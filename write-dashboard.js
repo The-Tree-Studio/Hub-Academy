@@ -26,10 +26,10 @@ const THEMES = [
   {
     titre: 'Fiscalit\u00e9 internationale', emoji: '\u{1F4BC}', couleur: '#dc2626',
     modules: [
-      { title: 'FATCA — Foreign Account Tax Compliance Act', icon: '\u{1F1FA}\u{1F1F8}', slug: 'fatca', ready: false },
       { title: 'CRS — Common Reporting Standard', icon: '\u{1F30D}', slug: 'crs', ready: false },
-      { title: 'QI — Qualified Intermediary', icon: '\u{1F4B0}', slug: 'qi', ready: false },
       { title: 'FATCA vs CRS vs QI — Quelles diff\u00e9rences ?', icon: '\u2194\uFE0F', slug: 'fatca-crs-qi-differences', ready: false },
+      { title: 'FATCA — Foreign Account Tax Compliance Act', icon: '\u{1F1FA}\u{1F1F8}', slug: 'fatca', ready: false },
+      { title: 'QI — Qualified Intermediary', icon: '\u{1F4B0}', slug: 'qi', ready: false },
       { title: 'V\u00e9rifier un formulaire W-9, W-8BEN ou Tax Self-Certification', icon: '\u{1F4CB}', slug: 'formulaires-fiscaux', ready: false },
     ],
   },
@@ -51,8 +51,8 @@ const THEMES = [
     modules: [
       { title: 'GDPR / RGPD', icon: '\u{1F510}', slug: 'gdpr-rgpd', ready: false },
       { title: 'ISO 27001', icon: '\u{1F3C5}', slug: 'iso-27001', ready: false },
-      { title: 'Secret professionnel', icon: '\u{1F92B}', slug: 'secret-professionnel', ready: false },
       { title: 'S\u00e9curit\u00e9 des donn\u00e9es', icon: '\u{1F6E1}\uFE0F', slug: 'securite-donnees', ready: false },
+      { title: 'Secret professionnel', icon: '\u{1F92B}', slug: 'secret-professionnel', ready: false },
     ],
   },
   {

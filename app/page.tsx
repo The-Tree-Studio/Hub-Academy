@@ -26,10 +26,10 @@ const THEMES = [
   {
     titre: 'Fiscalité internationale', emoji: '💼', couleur: '#dc2626',
     modules: [
-      { title: 'FATCA — Foreign Account Tax Compliance Act', icon: '🇺🇸', slug: 'fatca', ready: false },
       { title: 'CRS — Common Reporting Standard', icon: '🌍', slug: 'crs', ready: false },
-      { title: 'QI — Qualified Intermediary', icon: '💰', slug: 'qi', ready: false },
       { title: 'FATCA vs CRS vs QI — Quelles différences ?', icon: '↔️', slug: 'fatca-crs-qi-differences', ready: false },
+      { title: 'FATCA — Foreign Account Tax Compliance Act', icon: '🇺🇸', slug: 'fatca', ready: false },
+      { title: 'QI — Qualified Intermediary', icon: '💰', slug: 'qi', ready: false },
       { title: 'Vérifier un formulaire W-9, W-8BEN ou Tax Self-Certification', icon: '📋', slug: 'formulaires-fiscaux', ready: false },
     ],
   },
@@ -51,8 +51,8 @@ const THEMES = [
     modules: [
       { title: 'GDPR / RGPD', icon: '🔐', slug: 'gdpr-rgpd', ready: false },
       { title: 'ISO 27001', icon: '🏅', slug: 'iso-27001', ready: false },
-      { title: 'Secret professionnel', icon: '🤫', slug: 'secret-professionnel', ready: false },
       { title: 'Sécurité des données', icon: '🛡️', slug: 'securite-donnees', ready: false },
+      { title: 'Secret professionnel', icon: '🤫', slug: 'secret-professionnel', ready: false },
     ],
   },
   {
