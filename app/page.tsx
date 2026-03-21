@@ -3,33 +3,105 @@ import { useEffect, useState } from 'react'
 import { createClient } from '@/lib/supabase'
 import { useRouter } from 'next/navigation'
 
-const MODULES = [
-  { title: 'Gouvernance PSF', icon: '🏛️', slug: 'gouvernance-psf', ready: false },
-  { title: 'GDPR / RGPD', icon: '🔐', slug: 'gdpr-rgpd', ready: false },
-  { title: 'AML/KYC Rules', icon: '🔍', slug: 'aml-kyc', ready: true },
-  { title: 'Whistleblowing', icon: '📣', slug: 'whistleblowing', ready: false },
-  { title: 'Sécurité des données', icon: '🛡️', slug: 'securite-donnees', ready: false },
-  { title: 'Secret professionnel', icon: '🤫', slug: 'secret-professionnel', ready: false },
-  { title: 'FATCA / CRS / QI', icon: '🌍', slug: 'fatca-crs', ready: false },
-  { title: 'Gestion des risques', icon: '⚖️', slug: 'gestion-risques', ready: false },
-  { title: "Conflits d'intérêts", icon: '⚡', slug: 'conflits-interets', ready: false },
-  { title: 'Veille réglementaire', icon: '📡', slug: 'veille-reglementaire', ready: false },
-  { title: 'Name Screening', icon: '🔎', slug: 'name-screening', ready: false },
-  { title: 'Externalisation 22/806', icon: '🤝', slug: 'externalisation', ready: false },
-  { title: 'Résilience IT (DORA)', icon: '💻', slug: 'resilience-it', ready: false },
-  { title: 'Risk Scoring client', icon: '📊', slug: 'risk-scoring', ready: false },
-  { title: 'DDR', icon: '📋', slug: 'ddr', ready: false },
-  { title: 'Infrastructure IT', icon: '🖥️', slug: 'infrastructure-it', ready: false },
-  { title: 'Obligations employé', icon: '📌', slug: 'obligations-employe', ready: false },
-  { title: 'Droits employé', icon: '✊', slug: 'droits-employe', ready: false },
-  { title: 'ISO 27001', icon: '🏅', slug: 'iso-27001', ready: false },
-  { title: 'ISO 22301', icon: '🏆', slug: 'iso-22301', ready: false },
-  { title: 'Circulaire 24/850', icon: '📰', slug: 'circulaire-24-850', ready: false },
+const THEMES = [
+  {
+    titre: 'Continuité de l\'activité',
+    emoji: '🔄',
+    couleur: '#0369a1',
+    modules: [
+      { title: 'Gestion de crise', icon: '🆘', slug: 'gestion-crise', ready: false },
+      { title: 'Gestion des incidents', icon: '🚨', slug: 'gestion-incidents', ready: false },
+      { title: 'Plan de continuité (BCP)', icon: '📆', slug: 'bcp', ready: false },
+      { title: 'Plan de reprise IT (DRP)', icon: '⚙️', slug: 'drp', ready: false },
+      { title: 'Tests & exercices BCP', icon: '🧪', slug: 'tests-bcp', ready: false },
+    ],
+  },
+  {
+    titre: 'Droits & Obligations des employés',
+    emoji: '👥',
+    couleur: '#b45309',
+    modules: [
+      { title: 'Droits employé', icon: '✊', slug: 'droits-employe', ready: false },
+      { title: 'Obligations employé', icon: '📌', slug: 'obligations-employe', ready: false },
+    ],
+  },
+  {
+    titre: 'Fiscalité internationale',
+    emoji: '💼',
+    couleur: '#dc2626',
+    modules: [
+      { title: 'FATCA / CRS / QI', icon: '🌍', slug: 'fatca-crs', ready: false },
+    ],
+  },
+  {
+    titre: 'Gouvernance & Conformité',
+    emoji: '⚖️',
+    couleur: '#7c3aed',
+    modules: [
+      { title: 'Conflits d\'intérêts', icon: '⚡', slug: 'conflits-interets', ready: false },
+      { title: 'Contrôle Interne', icon: '🔎', slug: 'controle-interne', ready: false },
+      { title: 'Gestion des risques', icon: '⚖️', slug: 'gestion-risques', ready: false },
+      { title: 'Gouvernance PSF', icon: '🏛️', slug: 'gouvernance-psf', ready: false },
+      { title: 'Mutualisation', icon: '🔗', slug: 'mutualisation', ready: false },
+      { title: 'Accessibilité', icon: '♿', slug: 'accessibilite', ready: false },
+      { title: 'Veille réglementaire', icon: '📡', slug: 'veille-reglementaire', ready: false },
+      { title: 'Whistleblowing', icon: '📣', slug: 'whistleblowing', ready: false },
+    ],
+  },
+  {
+    titre: 'Protection des données',
+    emoji: '🔐',
+    couleur: '#0891b2',
+    modules: [
+      { title: 'GDPR / RGPD', icon: '🔐', slug: 'gdpr-rgpd', ready: false },
+      { title: 'ISO 27001', icon: '🏅', slug: 'iso-27001', ready: false },
+      { title: 'Secret professionnel', icon: '🤫', slug: 'secret-professionnel', ready: false },
+      { title: 'Sécurité des données', icon: '🛡️', slug: 'securite-donnees', ready: false },
+    ],
+  },
+  {
+    titre: 'Règles anti-blanchiment',
+    emoji: '🛡️',
+    couleur: '#e91e8c',
+    modules: [
+      { title: 'AML/KYC Rules', icon: '🔍', slug: 'aml-kyc', ready: true },
+      { title: 'DDR', icon: '📋', slug: 'ddr', ready: false },
+      { title: 'Name Screening', icon: '🔎', slug: 'name-screening', ready: false },
+      { title: 'Opérations suspectes', icon: '🚨', slug: 'operations-suspectes', ready: false },
+      { title: 'Risk Scoring client', icon: '📊', slug: 'risk-scoring', ready: false },
+      { title: 'UBO — Bénéficiaire effectif', icon: '👤', slug: 'ubo', ready: false },
+    ],
+  },
+  {
+    titre: 'Résilience & Infrastructure IT',
+    emoji: '💻',
+    couleur: '#059669',
+    modules: [
+      { title: 'Circulaire 24/850', icon: '📰', slug: 'circulaire-24-850', ready: false },
+      { title: 'Externalisation 22/806', icon: '🤝', slug: 'externalisation', ready: false },
+      { title: 'Infrastructure IT', icon: '🖥️', slug: 'infrastructure-it', ready: false },
+      { title: 'ISO 22301', icon: '🏆', slug: 'iso-22301', ready: false },
+      { title: 'Résilience IT (DORA)', icon: '💻', slug: 'resilience-it', ready: false },
+    ],
+  },
+  {
+    titre: 'Services prestés aux clients',
+    emoji: '🎯',
+    couleur: '#c2410c',
+    modules: [
+      { title: 'Catalogue des services i-Hub', icon: '📂', slug: 'catalogue-services', ready: false },
+      { title: 'Gestion des incidents clients', icon: '🔧', slug: 'incidents-clients', ready: false },
+      { title: 'Niveaux de service (SLA)', icon: '📏', slug: 'sla', ready: false },
+      { title: 'Onboarding client', icon: '🤝', slug: 'onboarding-client', ready: false },
+      { title: 'Rapports & reporting clients', icon: '📈', slug: 'reporting-clients', ready: false },
+    ],
+  },
 ]
 
 export default function Home() {
   const [user, setUser] = useState<any>(null)
   const [loading, setLoading] = useState(true)
+  const [openThemes, setOpenThemes] = useState<Record<number, boolean>>({ 5: true }) // Règles anti-blanchiment ouvert par défaut
   const router = useRouter()
   const supabase = createClient()
 
@@ -45,13 +117,18 @@ export default function Home() {
     router.push('/login')
   }
 
+  function toggleTheme(idx: number) {
+    setOpenThemes(prev => ({ ...prev, [idx]: !prev[idx] }))
+  }
+
   if (loading) return (
     <div style={{ minHeight: '100vh', background: '#fff0f5', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#e91e8c', fontSize: '18px' }}>
       Chargement...
     </div>
   )
 
-  const readyCount = MODULES.filter(m => m.ready).length
+  const totalModules = THEMES.reduce((acc, t) => acc + t.modules.length, 0)
+  const readyModules = THEMES.reduce((acc, t) => acc + t.modules.filter(m => m.ready).length, 0)
 
   return (
     <div style={{ minHeight: '100vh', background: '#fff0f5', color: '#1e293b', fontFamily: 'sans-serif' }}>
@@ -66,48 +143,122 @@ export default function Home() {
         </div>
       </div>
 
-      <div style={{ padding: '40px 32px', textAlign: 'center' }}>
-        <h1 style={{ fontSize: '32px', fontWeight: '700', marginBottom: '8px', color: '#1e293b' }}>
-          Bienvenue sur <span style={{ color: '#e91e8c' }}>Hub Academy</span> 🎓
-        </h1>
-        <p style={{ color: '#94a3b8', marginBottom: '8px' }}>Votre plateforme de formation réglementaire</p>
-        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', background: '#e91e8c15', borderRadius: '20px', padding: '6px 14px', marginBottom: '40px' }}>
-          <span style={{ color: '#e91e8c', fontSize: '13px', fontWeight: '700' }}>{readyCount} module{readyCount > 1 ? 's' : ''} disponible{readyCount > 1 ? 's' : ''}</span>
-          <span style={{ color: '#94a3b8', fontSize: '13px' }}>· {MODULES.length - readyCount} à venir</span>
+      <div style={{ padding: '40px 32px', maxWidth: '1200px', margin: '0 auto' }}>
+        {/* Titre */}
+        <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+          <h1 style={{ fontSize: '32px', fontWeight: '700', marginBottom: '8px', color: '#1e293b' }}>
+            Bienvenue sur <span style={{ color: '#e91e8c' }}>Hub Academy</span> 🎓
+          </h1>
+          <p style={{ color: '#94a3b8', marginBottom: '12px' }}>Votre plateforme de formation réglementaire</p>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#e91e8c15', borderRadius: '20px', padding: '6px 16px' }}>
+            <span style={{ color: '#e91e8c', fontSize: '13px', fontWeight: '700' }}>
+              {readyModules} module{readyModules > 1 ? 's' : ''} disponible{readyModules > 1 ? 's' : ''}
+            </span>
+            <span style={{ color: '#94a3b8', fontSize: '13px' }}>· {totalModules - readyModules} à venir · {THEMES.length} thématiques</span>
+          </div>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '20px', maxWidth: '1200px', margin: '0 auto' }}>
-          {MODULES.map((m, i) => (
-            <div key={i}
-              onClick={() => m.ready && router.push(`/modules/${m.slug}`)}
-              style={{
-                background: 'white',
-                border: m.ready ? '1.5px solid #fce4ec' : '1.5px solid #f1f5f9',
-                borderRadius: '14px',
-                padding: '24px',
-                cursor: m.ready ? 'pointer' : 'default',
-                transition: 'all 0.2s',
-                boxShadow: m.ready ? '0 2px 8px rgba(233,30,140,0.06)' : '0 1px 4px rgba(0,0,0,0.04)',
-                opacity: m.ready ? 1 : 0.65,
-                position: 'relative',
-              }}
-              onMouseOver={e => { if (m.ready) { e.currentTarget.style.borderColor = '#e91e8c'; e.currentTarget.style.boxShadow = '0 6px 24px rgba(233,30,140,0.18)'; e.currentTarget.style.transform = 'translateY(-2px)' } }}
-              onMouseOut={e => { if (m.ready) { e.currentTarget.style.borderColor = '#fce4ec'; e.currentTarget.style.boxShadow = '0 2px 8px rgba(233,30,140,0.06)'; e.currentTarget.style.transform = 'translateY(0)' } }}>
-              {m.ready && (
-                <span style={{ position: 'absolute', top: '12px', right: '12px', background: '#d1fae5', color: '#059669', fontSize: '11px', fontWeight: '700', borderRadius: '20px', padding: '2px 8px' }}>
-                  DISPONIBLE
-                </span>
-              )}
-              <div style={{ fontSize: '36px', marginBottom: '12px' }}>{m.icon}</div>
-              <div style={{ fontWeight: '700', marginBottom: '6px', color: '#1e293b', fontSize: '15px' }}>{m.title}</div>
-              <div style={{ color: '#94a3b8', fontSize: '13px', marginBottom: '12px' }}>
-                {m.ready ? 'Fiches + 3 quiz interactifs' : 'Module · Bientôt disponible'}
+        {/* Accordéons */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+          {THEMES.map((theme, ti) => {
+            const isOpen = !!openThemes[ti]
+            const readyCount = theme.modules.filter(m => m.ready).length
+            return (
+              <div key={ti} style={{ background: 'white', borderRadius: '16px', overflow: 'hidden', boxShadow: `0 2px 12px ${theme.couleur}12`, border: `1.5px solid ${isOpen ? theme.couleur + '40' : '#f1f5f9'}`, transition: 'all 0.2s' }}>
+                
+                {/* En-tête cliquable */}
+                <button
+                  onClick={() => toggleTheme(ti)}
+                  style={{
+                    width: '100%', display: 'flex', alignItems: 'center', gap: '14px',
+                    padding: '18px 24px', background: 'none', border: 'none', cursor: 'pointer',
+                    textAlign: 'left',
+                  }}>
+                  {/* Pastille couleur */}
+                  <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: `${theme.couleur}15`, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '20px', flexShrink: 0 }}>
+                    {theme.emoji}
+                  </div>
+
+                  {/* Titre */}
+                  <div style={{ flex: 1 }}>
+                    <div style={{ fontWeight: '700', fontSize: '16px', color: '#1e293b', marginBottom: '2px' }}>{theme.titre}</div>
+                    <div style={{ fontSize: '12px', color: '#94a3b8' }}>
+                      {theme.modules.length} module{theme.modules.length > 1 ? 's' : ''}
+                      {readyCount > 0 && <span style={{ color: theme.couleur, fontWeight: '600' }}> · {readyCount} disponible{readyCount > 1 ? 's' : ''}</span>}
+                    </div>
+                  </div>
+
+                  {/* Badges modules dispo */}
+                  {readyCount > 0 && (
+                    <span style={{ background: '#d1fae5', color: '#059669', fontSize: '11px', fontWeight: '700', borderRadius: '20px', padding: '3px 10px', flexShrink: 0 }}>
+                      ✓ {readyCount} dispo
+                    </span>
+                  )}
+
+                  {/* Flèche */}
+                  <div style={{ fontSize: '18px', color: theme.couleur, transition: 'transform 0.3s', transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)', flexShrink: 0 }}>
+                    ▾
+                  </div>
+                </button>
+
+                {/* Contenu accordéon */}
+                {isOpen && (
+                  <div style={{ padding: '0 20px 20px', borderTop: `1px solid ${theme.couleur}20` }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '12px', paddingTop: '16px' }}>
+                      {theme.modules.map((m, i) => (
+                        <div key={i}
+                          onClick={() => m.ready && router.push(`/modules/${m.slug}`)}
+                          style={{
+                            background: m.ready ? 'white' : '#fafafa',
+                            border: m.ready ? `1.5px solid ${theme.couleur}30` : '1.5px solid #f1f5f9',
+                            borderRadius: '12px',
+                            padding: '16px',
+                            cursor: m.ready ? 'pointer' : 'default',
+                            transition: 'all 0.2s',
+                            opacity: m.ready ? 1 : 0.55,
+                            position: 'relative',
+                            boxShadow: m.ready ? `0 2px 8px ${theme.couleur}10` : 'none',
+                          } as React.CSSProperties}
+                          onMouseOver={e => {
+                            if (m.ready) {
+                              e.currentTarget.style.borderColor = theme.couleur
+                              e.currentTarget.style.boxShadow = `0 4px 20px ${theme.couleur}25`
+                              e.currentTarget.style.transform = 'translateY(-2px)'
+                            }
+                          }}
+                          onMouseOut={e => {
+                            if (m.ready) {
+                              e.currentTarget.style.borderColor = `${theme.couleur}30`
+                              e.currentTarget.style.boxShadow = `0 2px 8px ${theme.couleur}10`
+                              e.currentTarget.style.transform = 'translateY(0)'
+                            }
+                          }}>
+
+                          {m.ready && (
+                            <span style={{ position: 'absolute', top: '8px', right: '8px', background: '#d1fae5', color: '#059669', fontSize: '9px', fontWeight: '700', borderRadius: '20px', padding: '2px 6px' }}>
+                              DISPO
+                            </span>
+                          )}
+
+                          <div style={{ fontSize: '26px', marginBottom: '8px' }}>{m.icon}</div>
+                          <div style={{ fontWeight: '700', fontSize: '13px', color: '#1e293b', lineHeight: 1.3, marginBottom: '4px' }}>{m.title}</div>
+                          <div style={{ fontSize: '11px', color: '#94a3b8' }}>
+                            {m.ready ? 'Fiches + quiz interactifs' : 'Bientôt disponible'}
+                          </div>
+
+                          {m.ready && (
+                            <div style={{ marginTop: '10px', background: '#fff0f5', borderRadius: '4px', height: '3px' }}>
+                              <div style={{ background: theme.couleur, borderRadius: '4px', height: '3px', width: '0%' }} />
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
-              <div style={{ background: '#fff0f5', borderRadius: '6px', height: '5px' }}>
-                <div style={{ background: '#e91e8c', borderRadius: '6px', height: '5px', width: '0%' }} />
-              </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </div>
