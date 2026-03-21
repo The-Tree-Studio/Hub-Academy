@@ -410,13 +410,13 @@ export default function ModuleAmlKyc() {
     }, 2200)
   }
 
-  const base: React.CSSProperties = { minHeight: '100vh', background: '#fff0f5', fontFamily: "'Segoe UI', system-ui, sans-serif", color: '#1e293b' }
+  const base: React.CSSProperties = { minHeight: '100vh', background: '#faf6f0', fontFamily: "'Segoe UI', system-ui, sans-serif", color: '#3d2010' }
 
   const NavBar = () => (
-    <div style={{ background: 'white', borderBottom: '1px solid #fce4ec', padding: '12px 24px', display: 'flex', alignItems: 'center', gap: '12px', boxShadow: '0 2px 8px rgba(233,30,140,0.06)' }}>
-      <button onClick={() => router.push('/')} style={{ background: 'none', border: '1px solid #fce4ec', borderRadius: '8px', padding: '6px 12px', color: '#e91e8c', cursor: 'pointer', fontSize: '14px' }}>← Accueil</button>
+    <div style={{ background: 'white', borderBottom: '1px solid #e8d5c0', padding: '12px 24px', display: 'flex', alignItems: 'center', gap: '12px', boxShadow: '0 2px 8px rgba(233,30,140,0.06)' }}>
+      <button onClick={() => router.push('/')} style={{ background: 'none', border: '1px solid #e8d5c0', borderRadius: '8px', padding: '6px 12px', color: '#e91e8c', cursor: 'pointer', fontSize: '14px' }}>← Accueil</button>
       <span style={{ color: '#e91e8c', fontWeight: '700', fontSize: '16px' }}>🔍 AML/KYC Rules</span>
-      <span style={{ marginLeft: 'auto', background: '#fff0f5', border: '1px solid #fce4ec', borderRadius: '20px', padding: '4px 14px', fontSize: '13px', color: '#e91e8c', fontWeight: '600' }}>⭐ {score} pts</span>
+      <span style={{ marginLeft: 'auto', background: '#faf6f0', border: '1px solid #e8d5c0', borderRadius: '20px', padding: '4px 14px', fontSize: '13px', color: '#e91e8c', fontWeight: '600' }}>⭐ {score} pts</span>
     </div>
   )
 
@@ -425,9 +425,9 @@ export default function ModuleAmlKyc() {
       <NavBar />
       <div style={{ maxWidth: '680px', margin: '0 auto', padding: '60px 24px', textAlign: 'center' }}>
         <div style={{ fontSize: '72px', marginBottom: '20px' }}>🔍</div>
-        <h1 style={{ fontSize: '32px', fontWeight: '800', color: '#1e293b', marginBottom: '12px' }}>AML/KYC Rules</h1>
-        <p style={{ fontSize: '18px', color: '#64748b', marginBottom: '32px' }}>Les obligations directes d'i-Hub envers ses clients</p>
-        <div style={{ background: 'white', border: '1px solid #fce4ec', borderRadius: '16px', padding: '24px', marginBottom: '32px', textAlign: 'left' }}>
+        <h1 style={{ fontSize: '32px', fontWeight: '800', color: '#3d2010', marginBottom: '12px' }}>AML/KYC Rules</h1>
+        <p style={{ fontSize: '18px', color: '#9c7c5e', marginBottom: '32px' }}>Les obligations directes d'i-Hub envers ses clients</p>
+        <div style={{ background: 'white', border: '1px solid #e8d5c0', borderRadius: '16px', padding: '24px', marginBottom: '32px', textAlign: 'left' }}>
           <p style={{ margin: '0 0 16px', fontWeight: '700', color: '#e91e8c' }}>📚 Ce que vous allez apprendre :</p>
           {[
             'Le cadre légal luxembourgeois (loi 2004, GAFI, AMLD5)',
@@ -439,13 +439,13 @@ export default function ModuleAmlKyc() {
           ].map((t, i) => (
             <div key={i} style={{ display: 'flex', gap: '10px', padding: '6px 0', borderBottom: i < 5 ? '1px solid #fce4ec' : 'none' }}>
               <span style={{ color: '#e91e8c', fontWeight: '700' }}>✓</span>
-              <span style={{ color: '#475569', fontSize: '15px' }}>{t}</span>
+              <span style={{ color: '#5c3d2e', fontSize: '15px' }}>{t}</span>
             </div>
           ))}
         </div>
         <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', marginBottom: '32px', flexWrap: 'wrap' }}>
           {[{ label: '21 fiches', icon: '📖' }, { label: '3 quiz fun', icon: '🎮' }, { label: '~20 min', icon: '⏱️' }].map((b, i) => (
-            <div key={i} style={{ background: 'white', border: '1px solid #fce4ec', borderRadius: '12px', padding: '10px 20px', fontSize: '14px', color: '#64748b', display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <div key={i} style={{ background: 'white', border: '1px solid #e8d5c0', borderRadius: '12px', padding: '10px 20px', fontSize: '14px', color: '#9c7c5e', display: 'flex', alignItems: 'center', gap: '6px' }}>
               {b.icon} {b.label}
             </div>
           ))}
@@ -468,7 +468,7 @@ export default function ModuleAmlKyc() {
         </div>
         <div style={{ maxWidth: '680px', margin: '0 auto', padding: '32px 24px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-            <span style={{ fontSize: '13px', color: '#94a3b8', fontWeight: '600' }}>FICHE {ficheIndex + 1} / {FICHES.length}</span>
+            <span style={{ fontSize: '13px', color: '#9c7c5e', fontWeight: '600' }}>FICHE {ficheIndex + 1} / {FICHES.length}</span>
             <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap', justifyContent: 'flex-end', maxWidth: '200px' }}>
               {FICHES.map((_, i) => (
                 <div key={i} onClick={() => { setFicheIndex(i); setPlusLoinOpen(false) }} style={{ width: '8px', height: '8px', borderRadius: '50%', background: i === ficheIndex ? fiche.couleur : i < ficheIndex ? '#e91e8c50' : '#fce4ec', cursor: 'pointer', transition: 'all 0.2s' }} />
@@ -484,7 +484,7 @@ export default function ModuleAmlKyc() {
               {fiche.contenu.map((item, i) => (
                 <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', padding: '12px 0', borderBottom: i < fiche.contenu.length - 1 ? '1px solid #f1f5f9' : 'none' }}>
                   <span style={{ fontSize: '22px', minWidth: '30px', textAlign: 'center' }}>{item.icon}</span>
-                  <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.6, color: '#334155' }}
+                  <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.6, color: '#3d2010' }}
                     dangerouslySetInnerHTML={{ __html: item.texte.replace(/\*\*(.*?)\*\*/g, `<strong style="color:${fiche.couleur}">$1</strong>`) }} />
                 </div>
               ))}
@@ -492,7 +492,7 @@ export default function ModuleAmlKyc() {
                 <span style={{ fontSize: '18px' }}>💡</span>
                 <div>
                   <p style={{ margin: '0 0 4px', fontSize: '11px', fontWeight: '700', color: fiche.couleur, textTransform: 'uppercase', letterSpacing: '1px' }}>À RETENIR</p>
-                  <p style={{ margin: 0, fontSize: '14px', color: '#475569', fontStyle: 'italic' }}>{fiche.aretenir}</p>
+                  <p style={{ margin: 0, fontSize: '14px', color: '#5c3d2e', fontStyle: 'italic' }}>{fiche.aretenir}</p>
                 </div>
               </div>
               {(fiche as any).plusLoin && (
@@ -507,7 +507,7 @@ export default function ModuleAmlKyc() {
                       {((fiche as any).plusLoin as {icon: string, texte: string}[]).map((item, i) => (
                         <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', padding: '10px 0', borderBottom: i < (fiche as any).plusLoin.length - 1 ? `1px solid ${fiche.couleur}20` : 'none' }}>
                           <span style={{ fontSize: '20px', minWidth: '28px', textAlign: 'center' }}>{item.icon}</span>
-                          <p style={{ margin: 0, fontSize: '14px', lineHeight: 1.6, color: '#475569' }}
+                          <p style={{ margin: 0, fontSize: '14px', lineHeight: 1.6, color: '#5c3d2e' }}
                             dangerouslySetInnerHTML={{ __html: item.texte.replace(/\*\*(.*?)\*\*/g, `<strong style="color:${fiche.couleur}">$1</strong>`) }} />
                         </div>
                       ))}
@@ -519,7 +519,7 @@ export default function ModuleAmlKyc() {
           </div>
           <div style={{ display: 'flex', gap: '12px' }}>
             {ficheIndex > 0 && (
-              <button onClick={() => { setFicheIndex(i => i - 1); setPlusLoinOpen(false) }} style={{ flex: 1, padding: '14px', background: 'white', border: '1px solid #fce4ec', borderRadius: '12px', color: '#64748b', cursor: 'pointer', fontSize: '15px', fontWeight: '600' }}>← Précédent</button>
+              <button onClick={() => { setFicheIndex(i => i - 1); setPlusLoinOpen(false) }} style={{ flex: 1, padding: '14px', background: 'white', border: '1px solid #e8d5c0', borderRadius: '12px', color: '#9c7c5e', cursor: 'pointer', fontSize: '15px', fontWeight: '600' }}>← Précédent</button>
             )}
             <button onClick={() => ficheIndex < FICHES.length - 1 ? (setFicheIndex(i => i + 1), setPlusLoinOpen(false)) : setPhase('quiz1')}
               style={{ flex: 2, padding: '14px', background: fiche.couleur, border: 'none', borderRadius: '12px', color: 'white', cursor: 'pointer', fontSize: '16px', fontWeight: '700', boxShadow: `0 4px 16px ${fiche.couleur}40` }}>
@@ -539,13 +539,13 @@ export default function ModuleAmlKyc() {
         <div style={{ maxWidth: '680px', margin: '0 auto', padding: '40px 24px' }}>
           <div style={{ textAlign: 'center', marginBottom: '28px' }}>
             <span style={{ background: '#7c3aed15', color: '#7c3aed', borderRadius: '20px', padding: '6px 16px', fontSize: '13px', fontWeight: '700', display: 'inline-block', marginBottom: '12px' }}>QUIZ 1/3 · ASSOCIER LES PAIRES</span>
-            <h2 style={{ fontSize: '22px', fontWeight: '800', color: '#1e293b', margin: '0 0 8px' }}>🧩 Reliez chaque sigle à sa définition</h2>
-            <p style={{ color: '#64748b', fontSize: '14px', margin: 0 }}>Cliquez d'abord sur un sigle, puis sur sa définition</p>
+            <h2 style={{ fontSize: '22px', fontWeight: '800', color: '#3d2010', margin: '0 0 8px' }}>🧩 Reliez chaque sigle à sa définition</h2>
+            <p style={{ color: '#9c7c5e', fontSize: '14px', margin: 0 }}>Cliquez d'abord sur un sigle, puis sur sa définition</p>
           </div>
           {matchError && <div style={{ background: '#fee2e2', border: '1px solid #fca5a5', borderRadius: '12px', padding: '12px 16px', marginBottom: '16px', color: '#dc2626', fontSize: '14px', textAlign: 'center' }}>{matchError}</div>}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '20px' }}>
             <div>
-              <p style={{ fontSize: '12px', fontWeight: '700', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '10px' }}>Sigles</p>
+              <p style={{ fontSize: '12px', fontWeight: '700', color: '#9c7c5e', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '10px' }}>Sigles</p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                 {activeMatching.map(m => {
                   const isPaired = !!matchPairs[m.sigle]
@@ -560,7 +560,7 @@ export default function ModuleAmlKyc() {
               </div>
             </div>
             <div>
-              <p style={{ fontSize: '12px', fontWeight: '700', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '10px' }}>Définitions</p>
+              <p style={{ fontSize: '12px', fontWeight: '700', color: '#9c7c5e', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '10px' }}>Définitions</p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                 {shuffle(activeMatching.map(m => ({ definition: m.definition }))).map(m => {
                   const isPaired = Object.values(matchPairs).includes(m.definition)
@@ -597,11 +597,11 @@ export default function ModuleAmlKyc() {
         <div style={{ maxWidth: '680px', margin: '0 auto', padding: '40px 24px' }}>
           <div style={{ textAlign: 'center', marginBottom: '28px' }}>
             <span style={{ background: '#0891b215', color: '#0891b2', borderRadius: '20px', padding: '6px 16px', fontSize: '13px', fontWeight: '700', display: 'inline-block', marginBottom: '12px' }}>QUIZ 2/3 · CONSTRUIRE LE DOSSIER KYC</span>
-            <h2 style={{ fontSize: '22px', fontWeight: '800', color: '#1e293b', margin: '0 0 8px' }}>🧱 Assemblez les briques dans l'ordre !</h2>
-            <p style={{ color: '#64748b', fontSize: '14px', margin: 0 }}>{activeScenario.scenario}</p>
+            <h2 style={{ fontSize: '22px', fontWeight: '800', color: '#3d2010', margin: '0 0 8px' }}>🧱 Assemblez les briques dans l'ordre !</h2>
+            <p style={{ color: '#9c7c5e', fontSize: '14px', margin: 0 }}>{activeScenario.scenario}</p>
           </div>
           <div style={{ background: 'white', border: '2px dashed #0891b240', borderRadius: '16px', padding: '20px', marginBottom: '20px', minHeight: '100px' }}>
-            <p style={{ fontSize: '12px', fontWeight: '700', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>📁 Votre dossier KYC</p>
+            <p style={{ fontSize: '12px', fontWeight: '700', color: '#9c7c5e', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>📁 Votre dossier KYC</p>
             {briquesPlacees.length === 0
               ? <p style={{ color: '#cbd5e1', textAlign: 'center', fontSize: '14px', padding: '16px 0' }}>Cliquez sur les documents ci-dessous dans le bon ordre...</p>
               : <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
@@ -617,7 +617,7 @@ export default function ModuleAmlKyc() {
           {briqueMessage && <div style={{ background: '#fef3c7', border: '1px solid #fcd34d', borderRadius: '12px', padding: '12px 16px', marginBottom: '16px', color: '#92400e', fontSize: '14px', textAlign: 'center' }}>{briqueMessage}</div>}
           {briquesDisponibles.length > 0 && (
             <div>
-              <p style={{ fontSize: '12px', fontWeight: '700', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>Documents disponibles</p>
+              <p style={{ fontSize: '12px', fontWeight: '700', color: '#9c7c5e', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>Documents disponibles</p>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
                 {briquesDisponibles.map((b: {id:string,texte:string,ordre:number}) => (
                   <button key={b.id} onClick={() => placerBrique(b)}
@@ -658,7 +658,7 @@ export default function ModuleAmlKyc() {
             QUIZ 3/3 · VRAI OU FAUX — {vfIndex + 1}/{activeVF.length}
           </span>
           <div style={{ background: 'white', borderRadius: '20px', padding: '32px 24px', boxShadow: '0 8px 32px rgba(0,0,0,0.08)', marginBottom: '28px', minHeight: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <p style={{ fontSize: '19px', fontWeight: '700', color: '#1e293b', lineHeight: 1.5, margin: 0 }}>{q.texte}</p>
+            <p style={{ fontSize: '19px', fontWeight: '700', color: '#3d2010', lineHeight: 1.5, margin: 0 }}>{q.texte}</p>
           </div>
           {vfRepondu === null ? (
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
@@ -669,7 +669,7 @@ export default function ModuleAmlKyc() {
             <div style={{ background: vfAnimation === 'correct' ? '#d1fae5' : '#fee2e2', border: `2px solid ${vfAnimation === 'correct' ? '#6ee7b7' : '#fca5a5'}`, borderRadius: '16px', padding: '20px' }}>
               <p style={{ fontSize: '28px', margin: '0 0 8px' }}>{vfAnimation === 'correct' ? '🎉' : '😅'}</p>
               <p style={{ fontWeight: '800', color: vfAnimation === 'correct' ? '#059669' : '#dc2626', fontSize: '18px', margin: '0 0 8px' }}>{vfAnimation === 'correct' ? 'Bravo !' : 'Pas tout à fait...'}</p>
-              <p style={{ color: '#475569', fontSize: '15px', margin: 0, fontStyle: 'italic' }}>{q.explication}</p>
+              <p style={{ color: '#5c3d2e', fontSize: '15px', margin: 0, fontStyle: 'italic' }}>{q.explication}</p>
             </div>
           )}
           <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', marginTop: '24px' }}>
@@ -690,12 +690,12 @@ export default function ModuleAmlKyc() {
       <NavBar />
       <div style={{ maxWidth: '560px', margin: '0 auto', padding: '60px 24px', textAlign: 'center' }}>
         <div style={{ fontSize: '80px', marginBottom: '16px' }}>{medal}</div>
-        <h2 style={{ fontSize: '32px', fontWeight: '800', color: '#1e293b', margin: '0 0 8px' }}>{msg}</h2>
-        <p style={{ color: '#94a3b8', fontSize: '16px', marginBottom: '32px' }}>Module AML/KYC Rules terminé — 21 fiches maîtrisées !</p>
+        <h2 style={{ fontSize: '32px', fontWeight: '800', color: '#3d2010', margin: '0 0 8px' }}>{msg}</h2>
+        <p style={{ color: '#9c7c5e', fontSize: '16px', marginBottom: '32px' }}>Module AML/KYC Rules terminé — 21 fiches maîtrisées !</p>
         <div style={{ background: 'white', borderRadius: '20px', padding: '32px', boxShadow: '0 8px 32px rgba(233,30,140,0.10)', marginBottom: '24px' }}>
           <div style={{ fontSize: '56px', fontWeight: '800', color: '#e91e8c', marginBottom: '4px' }}>{totalScore}<span style={{ fontSize: '24px' }}>/100</span></div>
-          <p style={{ color: '#94a3b8', margin: '0 0 20px', fontSize: '14px' }}>Score total</p>
-          <div style={{ background: '#fff0f5', borderRadius: '8px', height: '12px', overflow: 'hidden' }}>
+          <p style={{ color: '#9c7c5e', margin: '0 0 20px', fontSize: '14px' }}>Score total</p>
+          <div style={{ background: '#faf6f0', borderRadius: '8px', height: '12px', overflow: 'hidden' }}>
             <div style={{ background: 'linear-gradient(90deg, #e91e8c, #f472b6)', height: '12px', width: `${totalScore}%`, borderRadius: '8px' }} />
           </div>
         </div>
@@ -718,7 +718,7 @@ export default function ModuleAmlKyc() {
               setScore(0)
               setPhase('intro')
             })() }}
-            style={{ padding: '14px', background: 'white', border: '1px solid #fce4ec', borderRadius: '12px', color: '#e91e8c', fontSize: '15px', fontWeight: '600', cursor: 'pointer' }}>
+            style={{ padding: '14px', background: 'white', border: '1px solid #e8d5c0', borderRadius: '12px', color: '#e91e8c', fontSize: '15px', fontWeight: '600', cursor: 'pointer' }}>
             🔄 Recommencer ce module
           </button>
         </div>
