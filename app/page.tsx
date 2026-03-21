@@ -5,79 +5,79 @@ import { useRouter } from 'next/navigation'
 
 const THEMES = [
   {
-    titre: 'Règles anti-blanchiment', emoji: '🛡️', couleur: '#e91e8c',
+    titre: "Continuit\u00e9 de l'activit\u00e9", emoji: '\U0001f504', couleur: '#0369a1',
     modules: [
-      { title: 'AML/KYC Rules', icon: '🔍', slug: 'aml-kyc', ready: true },
-      { title: 'Name Screening', icon: '🔎', slug: 'name-screening', ready: false },
-      { title: 'Risk Scoring client', icon: '📊', slug: 'risk-scoring', ready: false },
-      { title: 'UBO — Bénéficiaire effectif', icon: '👤', slug: 'ubo', ready: false },
-      { title: 'DDR', icon: '📋', slug: 'ddr', ready: false },
-      { title: 'Opérations suspectes', icon: '🚨', slug: 'operations-suspectes', ready: false },
+      { title: 'Gestion de crise', icon: '\U0001f198', slug: 'gestion-crise', ready: false },
+      { title: 'Gestion des incidents', icon: '\U0001f6a8', slug: 'gestion-incidents', ready: false },
+      { title: 'Plan de continuit\u00e9 (BCP)', icon: '\U0001f4c6', slug: 'bcp', ready: false },
+      { title: 'Plan de reprise IT (DRP)', icon: '\u2699\ufe0f', slug: 'drp', ready: false },
+      { title: 'Tests & exercices BCP', icon: '\U0001f9ea', slug: 'tests-bcp', ready: false },
     ],
   },
   {
-    titre: 'Gouvernance & Conformité', emoji: '⚖️', couleur: '#7c3aed',
+    titre: 'Droits & Obligations des employ\u00e9s', emoji: '\U0001f465', couleur: '#b45309',
     modules: [
-      { title: 'Gouvernance PSF', icon: '🏛️', slug: 'gouvernance-psf', ready: false },
-      { title: 'Gestion des risques', icon: '⚖️', slug: 'gestion-risques', ready: false },
-      { title: "Conflits d'intérêts", icon: '⚡', slug: 'conflits-interets', ready: false },
-      { title: 'Whistleblowing', icon: '📣', slug: 'whistleblowing', ready: false },
-      { title: 'Veille réglementaire', icon: '📡', slug: 'veille-reglementaire', ready: false },
-      { title: 'Mutualisation', icon: '🔗', slug: 'mutualisation', ready: false },
-      { title: 'Accessibilité', icon: '♿', slug: 'accessibilite', ready: false },
-      { title: 'Contrôle Interne', icon: '🔎', slug: 'controle-interne', ready: false },
+      { title: 'Droits employ\u00e9', icon: '\u270a', slug: 'droits-employe', ready: false },
+      { title: 'Obligations employ\u00e9', icon: '\U0001f4cc', slug: 'obligations-employe', ready: false },
     ],
   },
   {
-    titre: 'Protection des données', emoji: '🔐', couleur: '#0891b2',
+    titre: 'Fiscalit\u00e9 internationale', emoji: '\U0001f4bc', couleur: '#dc2626',
     modules: [
-      { title: 'GDPR / RGPD', icon: '🔐', slug: 'gdpr-rgpd', ready: false },
-      { title: 'Sécurité des données', icon: '🛡️', slug: 'securite-donnees', ready: false },
-      { title: 'Secret professionnel', icon: '🤫', slug: 'secret-professionnel', ready: false },
-      { title: 'ISO 27001', icon: '🏅', slug: 'iso-27001', ready: false },
+      { title: 'FATCA / CRS / QI', icon: '\U0001f30d', slug: 'fatca-crs', ready: false },
     ],
   },
   {
-    titre: 'Résilience & Infrastructure IT', emoji: '💻', couleur: '#059669',
+    titre: 'Gouvernance & Conformit\u00e9', emoji: '\u2696\ufe0f', couleur: '#7c3aed',
     modules: [
-      { title: 'Résilience IT (DORA)', icon: '💻', slug: 'resilience-it', ready: false },
-      { title: 'Infrastructure IT', icon: '🖥️', slug: 'infrastructure-it', ready: false },
-      { title: 'ISO 22301', icon: '🏆', slug: 'iso-22301', ready: false },
-      { title: 'Externalisation 22/806', icon: '🤝', slug: 'externalisation', ready: false },
-      { title: 'Circulaire 24/850', icon: '📰', slug: 'circulaire-24-850', ready: false },
+      { title: 'Accessibilit\u00e9', icon: '\u267f', slug: 'accessibilite', ready: false },
+      { title: "Conflits d'int\u00e9r\u00eats", icon: '\u26a1', slug: 'conflits-interets', ready: false },
+      { title: 'Contr\u00f4le Interne', icon: '\U0001f50e', slug: 'controle-interne', ready: false },
+      { title: 'Gestion des risques', icon: '\u2696\ufe0f', slug: 'gestion-risques', ready: false },
+      { title: 'Gouvernance PSF', icon: '\U0001f3db\ufe0f', slug: 'gouvernance-psf', ready: false },
+      { title: 'Mutualisation', icon: '\U0001f517', slug: 'mutualisation', ready: false },
+      { title: 'Veille r\u00e9glementaire', icon: '\U0001f4e1', slug: 'veille-reglementaire', ready: false },
+      { title: 'Whistleblowing', icon: '\U0001f4e3', slug: 'whistleblowing', ready: false },
     ],
   },
   {
-    titre: 'Fiscalité internationale', emoji: '💼', couleur: '#dc2626',
+    titre: 'Protection des donn\u00e9es', emoji: '\U0001f510', couleur: '#0891b2',
     modules: [
-      { title: 'FATCA / CRS / QI', icon: '🌍', slug: 'fatca-crs', ready: false },
+      { title: 'GDPR / RGPD', icon: '\U0001f510', slug: 'gdpr-rgpd', ready: false },
+      { title: 'ISO 27001', icon: '\U0001f3c5', slug: 'iso-27001', ready: false },
+      { title: 'Secret professionnel', icon: '\U0001f92b', slug: 'secret-professionnel', ready: false },
+      { title: 'S\u00e9curit\u00e9 des donn\u00e9es', icon: '\U0001f6e1\ufe0f', slug: 'securite-donnees', ready: false },
     ],
   },
   {
-    titre: 'Services prestés aux clients', emoji: '🎯', couleur: '#c2410c',
+    titre: 'R\u00e8gles anti-blanchiment', emoji: '\U0001f6e1\ufe0f', couleur: '#e91e8c',
     modules: [
-      { title: 'Catalogue des services i-Hub', icon: '📂', slug: 'catalogue-services', ready: false },
-      { title: 'Niveaux de service (SLA)', icon: '📏', slug: 'sla', ready: false },
-      { title: 'Gestion des incidents clients', icon: '🔧', slug: 'incidents-clients', ready: false },
-      { title: 'Onboarding client', icon: '🤝', slug: 'onboarding-client', ready: false },
-      { title: 'Rapports & reporting clients', icon: '📈', slug: 'reporting-clients', ready: false },
+      { title: 'AML/KYC Rules', icon: '\U0001f50d', slug: 'aml-kyc', ready: true },
+      { title: 'DDR', icon: '\U0001f4cb', slug: 'ddr', ready: false },
+      { title: 'Name Screening', icon: '\U0001f50e', slug: 'name-screening', ready: false },
+      { title: 'Op\u00e9rations suspectes', icon: '\U0001f6a8', slug: 'operations-suspectes', ready: false },
+      { title: 'Risk Scoring client', icon: '\U0001f4ca', slug: 'risk-scoring', ready: false },
+      { title: 'UBO \u2014 B\u00e9n\u00e9ficiaire effectif', icon: '\U0001f464', slug: 'ubo', ready: false },
     ],
   },
   {
-    titre: 'Continuité de l\'activité', emoji: '🔄', couleur: '#0369a1',
+    titre: 'R\u00e9silience & Infrastructure IT', emoji: '\U0001f4bb', couleur: '#059669',
     modules: [
-      { title: 'Plan de continuité (BCP)', icon: '📆', slug: 'bcp', ready: false },
-      { title: 'Plan de reprise IT (DRP)', icon: '⚙️', slug: 'drp', ready: false },
-      { title: 'Gestion de crise', icon: '🆘', slug: 'gestion-crise', ready: false },
-      { title: 'Gestion des incidents', icon: '🚨', slug: 'gestion-incidents', ready: false },
-      { title: 'Tests & exercices BCP', icon: '🧪', slug: 'tests-bcp', ready: false },
+      { title: 'Circulaire 24/850', icon: '\U0001f4f0', slug: 'circulaire-24-850', ready: false },
+      { title: 'Externalisation 22/806', icon: '\U0001f91d', slug: 'externalisation', ready: false },
+      { title: 'Infrastructure IT', icon: '\U0001f5a5\ufe0f', slug: 'infrastructure-it', ready: false },
+      { title: 'ISO 22301', icon: '\U0001f3c6', slug: 'iso-22301', ready: false },
+      { title: 'R\u00e9silience IT (DORA)', icon: '\U0001f4bb', slug: 'resilience-it', ready: false },
     ],
   },
   {
-    titre: 'Droits & Obligations des employés', emoji: '👥', couleur: '#b45309',
+    titre: 'Services prest\u00e9s aux clients', emoji: '\U0001f3af', couleur: '#c2410c',
     modules: [
-      { title: 'Obligations employé', icon: '📌', slug: 'obligations-employe', ready: false },
-      { title: 'Droits employé', icon: '✊', slug: 'droits-employe', ready: false },
+      { title: 'Catalogue des services i-Hub', icon: '\U0001f4c2', slug: 'catalogue-services', ready: false },
+      { title: 'Gestion des incidents clients', icon: '\U0001f527', slug: 'incidents-clients', ready: false },
+      { title: 'Niveaux de service (SLA)', icon: '\U0001f4cf', slug: 'sla', ready: false },
+      { title: 'Onboarding client', icon: '\U0001f91d', slug: 'onboarding-client', ready: false },
+      { title: 'Rapports & reporting clients', icon: '\U0001f4c8', slug: 'reporting-clients', ready: false },
     ],
   },
 ]
@@ -85,7 +85,7 @@ const THEMES = [
 export default function Home() {
   const [user, setUser] = useState<any>(null)
   const [loading, setLoading] = useState(true)
-  const [openThemes, setOpenThemes] = useState<Record<number, boolean>>({ 0: true })
+  const [openThemes, setOpenThemes] = useState<Record<number, boolean>>({ 5: true })
   const router = useRouter()
   const supabase = createClient()
 
@@ -117,11 +117,11 @@ export default function Home() {
   return (
     <div style={{ minHeight: '100vh', background: '#fff0f5', color: '#1e293b', fontFamily: 'sans-serif' }}>
       <div style={{ background: 'white', borderBottom: '1px solid #fce4ec', padding: '16px 32px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', boxShadow: '0 2px 8px rgba(233,30,140,0.08)' }}>
-        <span style={{ color: '#e91e8c', fontWeight: '700', fontSize: '20px' }}>🎓 Hub Academy</span>
+        <span style={{ color: '#e91e8c', fontWeight: '700', fontSize: '20px' }}>\U0001f393 Hub Academy</span>
         <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
           <span style={{ color: '#94a3b8', fontSize: '14px' }}>{user?.email}</span>
           <button onClick={handleLogout} style={{ padding: '8px 16px', background: 'transparent', border: '1px solid #fce4ec', borderRadius: '8px', color: '#e91e8c', cursor: 'pointer', fontSize: '14px' }}>
-            Déconnexion
+            D\u00e9connexion
           </button>
         </div>
       </div>
@@ -129,12 +129,12 @@ export default function Home() {
       <div style={{ padding: '40px 32px', maxWidth: '1200px', margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: '40px' }}>
           <h1 style={{ fontSize: '32px', fontWeight: '700', marginBottom: '8px', color: '#1e293b' }}>
-            Bienvenue sur <span style={{ color: '#e91e8c' }}>Hub Academy</span> 🎓
+            Bienvenue sur <span style={{ color: '#e91e8c' }}>Hub Academy</span> \U0001f393
           </h1>
-          <p style={{ color: '#94a3b8', marginBottom: '12px' }}>Votre plateforme de formation réglementaire</p>
+          <p style={{ color: '#94a3b8', marginBottom: '12px' }}>Votre plateforme de formation r\u00e9glementaire</p>
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#e91e8c15', borderRadius: '20px', padding: '6px 16px' }}>
             <span style={{ color: '#e91e8c', fontSize: '13px', fontWeight: '700' }}>{readyModules} module disponible</span>
-            <span style={{ color: '#94a3b8', fontSize: '13px' }}>· {totalModules - readyModules} à venir · {THEMES.length} thématiques</span>
+            <span style={{ color: '#94a3b8', fontSize: '13px' }}>\u00b7 {totalModules - readyModules} \u00e0 venir \u00b7 {THEMES.length} th\u00e9matiques</span>
           </div>
         </div>
 
@@ -152,15 +152,15 @@ export default function Home() {
                     <div style={{ fontWeight: '700', fontSize: '16px', color: '#1e293b', marginBottom: '2px' }}>{theme.titre}</div>
                     <div style={{ fontSize: '12px', color: '#94a3b8' }}>
                       {theme.modules.length} module{theme.modules.length > 1 ? 's' : ''}
-                      {readyCount > 0 && <span style={{ color: theme.couleur, fontWeight: '600' }}> · {readyCount} disponible{readyCount > 1 ? 's' : ''}</span>}
+                      {readyCount > 0 && <span style={{ color: theme.couleur, fontWeight: '600' }}> \u00b7 {readyCount} disponible{readyCount > 1 ? 's' : ''}</span>}
                     </div>
                   </div>
                   {readyCount > 0 && (
                     <span style={{ background: '#d1fae5', color: '#059669', fontSize: '11px', fontWeight: '700', borderRadius: '20px', padding: '3px 10px', flexShrink: 0 }}>
-                      ✓ {readyCount} dispo
+                      \u2713 {readyCount} dispo
                     </span>
                   )}
-                  <div style={{ fontSize: '18px', color: theme.couleur, transition: 'transform 0.3s', transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)', flexShrink: 0 }}>▾</div>
+                  <div style={{ fontSize: '18px', color: theme.couleur, transition: 'transform 0.3s', transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)', flexShrink: 0 }}>\u25be</div>
                 </button>
 
                 {isOpen && (
@@ -177,7 +177,7 @@ export default function Home() {
                           )}
                           <div style={{ fontSize: '26px', marginBottom: '8px' }}>{m.icon}</div>
                           <div style={{ fontWeight: '700', fontSize: '13px', color: '#1e293b', lineHeight: 1.3, marginBottom: '4px' }}>{m.title}</div>
-                          <div style={{ fontSize: '11px', color: '#94a3b8' }}>{m.ready ? 'Fiches + quiz interactifs' : 'Bientôt disponible'}</div>
+                          <div style={{ fontSize: '11px', color: '#94a3b8' }}>{m.ready ? 'Fiches + quiz interactifs' : 'Bient\u00f4t disponible'}</div>
                           {m.ready && (
                             <div style={{ marginTop: '10px', background: '#fff0f5', borderRadius: '4px', height: '3px' }}>
                               <div style={{ background: theme.couleur, borderRadius: '4px', height: '3px', width: '0%' }} />
