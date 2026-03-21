@@ -69,6 +69,22 @@ export default function Home() {
             </div>
           ))}
         </div>
+
+        <div style={{maxWidth:'680px',margin:'48px auto 0',padding:'0 0 48px'}}>
+          <p style={{color:'#475569',marginBottom:'12px',fontSize:'15px'}}>
+            en remplaçant l'ancien <code style={{background:'#f1f5f9',border:'1px solid #e2e8f0',borderRadius:'4px',padding:'2px 6px',fontSize:'13px',color:'#e91e8c'}}>page.tsx</code>. Puis dans le terminal :
+          </p>
+          <div style={{background:'#1e293b',borderRadius:'10px',overflow:'hidden'}}>
+            <div style={{padding:'8px 16px',background:'#0f172a',color:'#94a3b8',fontSize:'12px',borderBottom:'1px solid #334155'}}>bash</div>
+            <div style={{padding:'20px 24px',fontFamily:'monospace',fontSize:'14px',lineHeight:'2'}}>
+              <div><span style={{color:'#38bdf8'}}>git</span> <span style={{color:'#e2e8f0'}}>add .</span></div>
+              <div><span style={{color:'#38bdf8'}}>git</span> <span style={{color:'#e2e8f0'}}>commit -m </span><span style={{color:'#4ade80'}}>"mint dashboard"</span></div>
+              <div><span style={{color:'#38bdf8'}}>git</span> <span style={{color:'#e2e8f0'}}>push</span></div>
+            </div>
+          </div>
+          <p style={{color:'#475569',marginTop:'16px',fontSize:'15px'}}>Dites-moi quand c'est pushé ✅</p>
+        </div>
+
       </div>
     </div>
   )
