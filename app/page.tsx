@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react'
 import { createClient } from '@/lib/supabase'
 import { useRouter } from 'next/navigation'
 
+const HERO_IMAGE = '/hero.jpg' // ← Changez juste le nom du fichier ici (mettez votre image dans le dossier public/)
+
 const THEMES = [
   {
     titre: "Continuité de l'activité", emoji: '🔄', couleur: '#0369a1',
@@ -50,7 +52,7 @@ const THEMES = [
     ],
   },
   {
-    titre: 'Règles anti-blanchiment', emoji: '🛡️', couleur: '#e91e8c',
+    titre: 'Anti-blanchiment d'argent', emoji: '🛡️', couleur: '#e91e8c',
     modules: [
       { title: 'AML/KYC Rules', icon: '🔍', slug: 'aml-kyc', ready: true },
       { title: 'DDR', icon: '📋', slug: 'ddr', ready: false },
@@ -130,15 +132,19 @@ export default function Home() {
         </div>
       </div>
 
-      {/* HERO bandeau brun moyen */}
-      <div style={{ background: '#5c3d2e', padding: '32px', textAlign: 'center' }}>
-        <h1 style={{ fontSize: '28px', fontWeight: '800', marginBottom: '6px', color: 'white' }}>
-          Bienvenue sur <span style={{ color: '#e91e8c' }}>Hub Academy</span> 🎓
-        </h1>
-        <p style={{ color: '#e8d5c0', marginBottom: '16px', fontSize: '15px' }}>Votre plateforme de formation réglementaire</p>
-        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'rgba(233,30,140,0.15)', border: '1px solid rgba(233,30,140,0.3)', borderRadius: '20px', padding: '6px 16px' }}>
-          <span style={{ color: '#e91e8c', fontSize: '13px', fontWeight: '700' }}>{readyModules} module disponible</span>
-          <span style={{ color: '#e8d5c0', fontSize: '13px' }}>· {totalModules - readyModules} à venir · {THEMES.length} thématiques</span>
+      {/* HERO bandeau image */}
+      <div style={{ position: 'relative', minHeight: '180px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
+        <img src={HERO_IMAGE} alt="Hub Academy" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} onError={e => { (e.target as HTMLImageElement).style.display = 'none' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'rgba(61,32,16,0.55)' }} />
+        <div style={{ position: 'relative', textAlign: 'center', padding: '32px' }}>
+          <h1 style={{ fontSize: '28px', fontWeight: '800', marginBottom: '6px', color: 'white' }}>
+            Bienvenue sur <span style={{ color: '#e91e8c' }}>Hub Academy</span> 🎓
+          </h1>
+          <p style={{ color: '#e8d5c0', marginBottom: '16px', fontSize: '15px' }}>Votre plateforme de formation réglementaire</p>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'rgba(233,30,140,0.15)', border: '1px solid rgba(233,30,140,0.3)', borderRadius: '20px', padding: '6px 16px' }}>
+            <span style={{ color: '#e91e8c', fontSize: '13px', fontWeight: '700' }}>{readyModules} module disponible</span>
+            <span style={{ color: '#e8d5c0', fontSize: '13px' }}>· {totalModules - readyModules} à venir · {THEMES.length} thématiques</span>
+          </div>
         </div>
       </div>
 
