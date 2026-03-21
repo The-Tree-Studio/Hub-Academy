@@ -28,7 +28,7 @@ const CERTIFICATIONS: Record<string, { fr: string; en: string; emoji: string; de
 // ─── THEMES FR ───────────────────────────────────────────────────────────────
 const THEMES_FR = [
   {
-    titre: "Anti-blanchiment d'argent", emoji: '🛡️', couleur: '#e91e8c',
+    titre: "Anti-blanchiment d'argent", emoji: '🛡️', couleur: '#16a34a',
     modules: [
       { title: 'Les grands principes', icon: '📖', slug: 'aml-grands-principes', ready: false },
       { title: 'AML/KYC Rules', icon: '🔍', slug: 'aml-kyc', ready: true },
@@ -139,7 +139,7 @@ const THEMES_FR_CLEAN = THEMES_FR.filter((_, i) => i !== 9)
 // ─── THEMES EN ───────────────────────────────────────────────────────────────
 const THEMES_EN = [
   {
-    titre: "Anti-Money Laundering", emoji: '🛡️', couleur: '#e91e8c',
+    titre: "Anti-Money Laundering", emoji: '🛡️', couleur: '#16a34a',
     modules: [
       { title: 'Key Principles', icon: '📖', slug: 'aml-grands-principes', ready: false },
       { title: 'AML/KYC Rules', icon: '🔍', slug: 'aml-kyc', ready: true },
@@ -297,13 +297,13 @@ export default function Home() {
   const rankIndex = Math.min(Math.floor(totalPoints / 100), t.ranks.length - 1)
 
   if (loading) return (
-    <div style={{ minHeight: '100vh', background: '#faf6f0', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#3d2010', fontSize: '18px' }}>
+    <div style={{ minHeight: '100vh', background: '#f0fdf4', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#14532d', fontSize: '18px' }}>
       Chargement...
     </div>
   )
 
   return (
-    <div style={{ minHeight: '100vh', background: '#faf6f0', display: 'flex', fontFamily: 'sans-serif', color: '#3d2010' }}>
+    <div style={{ minHeight: '100vh', background: '#f0fdf4', display: 'flex', fontFamily: 'sans-serif', color: '#14532d' }}>
 
       {/* ── SIDEBAR IMAGE ── */}
       <div style={{ width: '380px', minWidth: '380px', position: 'sticky', top: 0, height: '100vh', flexShrink: 0, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
@@ -316,18 +316,18 @@ export default function Home() {
           {/* Logo */}
           <div style={{ marginBottom: '40px' }}>
             <div style={{ fontSize: '36px', marginBottom: '8px' }}>🎓</div>
-            <h1 style={{ color: '#e91e8c', fontWeight: '800', fontSize: '22px', margin: '0 0 4px', lineHeight: 1.2 }}>Hub Academy</h1>
-            <p style={{ color: '#e8d5c0', fontSize: '12px', margin: 0, opacity: 0.8 }}>{t.siteSubtitle}</p>
+            <h1 style={{ color: '#16a34a', fontWeight: '800', fontSize: '22px', margin: '0 0 4px', lineHeight: 1.2 }}>Hub Academy</h1>
+            <p style={{ color: '#bbf7d0', fontSize: '12px', margin: 0, opacity: 0.8 }}>{t.siteSubtitle}</p>
           </div>
 
           {/* Nav */}
           <nav style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: 'auto' }}>
-            <button onClick={() => setView('home')} style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '12px 16px', borderRadius: '10px', border: 'none', cursor: 'pointer', textAlign: 'left', background: view === 'home' ? 'rgba(233,30,140,0.25)' : 'transparent', color: view === 'home' ? '#e91e8c' : '#e8d5c0', fontWeight: view === 'home' ? '700' : '400', fontSize: '14px', transition: 'all 0.2s' }}>
+            <button onClick={() => setView('home')} style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '12px 16px', borderRadius: '10px', border: 'none', cursor: 'pointer', textAlign: 'left', background: view === 'home' ? 'rgba(22,163,74,0.25)' : 'transparent', color: view === 'home' ? '#16a34a' : '#bbf7d0', fontWeight: view === 'home' ? '700' : '400', fontSize: '14px', transition: 'all 0.2s' }}>
               <span>📚</span> {lang === 'fr' ? 'Formations' : 'Training'}
             </button>
-            <button onClick={() => setView('dashboard')} style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '12px 16px', borderRadius: '10px', border: 'none', cursor: 'pointer', textAlign: 'left', background: view === 'dashboard' ? 'rgba(233,30,140,0.25)' : 'transparent', color: view === 'dashboard' ? '#e91e8c' : '#e8d5c0', fontWeight: view === 'dashboard' ? '700' : '400', fontSize: '14px', transition: 'all 0.2s' }}>
+            <button onClick={() => setView('dashboard')} style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '12px 16px', borderRadius: '10px', border: 'none', cursor: 'pointer', textAlign: 'left', background: view === 'dashboard' ? 'rgba(22,163,74,0.25)' : 'transparent', color: view === 'dashboard' ? '#16a34a' : '#bbf7d0', fontWeight: view === 'dashboard' ? '700' : '400', fontSize: '14px', transition: 'all 0.2s' }}>
               <span>🏆</span> {t.dashboard}
-              {earnedCerts.length > 0 && <span style={{ marginLeft: 'auto', background: '#e91e8c', color: 'white', fontSize: '10px', fontWeight: '800', borderRadius: '20px', padding: '1px 6px' }}>{earnedCerts.length}</span>}
+              {earnedCerts.length > 0 && <span style={{ marginLeft: 'auto', background: '#16a34a', color: 'white', fontSize: '10px', fontWeight: '800', borderRadius: '20px', padding: '1px 6px' }}>{earnedCerts.length}</span>}
             </button>
           </nav>
 
@@ -335,11 +335,11 @@ export default function Home() {
           <div style={{ marginTop: '24px', borderTop: '1px solid rgba(255,255,255,0.15)', paddingTop: '20px' }}>
             {/* Language */}
             <div style={{ display: 'flex', background: 'rgba(255,255,255,0.1)', borderRadius: '20px', padding: '3px', gap: '2px', marginBottom: '12px' }}>
-              <button onClick={() => { saveLang('fr'); setLang('fr') }} style={{ flex: 1, padding: '6px', borderRadius: '16px', border: 'none', cursor: 'pointer', fontSize: '13px', fontWeight: '700', background: lang === 'fr' ? '#e91e8c' : 'transparent', color: lang === 'fr' ? 'white' : '#e8d5c0', transition: 'all 0.2s' }}>🇫🇷 FR</button>
-              <button onClick={() => { saveLang('en'); setLang('en') }} style={{ flex: 1, padding: '6px', borderRadius: '16px', border: 'none', cursor: 'pointer', fontSize: '13px', fontWeight: '700', background: lang === 'en' ? '#e91e8c' : 'transparent', color: lang === 'en' ? 'white' : '#e8d5c0', transition: 'all 0.2s' }}>🇬🇧 EN</button>
+              <button onClick={() => { saveLang('fr'); setLang('fr') }} style={{ flex: 1, padding: '6px', borderRadius: '16px', border: 'none', cursor: 'pointer', fontSize: '13px', fontWeight: '700', background: lang === 'fr' ? '#16a34a' : 'transparent', color: lang === 'fr' ? 'white' : '#bbf7d0', transition: 'all 0.2s' }}>🇫🇷 FR</button>
+              <button onClick={() => { saveLang('en'); setLang('en') }} style={{ flex: 1, padding: '6px', borderRadius: '16px', border: 'none', cursor: 'pointer', fontSize: '13px', fontWeight: '700', background: lang === 'en' ? '#16a34a' : 'transparent', color: lang === 'en' ? 'white' : '#bbf7d0', transition: 'all 0.2s' }}>🇬🇧 EN</button>
             </div>
-            <p style={{ color: '#e8d5c0', fontSize: '12px', margin: '0 0 10px', opacity: 0.7, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{user?.email}</p>
-            <button onClick={handleLogout} style={{ width: '100%', padding: '8px', background: 'transparent', border: '1px solid rgba(233,30,140,0.5)', borderRadius: '8px', color: '#e91e8c', cursor: 'pointer', fontSize: '13px', fontWeight: '600' }}>
+            <p style={{ color: '#bbf7d0', fontSize: '12px', margin: '0 0 10px', opacity: 0.7, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{user?.email}</p>
+            <button onClick={handleLogout} style={{ width: '100%', padding: '8px', background: 'transparent', border: '1px solid rgba(22,163,74,0.5)', borderRadius: '8px', color: '#16a34a', cursor: 'pointer', fontSize: '13px', fontWeight: '600' }}>
               {t.logout}
             </button>
           </div>
@@ -354,12 +354,12 @@ export default function Home() {
           <div style={{ padding: '40px 32px', maxWidth: '1000px' }}>
             {/* Header */}
             <div style={{ marginBottom: '36px' }}>
-              <h2 style={{ fontSize: '26px', fontWeight: '800', color: '#3d2010', margin: '0 0 6px' }}>
+              <h2 style={{ fontSize: '26px', fontWeight: '800', color: '#14532d', margin: '0 0 6px' }}>
                 {lang === 'fr' ? 'Tous les modules' : 'All modules'}
               </h2>
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#f0e6d8', borderRadius: '20px', padding: '5px 14px' }}>
-                <span style={{ color: '#e91e8c', fontSize: '13px', fontWeight: '700' }}>{readyModules} {t.available}</span>
-                <span style={{ color: '#9c7c5e', fontSize: '13px' }}>· {totalModules - readyModules} {t.coming} · {THEMES.length} {t.themes}</span>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#dcfce7', borderRadius: '20px', padding: '5px 14px' }}>
+                <span style={{ color: '#16a34a', fontSize: '13px', fontWeight: '700' }}>{readyModules} {t.available}</span>
+                <span style={{ color: '#4b7c5e', fontSize: '13px' }}>· {totalModules - readyModules} {t.coming} · {THEMES.length} {t.themes}</span>
               </div>
             </div>
 
@@ -369,35 +369,35 @@ export default function Home() {
                 const isOpen = !!openThemes[ti]
                 const readyCount = theme.modules.filter(m => m.ready).length
                 return (
-                  <div key={ti} style={{ background: 'white', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 2px 12px rgba(61,32,16,0.07)', border: `1.5px solid ${isOpen ? '#3d2010' : '#e8d5c0'}`, transition: 'all 0.2s' }}>
-                    <button onClick={() => toggleTheme(ti)} style={{ width: '100%', display: 'flex', alignItems: 'center', gap: '14px', padding: '16px 20px', background: isOpen ? '#3d2010' : 'white', border: 'none', cursor: 'pointer', textAlign: 'left', transition: 'background 0.2s' }}>
-                      <div style={{ width: '38px', height: '38px', borderRadius: '10px', background: isOpen ? 'rgba(255,255,255,0.12)' : '#f0e6d8', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px', flexShrink: 0 }}>{theme.emoji}</div>
+                  <div key={ti} style={{ background: 'white', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 2px 12px rgba(61,32,16,0.07)', border: `1.5px solid ${isOpen ? '#14532d' : '#bbf7d0'}`, transition: 'all 0.2s' }}>
+                    <button onClick={() => toggleTheme(ti)} style={{ width: '100%', display: 'flex', alignItems: 'center', gap: '14px', padding: '16px 20px', background: isOpen ? '#14532d' : 'white', border: 'none', cursor: 'pointer', textAlign: 'left', transition: 'background 0.2s' }}>
+                      <div style={{ width: '38px', height: '38px', borderRadius: '10px', background: isOpen ? 'rgba(255,255,255,0.12)' : '#dcfce7', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px', flexShrink: 0 }}>{theme.emoji}</div>
                       <div style={{ flex: 1 }}>
-                        <div style={{ fontWeight: '700', fontSize: '15px', color: isOpen ? 'white' : '#3d2010', marginBottom: '2px' }}>{theme.titre}</div>
-                        <div style={{ fontSize: '12px', color: isOpen ? '#e8d5c0' : '#9c7c5e' }}>
+                        <div style={{ fontWeight: '700', fontSize: '15px', color: isOpen ? 'white' : '#14532d', marginBottom: '2px' }}>{theme.titre}</div>
+                        <div style={{ fontSize: '12px', color: isOpen ? '#bbf7d0' : '#4b7c5e' }}>
                           {theme.modules.length} {theme.modules.length > 1 ? t.modulesP : t.modules}
-                          {readyCount > 0 && <span style={{ color: '#e91e8c', fontWeight: '600' }}> · {readyCount} {t.available}</span>}
+                          {readyCount > 0 && <span style={{ color: '#16a34a', fontWeight: '600' }}> · {readyCount} {t.available}</span>}
                         </div>
                       </div>
-                      {readyCount > 0 && <span style={{ background: '#e91e8c', color: 'white', fontSize: '11px', fontWeight: '700', borderRadius: '20px', padding: '3px 10px', flexShrink: 0 }}>✓ {readyCount}</span>}
-                      <div style={{ fontSize: '16px', color: isOpen ? '#e91e8c' : '#9c7c5e', transition: 'transform 0.3s', transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)', flexShrink: 0 }}>▾</div>
+                      {readyCount > 0 && <span style={{ background: '#16a34a', color: 'white', fontSize: '11px', fontWeight: '700', borderRadius: '20px', padding: '3px 10px', flexShrink: 0 }}>✓ {readyCount}</span>}
+                      <div style={{ fontSize: '16px', color: isOpen ? '#16a34a' : '#4b7c5e', transition: 'transform 0.3s', transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)', flexShrink: 0 }}>▾</div>
                     </button>
 
                     {isOpen && (
-                      <div style={{ padding: '0 16px 16px', borderTop: '1px solid #e8d5c0', background: '#faf6f0' }}>
+                      <div style={{ padding: '0 16px 16px', borderTop: '1px solid #bbf7d0', background: '#f0fdf4' }}>
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: '10px', paddingTop: '14px' }}>
                           {theme.modules.map((m, i) => (
                             <div key={i}
                               onClick={() => m.ready && router.push(`/modules/${m.slug}`)}
-                              style={{ background: '#faf6f0', border: m.ready ? `1.5px solid ${theme.couleur}40` : '1.5px solid #e8d5c0', borderRadius: '12px', padding: '14px', cursor: m.ready ? 'pointer' : 'default', transition: 'all 0.2s', opacity: m.ready ? 1 : 0.5, position: 'relative' } as React.CSSProperties}
+                              style={{ background: '#f0fdf4', border: m.ready ? `1.5px solid ${theme.couleur}40` : '1.5px solid #bbf7d0', borderRadius: '12px', padding: '14px', cursor: m.ready ? 'pointer' : 'default', transition: 'all 0.2s', opacity: m.ready ? 1 : 0.5, position: 'relative' } as React.CSSProperties}
                               onMouseOver={e => { if (m.ready) { e.currentTarget.style.borderColor = theme.couleur; e.currentTarget.style.boxShadow = `0 4px 16px ${theme.couleur}20`; e.currentTarget.style.transform = 'translateY(-2px)' } }}
                               onMouseOut={e => { if (m.ready) { e.currentTarget.style.borderColor = `${theme.couleur}40`; e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.transform = 'translateY(0)' } }}>
-                              {m.ready && <span style={{ position: 'absolute', top: '6px', right: '6px', background: '#e91e8c', color: 'white', fontSize: '9px', fontWeight: '700', borderRadius: '20px', padding: '1px 6px' }}>{t.dispo}</span>}
+                              {m.ready && <span style={{ position: 'absolute', top: '6px', right: '6px', background: '#16a34a', color: 'white', fontSize: '9px', fontWeight: '700', borderRadius: '20px', padding: '1px 6px' }}>{t.dispo}</span>}
                               {completedModules.includes(m.slug) && <span style={{ position: 'absolute', top: '6px', left: '6px', fontSize: '12px' }}>✅</span>}
                               <div style={{ fontSize: '24px', marginBottom: '6px' }}>{m.icon}</div>
-                              <div style={{ fontWeight: '700', fontSize: '12px', color: '#3d2010', lineHeight: 1.3, marginBottom: '3px' }}>{m.title}</div>
-                              <div style={{ fontSize: '10px', color: '#9c7c5e' }}>{m.ready ? t.quizzes : t.soon}</div>
-                              {m.ready && <div style={{ marginTop: '8px', background: '#f0e6d8', borderRadius: '3px', height: '3px' }}><div style={{ background: completedModules.includes(m.slug) ? '#059669' : '#e91e8c', borderRadius: '3px', height: '3px', width: completedModules.includes(m.slug) ? '100%' : '0%' }}/></div>}
+                              <div style={{ fontWeight: '700', fontSize: '12px', color: '#14532d', lineHeight: 1.3, marginBottom: '3px' }}>{m.title}</div>
+                              <div style={{ fontSize: '10px', color: '#4b7c5e' }}>{m.ready ? t.quizzes : t.soon}</div>
+                              {m.ready && <div style={{ marginTop: '8px', background: '#dcfce7', borderRadius: '3px', height: '3px' }}><div style={{ background: completedModules.includes(m.slug) ? '#059669' : '#16a34a', borderRadius: '3px', height: '3px', width: completedModules.includes(m.slug) ? '100%' : '0%' }}/></div>}
                             </div>
                           ))}
                         </div>
@@ -413,55 +413,55 @@ export default function Home() {
         {/* ── DASHBOARD VIEW ── */}
         {view === 'dashboard' && (
           <div style={{ padding: '40px 32px', maxWidth: '900px' }}>
-            <h2 style={{ fontSize: '26px', fontWeight: '800', color: '#3d2010', margin: '0 0 6px' }}>{t.dashboard}</h2>
-            <p style={{ color: '#9c7c5e', marginBottom: '32px', fontSize: '15px' }}>{user?.email}</p>
+            <h2 style={{ fontSize: '26px', fontWeight: '800', color: '#14532d', margin: '0 0 6px' }}>{t.dashboard}</h2>
+            <p style={{ color: '#4b7c5e', marginBottom: '32px', fontSize: '15px' }}>{user?.email}</p>
 
             {/* Score + Rank */}
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '16px', marginBottom: '32px' }}>
               {[
-                { label: lang === 'fr' ? 'Certifications' : 'Certifications', value: earnedCerts.length, icon: '🏅', color: '#e91e8c' },
+                { label: lang === 'fr' ? 'Certifications' : 'Certifications', value: earnedCerts.length, icon: '🏅', color: '#16a34a' },
                 { label: t.totalScore, value: totalPoints + ' pts', icon: '⭐', color: '#7c3aed' },
                 { label: t.rank, value: t.ranks[rankIndex], icon: '🎓', color: '#059669', small: true },
               ].map((card, i) => (
-                <div key={i} style={{ background: 'white', borderRadius: '16px', padding: '20px', border: '1.5px solid #e8d5c0', textAlign: 'center' }}>
+                <div key={i} style={{ background: 'white', borderRadius: '16px', padding: '20px', border: '1.5px solid #bbf7d0', textAlign: 'center' }}>
                   <div style={{ fontSize: '32px', marginBottom: '8px' }}>{card.icon}</div>
                   <div style={{ fontSize: card.small ? '14px' : '28px', fontWeight: '800', color: card.color, marginBottom: '4px' }}>{card.value}</div>
-                  <div style={{ fontSize: '12px', color: '#9c7c5e' }}>{card.label}</div>
+                  <div style={{ fontSize: '12px', color: '#4b7c5e' }}>{card.label}</div>
                 </div>
               ))}
             </div>
 
             {/* Progress bar */}
-            <div style={{ background: 'white', borderRadius: '16px', padding: '20px', border: '1.5px solid #e8d5c0', marginBottom: '32px' }}>
+            <div style={{ background: 'white', borderRadius: '16px', padding: '20px', border: '1.5px solid #bbf7d0', marginBottom: '32px' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
-                <span style={{ fontWeight: '700', color: '#3d2010', fontSize: '14px' }}>{lang === 'fr' ? 'Progression globale' : 'Overall progress'}</span>
-                <span style={{ color: '#e91e8c', fontWeight: '700', fontSize: '14px' }}>{earnedCerts.length}/{Object.keys(CERTIFICATIONS).length}</span>
+                <span style={{ fontWeight: '700', color: '#14532d', fontSize: '14px' }}>{lang === 'fr' ? 'Progression globale' : 'Overall progress'}</span>
+                <span style={{ color: '#16a34a', fontWeight: '700', fontSize: '14px' }}>{earnedCerts.length}/{Object.keys(CERTIFICATIONS).length}</span>
               </div>
-              <div style={{ background: '#f0e6d8', borderRadius: '8px', height: '12px', overflow: 'hidden' }}>
-                <div style={{ background: 'linear-gradient(90deg, #e91e8c, #f472b6)', height: '12px', width: `${(earnedCerts.length / Object.keys(CERTIFICATIONS).length) * 100}%`, borderRadius: '8px', transition: 'width 1s ease' }}/>
+              <div style={{ background: '#dcfce7', borderRadius: '8px', height: '12px', overflow: 'hidden' }}>
+                <div style={{ background: 'linear-gradient(90deg, #16a34a, #4ade80)', height: '12px', width: `${(earnedCerts.length / Object.keys(CERTIFICATIONS).length) * 100}%`, borderRadius: '8px', transition: 'width 1s ease' }}/>
               </div>
             </div>
 
             {/* Certifications */}
-            <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#3d2010', marginBottom: '16px' }}>{t.yourCerts}</h3>
+            <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#14532d', marginBottom: '16px' }}>{t.yourCerts}</h3>
             {earnedCerts.length === 0 ? (
-              <div style={{ background: 'white', borderRadius: '16px', padding: '48px', textAlign: 'center', border: '2px dashed #e8d5c0' }}>
+              <div style={{ background: 'white', borderRadius: '16px', padding: '48px', textAlign: 'center', border: '2px dashed #bbf7d0' }}>
                 <div style={{ fontSize: '48px', marginBottom: '16px' }}>🌱</div>
-                <p style={{ fontWeight: '700', color: '#3d2010', fontSize: '18px', margin: '0 0 8px' }}>{t.noModules}</p>
-                <p style={{ color: '#9c7c5e', margin: 0, fontSize: '14px' }}>{t.noModulesDesc}</p>
-                <button onClick={() => setView('home')} style={{ marginTop: '20px', padding: '12px 24px', background: '#e91e8c', border: 'none', borderRadius: '10px', color: 'white', fontWeight: '700', cursor: 'pointer', fontSize: '14px' }}>
+                <p style={{ fontWeight: '700', color: '#14532d', fontSize: '18px', margin: '0 0 8px' }}>{t.noModules}</p>
+                <p style={{ color: '#4b7c5e', margin: 0, fontSize: '14px' }}>{t.noModulesDesc}</p>
+                <button onClick={() => setView('home')} style={{ marginTop: '20px', padding: '12px 24px', background: '#16a34a', border: 'none', borderRadius: '10px', color: 'white', fontWeight: '700', cursor: 'pointer', fontSize: '14px' }}>
                   {lang === 'fr' ? 'Voir les modules →' : 'See modules →'}
                 </button>
               </div>
             ) : (
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '16px' }}>
                 {earnedCerts.map(({ slug, cert }) => (
-                  <div key={slug} style={{ background: 'white', borderRadius: '16px', padding: '24px', border: '2px solid #e91e8c30', boxShadow: '0 4px 20px rgba(233,30,140,0.08)', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
-                    <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '4px', background: 'linear-gradient(90deg, #e91e8c, #f472b6)' }}/>
+                  <div key={slug} style={{ background: 'white', borderRadius: '16px', padding: '24px', border: '2px solid #16a34a30', boxShadow: '0 4px 20px rgba(22,163,74,0.08)', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+                    <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '4px', background: 'linear-gradient(90deg, #16a34a, #4ade80)' }}/>
                     <div style={{ fontSize: '40px', marginBottom: '10px' }}>{cert.emoji}</div>
-                    <div style={{ fontWeight: '800', fontSize: '14px', color: '#3d2010', marginBottom: '4px', lineHeight: 1.3 }}>{lang === 'fr' ? cert.fr : cert.en}</div>
-                    <div style={{ fontSize: '11px', color: '#9c7c5e', marginBottom: '12px' }}>{lang === 'fr' ? cert.desc_fr : cert.desc_en}</div>
-                    <div style={{ background: '#e91e8c', color: 'white', borderRadius: '20px', padding: '4px 12px', fontSize: '11px', fontWeight: '700', display: 'inline-block' }}>
+                    <div style={{ fontWeight: '800', fontSize: '14px', color: '#14532d', marginBottom: '4px', lineHeight: 1.3 }}>{lang === 'fr' ? cert.fr : cert.en}</div>
+                    <div style={{ fontSize: '11px', color: '#4b7c5e', marginBottom: '12px' }}>{lang === 'fr' ? cert.desc_fr : cert.desc_en}</div>
+                    <div style={{ background: '#16a34a', color: 'white', borderRadius: '20px', padding: '4px 12px', fontSize: '11px', fontWeight: '700', display: 'inline-block' }}>
                       ✓ {lang === 'fr' ? 'Obtenu' : 'Earned'}
                     </div>
                   </div>
@@ -470,14 +470,14 @@ export default function Home() {
             )}
 
             {/* Locked certifications */}
-            <h3 style={{ fontSize: '16px', fontWeight: '700', color: '#9c7c5e', marginTop: '32px', marginBottom: '16px' }}>{lang === 'fr' ? 'À débloquer' : 'To unlock'}</h3>
+            <h3 style={{ fontSize: '16px', fontWeight: '700', color: '#4b7c5e', marginTop: '32px', marginBottom: '16px' }}>{lang === 'fr' ? 'À débloquer' : 'To unlock'}</h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '12px' }}>
               {Object.entries(CERTIFICATIONS).filter(([slug]) => !completedModules.includes(slug)).map(([slug, cert]) => (
-                <div key={slug} style={{ background: '#faf6f0', borderRadius: '12px', padding: '16px', border: '1.5px solid #e8d5c0', opacity: 0.6, display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <div key={slug} style={{ background: '#f0fdf4', borderRadius: '12px', padding: '16px', border: '1.5px solid #bbf7d0', opacity: 0.6, display: 'flex', alignItems: 'center', gap: '12px' }}>
                   <div style={{ fontSize: '28px', filter: 'grayscale(1)' }}>{cert.emoji}</div>
                   <div>
-                    <div style={{ fontWeight: '700', fontSize: '12px', color: '#3d2010' }}>{lang === 'fr' ? cert.fr : cert.en}</div>
-                    <div style={{ fontSize: '11px', color: '#9c7c5e' }}>🔒 {lang === 'fr' ? 'À débloquer' : 'Locked'}</div>
+                    <div style={{ fontWeight: '700', fontSize: '12px', color: '#14532d' }}>{lang === 'fr' ? cert.fr : cert.en}</div>
+                    <div style={{ fontSize: '11px', color: '#4b7c5e' }}>🔒 {lang === 'fr' ? 'À débloquer' : 'Locked'}</div>
                   </div>
                 </div>
               ))}

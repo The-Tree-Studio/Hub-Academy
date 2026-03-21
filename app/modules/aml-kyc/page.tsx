@@ -144,7 +144,7 @@ export default function ModuleAmlKyc() {
   const [vfScore, setVfScore] = useState(0)
   const [vfAnimation, setVfAnimation] = useState<'correct'|'wrong'|null>(null)
 
-  const C = '#e91e8c'
+  const C = '#16a34a'
 
   function initQuizzes(l: 'fr'|'en') {
     const bm = l==='fr'?BANQUE_MATCHING_FR:BANQUE_MATCHING_EN
@@ -192,18 +192,18 @@ export default function ModuleAmlKyc() {
     }, 2200)
   }
 
-  const base:React.CSSProperties={minHeight:'100vh',background:'#faf6f0',fontFamily:"'Segoe UI',system-ui,sans-serif",color:'#3d2010'}
+  const base:React.CSSProperties={minHeight:'100vh',background:'#f0fdf4',fontFamily:"'Segoe UI',system-ui,sans-serif",color:'#14532d'}
 
   const NavBar=()=>(
-    <div style={{background:'#3d2010',padding:'12px 24px',display:'flex',alignItems:'center',gap:'12px',boxShadow:'0 2px 8px rgba(61,32,16,0.2)'}}>
-      <button onClick={()=>router.push('/')} style={{background:'none',border:'1px solid #e91e8c',borderRadius:'8px',padding:'6px 12px',color:'#e91e8c',cursor:'pointer',fontSize:'14px'}}>{t.home}</button>
-      <span style={{color:'#e91e8c',fontWeight:'700',fontSize:'16px'}}>🔍 {t.title}</span>
+    <div style={{background:'#14532d',padding:'12px 24px',display:'flex',alignItems:'center',gap:'12px',boxShadow:'0 2px 8px rgba(61,32,16,0.2)'}}>
+      <button onClick={()=>router.push('/')} style={{background:'none',border:'1px solid #16a34a',borderRadius:'8px',padding:'6px 12px',color:'#16a34a',cursor:'pointer',fontSize:'14px'}}>{t.home}</button>
+      <span style={{color:'#16a34a',fontWeight:'700',fontSize:'16px'}}>🔍 {t.title}</span>
       <div style={{marginLeft:'auto',display:'flex',alignItems:'center',gap:'10px'}}>
         <div style={{display:'flex',background:'rgba(255,255,255,0.1)',borderRadius:'16px',padding:'2px',gap:'2px'}}>
-          <button onClick={()=>switchLang('fr')} style={{padding:'4px 10px',borderRadius:'12px',border:'none',cursor:'pointer',fontSize:'12px',fontWeight:'700',background:lang==='fr'?C:'transparent',color:lang==='fr'?'white':'#e8d5c0',transition:'all 0.2s'}}>🇫🇷 FR</button>
-          <button onClick={()=>switchLang('en')} style={{padding:'4px 10px',borderRadius:'12px',border:'none',cursor:'pointer',fontSize:'12px',fontWeight:'700',background:lang==='en'?C:'transparent',color:lang==='en'?'white':'#e8d5c0',transition:'all 0.2s'}}>🇬🇧 EN</button>
+          <button onClick={()=>switchLang('fr')} style={{padding:'4px 10px',borderRadius:'12px',border:'none',cursor:'pointer',fontSize:'12px',fontWeight:'700',background:lang==='fr'?C:'transparent',color:lang==='fr'?'white':'#bbf7d0',transition:'all 0.2s'}}>🇫🇷 FR</button>
+          <button onClick={()=>switchLang('en')} style={{padding:'4px 10px',borderRadius:'12px',border:'none',cursor:'pointer',fontSize:'12px',fontWeight:'700',background:lang==='en'?C:'transparent',color:lang==='en'?'white':'#bbf7d0',transition:'all 0.2s'}}>🇬🇧 EN</button>
         </div>
-        <span style={{background:'#faf6f0',border:'1px solid #e8d5c0',borderRadius:'20px',padding:'4px 14px',fontSize:'13px',color:C,fontWeight:'600'}}>⭐ {score} {t.pts}</span>
+        <span style={{background:'#f0fdf4',border:'1px solid #bbf7d0',borderRadius:'20px',padding:'4px 14px',fontSize:'13px',color:C,fontWeight:'600'}}>⭐ {score} {t.pts}</span>
       </div>
     </div>
   )
@@ -212,23 +212,23 @@ export default function ModuleAmlKyc() {
     <div style={base}><NavBar/>
       <div style={{maxWidth:'680px',margin:'0 auto',padding:'60px 24px',textAlign:'center'}}>
         <div style={{fontSize:'72px',marginBottom:'20px'}}>🔍</div>
-        <h1 style={{fontSize:'32px',fontWeight:'800',color:'#3d2010',marginBottom:'12px'}}>{t.title}</h1>
-        <p style={{fontSize:'18px',color:'#9c7c5e',marginBottom:'32px'}}>{t.subtitle}</p>
-        <div style={{background:'white',border:'1px solid #e8d5c0',borderRadius:'16px',padding:'24px',marginBottom:'32px',textAlign:'left'}}>
+        <h1 style={{fontSize:'32px',fontWeight:'800',color:'#14532d',marginBottom:'12px'}}>{t.title}</h1>
+        <p style={{fontSize:'18px',color:'#4b7c5e',marginBottom:'32px'}}>{t.subtitle}</p>
+        <div style={{background:'white',border:'1px solid #bbf7d0',borderRadius:'16px',padding:'24px',marginBottom:'32px',textAlign:'left'}}>
           <p style={{margin:'0 0 16px',fontWeight:'700',color:C}}>{t.learn}</p>
           {t.learnItems.map((item,i)=>(
-            <div key={i} style={{display:'flex',gap:'10px',padding:'6px 0',borderBottom:i<t.learnItems.length-1?'1px solid #f0e6d8':'none'}}>
+            <div key={i} style={{display:'flex',gap:'10px',padding:'6px 0',borderBottom:i<t.learnItems.length-1?'1px solid #dcfce7':'none'}}>
               <span style={{color:C,fontWeight:'700'}}>✓</span>
-              <span style={{color:'#5c3d2e',fontSize:'15px'}}>{item}</span>
+              <span style={{color:'#166534',fontSize:'15px'}}>{item}</span>
             </div>
           ))}
         </div>
         <div style={{display:'flex',gap:'12px',justifyContent:'center',marginBottom:'32px',flexWrap:'wrap'}}>
           {[{label:t.fiches,icon:'📖'},{label:t.quiz,icon:'🎮'},{label:t.time,icon:'⏱️'}].map((b,i)=>(
-            <div key={i} style={{background:'white',border:'1px solid #e8d5c0',borderRadius:'12px',padding:'10px 20px',fontSize:'14px',color:'#9c7c5e',display:'flex',alignItems:'center',gap:'6px'}}>{b.icon} {b.label}</div>
+            <div key={i} style={{background:'white',border:'1px solid #bbf7d0',borderRadius:'12px',padding:'10px 20px',fontSize:'14px',color:'#4b7c5e',display:'flex',alignItems:'center',gap:'6px'}}>{b.icon} {b.label}</div>
           ))}
         </div>
-        <button onClick={()=>setPhase('fiches')} style={{background:C,color:'white',border:'none',borderRadius:'12px',padding:'16px 48px',fontSize:'18px',fontWeight:'700',cursor:'pointer',boxShadow:'0 4px 20px rgba(233,30,140,0.35)'}}>{t.start}</button>
+        <button onClick={()=>setPhase('fiches')} style={{background:C,color:'white',border:'none',borderRadius:'12px',padding:'16px 48px',fontSize:'18px',fontWeight:'700',cursor:'pointer',boxShadow:'0 4px 20px rgba(22,163,74,0.35)'}}>{t.start}</button>
       </div>
     </div>
   )
@@ -237,31 +237,31 @@ export default function ModuleAmlKyc() {
     const fiche=FICHES[ficheIndex]; const progress=((ficheIndex+1)/FICHES.length)*100
     return (
       <div style={base}><NavBar/>
-        <div style={{background:'#e8d5c0',height:'6px'}}><div style={{background:C,height:'6px',width:`${progress}%`,transition:'width 0.4s ease',borderRadius:'0 4px 4px 0'}}/></div>
+        <div style={{background:'#bbf7d0',height:'6px'}}><div style={{background:C,height:'6px',width:`${progress}%`,transition:'width 0.4s ease',borderRadius:'0 4px 4px 0'}}/></div>
         <div style={{maxWidth:'680px',margin:'0 auto',padding:'32px 24px'}}>
           <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:'20px'}}>
-            <span style={{fontSize:'13px',color:'#9c7c5e',fontWeight:'600'}}>{lang==='fr'?'FICHE':'CARD'} {ficheIndex+1} / {FICHES.length}</span>
+            <span style={{fontSize:'13px',color:'#4b7c5e',fontWeight:'600'}}>{lang==='fr'?'FICHE':'CARD'} {ficheIndex+1} / {FICHES.length}</span>
             <div style={{display:'flex',gap:'4px',flexWrap:'wrap',justifyContent:'flex-end',maxWidth:'200px'}}>
-              {FICHES.map((_,i)=>(<div key={i} onClick={()=>{setFicheIndex(i);setPlusLoinOpen(false)}} style={{width:'8px',height:'8px',borderRadius:'50%',background:i===ficheIndex?C:i<ficheIndex?C+'60':'#e8d5c0',cursor:'pointer',transition:'all 0.2s'}}/>))}
+              {FICHES.map((_,i)=>(<div key={i} onClick={()=>{setFicheIndex(i);setPlusLoinOpen(false)}} style={{width:'8px',height:'8px',borderRadius:'50%',background:i===ficheIndex?C:i<ficheIndex?C+'60':'#bbf7d0',cursor:'pointer',transition:'all 0.2s'}}/>))}
             </div>
           </div>
-          <div style={{background:'white',borderRadius:'20px',boxShadow:'0 8px 40px rgba(233,30,140,0.12)',border:`2px solid ${C}30`,overflow:'hidden',marginBottom:'20px'}}>
+          <div style={{background:'white',borderRadius:'20px',boxShadow:'0 8px 40px rgba(22,163,74,0.12)',border:`2px solid ${C}30`,overflow:'hidden',marginBottom:'20px'}}>
             <div style={{background:C,padding:'24px',textAlign:'center'}}>
               <div style={{fontSize:'48px',marginBottom:'10px'}}>{fiche.emoji}</div>
               <h2 style={{color:'white',fontSize:'20px',fontWeight:'800',margin:0,lineHeight:1.3}}>{fiche.titre}</h2>
             </div>
             <div style={{padding:'20px'}}>
               {fiche.contenu.map((item,i)=>(
-                <div key={i} style={{display:'flex',alignItems:'flex-start',gap:'12px',padding:'12px 0',borderBottom:i<fiche.contenu.length-1?'1px solid #f0e6d8':'none'}}>
+                <div key={i} style={{display:'flex',alignItems:'flex-start',gap:'12px',padding:'12px 0',borderBottom:i<fiche.contenu.length-1?'1px solid #dcfce7':'none'}}>
                   <span style={{fontSize:'22px',minWidth:'30px',textAlign:'center'}}>{item.icon}</span>
-                  <p style={{margin:0,fontSize:'15px',lineHeight:1.6,color:'#5c3d2e'}} dangerouslySetInnerHTML={{__html:item.texte.replace(/\*\*(.*?)\*\*/g,`<strong style="color:${C}">$1</strong>`)}}/>
+                  <p style={{margin:0,fontSize:'15px',lineHeight:1.6,color:'#166534'}} dangerouslySetInnerHTML={{__html:item.texte.replace(/\*\*(.*?)\*\*/g,`<strong style="color:${C}">$1</strong>`)}}/>
                 </div>
               ))}
               <div style={{background:`${C}10`,border:`1px solid ${C}30`,borderRadius:'12px',padding:'14px',marginTop:'14px',display:'flex',gap:'10px',alignItems:'flex-start'}}>
                 <span style={{fontSize:'18px'}}>💡</span>
                 <div>
                   <p style={{margin:'0 0 4px',fontSize:'11px',fontWeight:'700',color:C,textTransform:'uppercase',letterSpacing:'1px'}}>{t.toRetain}</p>
-                  <p style={{margin:0,fontSize:'14px',color:'#5c3d2e',fontStyle:'italic'}}>{fiche.aretenir}</p>
+                  <p style={{margin:0,fontSize:'14px',color:'#166534',fontStyle:'italic'}}>{fiche.aretenir}</p>
                 </div>
               </div>
               {(fiche as any).plusLoin && (
@@ -275,7 +275,7 @@ export default function ModuleAmlKyc() {
                       {((fiche as any).plusLoin as {icon:string,texte:string}[]).map((item,i)=>(
                         <div key={i} style={{display:'flex',alignItems:'flex-start',gap:'12px',padding:'10px 0',borderBottom:i<(fiche as any).plusLoin.length-1?`1px solid ${C}20`:'none'}}>
                           <span style={{fontSize:'20px',minWidth:'28px',textAlign:'center'}}>{item.icon}</span>
-                          <p style={{margin:0,fontSize:'14px',lineHeight:1.6,color:'#5c3d2e'}} dangerouslySetInnerHTML={{__html:item.texte.replace(/\*\*(.*?)\*\*/g,`<strong style="color:${C}">$1</strong>`)}}/>
+                          <p style={{margin:0,fontSize:'14px',lineHeight:1.6,color:'#166534'}} dangerouslySetInnerHTML={{__html:item.texte.replace(/\*\*(.*?)\*\*/g,`<strong style="color:${C}">$1</strong>`)}}/>
                         </div>
                       ))}
                     </div>
@@ -285,7 +285,7 @@ export default function ModuleAmlKyc() {
             </div>
           </div>
           <div style={{display:'flex',gap:'12px'}}>
-            {ficheIndex>0 && <button onClick={()=>{setFicheIndex(i=>i-1);setPlusLoinOpen(false)}} style={{flex:1,padding:'14px',background:'white',border:'1px solid #e8d5c0',borderRadius:'12px',color:'#9c7c5e',cursor:'pointer',fontSize:'15px',fontWeight:'600'}}>{t.prev}</button>}
+            {ficheIndex>0 && <button onClick={()=>{setFicheIndex(i=>i-1);setPlusLoinOpen(false)}} style={{flex:1,padding:'14px',background:'white',border:'1px solid #bbf7d0',borderRadius:'12px',color:'#4b7c5e',cursor:'pointer',fontSize:'15px',fontWeight:'600'}}>{t.prev}</button>}
             <button onClick={()=>ficheIndex<FICHES.length-1?(setFicheIndex(i=>i+1),setPlusLoinOpen(false)):setPhase('quiz1')}
               style={{flex:2,padding:'14px',background:C,border:'none',borderRadius:'12px',color:'white',cursor:'pointer',fontSize:'16px',fontWeight:'700',boxShadow:`0 4px 16px ${C}40`}}>
               {ficheIndex<FICHES.length-1?`${t.next} (${ficheIndex+2}/${FICHES.length}) →`:t.quizBtn}
@@ -303,28 +303,28 @@ export default function ModuleAmlKyc() {
         <div style={{maxWidth:'680px',margin:'0 auto',padding:'40px 24px'}}>
           <div style={{textAlign:'center',marginBottom:'28px'}}>
             <span style={{background:'#7c3aed15',color:'#7c3aed',borderRadius:'20px',padding:'6px 16px',fontSize:'13px',fontWeight:'700',display:'inline-block',marginBottom:'12px'}}>{t.quiz1label}</span>
-            <h2 style={{fontSize:'22px',fontWeight:'800',color:'#3d2010',margin:'0 0 8px'}}>{t.quiz1title}</h2>
-            <p style={{color:'#9c7c5e',fontSize:'14px',margin:0}}>{t.quiz1sub}</p>
+            <h2 style={{fontSize:'22px',fontWeight:'800',color:'#14532d',margin:'0 0 8px'}}>{t.quiz1title}</h2>
+            <p style={{color:'#4b7c5e',fontSize:'14px',margin:0}}>{t.quiz1sub}</p>
           </div>
           {matchError && <div style={{background:'#fee2e2',border:'1px solid #fca5a5',borderRadius:'12px',padding:'12px 16px',marginBottom:'16px',color:'#dc2626',fontSize:'14px',textAlign:'center'}}>{matchError}</div>}
           <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'16px',marginBottom:'20px'}}>
             <div>
-              <p style={{fontSize:'12px',fontWeight:'700',color:'#9c7c5e',textTransform:'uppercase',letterSpacing:'1px',marginBottom:'10px'}}>{t.sigles}</p>
+              <p style={{fontSize:'12px',fontWeight:'700',color:'#4b7c5e',textTransform:'uppercase',letterSpacing:'1px',marginBottom:'10px'}}>{t.sigles}</p>
               <div style={{display:'flex',flexDirection:'column',gap:'8px'}}>
                 {activeMatching.map(m=>{const ip=!!matchPairs[m.sigle],is=matchSelected===m.sigle;return(
                   <button key={m.sigle} onClick={()=>handleMatchSigle(m.sigle)} disabled={ip}
-                    style={{padding:'14px',borderRadius:'12px',fontSize:'16px',fontWeight:'800',cursor:ip?'default':'pointer',transition:'all 0.2s',background:ip?'#d1fae5':is?'#7c3aed':'white',color:ip?'#059669':is?'white':'#3d2010',boxShadow:is?'0 4px 16px #7c3aed50':'0 2px 8px rgba(0,0,0,0.06)',transform:is?'scale(1.04)':'scale(1)',border:ip?'1.5px solid #6ee7b7':is?'1.5px solid #7c3aed':'1.5px solid #e8d5c0'} as React.CSSProperties}>
+                    style={{padding:'14px',borderRadius:'12px',fontSize:'16px',fontWeight:'800',cursor:ip?'default':'pointer',transition:'all 0.2s',background:ip?'#d1fae5':is?'#7c3aed':'white',color:ip?'#059669':is?'white':'#14532d',boxShadow:is?'0 4px 16px #7c3aed50':'0 2px 8px rgba(0,0,0,0.06)',transform:is?'scale(1.04)':'scale(1)',border:ip?'1.5px solid #6ee7b7':is?'1.5px solid #7c3aed':'1.5px solid #bbf7d0'} as React.CSSProperties}>
                     {ip?'✓ ':''}{m.sigle}
                   </button>
                 )})}
               </div>
             </div>
             <div>
-              <p style={{fontSize:'12px',fontWeight:'700',color:'#9c7c5e',textTransform:'uppercase',letterSpacing:'1px',marginBottom:'10px'}}>{t.definitions}</p>
+              <p style={{fontSize:'12px',fontWeight:'700',color:'#4b7c5e',textTransform:'uppercase',letterSpacing:'1px',marginBottom:'10px'}}>{t.definitions}</p>
               <div style={{display:'flex',flexDirection:'column',gap:'8px'}}>
                 {shuffle(activeMatching.map(m=>({definition:m.definition}))).map(m=>{const ip=Object.values(matchPairs).includes(m.definition);return(
                   <button key={m.definition} onClick={()=>handleMatchDef(m.definition)} disabled={ip||!matchSelected}
-                    style={{padding:'14px',borderRadius:'12px',fontSize:'14px',fontWeight:'600',cursor:(ip||!matchSelected)?'default':'pointer',transition:'all 0.2s',textAlign:'left',background:ip?'#d1fae5':matchSelected?'white':'#faf6f0',color:ip?'#059669':'#3d2010',boxShadow:'0 2px 8px rgba(0,0,0,0.06)',border:ip?'1.5px solid #6ee7b7':'1.5px solid #e8d5c0',opacity:(!matchSelected&&!ip)?0.6:1} as React.CSSProperties}>
+                    style={{padding:'14px',borderRadius:'12px',fontSize:'14px',fontWeight:'600',cursor:(ip||!matchSelected)?'default':'pointer',transition:'all 0.2s',textAlign:'left',background:ip?'#d1fae5':matchSelected?'white':'#f0fdf4',color:ip?'#059669':'#14532d',boxShadow:'0 2px 8px rgba(0,0,0,0.06)',border:ip?'1.5px solid #6ee7b7':'1.5px solid #bbf7d0',opacity:(!matchSelected&&!ip)?0.6:1} as React.CSSProperties}>
                     {ip?'✓ ':''}{m.definition}
                   </button>
                 )})}
@@ -349,12 +349,12 @@ export default function ModuleAmlKyc() {
         <div style={{maxWidth:'680px',margin:'0 auto',padding:'40px 24px'}}>
           <div style={{textAlign:'center',marginBottom:'28px'}}>
             <span style={{background:'#0891b215',color:'#0891b2',borderRadius:'20px',padding:'6px 16px',fontSize:'13px',fontWeight:'700',display:'inline-block',marginBottom:'12px'}}>{t.quiz2label}</span>
-            <h2 style={{fontSize:'22px',fontWeight:'800',color:'#3d2010',margin:'0 0 8px'}}>{t.quiz2title}</h2>
-            <p style={{color:'#9c7c5e',fontSize:'14px',margin:0}}>{activeScenario.scenario}</p>
+            <h2 style={{fontSize:'22px',fontWeight:'800',color:'#14532d',margin:'0 0 8px'}}>{t.quiz2title}</h2>
+            <p style={{color:'#4b7c5e',fontSize:'14px',margin:0}}>{activeScenario.scenario}</p>
           </div>
           <div style={{background:'white',border:'2px dashed #0891b240',borderRadius:'16px',padding:'20px',marginBottom:'20px',minHeight:'100px'}}>
-            <p style={{fontSize:'12px',fontWeight:'700',color:'#9c7c5e',textTransform:'uppercase',letterSpacing:'1px',marginBottom:'12px'}}>{t.quiz2folder}</p>
-            {briquesPlacees.length===0?<p style={{color:'#9c7c5e',textAlign:'center',fontSize:'14px',padding:'16px 0'}}>{t.quiz2empty}</p>:
+            <p style={{fontSize:'12px',fontWeight:'700',color:'#4b7c5e',textTransform:'uppercase',letterSpacing:'1px',marginBottom:'12px'}}>{t.quiz2folder}</p>
+            {briquesPlacees.length===0?<p style={{color:'#4b7c5e',textAlign:'center',fontSize:'14px',padding:'16px 0'}}>{t.quiz2empty}</p>:
               <div style={{display:'flex',flexDirection:'column',gap:'8px'}}>
                 {briquesPlacees.map((b,i)=>(
                   <div key={b.id} style={{background:'#ecfdf5',border:'1px solid #6ee7b7',borderRadius:'10px',padding:'12px 16px',display:'flex',alignItems:'center',gap:'10px',fontSize:'14px',fontWeight:'600',color:'#059669'}}>
@@ -367,7 +367,7 @@ export default function ModuleAmlKyc() {
           {briqueMessage&&<div style={{background:'#fef3c7',border:'1px solid #fcd34d',borderRadius:'12px',padding:'12px 16px',marginBottom:'16px',color:'#92400e',fontSize:'14px',textAlign:'center'}}>{briqueMessage}</div>}
           {briquesDisponibles.length>0&&(
             <div>
-              <p style={{fontSize:'12px',fontWeight:'700',color:'#9c7c5e',textTransform:'uppercase',letterSpacing:'1px',marginBottom:'12px'}}>{t.quiz2available}</p>
+              <p style={{fontSize:'12px',fontWeight:'700',color:'#4b7c5e',textTransform:'uppercase',letterSpacing:'1px',marginBottom:'12px'}}>{t.quiz2available}</p>
               <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'10px'}}>
                 {briquesDisponibles.map(b=>(
                   <button key={b.id} onClick={()=>placerBrique(b)}
@@ -394,14 +394,14 @@ export default function ModuleAmlKyc() {
   if (phase==='quiz3') {
     const q=activeVF[vfIndex]
     return (
-      <div style={{...base,transition:'background 0.3s',background:vfAnimation==='correct'?'#d1fae5':vfAnimation==='wrong'?'#fee2e2':'#faf6f0'}}><NavBar/>
-        <div style={{background:vfAnimation==='correct'?'#6ee7b7':vfAnimation==='wrong'?'#fca5a5':'#e8d5c0',height:'6px'}}>
+      <div style={{...base,transition:'background 0.3s',background:vfAnimation==='correct'?'#d1fae5':vfAnimation==='wrong'?'#fee2e2':'#f0fdf4'}}><NavBar/>
+        <div style={{background:vfAnimation==='correct'?'#6ee7b7':vfAnimation==='wrong'?'#fca5a5':'#bbf7d0',height:'6px'}}>
           <div style={{background:C,height:'6px',width:`${(vfIndex/activeVF.length)*100}%`,transition:'width 0.4s ease'}}/>
         </div>
         <div style={{maxWidth:'560px',margin:'0 auto',padding:'40px 24px',textAlign:'center'}}>
           <span style={{background:`${C}15`,color:C,borderRadius:'20px',padding:'6px 16px',fontSize:'13px',fontWeight:'700',display:'inline-block',marginBottom:'24px'}}>{t.quiz3label} — {vfIndex+1}/{activeVF.length}</span>
           <div style={{background:'white',borderRadius:'20px',padding:'32px 24px',boxShadow:'0 8px 32px rgba(0,0,0,0.08)',marginBottom:'28px',minHeight:'100px',display:'flex',alignItems:'center',justifyContent:'center'}}>
-            <p style={{fontSize:'19px',fontWeight:'700',color:'#3d2010',lineHeight:1.5,margin:0}}>{q.texte}</p>
+            <p style={{fontSize:'19px',fontWeight:'700',color:'#14532d',lineHeight:1.5,margin:0}}>{q.texte}</p>
           </div>
           {vfRepondu===null?(
             <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'16px'}}>
@@ -412,11 +412,11 @@ export default function ModuleAmlKyc() {
             <div style={{background:vfAnimation==='correct'?'#d1fae5':'#fee2e2',border:`2px solid ${vfAnimation==='correct'?'#6ee7b7':'#fca5a5'}`,borderRadius:'16px',padding:'20px'}}>
               <p style={{fontSize:'28px',margin:'0 0 8px'}}>{vfAnimation==='correct'?'🎉':'😅'}</p>
               <p style={{fontWeight:'800',color:vfAnimation==='correct'?'#059669':'#dc2626',fontSize:'18px',margin:'0 0 8px'}}>{vfAnimation==='correct'?t.correct:t.wrong}</p>
-              <p style={{color:'#5c3d2e',fontSize:'15px',margin:0,fontStyle:'italic'}}>{q.explication}</p>
+              <p style={{color:'#166534',fontSize:'15px',margin:0,fontStyle:'italic'}}>{q.explication}</p>
             </div>
           )}
           <div style={{display:'flex',justifyContent:'center',gap:'8px',marginTop:'24px'}}>
-            {activeVF.map((_,i)=><div key={i} style={{width:'10px',height:'10px',borderRadius:'50%',background:i<=vfIndex?C:'#e8d5c0'}}/>)}
+            {activeVF.map((_,i)=><div key={i} style={{width:'10px',height:'10px',borderRadius:'50%',background:i<=vfIndex?C:'#bbf7d0'}}/>)}
           </div>
         </div>
       </div>
@@ -428,18 +428,18 @@ export default function ModuleAmlKyc() {
     <div style={base}><NavBar/>
       <div style={{maxWidth:'560px',margin:'0 auto',padding:'60px 24px',textAlign:'center'}}>
         <div style={{fontSize:'80px',marginBottom:'16px'}}>{medal}</div>
-        <h2 style={{fontSize:'32px',fontWeight:'800',color:'#3d2010',margin:'0 0 8px'}}>{msg}</h2>
-        <p style={{color:'#9c7c5e',fontSize:'16px',marginBottom:'32px'}}>{t.resultTitle}</p>
+        <h2 style={{fontSize:'32px',fontWeight:'800',color:'#14532d',margin:'0 0 8px'}}>{msg}</h2>
+        <p style={{color:'#4b7c5e',fontSize:'16px',marginBottom:'32px'}}>{t.resultTitle}</p>
         <div style={{background:'white',borderRadius:'20px',padding:'32px',boxShadow:`0 8px 32px ${C}10`,marginBottom:'24px'}}>
           <div style={{fontSize:'56px',fontWeight:'800',color:C,marginBottom:'4px'}}>{total}<span style={{fontSize:'24px'}}>/100</span></div>
-          <p style={{color:'#9c7c5e',margin:'0 0 20px',fontSize:'14px'}}>{t.score}</p>
-          <div style={{background:'#f0e6d8',borderRadius:'8px',height:'12px',overflow:'hidden'}}>
-            <div style={{background:`linear-gradient(90deg,${C},#f472b6)`,height:'12px',width:`${total}%`,borderRadius:'8px'}}/>
+          <p style={{color:'#4b7c5e',margin:'0 0 20px',fontSize:'14px'}}>{t.score}</p>
+          <div style={{background:'#dcfce7',borderRadius:'8px',height:'12px',overflow:'hidden'}}>
+            <div style={{background:`linear-gradient(90deg,${C},#4ade80)`,height:'12px',width:`${total}%`,borderRadius:'8px'}}/>
           </div>
         </div>
         <div style={{display:'flex',gap:'12px',flexDirection:'column'}}>
           <button onClick={()=>router.push('/')} style={{padding:'16px',background:C,border:'none',borderRadius:'12px',color:'white',fontSize:'17px',fontWeight:'700',cursor:'pointer'}}>{t.backHome}</button>
-          <button onClick={()=>{initQuizzes(lang);setScore(0);setPhase('intro')}} style={{padding:'14px',background:'white',border:'1px solid #e8d5c0',borderRadius:'12px',color:C,fontSize:'15px',fontWeight:'600',cursor:'pointer'}}>{t.restart}</button>
+          <button onClick={()=>{initQuizzes(lang);setScore(0);setPhase('intro')}} style={{padding:'14px',background:'white',border:'1px solid #bbf7d0',borderRadius:'12px',color:C,fontSize:'15px',fontWeight:'600',cursor:'pointer'}}>{t.restart}</button>
         </div>
       </div>
     </div>
