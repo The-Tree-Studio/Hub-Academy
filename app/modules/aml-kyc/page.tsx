@@ -362,7 +362,7 @@ export default function ModuleAmlKyc() {
                     <button key={m.definition} onClick={() => handleMatchDef(m.definition)}
                       disabled={isPaired || !matchSelected}
                       style={{
-                        padding: '14px', borderRadius: '12px', fontSize: '14px', fontWeight: '600', cursor: (isPaired || !matchSelected) ? 'default' : 'pointer', border: 'none', transition: 'all 0.2s', textAlign: 'left',
+                        padding: '14px', borderRadius: '12px', fontSize: '14px', fontWeight: '600', cursor: (isPaired || !matchSelected) ? 'default' : 'pointer', transition: 'all 0.2s', textAlign: 'left',
                         background: isPaired ? '#d1fae5' : matchSelected ? 'white' : '#f8fafc',
                         color: isPaired ? '#059669' : '#1e293b',
                         boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
