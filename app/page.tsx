@@ -295,7 +295,7 @@ export default function Home() {
     <div style={{ minHeight: '100vh', background: '#faf6f0', display: 'flex', fontFamily: 'sans-serif', color: '#6b3a2a' }}>
 
       {/* COLONNE IMAGE VERTICALE */}
-      <div style={{ width: '280px', minWidth: '280px', position: 'sticky', top: 0, height: '100vh', flexShrink: 0, overflow: 'hidden' } as React.CSSProperties}>
+      <div style={{ width: '450px', minWidth: '450px', position: 'sticky', top: 0, height: '100vh', flexShrink: 0, overflow: 'hidden' } as React.CSSProperties}>
         <img src={HERO_IMAGE} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', opacity: 0.92 }} onError={e => { (e.target as HTMLImageElement).style.display = 'none' }} />
         <div style={{ position: 'absolute', inset: 0, background: 'rgba(61,32,16,0.18)' }} />
         <div style={{ position: 'relative', zIndex: 1, padding: '24px 16px' }}>
