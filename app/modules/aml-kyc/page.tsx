@@ -177,7 +177,17 @@ export default function ModuleAmlKyc() {
     if (vfRepondu!==null) return
     const correct=activeVF[vfIndex].reponse===rep; setVfRepondu(rep); setVfAnimation(correct?'correct':'wrong')
     if (correct) setVfScore(s=>s+1)
-    setTimeout(()=>{ setVfAnimation(null); setVfRepondu(null); if (vfIndex+1<activeVF.length) setVfIndex(i=>i+1) else { const fs=correct?vfScore+1:vfScore; setScore(s=>s+fs*5); setPhase('resultat') } },2200)
+    setTimeout(() => {
+      setVfAnimation(null)
+      setVfRepondu(null)
+      if (vfIndex + 1 < activeVF.length) {
+        setVfIndex(i => i + 1)
+      } else {
+        const finalScore = correct ? vfScore + 1 : vfScore
+        setScore(s => s + finalScore * 5)
+        setPhase('resultat')
+      }
+    }, 2200)
   }
 
   const base:React.CSSProperties={minHeight:'100vh',background:'#faf6f0',fontFamily:"'Segoe UI',system-ui,sans-serif",color:'#3d2010'}
