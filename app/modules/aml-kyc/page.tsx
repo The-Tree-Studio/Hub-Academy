@@ -1,6 +1,7 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
+import { getLang, setLang as saveLang } from '@/lib/lang'
 
 function shuffle<T>(arr: T[]): T[] { return [...arr].sort(() => Math.random() - 0.5) }
 function pickRandom<T>(arr: T[], n: number): T[] { return shuffle(arr).slice(0, n) }
@@ -120,6 +121,7 @@ const BANQUE_VF_EN = [
 export default function ModuleAmlKyc() {
   const router = useRouter()
   const [lang, setLang] = useState<'fr'|'en'>('fr')
+  useEffect(() => { setLang(getLang()) }, [])
   const [phase, setPhase] = useState<'intro'|'fiches'|'quiz1'|'quiz2'|'quiz3'|'resultat'>('intro')
   const [ficheIndex, setFicheIndex] = useState(0)
   const [score, setScore] = useState(0)
@@ -156,7 +158,7 @@ export default function ModuleAmlKyc() {
   }
 
   function switchLang(l: 'fr'|'en') {
-    setLang(l); setPhase('intro'); setFicheIndex(0); setScore(0); setPlusLoinOpen(false); initQuizzes(l)
+    saveLang(l); setLang(l); setPhase('intro'); setFicheIndex(0); setScore(0); setPlusLoinOpen(false); initQuizzes(l)
   }
 
   function handleMatchSigle(sigle: string) { if (matchPairs[sigle]) return; setMatchSelected(sigle); setMatchError(null) }
