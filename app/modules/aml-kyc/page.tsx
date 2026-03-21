@@ -14,7 +14,7 @@ const FICHES = [
     aretenir: "i-Hub n'est pas une banque, mais a des obligations AML/KYC directes et personnelles vis-à-vis de chacun de ses clients.",
   },
   {
-    id: 2, emoji: '📜', titre: "Le cadre légal luxembourgeois", couleur: '#7c3aed',
+    id: 2, emoji: '📜', titre: "Le cadre légal luxembourgeois", couleur: '#e91e8c',
     contenu: [
       { icon: '🇱🇺', texte: "**Loi du 12 novembre 2004** — loi fondamentale LBC/FT au Luxembourg, modifiée plusieurs fois depuis" },
       { icon: '🇪🇺', texte: "**Directive européenne AMLD5 (2018/843)** — transposée au Luxembourg, renforce la transparence sur les UBO" },
@@ -24,7 +24,7 @@ const FICHES = [
     aretenir: "La loi de 2004 est la colonne vertébrale. Tout le reste (directives, règlements, circulaires CSSF) vient la compléter et la préciser.",
   },
   {
-    id: 3, emoji: '🤝', titre: "Qui sont les clients d'i-Hub ?", couleur: '#0891b2',
+    id: 3, emoji: '🤝', titre: "Qui sont les clients d'i-Hub ?", couleur: '#e91e8c',
     contenu: [
       { icon: '🏛️', texte: "**Banques et établissements de crédit** — agréés par la BCE ou la CSSF, niveau de surveillance maximal" },
       { icon: '📊', texte: "**Fonds d'investissement** (OPCVM, FIA, SIF, RAIF) — vérification du gestionnaire et du dépositaire" },
@@ -34,7 +34,7 @@ const FICHES = [
     aretenir: "Tous les clients d'i-Hub sont eux-mêmes des entités réglementées. Cela facilite le KYC mais ne le supprime pas !",
   },
   {
-    id: 4, emoji: '📋', titre: "Les 5 obligations fondamentales", couleur: '#059669',
+    id: 4, emoji: '📋', titre: "Les 5 obligations fondamentales", couleur: '#e91e8c',
     contenu: [
       { icon: '1️⃣', texte: "**Identifier** le client et vérifier son identité (numéro RCS, extrait de registre, statuts)" },
       { icon: '2️⃣', texte: "**Identifier le bénéficiaire effectif** (UBO) — qui détient ou contrôle réellement le client ?" },
@@ -45,7 +45,7 @@ const FICHES = [
     aretenir: "Ces 5 obligations s'appliquent AVANT de signer le contrat et pendant toute la durée de la relation commerciale.",
   },
   {
-    id: 5, emoji: '🔬', titre: "La CDD — Customer Due Diligence", couleur: '#dc2626',
+    id: 5, emoji: '🔬', titre: "La CDD — Customer Due Diligence", couleur: '#e91e8c',
     contenu: [
       { icon: '📌', texte: "**CDD** = Customer Due Diligence = mesures de vigilance standard appliquées à tous les clients sans exception" },
       { icon: '🧾', texte: "Comprend : vérification d'identité, collecte des documents, compréhension de l'activité et de l'objet social" },
@@ -66,7 +66,7 @@ const FICHES = [
     aretenir: "Pas de dossier KYC complet = pas de contrat. C'est une obligation légale, pas une formalité administrative optionnelle.",
   },
   {
-    id: 7, emoji: '👤', titre: "C'est quoi un UBO ?", couleur: '#7c3aed',
+    id: 7, emoji: '👤', titre: "C'est quoi un UBO ?", couleur: '#e91e8c',
     contenu: [
       { icon: '🎯', texte: "**UBO** = Ultimate Beneficial Owner = Bénéficiaire Effectif Final — la personne physique qui, en dernier ressort, possède ou contrôle l'entité cliente" },
       { icon: '25%', texte: "Toute personne physique détenant **directement ou indirectement plus de 25%** des parts ou droits de vote est considérée UBO" },
@@ -76,7 +76,7 @@ const FICHES = [
     aretenir: "Identifier l'UBO permet de savoir QUI se cache vraiment derrière une société. C'est la clé pour détecter les structures opaques.",
   },
   {
-    id: 8, emoji: '🏛️', titre: "C'est quoi un PEP ?", couleur: '#0891b2',
+    id: 8, emoji: '🏛️', titre: "C'est quoi un PEP ?", couleur: '#e91e8c',
     contenu: [
       { icon: '👑', texte: "**PEP** = Politically Exposed Person = Personne Politiquement Exposée exerçant ou ayant exercé une fonction publique importante" },
       { icon: '📋', texte: "Exemples : chefs d'État, ministres, parlementaires, juges de hautes cours, dirigeants de banques centrales, ambassadeurs" },
@@ -86,17 +86,17 @@ const FICHES = [
     aretenir: "Un PEP n'est pas forcément suspect, mais son profil exige automatiquement des mesures de vigilance renforcées (EDD).",
   },
   {
-    id: 9, emoji: '⬆️', titre: "L'EDD — Enhanced Due Diligence", couleur: '#059669',
+    id: 9, emoji: '⬆️', titre: "L'EDD — Enhanced Due Diligence", couleur: '#e91e8c',
     contenu: [
       { icon: '🔬', texte: "**EDD** = Enhanced Due Diligence = Vigilance renforcée, appliquée aux clients présentant un **risque plus élevé**" },
       { icon: '🚩', texte: "Déclenchée pour : les PEP, les clients de pays à risque GAFI, les structures complexes, les activités sensibles" },
       { icon: '📋', texte: "En pratique : informations supplémentaires sur l'origine des fonds, validation par la direction, surveillance accrue des transactions" },
-      { icon: '✍️', texte: "L'EDD doit être **documentée et approuvée** par l'AMLCO d'i-Hub avant toute entrée en relation ou renouvellement de contrat" },
+      { icon: '✍️', texte: "L'EDD doit être **documentée et approuvée** par l'équipe Compliance d'i-Hub avant toute entrée en relation ou renouvellement de contrat" },
     ],
     aretenir: "L'EDD n'est pas un refus automatique — c'est une vigilance plus poussée. On peut accepter un client PEP, mais avec davantage de contrôles.",
   },
   {
-    id: 10, emoji: '⬇️', titre: "La SDD — Vigilance simplifiée", couleur: '#dc2626',
+    id: 10, emoji: '⬇️', titre: "La SDD — Vigilance simplifiée", couleur: '#e91e8c',
     contenu: [
       { icon: '✅', texte: "**SDD** = Simplified Due Diligence = Vigilance allégée applicable uniquement aux clients présentant un **risque faible démontré**" },
       { icon: '🏛️', texte: "Applicable par exemple aux organismes publics d'État, administrations ou entités cotées sur un marché réglementé UE" },
@@ -116,17 +116,17 @@ const FICHES = [
     aretenir: "Un client dont l'activité principale est dans un pays listé GAFI déclenche automatiquement l'EDD. Pas de dérogation possible.",
   },
   {
-    id: 12, emoji: '📊', titre: "Le Risk Scoring d'un client", couleur: '#7c3aed',
+    id: 12, emoji: '📊', titre: "Le Risk Scoring d'un client", couleur: '#e91e8c',
     contenu: [
       { icon: '⚖️', texte: "Le **risk scoring** = attribuer une note de risque (faible / moyen / élevé) à chaque client selon des critères objectifs définis" },
       { icon: '📍', texte: "Critères évalués : pays d'origine, type d'entité, secteur d'activité, structure d'actionnariat, présence de PEP ou sanctions" },
-      { icon: '🔢', texte: "Chez i-Hub, le scoring est formalisé dans une **matrice de risque** validée par l'AMLCO et mise à jour chaque année" },
+      { icon: '🔢', texte: "Chez i-Hub, le scoring est formalisé dans une **matrice de risque** validée par l'équipe Compliance et mise à jour chaque année" },
       { icon: '📈', texte: "Le score détermine le niveau de vigilance applicable : **faible → SDD**, **moyen → CDD standard**, **élevé → EDD**" },
     ],
     aretenir: "Le risk scoring est un outil objectif pour calibrer la vigilance. Il protège i-Hub et garantit une approche proportionnée et documentée.",
   },
   {
-    id: 13, emoji: '👁️', titre: "La surveillance continue", couleur: '#0891b2',
+    id: 13, emoji: '👁️', titre: "La surveillance continue", couleur: '#e91e8c',
     contenu: [
       { icon: '🔄', texte: "Le KYC n'est pas un exercice ponctuel — la relation d'affaires doit être **surveillée tout au long de sa durée**" },
       { icon: '📅', texte: "**Mise à jour annuelle** pour les clients à risque élevé, tous les **3 ans** pour les clients à risque standard" },
@@ -136,7 +136,7 @@ const FICHES = [
     aretenir: "Un dossier KYC à jour est aussi important qu'un dossier initial complet. Une relation qui évolue doit déclencher une révision.",
   },
   {
-    id: 14, emoji: '🚩', titre: "Les signaux d'alerte (Red Flags)", couleur: '#059669',
+    id: 14, emoji: '🚩', titre: "Les signaux d'alerte (Red Flags)", couleur: '#e91e8c',
     contenu: [
       { icon: '🔴', texte: "**Structure opaque** : actionnariat complexe avec de multiples couches de holdings dans des pays peu coopératifs" },
       { icon: '🔴', texte: "**Refus de fournir des documents** ou d'identifier les UBO sans justification valable ou légitime" },
@@ -147,12 +147,12 @@ const FICHES = [
     aretenir: "Un seul red flag n'est pas forcément bloquant, mais l'accumulation de signaux doit alerter et déclencher une EDD ou un refus motivé.",
   },
   {
-    id: 15, emoji: '🚨', titre: "Que faire en cas de doute ?", couleur: '#dc2626',
+    id: 15, emoji: '🚨', titre: "Que faire en cas de doute ?", couleur: '#e91e8c',
     contenu: [
-      { icon: '🛑', texte: "**Ne jamais agir seul** — tout doute doit être immédiatement signalé au **Responsable AML (AMLCO)** d'i-Hub" },
+      { icon: '🛑', texte: "**Ne jamais agir seul** — tout doute doit être immédiatement signalé au **Responsable AML (équipe Compliance)** d'i-Hub" },
       { icon: '📝', texte: "**Documenter tout** : les questions posées, les réponses reçues, les documents collectés, les décisions prises avec leur date" },
       { icon: '🚫', texte: "**Ne pas informer le client** qu'une déclaration de soupçon est en cours — c'est le **tipping-off**, strictement interdit par la loi" },
-      { icon: '⏸️', texte: "En cas de doute sérieux, **suspendre la relation** ou les transactions en cours jusqu'à la décision formelle de l'AMLCO" },
+      { icon: '⏸️', texte: "En cas de doute sérieux, **suspendre la relation** ou les transactions en cours jusqu'à la décision formelle de l'équipe Compliance" },
     ],
     aretenir: "En cas de doute : STOP — SIGNAL — DOCUMENTE. Ne jamais prendre seul une décision sur un cas sensible ou ambigu.",
   },
@@ -167,7 +167,7 @@ const FICHES = [
     aretenir: "Déclarer à la CRF est une obligation légale, pas une option. L'absence de déclaration expose i-Hub et ses dirigeants à des sanctions pénales.",
   },
   {
-    id: 17, emoji: '🤫', titre: "Secret professionnel vs obligation de déclarer", couleur: '#7c3aed',
+    id: 17, emoji: '🤫', titre: "Secret professionnel vs obligation de déclarer", couleur: '#e91e8c',
     contenu: [
       { icon: '🔒', texte: "Les PSF sont soumis au **secret professionnel** — ils ne peuvent normalement pas divulguer les informations de leurs clients à des tiers" },
       { icon: '⚖️', texte: "**Exception légale** : l'obligation de déclarer à la CRF **prime** sur le secret professionnel en cas de soupçon de blanchiment ou financement du terrorisme" },
@@ -177,17 +177,17 @@ const FICHES = [
     aretenir: "Déclarer à la CRF de bonne foi protège i-Hub légalement, même si le soupçon s'avère infondé à posteriori.",
   },
   {
-    id: 18, emoji: '❄️', titre: "Le gel des avoirs", couleur: '#0891b2',
+    id: 18, emoji: '❄️', titre: "Le gel des avoirs", couleur: '#e91e8c',
     contenu: [
       { icon: '🚫', texte: "Le **gel des avoirs** = blocage immédiat de tout fonds, transaction ou service lié à une personne ou entité figurant sur une liste de sanctions" },
       { icon: '📋', texte: "Listes à consulter en priorité : **ONU, UE (règlement 2580/2001), OFAC (USA)**, et liste nationale luxembourgeoise du Trésor" },
       { icon: '⚡', texte: "Le gel est **immédiat et automatique** dès qu'un nom apparaît sur une liste — sans attendre de décision judiciaire" },
       { icon: '📢', texte: "i-Hub doit **notifier la CRF et le Parquet** en cas de gel d'avoirs et tenir un registre précis des actifs gelés" },
     ],
-    aretenir: "Le gel s'applique même si la transaction est déjà en cours. En cas de match sur une liste de sanctions : on arrête tout et on appelle l'AMLCO.",
+    aretenir: "Le gel s'applique même si la transaction est déjà en cours. En cas de match sur une liste de sanctions : on arrête tout et on appelle l'équipe Compliance.",
   },
   {
-    id: 19, emoji: '⚠️', titre: "Les sanctions en cas de manquement", couleur: '#059669',
+    id: 19, emoji: '⚠️', titre: "Les sanctions en cas de manquement", couleur: '#e91e8c',
     contenu: [
       { icon: '💶', texte: "**Amendes administratives** de la CSSF pouvant atteindre **5 millions d'euros** ou 10% du chiffre d'affaires annuel total" },
       { icon: '📛', texte: "**Retrait de la licence PSF** — i-Hub ne pourrait plus exercer son activité au Luxembourg, fin immédiate de l'activité" },
@@ -197,14 +197,14 @@ const FICHES = [
     aretenir: "Les sanctions AML/KYC sont parmi les plus sévères du secteur financier luxembourgeois. L'ignorance de la loi n'est jamais une excuse recevable.",
   },
   {
-    id: 20, emoji: '👨‍💼', titre: "Le rôle de l'AMLCO chez i-Hub", couleur: '#dc2626',
+    id: 20, emoji: '👨‍💼', titre: "Le rôle de l'équipe Compliance chez i-Hub", couleur: '#e91e8c',
     contenu: [
-      { icon: '🎯', texte: "**AMLCO** = Anti-Money Laundering Compliance Officer = Responsable AML d'i-Hub, personnellement agréé par la CSSF" },
+      { icon: '🎯', texte: "**équipe Compliance** = Anti-Money Laundering Compliance Officer = Responsable AML d'i-Hub, personnellement agréé par la CSSF" },
       { icon: '📋', texte: "Ses missions : définir la politique AML/KYC, valider les dossiers à risque, former les équipes, rédiger le rapport annuel CSSF" },
       { icon: '🚨', texte: "En cas de doute ou red flag détecté, **c'est lui que vous contactez** — il a l'autorité pour bloquer ou autoriser une relation d'affaires" },
       { icon: '🤝', texte: "**Vous aussi, vous avez un rôle** — chaque employé d'i-Hub est un maillon de la chaîne AML. Votre vigilance au quotidien compte !" },
     ],
-    aretenir: "L'AMLCO est le référent AML d'i-Hub. Mais la conformité est l'affaire de tous — chaque employé est responsable de ce qu'il observe.",
+    aretenir: "L'équipe Compliance est le référent AML d'i-Hub. Mais la conformité est l'affaire de tous — chaque employé est responsable de ce qu'il observe.",
   },
 ]
 
@@ -223,7 +223,7 @@ const QUIZ_BRIQUES = [
   { id: 'id', texte: "🪪 Pièce d'identité dirigeant", ordre: 3 },
   { id: 'licence', texte: '🔐 Licence CSSF client', ordre: 4 },
   { id: 'questionnaire', texte: '📝 Questionnaire AML', ordre: 5 },
-  { id: 'validation', texte: '✅ Validation AMLCO', ordre: 6 },
+  { id: 'validation', texte: '✅ Validation équipe Compliance', ordre: 6 },
 ]
 
 const QUIZ_VRAI_FAUX = [
@@ -232,7 +232,7 @@ const QUIZ_VRAI_FAUX = [
   { texte: "Si le dossier KYC est incomplet, on peut quand même signer le contrat", reponse: false, explication: "Non ! Pas de KYC complet = pas de relation d'affaires. C'est une obligation légale." },
   { texte: "Le dossier KYC doit être conservé 10 ans après la fin de la relation", reponse: true, explication: "Exact ! La loi impose une conservation de 10 ans de tous les documents KYC." },
   { texte: "On peut informer un client qu'une déclaration de soupçon a été faite à la CRF", reponse: false, explication: "Non ! C'est le tipping-off, strictement interdit par la loi sous peine de sanctions pénales." },
-  { texte: "L'AMLCO est la seule personne responsable de la conformité AML chez i-Hub", reponse: false, explication: "Non ! Chaque employé est responsable de signaler les anomalies. La conformité est l'affaire de tous." },
+  { texte: "L'équipe Compliance est la seule personne responsable de la conformité AML chez i-Hub", reponse: false, explication: "Non ! Chaque employé est responsable de signaler les anomalies. La conformité est l'affaire de tous." },
 ]
 
 export default function ModuleAmlKyc() {
@@ -332,7 +332,7 @@ export default function ModuleAmlKyc() {
             'UBO, PEP, risk scoring — les concepts clés',
             'Comment constituer un dossier KYC complet',
             "Les signaux d'alerte et que faire en cas de doute",
-            "Le rôle de la CRF et de l'AMLCO d'i-Hub",
+            "Le rôle de la CRF et de l'équipe Compliance d'i-Hub",
           ].map((t, i) => (
             <div key={i} style={{ display: 'flex', gap: '10px', padding: '6px 0', borderBottom: i < 5 ? '1px solid #fce4ec' : 'none' }}>
               <span style={{ color: '#e91e8c', fontWeight: '700' }}>✓</span>
