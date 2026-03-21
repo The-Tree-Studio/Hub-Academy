@@ -56,7 +56,7 @@ const THEMES = [
     ],
   },
   {
-    titre: 'Anti-blanchiment d'argent', emoji: '🛡️', couleur: '#e91e8c',
+    titre: "Anti-blanchiment d'argent", emoji: '🛡️', couleur: '#e91e8c',
     modules: [
       { title: 'AML/KYC Rules', icon: '🔍', slug: 'aml-kyc', ready: true },
       { title: 'DDR', icon: '📋', slug: 'ddr', ready: false },
