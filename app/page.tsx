@@ -249,7 +249,7 @@ const UI = {
     myCerts: 'Mes certifications', noModules: 'Aucun module complété pour l\'instant',
     noModulesDesc: 'Commencez un module pour gagner votre première certification !',
     yourCerts: 'Vos certifications obtenues',
-    totalScore: 'Score total', rank: 'Niveau',
+    totalScore: 'HubCoins', rank: 'Niveau',
     ranks: ['🌱 Débutant', '🌿 Apprenti', '⭐ Confirmé', '🏆 Expert', '🎓 Maître Réglementaire'],
   },
   en: {
@@ -260,7 +260,7 @@ const UI = {
     myCerts: 'My certifications', noModules: 'No modules completed yet',
     noModulesDesc: 'Start a module to earn your first certification!',
     yourCerts: 'Your earned certifications',
-    totalScore: 'Total score', rank: 'Level',
+    totalScore: 'HubCoins', rank: 'Level',
     ranks: ['🌱 Beginner', '🌿 Apprentice', '⭐ Confirmed', '🏆 Expert', '🎓 Regulatory Master'],
   },
 }
@@ -420,7 +420,7 @@ export default function Home() {
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '16px', marginBottom: '32px' }}>
               {[
                 { label: lang === 'fr' ? 'Certifications' : 'Certifications', value: earnedCerts.length, icon: '🏅', color: '#16a34a' },
-                { label: t.totalScore, value: totalPoints + ' pts', icon: '⭐', color: '#7c3aed' },
+                { label: t.totalScore, value: totalPoints + ' 🪙', icon: '⭐', color: '#7c3aed' },
                 { label: t.rank, value: t.ranks[rankIndex], icon: '🎓', color: '#059669', small: true },
               ].map((card, i) => (
                 <div key={i} style={{ background: 'white', borderRadius: '16px', padding: '20px', border: '1.5px solid #bbf7d0', textAlign: 'center' }}>

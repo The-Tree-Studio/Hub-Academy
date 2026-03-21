@@ -10,7 +10,7 @@ const UI = {
   fr: {
     title: 'AML/KYC Rules', subtitle: "Les obligations directes d'i-Hub envers ses clients",
     learn: '📚 Ce que vous allez apprendre :', learnItems: ['Le cadre légal luxembourgeois (loi 2004, GAFI, AMLD5)','CDD, EDD, SDD — les 3 niveaux de vigilance','UBO, PEP, risk scoring — les concepts clés','Comment constituer un dossier KYC complet',"Les signaux d'alerte et que faire en cas de doute","Le rôle de la CRF et de l'équipe Compliance d'i-Hub"],
-    fiches:'21 fiches',quiz:'3 quiz fun',time:'~20 min',start:"C'est parti ! 🚀",prev:'← Précédent',next:'Fiche suivante',quizBtn:'🎮 Passer aux quiz !',toRetain:'À RETENIR',goFurther:'🔭 Aller plus loin',home:'← Accueil',pts:'pts',
+    fiches:'21 fiches',quiz:'3 quiz fun',time:'~20 min',start:"C'est parti ! 🚀",prev:'← Précédent',next:'Fiche suivante',quizBtn:'🎮 Passer aux quiz !',toRetain:'À RETENIR',goFurther:'🔭 Aller plus loin',home:'← Accueil',pts:'🪙',
     quiz1title:'🧩 Reliez chaque sigle à sa définition',quiz1sub:"Cliquez d'abord sur un sigle, puis sur sa définition",quiz1label:'QUIZ 1/3 · ASSOCIER LES PAIRES',sigles:'Sigles',definitions:'Définitions',quiz1done:'Parfait ! Tous les sigles sont associés !',
     quiz2label:'QUIZ 2/3 · CONSTRUIRE LE DOSSIER',quiz2title:'🧱 Assemblez les éléments dans le bon ordre !',quiz2folder:'📁 Votre dossier',quiz2empty:'Cliquez sur les éléments ci-dessous dans le bon ordre...',quiz2available:'Éléments disponibles',quiz2done:'Parfait ! Dans le bon ordre !',
     quiz3label:'QUIZ 3/3 · VRAI OU FAUX',true:'✅ VRAI',false:'❌ FAUX',correct:'Bravo !',wrong:'Pas tout à fait...',next2:'Quiz suivant →',last:'Dernier quiz →',
@@ -19,7 +19,7 @@ const UI = {
   en: {
     title: 'AML/KYC Rules', subtitle: "i-Hub's direct obligations towards its clients",
     learn: '📚 What you will learn:', learnItems: ['Luxembourg legal framework (2004 law, FATF, AMLD5)','CDD, EDD, SDD — the 3 levels of due diligence','UBO, PEP, risk scoring — key concepts','How to build a complete KYC file','Red flags and what to do when in doubt',"The role of the FIU and i-Hub's Compliance team"],
-    fiches:'21 cards',quiz:'3 fun quizzes',time:'~20 min',start:"Let's go! 🚀",prev:'← Previous',next:'Next card',quizBtn:'🎮 Go to quizzes!',toRetain:'KEY TAKEAWAY',goFurther:'🔭 Go further',home:'← Home',pts:'pts',
+    fiches:'21 cards',quiz:'3 fun quizzes',time:'~20 min',start:"Let's go! 🚀",prev:'← Previous',next:'Next card',quizBtn:'🎮 Go to quizzes!',toRetain:'KEY TAKEAWAY',goFurther:'🔭 Go further',home:'← Home',pts:'🪙',
     quiz1title:'🧩 Match each acronym to its definition',quiz1sub:'Click an acronym first, then its definition',quiz1label:'QUIZ 1/3 · MATCH THE PAIRS',sigles:'Acronyms',definitions:'Definitions',quiz1done:'Perfect! All acronyms matched!',
     quiz2label:'QUIZ 2/3 · BUILD THE FILE',quiz2title:'🧱 Assemble the steps in the right order!',quiz2folder:'📁 Your file',quiz2empty:'Click on the items below in the correct order...',quiz2available:'Available items',quiz2done:'Perfect! Correct order!',
     quiz3label:'QUIZ 3/3 · TRUE OR FALSE',true:'✅ TRUE',false:'❌ FALSE',correct:'Well done!',wrong:'Not quite...',next2:'Next quiz →',last:'Last quiz →',
