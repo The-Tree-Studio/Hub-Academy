@@ -244,32 +244,92 @@ const FICHES = [
   },
 ]
 
-const QUIZ_MATCHING = [
+// ─── BANQUES DE QUESTIONS ────────────────────────────────────────────────────
+
+function shuffle<T>(arr: T[]): T[] {
+  return [...arr].sort(() => Math.random() - 0.5)
+}
+
+const BANQUE_MATCHING = [
   { sigle: 'AML', definition: 'Lutte contre le blanchiment' },
   { sigle: 'KYC', definition: 'Connaissance du client' },
   { sigle: 'UBO', definition: 'Bénéficiaire effectif final' },
   { sigle: 'PEP', definition: 'Personne politiquement exposée' },
   { sigle: 'EDD', definition: 'Vigilance renforcée' },
   { sigle: 'CRF', definition: 'Cellule renseignement financier' },
+  { sigle: 'SDD', definition: 'Vigilance simplifiée' },
+  { sigle: 'CDD', definition: 'Vigilance standard' },
+  { sigle: 'STR', definition: 'Rapport de transaction suspecte' },
+  { sigle: 'LBC', definition: 'Lutte contre le blanchiment de capitaux' },
+  { sigle: 'FT', definition: 'Financement du terrorisme' },
+  { sigle: 'RBE', definition: 'Registre des bénéficiaires effectifs' },
+  { sigle: 'GAFI', definition: 'Groupe d\'action financière' },
+  { sigle: 'PSF', definition: 'Professionnel du secteur financier' },
+  { sigle: 'CAA', definition: 'Commissariat aux assurances' },
+  { sigle: 'CSSF', definition: 'Superviseur financier luxembourgeois' },
+  { sigle: 'OFAC', definition: 'Sanctions financières américaines' },
+  { sigle: 'AMLA', definition: 'Future autorité AML européenne' },
 ]
 
-const QUIZ_BRIQUES = [
-  { id: 'rcs', texte: '📄 Extrait RCS', ordre: 1 },
-  { id: 'statuts', texte: '📜 Statuts coordonnés', ordre: 2 },
-  { id: 'id', texte: "🪪 Pièce d'identité dirigeant", ordre: 3 },
-  { id: 'licence', texte: '🔐 Licence CSSF client', ordre: 4 },
-  { id: 'questionnaire', texte: '📝 Questionnaire AML', ordre: 5 },
-  { id: 'validation', texte: '✅ Validation équipe Compliance', ordre: 6 },
+const BANQUE_BRIQUES = [
+  { scenario: "Constituez le dossier KYC dans l'ordre correct", items: [
+    { id: 'rcs', texte: '📄 Extrait RCS', ordre: 1 },
+    { id: 'statuts', texte: '📜 Statuts coordonnés', ordre: 2 },
+    { id: 'id', texte: "🪪 Pièce d'identité dirigeant", ordre: 3 },
+    { id: 'licence', texte: '🔐 Licence CSSF client', ordre: 4 },
+    { id: 'questionnaire', texte: '📝 Questionnaire AML', ordre: 5 },
+    { id: 'validation', texte: '✅ Validation équipe Compliance', ordre: 6 },
+  ]},
+  { scenario: "Ordonnez les étapes d'une entrée en relation client", items: [
+    { id: 'identify', texte: '🔍 Identifier le client', ordre: 1 },
+    { id: 'ubo', texte: '👤 Identifier les UBO', ordre: 2 },
+    { id: 'scoring', texte: '📊 Calculer le risk scoring', ordre: 3 },
+    { id: 'dossier', texte: '📁 Constituer le dossier KYC', ordre: 4 },
+    { id: 'validate', texte: '✅ Validation équipe Compliance', ordre: 5 },
+    { id: 'contrat', texte: '📝 Signature du contrat', ordre: 6 },
+  ]},
+  { scenario: "Ordonnez les étapes en cas de soupçon de blanchiment", items: [
+    { id: 'stop', texte: '🛑 Suspendre la transaction', ordre: 1 },
+    { id: 'doc', texte: '📝 Documenter les faits', ordre: 2 },
+    { id: 'signal', texte: '📢 Alerter l\'équipe Compliance', ordre: 3 },
+    { id: 'analyse', texte: '🔬 Analyser le dossier ensemble', ordre: 4 },
+    { id: 'str', texte: '📨 Déclarer à la CRF si confirmé', ordre: 5 },
+    { id: 'notp', texte: '🤫 Ne jamais informer le client', ordre: 6 },
+  ]},
+  { scenario: "Ordonnez les niveaux de vigilance du plus faible au plus fort", items: [
+    { id: 'sdd', texte: '⬇️ SDD — Vigilance simplifiée', ordre: 1 },
+    { id: 'cdd', texte: '🔬 CDD — Vigilance standard', ordre: 2 },
+    { id: 'edd', texte: '⬆️ EDD — Vigilance renforcée', ordre: 3 },
+    { id: 'str', texte: '🚨 Signalement à la CRF', ordre: 4 },
+    { id: 'gel', texte: '❄️ Gel des avoirs', ordre: 5 },
+    { id: 'refus', texte: '🚫 Refus de la relation', ordre: 6 },
+  ]},
 ]
 
-const QUIZ_VRAI_FAUX = [
+const BANQUE_VRAI_FAUX = [
   { texte: "i-Hub doit vérifier l'identité de ses clients car c'est une banque", reponse: false, explication: "i-Hub est un PSF de support, pas une banque. Mais la loi LBC/FT s'applique quand même !" },
   { texte: "Un client PEP nécessite des mesures de vigilance renforcées (EDD)", reponse: true, explication: "Exact ! Toute personne politiquement exposée déclenche automatiquement l'EDD." },
   { texte: "Si le dossier KYC est incomplet, on peut quand même signer le contrat", reponse: false, explication: "Non ! Pas de KYC complet = pas de relation d'affaires. C'est une obligation légale." },
   { texte: "Le dossier KYC doit être conservé 10 ans après la fin de la relation", reponse: true, explication: "Exact ! La loi impose une conservation de 10 ans de tous les documents KYC." },
   { texte: "On peut informer un client qu'une déclaration de soupçon a été faite à la CRF", reponse: false, explication: "Non ! C'est le tipping-off, strictement interdit par la loi sous peine de sanctions pénales." },
-  { texte: "L'équipe Compliance est la seule personne responsable de la conformité AML chez i-Hub", reponse: false, explication: "Non ! Chaque employé est responsable de signaler les anomalies. La conformité est l'affaire de tous." },
+  { texte: "L'équipe Compliance est la seule responsable de la conformité AML chez i-Hub", reponse: false, explication: "Non ! Chaque employé est responsable de signaler les anomalies. La conformité est l'affaire de tous." },
+  { texte: "Un UBO est toute personne détenant plus de 25% d'une société", reponse: true, explication: "Exact ! Le seuil légal est fixé à 25% de détention directe ou indirecte." },
+  { texte: "La SDD (vigilance simplifiée) dispense totalement de collecter des documents", reponse: false, explication: "Non ! La SDD allège la vigilance mais ne supprime pas l'obligation de collecter les documents de base." },
+  { texte: "Le GAFI publie ses listes de pays à risque une fois par an", reponse: false, explication: "Non ! Le GAFI publie ses listes 3 fois par an : en février, juin et octobre." },
+  { texte: "Un fournisseur d'i-Hub peut être exempté du name screening s'il est luxembourgeois", reponse: false, explication: "Non ! Tout fournisseur, quelle que soit sa nationalité, doit être screené contre les listes de sanctions." },
+  { texte: "Le gel des avoirs s'applique même si une transaction est déjà en cours", reponse: true, explication: "Exact ! Le gel est immédiat, sans délai ni exception. On arrête tout et on alerte l'équipe Compliance." },
+  { texte: "Un PEP reste soumis à l'EDD au moins 12 mois après avoir quitté ses fonctions", reponse: true, explication: "Exact ! Le statut PEP persiste au minimum 12 mois après la cessation des fonctions." },
+  { texte: "Les UBO doivent être inscrits au RBE luxembourgeois depuis 2019", reponse: true, explication: "Exact ! Le Registre des Bénéficiaires Effectifs est obligatoire depuis 2019 au Luxembourg." },
+  { texte: "L'OFAC est une autorité luxembourgeoise de gel des avoirs", reponse: false, explication: "Non ! L'OFAC est américain (Office of Foreign Assets Control). Ses sanctions s'appliquent toutefois aux entités traitant en dollars." },
+  { texte: "i-Hub peut accepter un client dont le dirigeant est PEP si le reste du dossier est clean", reponse: true, explication: "Oui ! Un PEP n'est pas automatiquement refusé — mais l'EDD doit être appliquée et validée par l'équipe Compliance." },
+  { texte: "La CRF peut transmettre une déclaration de soupçon directement au Parquet", reponse: true, explication: "Exact ! Après analyse, la CRF peut transmettre au Parquet du Luxembourg qui peut ouvrir une enquête pénale." },
+  { texte: "Un employé d'i-Hub qui ne signale pas un soupçon peut être sanctionné pénalement", reponse: true, explication: "Oui ! L'obligation de déclaration est personnelle. Ne pas signaler peut constituer un délit de complicité." },
+  { texte: "Le risk scoring d'un client ne peut jamais évoluer une fois fixé", reponse: false, explication: "Non ! Le risk scoring est réévalué régulièrement et immédiatement si la situation du client change." },
 ]
+
+function pickRandom<T>(arr: T[], n: number): T[] {
+  return shuffle(arr).slice(0, n)
+}
 
 export default function ModuleAmlKyc() {
   const router = useRouter()
@@ -278,15 +338,21 @@ export default function ModuleAmlKyc() {
   const [score, setScore] = useState(0)
   const [plusLoinOpen, setPlusLoinOpen] = useState(false)
 
+  // Quiz 1 — Matching (6 paires tirées aléatoirement parmi 18)
+  const [activeMatching, setActiveMatching] = useState(() => pickRandom(BANQUE_MATCHING, 6))
   const [matchSelected, setMatchSelected] = useState<string | null>(null)
   const [matchPairs, setMatchPairs] = useState<Record<string, string>>({})
-  const [matchDefs] = useState(() => [...QUIZ_MATCHING].sort(() => Math.random() - 0.5))
+  const [matchDefs, setMatchDefs] = useState(() => shuffle(pickRandom(BANQUE_MATCHING, 6).map(m => ({ definition: m.definition }))))
   const [matchError, setMatchError] = useState<string | null>(null)
 
-  const [briquesDisponibles, setBriquesDisponibles] = useState(() => [...QUIZ_BRIQUES].sort(() => Math.random() - 0.5))
-  const [briquesPlacees, setBriquesPlacees] = useState<typeof QUIZ_BRIQUES>([])
+  // Quiz 2 — Briques (scénario tiré aléatoirement parmi 4)
+  const [activeScenario, setActiveScenario] = useState(() => BANQUE_BRIQUES[Math.floor(Math.random() * BANQUE_BRIQUES.length)])
+  const [briquesDisponibles, setBriquesDisponibles] = useState(() => shuffle(BANQUE_BRIQUES[Math.floor(Math.random() * BANQUE_BRIQUES.length)].items))
+  const [briquesPlacees, setBriquesPlacees] = useState<{id:string,texte:string,ordre:number}[]>([])
   const [briqueMessage, setBriqueMessage] = useState<string | null>(null)
 
+  // Quiz 3 — Vrai/Faux (6 questions tirées aléatoirement parmi 18)
+  const [activeVF, setActiveVF] = useState(() => pickRandom(BANQUE_VRAI_FAUX, 6))
   const [vfIndex, setVfIndex] = useState(0)
   const [vfRepondu, setVfRepondu] = useState<boolean | null>(null)
   const [vfScore, setVfScore] = useState(0)
@@ -300,41 +366,41 @@ export default function ModuleAmlKyc() {
 
   function handleMatchDef(def: string) {
     if (!matchSelected) return
-    const correct = QUIZ_MATCHING.find(m => m.sigle === matchSelected)?.definition
+    const correct = activeMatching.find(m => m.sigle === matchSelected)?.definition
     if (correct === def) {
       const newPairs = { ...matchPairs, [matchSelected]: def }
       setMatchPairs(newPairs)
       setMatchSelected(null)
-      if (Object.keys(newPairs).length === QUIZ_MATCHING.length) setScore(s => s + 15)
+      if (Object.keys(newPairs).length === activeMatching.length) setScore(s => s + 15)
     } else {
       setMatchError(`❌ "${def}" ne correspond pas à ${matchSelected}. Réessaie !`)
       setMatchSelected(null)
     }
   }
 
-  function placerBrique(brique: typeof QUIZ_BRIQUES[0]) {
+  function placerBrique(brique: {id:string,texte:string,ordre:number}) {
     const expected = briquesPlacees.length + 1
     if (brique.ordre === expected) {
       const newList = [...briquesPlacees, brique]
       setBriquesPlacees(newList)
       setBriquesDisponibles(d => d.filter(b => b.id !== brique.id))
       setBriqueMessage(null)
-      if (brique.ordre === QUIZ_BRIQUES.length) setScore(s => s + 15)
+      if (brique.ordre === activeScenario.items.length) setScore(s => s + 15)
     } else {
-      setBriqueMessage(`⚠️ Pas encore ! Le document n°${expected} doit venir avant.`)
+      setBriqueMessage(`⚠️ Pas encore ! L'étape n°${expected} doit venir avant.`)
     }
   }
 
   function repondreVF(rep: boolean) {
     if (vfRepondu !== null) return
-    const correct = QUIZ_VRAI_FAUX[vfIndex].reponse === rep
+    const correct = activeVF[vfIndex].reponse === rep
     setVfRepondu(rep)
     setVfAnimation(correct ? 'correct' : 'wrong')
     if (correct) setVfScore(s => s + 1)
     setTimeout(() => {
       setVfAnimation(null)
       setVfRepondu(null)
-      if (vfIndex + 1 < QUIZ_VRAI_FAUX.length) {
+      if (vfIndex + 1 < activeVF.length) {
         setVfIndex(i => i + 1)
       } else {
         const finalScore = correct ? vfScore + 1 : vfScore
@@ -466,7 +532,7 @@ export default function ModuleAmlKyc() {
   }
 
   if (phase === 'quiz1') {
-    const done = Object.keys(matchPairs).length === QUIZ_MATCHING.length
+    const done = Object.keys(matchPairs).length === activeMatching.length
     return (
       <div style={base}>
         <NavBar />
@@ -481,7 +547,7 @@ export default function ModuleAmlKyc() {
             <div>
               <p style={{ fontSize: '12px', fontWeight: '700', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '10px' }}>Sigles</p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                {QUIZ_MATCHING.map(m => {
+                {activeMatching.map(m => {
                   const isPaired = !!matchPairs[m.sigle]
                   const isSelected = matchSelected === m.sigle
                   return (
@@ -496,7 +562,7 @@ export default function ModuleAmlKyc() {
             <div>
               <p style={{ fontSize: '12px', fontWeight: '700', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '10px' }}>Définitions</p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                {matchDefs.map(m => {
+                {shuffle(activeMatching.map(m => ({ definition: m.definition }))).map(m => {
                   const isPaired = Object.values(matchPairs).includes(m.definition)
                   return (
                     <button key={m.definition} onClick={() => handleMatchDef(m.definition)} disabled={isPaired || !matchSelected}
@@ -524,7 +590,7 @@ export default function ModuleAmlKyc() {
   }
 
   if (phase === 'quiz2') {
-    const done = briquesPlacees.length === QUIZ_BRIQUES.length
+    const done = briquesPlacees.length === activeScenario.items.length
     return (
       <div style={base}>
         <NavBar />
@@ -532,7 +598,7 @@ export default function ModuleAmlKyc() {
           <div style={{ textAlign: 'center', marginBottom: '28px' }}>
             <span style={{ background: '#0891b215', color: '#0891b2', borderRadius: '20px', padding: '6px 16px', fontSize: '13px', fontWeight: '700', display: 'inline-block', marginBottom: '12px' }}>QUIZ 2/3 · CONSTRUIRE LE DOSSIER KYC</span>
             <h2 style={{ fontSize: '22px', fontWeight: '800', color: '#1e293b', margin: '0 0 8px' }}>🧱 Assemblez les briques dans l'ordre !</h2>
-            <p style={{ color: '#64748b', fontSize: '14px', margin: 0 }}>Cliquez les documents dans le bon ordre pour constituer un dossier KYC complet</p>
+            <p style={{ color: '#64748b', fontSize: '14px', margin: 0 }}>{activeScenario.scenario}</p>
           </div>
           <div style={{ background: 'white', border: '2px dashed #0891b240', borderRadius: '16px', padding: '20px', marginBottom: '20px', minHeight: '100px' }}>
             <p style={{ fontSize: '12px', fontWeight: '700', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>📁 Votre dossier KYC</p>
@@ -553,7 +619,7 @@ export default function ModuleAmlKyc() {
             <div>
               <p style={{ fontSize: '12px', fontWeight: '700', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>Documents disponibles</p>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
-                {briquesDisponibles.map(b => (
+                {briquesDisponibles.map((b: {id:string,texte:string,ordre:number}) => (
                   <button key={b.id} onClick={() => placerBrique(b)}
                     style={{ padding: '14px 16px', background: 'white', border: '2px solid #0891b230', borderRadius: '12px', cursor: 'pointer', fontSize: '14px', fontWeight: '600', color: '#0891b2', textAlign: 'left', transition: 'all 0.15s' }}
                     onMouseOver={e => { (e.currentTarget as HTMLElement).style.borderColor = '#0891b2'; (e.currentTarget as HTMLElement).style.background = '#f0f9ff' }}
@@ -580,16 +646,16 @@ export default function ModuleAmlKyc() {
   }
 
   if (phase === 'quiz3') {
-    const q = QUIZ_VRAI_FAUX[vfIndex]
+    const q = activeVF[vfIndex]
     return (
       <div style={{ ...base, transition: 'background 0.3s', background: vfAnimation === 'correct' ? '#d1fae5' : vfAnimation === 'wrong' ? '#fee2e2' : '#fff0f5' }}>
         <NavBar />
         <div style={{ background: vfAnimation === 'correct' ? '#6ee7b7' : vfAnimation === 'wrong' ? '#fca5a5' : '#fce4ec', height: '6px' }}>
-          <div style={{ background: '#e91e8c', height: '6px', width: `${(vfIndex / QUIZ_VRAI_FAUX.length) * 100}%`, transition: 'width 0.4s ease' }} />
+          <div style={{ background: '#e91e8c', height: '6px', width: `${(vfIndex / activeVF.length) * 100}%`, transition: 'width 0.4s ease' }} />
         </div>
         <div style={{ maxWidth: '560px', margin: '0 auto', padding: '40px 24px', textAlign: 'center' }}>
           <span style={{ background: '#e91e8c15', color: '#e91e8c', borderRadius: '20px', padding: '6px 16px', fontSize: '13px', fontWeight: '700', display: 'inline-block', marginBottom: '24px' }}>
-            QUIZ 3/3 · VRAI OU FAUX — {vfIndex + 1}/{QUIZ_VRAI_FAUX.length}
+            QUIZ 3/3 · VRAI OU FAUX — {vfIndex + 1}/{activeVF.length}
           </span>
           <div style={{ background: 'white', borderRadius: '20px', padding: '32px 24px', boxShadow: '0 8px 32px rgba(0,0,0,0.08)', marginBottom: '28px', minHeight: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <p style={{ fontSize: '19px', fontWeight: '700', color: '#1e293b', lineHeight: 1.5, margin: 0 }}>{q.texte}</p>
@@ -607,7 +673,7 @@ export default function ModuleAmlKyc() {
             </div>
           )}
           <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', marginTop: '24px' }}>
-            {QUIZ_VRAI_FAUX.map((_, i) => (
+            {activeVF.map((_, i) => (
               <div key={i} style={{ width: '10px', height: '10px', borderRadius: '50%', background: i <= vfIndex ? '#e91e8c' : '#fce4ec' }} />
             ))}
           </div>
@@ -635,7 +701,23 @@ export default function ModuleAmlKyc() {
         </div>
         <div style={{ display: 'flex', gap: '12px', flexDirection: 'column' }}>
           <button onClick={() => router.push('/')} style={{ padding: '16px', background: '#e91e8c', border: 'none', borderRadius: '12px', color: 'white', fontSize: '17px', fontWeight: '700', cursor: 'pointer' }}>← Retour aux modules</button>
-          <button onClick={() => { setPhase('intro'); setScore(0); setMatchPairs({}); setMatchSelected(null); setBriquesDisponibles([...QUIZ_BRIQUES].sort(() => Math.random() - 0.5)); setBriquesPlacees([]); setVfIndex(0); setVfScore(0) }}
+          <button onClick={() => { (() => {
+              const newMatching = pickRandom(BANQUE_MATCHING, 6)
+              const newScenario = BANQUE_BRIQUES[Math.floor(Math.random() * BANQUE_BRIQUES.length)]
+              const newVF = pickRandom(BANQUE_VRAI_FAUX, 6)
+              setActiveMatching(newMatching)
+              setMatchDefs(shuffle(newMatching.map(m => ({ definition: m.definition }))))
+              setActiveScenario(newScenario)
+              setBriquesDisponibles(shuffle([...newScenario.items]))
+              setActiveVF(newVF)
+              setBriquesPlacees([])
+              setMatchPairs({})
+              setMatchSelected(null)
+              setVfIndex(0)
+              setVfScore(0)
+              setScore(0)
+              setPhase('intro')
+            })() }}
             style={{ padding: '14px', background: 'white', border: '1px solid #fce4ec', borderRadius: '12px', color: '#e91e8c', fontSize: '15px', fontWeight: '600', cursor: 'pointer' }}>
             🔄 Recommencer ce module
           </button>
