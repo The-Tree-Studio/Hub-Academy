@@ -197,7 +197,18 @@ const FICHES = [
     aretenir: "Les sanctions AML/KYC sont parmi les plus sévères du secteur financier luxembourgeois. L'ignorance de la loi n'est jamais une excuse recevable.",
   },
   {
-    id: 20, emoji: '👨‍💼', titre: "Le rôle de l'équipe Compliance chez i-Hub", couleur: '#e91e8c',
+    id: 20, emoji: '🔎', titre: "Le Name Screening sur les fournisseurs d'i-Hub", couleur: '#e91e8c',
+    contenu: [
+      { icon: '🏢', texte: "i-Hub doit faire du **name screening** non seulement sur ses clients, mais aussi sur ses **fournisseurs et prestataires externes**" },
+      { icon: '📋', texte: "Tout fournisseur qui accède aux systèmes, données ou locaux d'i-Hub doit être **vérifié avant la signature du contrat** et tout au long de la relation" },
+      { icon: '🔍', texte: "Le screening consiste à comparer le nom du fournisseur (et de ses dirigeants) contre les **listes de sanctions** (ONU, UE, OFAC) et les bases de données de PEP" },
+      { icon: '🚨', texte: "Un fournisseur dont le nom apparaît sur une liste de sanctions doit être **immédiatement bloqué** — aucune transaction, aucun paiement, aucun accès" },
+      { icon: '🔄', texte: "Le screening est **continu** — une alerte peut surgir à tout moment si un fournisseur existant est nouvellement sanctionné ou listé" },
+    ],
+    aretenir: "Les obligations AML/KYC d'i-Hub ne s'arrêtent pas aux clients. Les fournisseurs font aussi partie du périmètre de vigilance — signaler tout doute à l'équipe Compliance.",
+  },
+  {
+    id: 21, emoji: '👨‍💼', titre: "Le rôle de l'équipe Compliance chez i-Hub", couleur: '#e91e8c',
     contenu: [
       { icon: '🎯', texte: "**équipe Compliance** = Anti-Money Laundering Compliance Officer = Responsable AML d'i-Hub, personnellement agréé par la CSSF" },
       { icon: '📋', texte: "Ses missions : définir la politique AML/KYC, valider les dossiers à risque, former les équipes, rédiger le rapport annuel CSSF" },
@@ -341,7 +352,7 @@ export default function ModuleAmlKyc() {
           ))}
         </div>
         <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', marginBottom: '32px', flexWrap: 'wrap' }}>
-          {[{ label: '20 fiches', icon: '📖' }, { label: '3 quiz fun', icon: '🎮' }, { label: '~20 min', icon: '⏱️' }].map((b, i) => (
+          {[{ label: '21 fiches', icon: '📖' }, { label: '3 quiz fun', icon: '🎮' }, { label: '~20 min', icon: '⏱️' }].map((b, i) => (
             <div key={i} style={{ background: 'white', border: '1px solid #fce4ec', borderRadius: '12px', padding: '10px 20px', fontSize: '14px', color: '#64748b', display: 'flex', alignItems: 'center', gap: '6px' }}>
               {b.icon} {b.label}
             </div>
@@ -568,7 +579,7 @@ export default function ModuleAmlKyc() {
       <div style={{ maxWidth: '560px', margin: '0 auto', padding: '60px 24px', textAlign: 'center' }}>
         <div style={{ fontSize: '80px', marginBottom: '16px' }}>{medal}</div>
         <h2 style={{ fontSize: '32px', fontWeight: '800', color: '#1e293b', margin: '0 0 8px' }}>{msg}</h2>
-        <p style={{ color: '#94a3b8', fontSize: '16px', marginBottom: '32px' }}>Module AML/KYC Rules terminé — 20 fiches maîtrisées !</p>
+        <p style={{ color: '#94a3b8', fontSize: '16px', marginBottom: '32px' }}>Module AML/KYC Rules terminé — 21 fiches maîtrisées !</p>
         <div style={{ background: 'white', borderRadius: '20px', padding: '32px', boxShadow: '0 8px 32px rgba(233,30,140,0.10)', marginBottom: '24px' }}>
           <div style={{ fontSize: '56px', fontWeight: '800', color: '#e91e8c', marginBottom: '4px' }}>{totalScore}<span style={{ fontSize: '24px' }}>/100</span></div>
           <p style={{ color: '#94a3b8', margin: '0 0 20px', fontSize: '14px' }}>Score total</p>
