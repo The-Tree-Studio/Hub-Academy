@@ -106,7 +106,7 @@ export default function Home() {
   }
 
   if (loading) return (
-    <div style={{ minHeight: '100vh', background: '#fff0f5', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#e91e8c', fontSize: '18px' }}>
+    <div style={{ minHeight: '100vh', background: '#faf6f0', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#e91e8c', fontSize: '18px' }}>
       Chargement...
     </div>
   )
@@ -115,12 +115,12 @@ export default function Home() {
   const readyModules = THEMES.reduce((acc, t) => acc + t.modules.filter(m => m.ready).length, 0)
 
   return (
-    <div style={{ minHeight: '100vh', background: '#fff0f5', color: '#1e293b', fontFamily: 'sans-serif' }}>
-      <div style={{ background: 'white', borderBottom: '1px solid #fce4ec', padding: '16px 32px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', boxShadow: '0 2px 8px rgba(233,30,140,0.08)' }}>
+    <div style={{ minHeight: '100vh', background: '#faf6f0', color: '#3d2010', fontFamily: 'sans-serif' }}>
+      <div style={{ background: 'white', borderBottom: '1px solid #e8d5c0', padding: '16px 32px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', boxShadow: '0 2px 8px rgba(61,32,8,0.08)' }}>
         <span style={{ color: '#e91e8c', fontWeight: '700', fontSize: '20px' }}>\U0001f393 Hub Academy</span>
         <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-          <span style={{ color: '#94a3b8', fontSize: '14px' }}>{user?.email}</span>
-          <button onClick={handleLogout} style={{ padding: '8px 16px', background: 'transparent', border: '1px solid #fce4ec', borderRadius: '8px', color: '#e91e8c', cursor: 'pointer', fontSize: '14px' }}>
+          <span style={{ color: '#9c7c5e', fontSize: '14px' }}>{user?.email}</span>
+          <button onClick={handleLogout} style={{ padding: '8px 16px', background: 'transparent', border: '1px solid #e8d5c0', borderRadius: '8px', color: '#e91e8c', cursor: 'pointer', fontSize: '14px' }}>
             D\u00e9connexion
           </button>
         </div>
@@ -128,13 +128,13 @@ export default function Home() {
 
       <div style={{ padding: '40px 32px', maxWidth: '1200px', margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-          <h1 style={{ fontSize: '32px', fontWeight: '700', marginBottom: '8px', color: '#1e293b' }}>
+          <h1 style={{ fontSize: '32px', fontWeight: '700', marginBottom: '8px', color: '#3d2010' }}>
             Bienvenue sur <span style={{ color: '#e91e8c' }}>Hub Academy</span> \U0001f393
           </h1>
-          <p style={{ color: '#94a3b8', marginBottom: '12px' }}>Votre plateforme de formation r\u00e9glementaire</p>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#e91e8c15', borderRadius: '20px', padding: '6px 16px' }}>
+          <p style={{ color: '#9c7c5e', marginBottom: '12px' }}>Votre plateforme de formation r\u00e9glementaire</p>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#f0e6d8', borderRadius: '20px', padding: '6px 16px' }}>
             <span style={{ color: '#e91e8c', fontSize: '13px', fontWeight: '700' }}>{readyModules} module disponible</span>
-            <span style={{ color: '#94a3b8', fontSize: '13px' }}>\u00b7 {totalModules - readyModules} \u00e0 venir \u00b7 {THEMES.length} th\u00e9matiques</span>
+            <span style={{ color: '#9c7c5e', fontSize: '13px' }}>\u00b7 {totalModules - readyModules} \u00e0 venir \u00b7 {THEMES.length} th\u00e9matiques</span>
           </div>
         </div>
 
@@ -143,14 +143,14 @@ export default function Home() {
             const isOpen = !!openThemes[ti]
             const readyCount = theme.modules.filter(m => m.ready).length
             return (
-              <div key={ti} style={{ background: 'white', borderRadius: '16px', overflow: 'hidden', boxShadow: `0 2px 12px ${theme.couleur}12`, border: `1.5px solid ${isOpen ? theme.couleur + '40' : '#f1f5f9'}`, transition: 'all 0.2s' }}>
+              <div key={ti} style={{ background: 'white', borderRadius: '16px', overflow: 'hidden', boxShadow: `0 2px 12px ${theme.couleur}12`, border: `1.5px solid ${isOpen ? theme.couleur + '40' : '#e8d5c0'}`, transition: 'all 0.2s' }}>
                 <button onClick={() => toggleTheme(ti)} style={{ width: '100%', display: 'flex', alignItems: 'center', gap: '14px', padding: '18px 24px', background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left' }}>
                   <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: `${theme.couleur}15`, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '20px', flexShrink: 0 }}>
                     {theme.emoji}
                   </div>
                   <div style={{ flex: 1 }}>
-                    <div style={{ fontWeight: '700', fontSize: '16px', color: '#1e293b', marginBottom: '2px' }}>{theme.titre}</div>
-                    <div style={{ fontSize: '12px', color: '#94a3b8' }}>
+                    <div style={{ fontWeight: '700', fontSize: '16px', color: '#3d2010', marginBottom: '2px' }}>{theme.titre}</div>
+                    <div style={{ fontSize: '12px', color: '#9c7c5e' }}>
                       {theme.modules.length} module{theme.modules.length > 1 ? 's' : ''}
                       {readyCount > 0 && <span style={{ color: theme.couleur, fontWeight: '600' }}> \u00b7 {readyCount} disponible{readyCount > 1 ? 's' : ''}</span>}
                     </div>
@@ -176,10 +176,10 @@ export default function Home() {
                             <span style={{ position: 'absolute', top: '8px', right: '8px', background: '#d1fae5', color: '#059669', fontSize: '9px', fontWeight: '700', borderRadius: '20px', padding: '2px 6px' }}>DISPO</span>
                           )}
                           <div style={{ fontSize: '26px', marginBottom: '8px' }}>{m.icon}</div>
-                          <div style={{ fontWeight: '700', fontSize: '13px', color: '#1e293b', lineHeight: 1.3, marginBottom: '4px' }}>{m.title}</div>
-                          <div style={{ fontSize: '11px', color: '#94a3b8' }}>{m.ready ? 'Fiches + quiz interactifs' : 'Bient\u00f4t disponible'}</div>
+                          <div style={{ fontWeight: '700', fontSize: '13px', color: '#3d2010', lineHeight: 1.3, marginBottom: '4px' }}>{m.title}</div>
+                          <div style={{ fontSize: '11px', color: '#9c7c5e' }}>{m.ready ? 'Fiches + quiz interactifs' : 'Bient\u00f4t disponible'}</div>
                           {m.ready && (
-                            <div style={{ marginTop: '10px', background: '#fff0f5', borderRadius: '4px', height: '3px' }}>
+                            <div style={{ marginTop: '10px', background: '#faf6f0', borderRadius: '4px', height: '3px' }}>
                               <div style={{ background: theme.couleur, borderRadius: '4px', height: '3px', width: '0%' }} />
                             </div>
                           )}
