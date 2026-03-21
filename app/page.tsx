@@ -297,13 +297,13 @@ export default function Home() {
   const rankIndex = Math.min(Math.floor(totalPoints / 100), t.ranks.length - 1)
 
   if (loading) return (
-    <div style={{ minHeight: '100vh', background: '#fff0f5', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#3d2010', fontSize: '18px' }}>
+    <div style={{ minHeight: '100vh', background: '#fff0f5', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#6b3a2a', fontSize: '18px' }}>
       Chargement...
     </div>
   )
 
   return (
-    <div style={{ minHeight: '100vh', background: '#fff0f5', display: 'flex', fontFamily: 'sans-serif', color: '#3d2010' }}>
+    <div style={{ minHeight: '100vh', background: '#fff0f5', display: 'flex', fontFamily: 'sans-serif', color: '#6b3a2a' }}>
 
       {/* ── SIDEBAR IMAGE ── */}
       <div style={{ width: '380px', minWidth: '380px', position: 'sticky', top: 0, height: '100vh', flexShrink: 0, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
@@ -354,7 +354,7 @@ export default function Home() {
           <div style={{ padding: '40px 32px', maxWidth: '1000px' }}>
             {/* Header */}
             <div style={{ marginBottom: '36px' }}>
-              <h2 style={{ fontSize: '26px', fontWeight: '800', color: '#3d2010', margin: '0 0 6px' }}>
+              <h2 style={{ fontSize: '26px', fontWeight: '800', color: '#6b3a2a', margin: '0 0 6px' }}>
                 {lang === 'fr' ? 'Tous les modules' : 'All modules'}
               </h2>
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#fce4ec', borderRadius: '20px', padding: '5px 14px' }}>
@@ -369,11 +369,11 @@ export default function Home() {
                 const isOpen = !!openThemes[ti]
                 const readyCount = theme.modules.filter(m => m.ready).length
                 return (
-                  <div key={ti} style={{ background: 'white', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 2px 12px rgba(61,32,16,0.07)', border: `1.5px solid ${isOpen ? '#3d2010' : '#e8d5c0'}`, transition: 'all 0.2s' }}>
-                    <button onClick={() => toggleTheme(ti)} style={{ width: '100%', display: 'flex', alignItems: 'center', gap: '14px', padding: '16px 20px', background: isOpen ? '#3d2010' : 'white', border: 'none', cursor: 'pointer', textAlign: 'left', transition: 'background 0.2s' }}>
+                  <div key={ti} style={{ background: 'white', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 2px 12px rgba(61,32,16,0.07)', border: `1.5px solid ${isOpen ? '#6b3a2a' : '#e8d5c0'}`, transition: 'all 0.2s' }}>
+                    <button onClick={() => toggleTheme(ti)} style={{ width: '100%', display: 'flex', alignItems: 'center', gap: '14px', padding: '16px 20px', background: isOpen ? '#6b3a2a' : 'white', border: 'none', cursor: 'pointer', textAlign: 'left', transition: 'background 0.2s' }}>
                       <div style={{ width: '38px', height: '38px', borderRadius: '10px', background: isOpen ? 'rgba(255,255,255,0.12)' : '#fce4ec', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px', flexShrink: 0 }}>{theme.emoji}</div>
                       <div style={{ flex: 1 }}>
-                        <div style={{ fontWeight: '700', fontSize: '15px', color: isOpen ? 'white' : '#3d2010', marginBottom: '2px' }}>{theme.titre}</div>
+                        <div style={{ fontWeight: '700', fontSize: '15px', color: isOpen ? 'white' : '#6b3a2a', marginBottom: '2px' }}>{theme.titre}</div>
                         <div style={{ fontSize: '12px', color: isOpen ? '#e8d5c0' : '#9c7c5e' }}>
                           {theme.modules.length} {theme.modules.length > 1 ? t.modulesP : t.modules}
                           {readyCount > 0 && <span style={{ color: '#e91e8c', fontWeight: '600' }}> · {readyCount} {t.available}</span>}
@@ -395,7 +395,7 @@ export default function Home() {
                               {m.ready && <span style={{ position: 'absolute', top: '6px', right: '6px', background: '#e91e8c', color: 'white', fontSize: '9px', fontWeight: '700', borderRadius: '20px', padding: '1px 6px' }}>{t.dispo}</span>}
                               {completedModules.includes(m.slug) && <span style={{ position: 'absolute', top: '6px', left: '6px', fontSize: '12px' }}>✅</span>}
                               <div style={{ fontSize: '24px', marginBottom: '6px' }}>{m.icon}</div>
-                              <div style={{ fontWeight: '700', fontSize: '12px', color: '#3d2010', lineHeight: 1.3, marginBottom: '3px' }}>{m.title}</div>
+                              <div style={{ fontWeight: '700', fontSize: '12px', color: '#6b3a2a', lineHeight: 1.3, marginBottom: '3px' }}>{m.title}</div>
                               <div style={{ fontSize: '10px', color: '#9c7c5e' }}>{m.ready ? t.quizzes : t.soon}</div>
                               {m.ready && <div style={{ marginTop: '8px', background: '#fce4ec', borderRadius: '3px', height: '3px' }}><div style={{ background: completedModules.includes(m.slug) ? '#059669' : '#e91e8c', borderRadius: '3px', height: '3px', width: completedModules.includes(m.slug) ? '100%' : '0%' }}/></div>}
                             </div>
@@ -413,7 +413,7 @@ export default function Home() {
         {/* ── DASHBOARD VIEW ── */}
         {view === 'dashboard' && (
           <div style={{ padding: '40px 32px', maxWidth: '900px' }}>
-            <h2 style={{ fontSize: '26px', fontWeight: '800', color: '#3d2010', margin: '0 0 6px' }}>{t.dashboard}</h2>
+            <h2 style={{ fontSize: '26px', fontWeight: '800', color: '#6b3a2a', margin: '0 0 6px' }}>{t.dashboard}</h2>
             <p style={{ color: '#9c7c5e', marginBottom: '32px', fontSize: '15px' }}>{user?.email}</p>
 
             {/* Score + Rank */}
@@ -434,7 +434,7 @@ export default function Home() {
             {/* Progress bar */}
             <div style={{ background: 'white', borderRadius: '16px', padding: '20px', border: '1.5px solid #e8d5c0', marginBottom: '32px' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
-                <span style={{ fontWeight: '700', color: '#3d2010', fontSize: '14px' }}>{lang === 'fr' ? 'Progression globale' : 'Overall progress'}</span>
+                <span style={{ fontWeight: '700', color: '#6b3a2a', fontSize: '14px' }}>{lang === 'fr' ? 'Progression globale' : 'Overall progress'}</span>
                 <span style={{ color: '#e91e8c', fontWeight: '700', fontSize: '14px' }}>{earnedCerts.length}/{Object.keys(CERTIFICATIONS).length}</span>
               </div>
               <div style={{ background: '#fce4ec', borderRadius: '8px', height: '12px', overflow: 'hidden' }}>
@@ -443,11 +443,11 @@ export default function Home() {
             </div>
 
             {/* Certifications */}
-            <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#3d2010', marginBottom: '16px' }}>{t.yourCerts}</h3>
+            <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#6b3a2a', marginBottom: '16px' }}>{t.yourCerts}</h3>
             {earnedCerts.length === 0 ? (
               <div style={{ background: 'white', borderRadius: '16px', padding: '48px', textAlign: 'center', border: '2px dashed #e8d5c0' }}>
                 <div style={{ fontSize: '48px', marginBottom: '16px' }}>🌱</div>
-                <p style={{ fontWeight: '700', color: '#3d2010', fontSize: '18px', margin: '0 0 8px' }}>{t.noModules}</p>
+                <p style={{ fontWeight: '700', color: '#6b3a2a', fontSize: '18px', margin: '0 0 8px' }}>{t.noModules}</p>
                 <p style={{ color: '#9c7c5e', margin: 0, fontSize: '14px' }}>{t.noModulesDesc}</p>
                 <button onClick={() => setView('home')} style={{ marginTop: '20px', padding: '12px 24px', background: '#e91e8c', border: 'none', borderRadius: '10px', color: 'white', fontWeight: '700', cursor: 'pointer', fontSize: '14px' }}>
                   {lang === 'fr' ? 'Voir les modules →' : 'See modules →'}
@@ -459,7 +459,7 @@ export default function Home() {
                   <div key={slug} style={{ background: 'white', borderRadius: '16px', padding: '24px', border: '2px solid #e91e8c30', boxShadow: '0 4px 20px rgba(233,30,140,0.08)', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
                     <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '4px', background: 'linear-gradient(90deg, #e91e8c, #f472b6)' }}/>
                     <div style={{ fontSize: '40px', marginBottom: '10px' }}>{cert.emoji}</div>
-                    <div style={{ fontWeight: '800', fontSize: '14px', color: '#3d2010', marginBottom: '4px', lineHeight: 1.3 }}>{lang === 'fr' ? cert.fr : cert.en}</div>
+                    <div style={{ fontWeight: '800', fontSize: '14px', color: '#6b3a2a', marginBottom: '4px', lineHeight: 1.3 }}>{lang === 'fr' ? cert.fr : cert.en}</div>
                     <div style={{ fontSize: '11px', color: '#9c7c5e', marginBottom: '12px' }}>{lang === 'fr' ? cert.desc_fr : cert.desc_en}</div>
                     <div style={{ background: '#e91e8c', color: 'white', borderRadius: '20px', padding: '4px 12px', fontSize: '11px', fontWeight: '700', display: 'inline-block' }}>
                       ✓ {lang === 'fr' ? 'Obtenu' : 'Earned'}
@@ -476,7 +476,7 @@ export default function Home() {
                 <div key={slug} style={{ background: '#fff0f5', borderRadius: '12px', padding: '16px', border: '1.5px solid #e8d5c0', opacity: 0.6, display: 'flex', alignItems: 'center', gap: '12px' }}>
                   <div style={{ fontSize: '28px', filter: 'grayscale(1)' }}>{cert.emoji}</div>
                   <div>
-                    <div style={{ fontWeight: '700', fontSize: '12px', color: '#3d2010' }}>{lang === 'fr' ? cert.fr : cert.en}</div>
+                    <div style={{ fontWeight: '700', fontSize: '12px', color: '#6b3a2a' }}>{lang === 'fr' ? cert.fr : cert.en}</div>
                     <div style={{ fontSize: '11px', color: '#9c7c5e' }}>🔒 {lang === 'fr' ? 'À débloquer' : 'Locked'}</div>
                   </div>
                 </div>
