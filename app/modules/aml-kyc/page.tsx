@@ -13,6 +13,7 @@ const THEMES = [
       { title: 'Risk Scoring client', icon: '📊', slug: 'risk-scoring', ready: false },
       { title: 'UBO — Bénéficiaire effectif', icon: '👤', slug: 'ubo', ready: false },
       { title: 'DDR', icon: '📋', slug: 'ddr', ready: false },
+      { title: 'Opérations suspectes', icon: '🚨', slug: 'operations-suspectes', ready: false },
     ],
   },
   {
@@ -24,6 +25,7 @@ const THEMES = [
       { title: "Conflits d'intérêts", icon: '⚡', slug: 'conflits-interets', ready: false },
       { title: 'Whistleblowing', icon: '📣', slug: 'whistleblowing', ready: false },
       { title: 'Veille réglementaire', icon: '📡', slug: 'veille-reglementaire', ready: false },
+      { title: 'Mutualisation & Accessibilité', icon: '🔗', slug: 'mutualisation-accessibilite', ready: false },
     ],
   },
   {
