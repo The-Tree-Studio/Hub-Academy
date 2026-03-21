@@ -306,7 +306,7 @@ export default function Home() {
     <div style={{ minHeight: '100vh', background: '#faf6f0', display: 'flex', fontFamily: 'sans-serif', color: '#3d2010' }}>
 
       {/* ── SIDEBAR IMAGE ── */}
-      <div style={{ width: '300px', minWidth: '300px', position: 'sticky', top: 0, height: '100vh', flexShrink: 0, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+      <div style={{ width: '380px', minWidth: '380px', position: 'sticky', top: 0, height: '100vh', flexShrink: 0, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
         {/* Background image */}
         <img src={HERO_IMAGE} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.75 }} onError={e => { (e.target as HTMLImageElement).style.display = 'none' }} />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(61,32,16,0.45) 0%, rgba(61,32,16,0.2) 50%, rgba(61,32,16,0.55) 100%)' }} />
