@@ -26,6 +26,7 @@ const THEMES = [
       { title: 'Whistleblowing', icon: '📣', slug: 'whistleblowing', ready: false },
       { title: 'Veille réglementaire', icon: '📡', slug: 'veille-reglementaire', ready: false },
       { title: 'Mutualisation & Accessibilité', icon: '🔗', slug: 'mutualisation-accessibilite', ready: false },
+      { title: 'Contrôle Interne', icon: '🔎', slug: 'controle-interne', ready: false },
     ],
   },
   {
@@ -75,6 +76,7 @@ const THEMES = [
       { title: 'Plan de reprise IT (DRP)', icon: '⚙️', slug: 'drp', ready: false },
       { title: 'Gestion de crise', icon: '🆘', slug: 'gestion-crise', ready: false },
       { title: 'Tests & exercices BCP', icon: '🧪', slug: 'tests-bcp', ready: false },
+      { title: 'Gestion des incidents', icon: '🆘', slug: 'gestion-incidents', ready: false },
     ],
   },
   {
