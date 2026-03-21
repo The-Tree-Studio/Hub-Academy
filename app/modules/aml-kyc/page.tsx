@@ -339,7 +339,7 @@ export default function ModuleAmlKyc() {
                     <button key={m.sigle} onClick={() => handleMatchSigle(m.sigle)}
                       disabled={isPaired}
                       style={{
-                        padding: '14px', borderRadius: '12px', fontSize: '16px', fontWeight: '800', cursor: isPaired ? 'default' : 'pointer', border: 'none', transition: 'all 0.2s',
+                        padding: '14px', borderRadius: '12px', fontSize: '16px', fontWeight: '800', cursor: isPaired ? 'default' : 'pointer', transition: 'all 0.2s',
                         background: isPaired ? '#d1fae5' : isSelected ? '#7c3aed' : 'white',
                         color: isPaired ? '#059669' : isSelected ? 'white' : '#1e293b',
                         boxShadow: isSelected ? '0 4px 16px #7c3aed50' : '0 2px 8px rgba(0,0,0,0.06)',
