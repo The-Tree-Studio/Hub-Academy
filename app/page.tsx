@@ -48,6 +48,7 @@ const THEMES_FR = [
       { title: 'Plan de continuité (BCP)', icon: '📆', slug: 'bcp', ready: false },
       { title: 'Plan de reprise IT (DRP)', icon: '⚙️', slug: 'drp', ready: false },
       { title: 'Tests & exercices BCP', icon: '🧪', slug: 'tests-bcp', ready: false },
+      { title: 'ISO 22301', icon: '🏆', slug: 'iso-22301', ready: false },
     ],
   },
   {
@@ -101,7 +102,6 @@ const THEMES_FR = [
       { title: 'Circulaire 24/850', icon: '📰', slug: 'circulaire-24-850', ready: false },
       { title: 'Externalisation 22/806', icon: '🤝', slug: 'externalisation', ready: false },
       { title: 'Infrastructure IT', icon: '🖥️', slug: 'infrastructure-it', ready: false },
-      { title: 'ISO 22301', icon: '🏆', slug: 'iso-22301', ready: false },
       { title: 'Résilience IT (DORA)', icon: '💻', slug: 'resilience-it', ready: false },
     ],
   },
@@ -156,6 +156,7 @@ const THEMES_EN = [
       { title: 'Key Principles', icon: '📖', slug: 'bca-grands-principes', ready: false },
       { title: 'BCP — Business Continuity Plan', icon: '📆', slug: 'bcp', ready: false },
       { title: 'BCP Tests & Exercises', icon: '🧪', slug: 'tests-bcp', ready: false },
+      { title: 'ISO 22301', icon: '🏆', slug: 'iso-22301', ready: false },
       { title: 'Crisis Management', icon: '🆘', slug: 'gestion-crise', ready: false },
       { title: 'DRP — IT Disaster Recovery Plan', icon: '⚙️', slug: 'drp', ready: false },
       { title: 'Incident Management', icon: '🚨', slug: 'gestion-incidents', ready: false },
@@ -212,7 +213,6 @@ const THEMES_EN = [
       { title: 'Circular 24/850', icon: '📰', slug: 'circulaire-24-850', ready: false },
       { title: 'IT Infrastructure', icon: '🖥️', slug: 'infrastructure-it', ready: false },
       { title: 'IT Resilience (DORA)', icon: '💻', slug: 'resilience-it', ready: false },
-      { title: 'ISO 22301', icon: '🏆', slug: 'iso-22301', ready: false },
       { title: 'Outsourcing 22/806', icon: '🤝', slug: 'externalisation', ready: false },
     ],
   },
@@ -306,10 +306,10 @@ export default function Home() {
     <div style={{ minHeight: '100vh', background: '#faf6f0', display: 'flex', fontFamily: 'sans-serif', color: '#3d2010' }}>
 
       {/* ── SIDEBAR IMAGE ── */}
-      <div style={{ width: '260px', minWidth: '260px', position: 'sticky', top: 0, height: '100vh', flexShrink: 0, display: 'flex', flexDirection: 'column', overflow: 'hidden', background: '#3d2010' }}>
+      <div style={{ width: '300px', minWidth: '300px', position: 'sticky', top: 0, height: '100vh', flexShrink: 0, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
         {/* Background image */}
-        <img src={HERO_IMAGE} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.35 }} onError={e => { (e.target as HTMLImageElement).style.display = 'none' }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(61,32,16,0.7) 0%, rgba(61,32,16,0.5) 50%, rgba(61,32,16,0.85) 100%)' }} />
+        <img src={HERO_IMAGE} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.75 }} onError={e => { (e.target as HTMLImageElement).style.display = 'none' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(61,32,16,0.45) 0%, rgba(61,32,16,0.2) 50%, rgba(61,32,16,0.55) 100%)' }} />
 
         {/* Content over image */}
         <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', height: '100%', padding: '32px 20px' }}>
