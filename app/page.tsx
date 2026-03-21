@@ -178,7 +178,7 @@ export default function Home() {
                       {theme.modules.map((m, i) => (
                         <div key={i}
                           onClick={() => m.ready && router.push(`/modules/${m.slug}`)}
-                          style={{ background: 'white', border: m.ready ? '1.5px solid #e8d5c0' : '1.5px solid #ede0d4', borderRadius: '12px', padding: '16px', cursor: m.ready ? 'pointer' : 'default', transition: 'all 0.2s', opacity: m.ready ? 1 : 0.5, position: 'relative' } as React.CSSProperties}
+                          style={{ background: '#faf6f0', border: m.ready ? '1.5px solid #e8d5c0' : '1.5px solid #ede0d4', borderRadius: '12px', padding: '16px', cursor: m.ready ? 'pointer' : 'default', transition: 'all 0.2s', opacity: m.ready ? 1 : 0.5, position: 'relative' } as React.CSSProperties}
                           onMouseOver={e => { if (m.ready) { e.currentTarget.style.borderColor = '#3d2010'; e.currentTarget.style.boxShadow = '0 4px 16px rgba(61,32,16,0.15)'; e.currentTarget.style.transform = 'translateY(-2px)' } }}
                           onMouseOut={e => { if (m.ready) { e.currentTarget.style.borderColor = '#e8d5c0'; e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.transform = 'translateY(0)' } }}>
                           {m.ready && (
