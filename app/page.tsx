@@ -297,13 +297,13 @@ export default function Home() {
   const rankIndex = Math.min(Math.floor(totalPoints / 100), t.ranks.length - 1)
 
   if (loading) return (
-    <div style={{ minHeight: '100vh', background: '#fff0f5', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#6b3a2a', fontSize: '18px' }}>
+    <div style={{ minHeight: '100vh', background: '#faf6f0', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#6b3a2a', fontSize: '18px' }}>
       Chargement...
     </div>
   )
 
   return (
-    <div style={{ minHeight: '100vh', background: '#fff0f5', display: 'flex', fontFamily: 'sans-serif', color: '#6b3a2a' }}>
+    <div style={{ minHeight: '100vh', background: '#faf6f0', display: 'flex', fontFamily: 'sans-serif', color: '#6b3a2a' }}>
 
       {/* ── SIDEBAR IMAGE ── */}
       <div style={{ width: '380px', minWidth: '380px', position: 'sticky', top: 0, height: '100vh', flexShrink: 0, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
@@ -384,12 +384,12 @@ export default function Home() {
                     </button>
 
                     {isOpen && (
-                      <div style={{ padding: '0 16px 16px', borderTop: '1px solid #e8d5c0', background: '#fff0f5' }}>
+                      <div style={{ padding: '0 16px 16px', borderTop: '1px solid #e8d5c0', background: '#faf6f0' }}>
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: '10px', paddingTop: '14px' }}>
                           {theme.modules.map((m, i) => (
                             <div key={i}
                               onClick={() => m.ready && router.push(`/modules/${m.slug}`)}
-                              style={{ background: '#fff0f5', border: m.ready ? `1.5px solid ${theme.couleur}40` : '1.5px solid #e8d5c0', borderRadius: '12px', padding: '14px', cursor: m.ready ? 'pointer' : 'default', transition: 'all 0.2s', opacity: m.ready ? 1 : 0.5, position: 'relative' } as React.CSSProperties}
+                              style={{ background: '#faf6f0', border: m.ready ? `1.5px solid ${theme.couleur}40` : '1.5px solid #e8d5c0', borderRadius: '12px', padding: '14px', cursor: m.ready ? 'pointer' : 'default', transition: 'all 0.2s', opacity: m.ready ? 1 : 0.5, position: 'relative' } as React.CSSProperties}
                               onMouseOver={e => { if (m.ready) { e.currentTarget.style.borderColor = theme.couleur; e.currentTarget.style.boxShadow = `0 4px 16px ${theme.couleur}20`; e.currentTarget.style.transform = 'translateY(-2px)' } }}
                               onMouseOut={e => { if (m.ready) { e.currentTarget.style.borderColor = `${theme.couleur}40`; e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.transform = 'translateY(0)' } }}>
                               {m.ready && <span style={{ position: 'absolute', top: '6px', right: '6px', background: '#e91e8c', color: 'white', fontSize: '9px', fontWeight: '700', borderRadius: '20px', padding: '1px 6px' }}>{t.dispo}</span>}
@@ -473,7 +473,7 @@ export default function Home() {
             <h3 style={{ fontSize: '16px', fontWeight: '700', color: '#9c7c5e', marginTop: '32px', marginBottom: '16px' }}>{lang === 'fr' ? 'À débloquer' : 'To unlock'}</h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '12px' }}>
               {Object.entries(CERTIFICATIONS).filter(([slug]) => !completedModules.includes(slug)).map(([slug, cert]) => (
-                <div key={slug} style={{ background: '#fff0f5', borderRadius: '12px', padding: '16px', border: '1.5px solid #e8d5c0', opacity: 0.6, display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <div key={slug} style={{ background: '#faf6f0', borderRadius: '12px', padding: '16px', border: '1.5px solid #e8d5c0', opacity: 0.6, display: 'flex', alignItems: 'center', gap: '12px' }}>
                   <div style={{ fontSize: '28px', filter: 'grayscale(1)' }}>{cert.emoji}</div>
                   <div>
                     <div style={{ fontWeight: '700', fontSize: '12px', color: '#6b3a2a' }}>{lang === 'fr' ? cert.fr : cert.en}</div>

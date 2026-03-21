@@ -192,7 +192,7 @@ export default function ModuleAmlKyc() {
     }, 2200)
   }
 
-  const base:React.CSSProperties={minHeight:'100vh',background:'#fff0f5',fontFamily:"'Segoe UI',system-ui,sans-serif",color:'#6b3a2a'}
+  const base:React.CSSProperties={minHeight:'100vh',background:'#faf6f0',fontFamily:"'Segoe UI',system-ui,sans-serif",color:'#6b3a2a'}
 
   const NavBar=()=>(
     <div style={{background:'#6b3a2a',padding:'12px 24px',display:'flex',alignItems:'center',gap:'12px',boxShadow:'0 2px 8px rgba(61,32,16,0.2)'}}>
@@ -203,7 +203,7 @@ export default function ModuleAmlKyc() {
           <button onClick={()=>switchLang('fr')} style={{padding:'4px 10px',borderRadius:'12px',border:'none',cursor:'pointer',fontSize:'12px',fontWeight:'700',background:lang==='fr'?C:'transparent',color:lang==='fr'?'white':'#e8d5c0',transition:'all 0.2s'}}>🇫🇷 FR</button>
           <button onClick={()=>switchLang('en')} style={{padding:'4px 10px',borderRadius:'12px',border:'none',cursor:'pointer',fontSize:'12px',fontWeight:'700',background:lang==='en'?C:'transparent',color:lang==='en'?'white':'#e8d5c0',transition:'all 0.2s'}}>🇬🇧 EN</button>
         </div>
-        <span style={{background:'#fff0f5',border:'1px solid #e8d5c0',borderRadius:'20px',padding:'4px 14px',fontSize:'13px',color:C,fontWeight:'600'}}>⭐ {score} {t.pts}</span>
+        <span style={{background:'#faf6f0',border:'1px solid #e8d5c0',borderRadius:'20px',padding:'4px 14px',fontSize:'13px',color:C,fontWeight:'600'}}>⭐ {score} {t.pts}</span>
       </div>
     </div>
   )
@@ -324,7 +324,7 @@ export default function ModuleAmlKyc() {
               <div style={{display:'flex',flexDirection:'column',gap:'8px'}}>
                 {shuffle(activeMatching.map(m=>({definition:m.definition}))).map(m=>{const ip=Object.values(matchPairs).includes(m.definition);return(
                   <button key={m.definition} onClick={()=>handleMatchDef(m.definition)} disabled={ip||!matchSelected}
-                    style={{padding:'14px',borderRadius:'12px',fontSize:'14px',fontWeight:'600',cursor:(ip||!matchSelected)?'default':'pointer',transition:'all 0.2s',textAlign:'left',background:ip?'#d1fae5':matchSelected?'white':'#fff0f5',color:ip?'#059669':'#6b3a2a',boxShadow:'0 2px 8px rgba(0,0,0,0.06)',border:ip?'1.5px solid #6ee7b7':'1.5px solid #e8d5c0',opacity:(!matchSelected&&!ip)?0.6:1} as React.CSSProperties}>
+                    style={{padding:'14px',borderRadius:'12px',fontSize:'14px',fontWeight:'600',cursor:(ip||!matchSelected)?'default':'pointer',transition:'all 0.2s',textAlign:'left',background:ip?'#d1fae5':matchSelected?'white':'#faf6f0',color:ip?'#059669':'#6b3a2a',boxShadow:'0 2px 8px rgba(0,0,0,0.06)',border:ip?'1.5px solid #6ee7b7':'1.5px solid #e8d5c0',opacity:(!matchSelected&&!ip)?0.6:1} as React.CSSProperties}>
                     {ip?'✓ ':''}{m.definition}
                   </button>
                 )})}
@@ -394,7 +394,7 @@ export default function ModuleAmlKyc() {
   if (phase==='quiz3') {
     const q=activeVF[vfIndex]
     return (
-      <div style={{...base,transition:'background 0.3s',background:vfAnimation==='correct'?'#d1fae5':vfAnimation==='wrong'?'#fee2e2':'#fff0f5'}}><NavBar/>
+      <div style={{...base,transition:'background 0.3s',background:vfAnimation==='correct'?'#d1fae5':vfAnimation==='wrong'?'#fee2e2':'#faf6f0'}}><NavBar/>
         <div style={{background:vfAnimation==='correct'?'#6ee7b7':vfAnimation==='wrong'?'#fca5a5':'#e8d5c0',height:'6px'}}>
           <div style={{background:C,height:'6px',width:`${(vfIndex/activeVF.length)*100}%`,transition:'width 0.4s ease'}}/>
         </div>
