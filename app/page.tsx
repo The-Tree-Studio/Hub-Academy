@@ -292,22 +292,24 @@ export default function Home() {
   )
 
   return (
-    <div style={{ minHeight: '100vh', background: '#faf6f0', display: 'flex', flexDirection: 'column', fontFamily: 'sans-serif', color: '#6b3a2a' }}>
+    <div style={{ minHeight: '100vh', background: '#faf6f0', display: 'flex', fontFamily: 'sans-serif', color: '#6b3a2a' }}>
 
-      {/* HEADER HORIZONTAL */}
-      <div style={{ position: 'sticky', top: 0, zIndex: 100, flexShrink: 0 }}>
-        {/* Bande image */}
-        <div style={{ position: 'relative', height: '90px', overflow: 'hidden' }}>
-          <img src={HERO_IMAGE} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 30%', opacity: 0.9 }} onError={e => { (e.target as HTMLImageElement).style.display = 'none' }} />
-          <div style={{ position: 'absolute', inset: 0, background: 'rgba(61,32,16,0.25)' }} />
-          <div style={{ position: 'relative', zIndex: 1, height: '100%', display: 'flex', alignItems: 'center', padding: '0 32px', gap: '12px' }}>
-            <span style={{ fontSize: '28px' }}>🎓</span>
-            <h1 style={{ color: '#e91e8c', fontWeight: '800', fontSize: '22px', margin: 0, textShadow: '0 2px 6px rgba(0,0,0,0.5)' }}>Hub Academy</h1>
-            <p style={{ color: 'white', fontSize: '12px', margin: 0, textShadow: '0 1px 4px rgba(0,0,0,0.5)', opacity: 0.9 }}>{t.siteSubtitle}</p>
-          </div>
+      {/* COLONNE IMAGE VERTICALE */}
+      <div style={{ width: '180px', minWidth: '180px', position: 'sticky', top: 0, height: '100vh', flexShrink: 0, overflow: 'hidden' } as React.CSSProperties}>
+        <img src={HERO_IMAGE} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', opacity: 0.92 }} onError={e => { (e.target as HTMLImageElement).style.display = 'none' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'rgba(61,32,16,0.18)' }} />
+        <div style={{ position: 'relative', zIndex: 1, padding: '24px 16px' }}>
+          <div style={{ fontSize: '30px', marginBottom: '6px' }}>🎓</div>
+          <h1 style={{ color: '#e91e8c', fontWeight: '800', fontSize: '17px', margin: '0 0 4px', lineHeight: 1.2, textShadow: '0 2px 6px rgba(0,0,0,0.55)' }}>Hub Academy</h1>
+          <p style={{ color: 'white', fontSize: '10px', margin: 0, textShadow: '0 1px 4px rgba(0,0,0,0.55)', opacity: 0.9, lineHeight: 1.4 }}>{t.siteSubtitle}</p>
         </div>
-        {/* Barre de navigation */}
-        <div style={{ background: '#6b3a2a', borderBottom: '1px solid #8b5a47', padding: '0 32px', display: 'flex', alignItems: 'center', gap: '8px', height: '52px' }}>
+      </div>
+
+      {/* ZONE DROITE : header nav + contenu */}
+      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minWidth: 0 }}>
+
+        {/* HEADER NAV */}
+        <div style={{ position: 'sticky', top: 0, zIndex: 100, background: '#6b3a2a', borderBottom: '1px solid #8b5a47', padding: '0 24px', display: 'flex', alignItems: 'center', gap: '8px', height: '52px', flexShrink: 0 }}>
           {[
             { key: 'home' as const, icon: '📚', labelFr: 'Formations', labelEn: 'Training' },
             { key: 'dashboard' as const, icon: '🏆', labelFr: 'Mon tableau de bord', labelEn: 'My Dashboard' },
@@ -337,12 +339,9 @@ export default function Home() {
             </button>
           </div>
         </div>
-      </div>
 
-      {/* MAIN CONTENT */}
-      <div style={{ flex: 1, overflowY: 'auto' }}>
-
-      {/* OLD COLUMNS REMOVED */}
+        {/* CONTENU */}
+        <div style={{ flex: 1, overflowY: 'auto' }}>
 
         {/* HOME VIEW */}
         {view === 'home' && (
@@ -470,6 +469,7 @@ export default function Home() {
             </div>
           </div>
         )}
+        </div>
       </div>
     </div>
   )
