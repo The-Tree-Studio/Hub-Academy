@@ -22,6 +22,11 @@ const FICHES = [
       { icon: '🌍', texte: "**Recommandations du GAFI** — 40 recommandations internationales sur la LBC/FT, adoptées par le Luxembourg" },
     ],
     aretenir: "La loi de 2004 est la colonne vertébrale. Tout le reste (directives, règlements, circulaires CSSF) vient la compléter et la préciser.",
+    plusLoin: [
+      { icon: '📅', texte: "**AMLD6 (2021)** — élargit les infractions sous-jacentes au blanchiment et renforce les sanctions pénales pour les personnes morales" },
+      { icon: '🔭', texte: "**AMLD7 en cours** — prévoit la création d'une **Autorité européenne AML (AMLA)** basée à Francfort, avec des pouvoirs de supervision directe dès 2026" },
+      { icon: '🇱🇺', texte: "**Règlement CSSF 20-05** — introduit les exigences de gouvernance interne spécifiques aux PSF, incluant la désignation obligatoire d'un Responsable AML agréé" },
+    ],
   },
   {
     id: 3, emoji: '🤝', titre: "Qui sont les clients d'i-Hub ?", couleur: '#e91e8c',
@@ -74,6 +79,11 @@ const FICHES = [
       { icon: '🔍', texte: "Si aucune personne ne dépasse 25%, on identifie la ou les personnes exerçant le **contrôle effectif** de fait (ex: PDG)" },
     ],
     aretenir: "Identifier l'UBO permet de savoir QUI se cache vraiment derrière une société. C'est la clé pour détecter les structures opaques.",
+    plusLoin: [
+      { icon: '🏛️', texte: "Le **Registre des Bénéficiaires Effectifs (RBE)** luxembourgeois est public depuis 2019 — toute société doit y inscrire ses UBO sous peine d'amende pouvant atteindre 1,25 million d'euros" },
+      { icon: '🔗', texte: "En cas de **chaîne de holdings complexe**, i-Hub doit remonter toute la chaîne jusqu'à la personne physique réelle — même si cela implique plusieurs pays et plusieurs niveaux de détention" },
+      { icon: '🤝', texte: "Si le client refuse d'identifier ses UBO sans justification valable, i-Hub a l'obligation de **refuser la relation d'affaires** et peut être tenu de déclarer ce refus à la CRF" },
+    ],
   },
   {
     id: 8, emoji: '🏛️', titre: "C'est quoi un PEP ?", couleur: '#e91e8c',
@@ -114,6 +124,11 @@ const FICHES = [
       { icon: '🔄', texte: "Ces listes sont **mises à jour régulièrement** — i-Hub doit les consulter avant chaque nouvelle relation d'affaires internationale" },
     ],
     aretenir: "Un client dont l'activité principale est dans un pays listé GAFI déclenche automatiquement l'EDD. Pas de dérogation possible.",
+    plusLoin: [
+      { icon: '🌍', texte: "**Liste noire GAFI actuelle** (2024) : Iran, Corée du Nord, Myanmar — ces pays font l'objet d'un appel à contre-mesures. Toute transaction est quasi-impossible." },
+      { icon: '🟡', texte: "**Liste grise GAFI (exemples)** : Bulgarie, Cameroun, Croatie, Monaco, Namibie, Nigeria, Vietnam — surveillance accrue requise mais relation possible avec EDD documentée" },
+      { icon: '📋', texte: "**Mise à jour** : le GAFI publie ses listes révisées **3 fois par an** (février, juin, octobre). L'équipe Compliance d'i-Hub effectue une veille à chaque publication" },
+    ],
   },
   {
     id: 12, emoji: '📊', titre: "Le Risk Scoring d'un client", couleur: '#e91e8c',
@@ -145,6 +160,11 @@ const FICHES = [
       { icon: '🔴', texte: "**Pression pour conclure rapidement** un contrat sans passer par les procédures normales de due diligence d'i-Hub" },
     ],
     aretenir: "Un seul red flag n'est pas forcément bloquant, mais l'accumulation de signaux doit alerter et déclencher une EDD ou un refus motivé.",
+    plusLoin: [
+      { icon: '💡', texte: "**Technique du 'layering'** — un client qui fragmente ses paiements en petits montants pour éviter les seuils de déclaration (technique dite 'smurfing') est un red flag majeur" },
+      { icon: '🌐', texte: "**Pays non coopératifs** : une société dont les filiales intermédiaires sont aux Îles Caïmans, au Panama ou dans un autre paradis fiscal non justifié économiquement doit alerter" },
+      { icon: '📰', texte: "**Negative news** : une simple recherche Google sur le nom du client et de ses dirigeants fait partie des bonnes pratiques de CDD — une condamnation publique est un red flag évident" },
+    ],
   },
   {
     id: 15, emoji: '🚨', titre: "Que faire en cas de doute ?", couleur: '#e91e8c',
@@ -185,6 +205,11 @@ const FICHES = [
       { icon: '📢', texte: "i-Hub doit **notifier la CRF et le Parquet** en cas de gel d'avoirs et tenir un registre précis des actifs gelés" },
     ],
     aretenir: "Le gel s'applique même si la transaction est déjà en cours. En cas de match sur une liste de sanctions : on arrête tout et on appelle l'équipe Compliance.",
+    plusLoin: [
+      { icon: '🇺🇸', texte: "**OFAC (US)** — l'Office of Foreign Assets Control impose des sanctions extraterritoriales : même une société luxembourgeoise peut être sanctionnée si elle traite en dollars ou avec des correspondants américains" },
+      { icon: '⚡', texte: "**Faux positifs** : les outils de screening génèrent souvent des correspondances sur des noms communs (ex: 'Ali Hassan'). L'équipe Compliance doit documenter chaque analyse et décision de levée de doute" },
+      { icon: '📋', texte: "**Désengagement** : si un fournisseur ou client existant est nouvellement sanctionné, i-Hub a l'obligation de **résilier le contrat** dans les délais légaux et de ne pas renouveler la relation" },
+    ],
   },
   {
     id: 19, emoji: '⚠️', titre: "Les sanctions en cas de manquement", couleur: '#e91e8c',
@@ -251,6 +276,7 @@ export default function ModuleAmlKyc() {
   const [phase, setPhase] = useState<'intro' | 'fiches' | 'quiz1' | 'quiz2' | 'quiz3' | 'resultat'>('intro')
   const [ficheIndex, setFicheIndex] = useState(0)
   const [score, setScore] = useState(0)
+  const [plusLoinOpen, setPlusLoinOpen] = useState(false)
 
   const [matchSelected, setMatchSelected] = useState<string | null>(null)
   const [matchPairs, setMatchPairs] = useState<Record<string, string>>({})
@@ -379,7 +405,7 @@ export default function ModuleAmlKyc() {
             <span style={{ fontSize: '13px', color: '#94a3b8', fontWeight: '600' }}>FICHE {ficheIndex + 1} / {FICHES.length}</span>
             <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap', justifyContent: 'flex-end', maxWidth: '200px' }}>
               {FICHES.map((_, i) => (
-                <div key={i} onClick={() => setFicheIndex(i)} style={{ width: '8px', height: '8px', borderRadius: '50%', background: i === ficheIndex ? fiche.couleur : i < ficheIndex ? '#e91e8c50' : '#fce4ec', cursor: 'pointer', transition: 'all 0.2s' }} />
+                <div key={i} onClick={() => { setFicheIndex(i); setPlusLoinOpen(false) }} style={{ width: '8px', height: '8px', borderRadius: '50%', background: i === ficheIndex ? fiche.couleur : i < ficheIndex ? '#e91e8c50' : '#fce4ec', cursor: 'pointer', transition: 'all 0.2s' }} />
               ))}
             </div>
           </div>
@@ -403,13 +429,33 @@ export default function ModuleAmlKyc() {
                   <p style={{ margin: 0, fontSize: '14px', color: '#475569', fontStyle: 'italic' }}>{fiche.aretenir}</p>
                 </div>
               </div>
+              {(fiche as any).plusLoin && (
+                <div style={{ marginTop: '12px' }}>
+                  <button onClick={() => setPlusLoinOpen(o => !o)}
+                    style={{ width: '100%', padding: '12px 16px', background: plusLoinOpen ? fiche.couleur : 'white', border: `1.5px solid ${fiche.couleur}`, borderRadius: '10px', color: plusLoinOpen ? 'white' : fiche.couleur, cursor: 'pointer', fontSize: '14px', fontWeight: '700', display: 'flex', alignItems: 'center', justifyContent: 'space-between', transition: 'all 0.2s' }}>
+                    <span>🔭 Aller plus loin</span>
+                    <span style={{ fontSize: '18px', transition: 'transform 0.3s', transform: plusLoinOpen ? 'rotate(180deg)' : 'rotate(0deg)', display: 'inline-block' }}>▾</span>
+                  </button>
+                  {plusLoinOpen && (
+                    <div style={{ background: `${fiche.couleur}08`, border: `1px solid ${fiche.couleur}25`, borderRadius: '0 0 10px 10px', padding: '16px', marginTop: '-4px', borderTop: 'none' }}>
+                      {((fiche as any).plusLoin as {icon: string, texte: string}[]).map((item, i) => (
+                        <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', padding: '10px 0', borderBottom: i < (fiche as any).plusLoin.length - 1 ? `1px solid ${fiche.couleur}20` : 'none' }}>
+                          <span style={{ fontSize: '20px', minWidth: '28px', textAlign: 'center' }}>{item.icon}</span>
+                          <p style={{ margin: 0, fontSize: '14px', lineHeight: 1.6, color: '#475569' }}
+                            dangerouslySetInnerHTML={{ __html: item.texte.replace(/\*\*(.*?)\*\*/g, `<strong style="color:${fiche.couleur}">$1</strong>`) }} />
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           </div>
           <div style={{ display: 'flex', gap: '12px' }}>
             {ficheIndex > 0 && (
-              <button onClick={() => setFicheIndex(i => i - 1)} style={{ flex: 1, padding: '14px', background: 'white', border: '1px solid #fce4ec', borderRadius: '12px', color: '#64748b', cursor: 'pointer', fontSize: '15px', fontWeight: '600' }}>← Précédent</button>
+              <button onClick={() => { setFicheIndex(i => i - 1); setPlusLoinOpen(false) }} style={{ flex: 1, padding: '14px', background: 'white', border: '1px solid #fce4ec', borderRadius: '12px', color: '#64748b', cursor: 'pointer', fontSize: '15px', fontWeight: '600' }}>← Précédent</button>
             )}
-            <button onClick={() => ficheIndex < FICHES.length - 1 ? setFicheIndex(i => i + 1) : setPhase('quiz1')}
+            <button onClick={() => ficheIndex < FICHES.length - 1 ? (setFicheIndex(i => i + 1), setPlusLoinOpen(false)) : setPhase('quiz1')}
               style={{ flex: 2, padding: '14px', background: fiche.couleur, border: 'none', borderRadius: '12px', color: 'white', cursor: 'pointer', fontSize: '16px', fontWeight: '700', boxShadow: `0 4px 16px ${fiche.couleur}40` }}>
               {ficheIndex < FICHES.length - 1 ? `Fiche suivante (${ficheIndex + 2}/${FICHES.length}) →` : '🎮 Passer aux quiz !'}
             </button>
