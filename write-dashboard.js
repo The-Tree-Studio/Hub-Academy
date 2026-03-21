@@ -295,55 +295,57 @@ export default function Home() {
   )
 
   return (
-    <div style={{ minHeight: '100vh', background: '#faf6f0', display: 'flex', fontFamily: 'sans-serif', color: '#6b3a2a' }}>
+    <div style={{ minHeight: '100vh', background: '#faf6f0', display: 'flex', flexDirection: 'column', fontFamily: 'sans-serif', color: '#6b3a2a' }}>
 
-      {/* IMAGE COLUMN */}
-      <div style={{ width: '200px', minWidth: '200px', position: 'sticky', top: 0, height: '100vh', flexShrink: 0, overflow: 'hidden' } as React.CSSProperties}>
-        <img src={HERO_IMAGE} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.9 }} onError={e => { (e.target as HTMLImageElement).style.display = 'none' }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'rgba(61,32,16,0.2)' }} />
-        <div style={{ position: 'relative', zIndex: 1, padding: '28px 16px' }}>
-          <div style={{ fontSize: '32px', marginBottom: '6px' }}>🎓</div>
-          <h1 style={{ color: '#e91e8c', fontWeight: '800', fontSize: '18px', margin: '0 0 4px', lineHeight: 1.2, textShadow: '0 2px 6px rgba(0,0,0,0.6)' }}>Hub Academy</h1>
-          <p style={{ color: 'white', fontSize: '10px', margin: 0, textShadow: '0 1px 4px rgba(0,0,0,0.6)' }}>{t.siteSubtitle}</p>
+      {/* HEADER HORIZONTAL */}
+      <div style={{ position: 'sticky', top: 0, zIndex: 100, flexShrink: 0 }}>
+        {/* Bande image */}
+        <div style={{ position: 'relative', height: '90px', overflow: 'hidden' }}>
+          <img src={HERO_IMAGE} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 30%', opacity: 0.9 }} onError={e => { (e.target as HTMLImageElement).style.display = 'none' }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'rgba(61,32,16,0.25)' }} />
+          <div style={{ position: 'relative', zIndex: 1, height: '100%', display: 'flex', alignItems: 'center', padding: '0 32px', gap: '12px' }}>
+            <span style={{ fontSize: '28px' }}>🎓</span>
+            <h1 style={{ color: '#e91e8c', fontWeight: '800', fontSize: '22px', margin: 0, textShadow: '0 2px 6px rgba(0,0,0,0.5)' }}>Hub Academy</h1>
+            <p style={{ color: 'white', fontSize: '12px', margin: 0, textShadow: '0 1px 4px rgba(0,0,0,0.5)', opacity: 0.9 }}>{t.siteSubtitle}</p>
+          </div>
         </div>
-      </div>
-
-      {/* MENU COLUMN */}
-      <div style={{ width: '190px', minWidth: '190px', position: 'sticky', top: 0, height: '100vh', flexShrink: 0, display: 'flex', flexDirection: 'column', background: '#6b3a2a', borderRight: '1px solid #8b5a47', padding: '28px 14px' }}>
-        <nav style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginBottom: 'auto' }}>
+        {/* Barre de navigation */}
+        <div style={{ background: '#6b3a2a', borderBottom: '1px solid #8b5a47', padding: '0 32px', display: 'flex', alignItems: 'center', gap: '8px', height: '52px' }}>
           {[
             { key: 'home' as const, icon: '📚', labelFr: 'Formations', labelEn: 'Training' },
             { key: 'dashboard' as const, icon: '🏆', labelFr: 'Mon tableau de bord', labelEn: 'My Dashboard' },
           ].map(item => (
             <button key={item.key} onClick={() => setView(item.key)}
-              style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '12px 14px', borderRadius: '10px', border: 'none', cursor: 'pointer', textAlign: 'left', background: view === item.key ? 'rgba(233,30,140,0.25)' : 'transparent', color: view === item.key ? '#e91e8c' : '#e8d5c0', fontWeight: view === item.key ? '700' : '400', fontSize: '14px', transition: 'all 0.2s' }}>
+              style={{ display: 'flex', alignItems: 'center', gap: '7px', padding: '8px 16px', borderRadius: '8px', border: 'none', cursor: 'pointer', background: view === item.key ? 'rgba(233,30,140,0.25)' : 'transparent', color: view === item.key ? '#e91e8c' : '#e8d5c0', fontWeight: view === item.key ? '700' : '400', fontSize: '14px', transition: 'all 0.2s' }}>
               <span>{item.icon}</span>
               <span>{lang === 'fr' ? item.labelFr : item.labelEn}</span>
               {item.key === 'dashboard' && earnedCerts.length > 0 && (
-                <span style={{ marginLeft: 'auto', background: '#e91e8c', color: 'white', fontSize: '10px', fontWeight: '800', borderRadius: '20px', padding: '1px 6px' }}>{earnedCerts.length}</span>
+                <span style={{ background: '#e91e8c', color: 'white', fontSize: '10px', fontWeight: '800', borderRadius: '20px', padding: '1px 6px' }}>{earnedCerts.length}</span>
               )}
             </button>
           ))}
-        </nav>
-        <div style={{ borderTop: '1px solid rgba(255,255,255,0.15)', paddingTop: '16px' }}>
-          <div style={{ display: 'flex', background: 'rgba(255,255,255,0.1)', borderRadius: '20px', padding: '3px', gap: '2px', marginBottom: '10px' }}>
-            {(['fr', 'en'] as const).map(l => (
-              <button key={l} onClick={() => { saveLang(l); setLang(l) }}
-                style={{ flex: 1, padding: '5px', borderRadius: '16px', border: 'none', cursor: 'pointer', fontSize: '12px', fontWeight: '700', background: lang === l ? '#e91e8c' : 'transparent', color: lang === l ? 'white' : '#e8d5c0', transition: 'all 0.2s' }}>
-                {l === 'fr' ? '🇫🇷 FR' : '🇬🇧 EN'}
-              </button>
-            ))}
+          <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <div style={{ display: 'flex', background: 'rgba(255,255,255,0.1)', borderRadius: '20px', padding: '3px', gap: '2px' }}>
+              {(['fr', 'en'] as const).map(l => (
+                <button key={l} onClick={() => { saveLang(l); setLang(l) }}
+                  style={{ padding: '4px 12px', borderRadius: '16px', border: 'none', cursor: 'pointer', fontSize: '12px', fontWeight: '700', background: lang === l ? '#e91e8c' : 'transparent', color: lang === l ? 'white' : '#e8d5c0', transition: 'all 0.2s' }}>
+                  {l === 'fr' ? '🇫🇷 FR' : '🇬🇧 EN'}
+                </button>
+              ))}
+            </div>
+            <span style={{ color: '#e8d5c0', fontSize: '12px', opacity: 0.7 }}>{user?.email}</span>
+            <button onClick={async () => { await supabase.auth.signOut(); router.push('/login') }}
+              style={{ padding: '6px 14px', background: 'transparent', border: '1px solid rgba(233,30,140,0.5)', borderRadius: '8px', color: '#e91e8c', cursor: 'pointer', fontSize: '12px', fontWeight: '600' }}>
+              {t.logout}
+            </button>
           </div>
-          <p style={{ color: '#e8d5c0', fontSize: '11px', margin: '0 0 8px', opacity: 0.7, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{user?.email}</p>
-          <button onClick={async () => { await supabase.auth.signOut(); router.push('/login') }}
-            style={{ width: '100%', padding: '8px', background: 'transparent', border: '1px solid rgba(233,30,140,0.5)', borderRadius: '8px', color: '#e91e8c', cursor: 'pointer', fontSize: '12px', fontWeight: '600' }}>
-            {t.logout}
-          </button>
         </div>
       </div>
 
       {/* MAIN CONTENT */}
-      <div style={{ flex: 1, overflowY: 'auto', minWidth: 0 }}>
+      <div style={{ flex: 1, overflowY: 'auto' }}>
+
+      {/* OLD COLUMNS REMOVED */}
 
         {/* HOME VIEW */}
         {view === 'home' && (
