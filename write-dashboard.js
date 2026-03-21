@@ -106,7 +106,7 @@ export default function Home() {
   }
 
   if (loading) return (
-    <div style={{ minHeight: '100vh', background: '#faf6f0', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#5c3d2e', fontSize: '18px' }}>
+    <div style={{ minHeight: '100vh', background: '#faf6f0', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#3d2010', fontSize: '18px' }}>
       Chargement...
     </div>
   )
@@ -116,70 +116,80 @@ export default function Home() {
 
   return (
     <div style={{ minHeight: '100vh', background: '#faf6f0', color: '#3d2010', fontFamily: 'sans-serif' }}>
-      <div style={{ background: 'white', borderBottom: '1px solid #e8d5c0', padding: '16px 32px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', boxShadow: '0 2px 8px rgba(92,61,46,0.08)' }}>
-        <span style={{ color: '#5c3d2e', fontWeight: '800', fontSize: '20px' }}>\u{1F393} Hub Academy</span>
+
+      {/* HEADER bandeau brun foncé */}
+      <div style={{ background: '#3d2010', padding: '16px 32px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', boxShadow: '0 2px 12px rgba(61,32,16,0.25)' }}>
+        <span style={{ color: '#e91e8c', fontWeight: '800', fontSize: '22px', letterSpacing: '0.5px' }}>
+          \u{1F393} Hub Academy
+        </span>
         <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-          <span style={{ color: '#9c7c5e', fontSize: '14px' }}>{user?.email}</span>
-          <button onClick={handleLogout} style={{ padding: '8px 16px', background: 'transparent', border: '1px solid #e8d5c0', borderRadius: '8px', color: '#5c3d2e', cursor: 'pointer', fontSize: '14px' }}>
+          <span style={{ color: '#e8d5c0', fontSize: '14px' }}>{user?.email}</span>
+          <button onClick={handleLogout} style={{ padding: '8px 16px', background: 'transparent', border: '1px solid #e91e8c', borderRadius: '8px', color: '#e91e8c', cursor: 'pointer', fontSize: '14px', fontWeight: '600' }}>
             D\u00e9connexion
           </button>
         </div>
       </div>
 
-      <div style={{ padding: '40px 32px', maxWidth: '1200px', margin: '0 auto' }}>
-        <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-          <h1 style={{ fontSize: '32px', fontWeight: '700', marginBottom: '8px', color: '#3d2010' }}>
-            Bienvenue sur <span style={{ color: '#5c3d2e' }}>Hub Academy</span> \u{1F393}
-          </h1>
-          <p style={{ color: '#9c7c5e', marginBottom: '12px' }}>Votre plateforme de formation r\u00e9glementaire</p>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#f0e6d8', borderRadius: '20px', padding: '6px 16px' }}>
-            <span style={{ color: '#5c3d2e', fontSize: '13px', fontWeight: '700' }}>{readyModules} module disponible</span>
-            <span style={{ color: '#9c7c5e', fontSize: '13px' }}>\u00b7 {totalModules - readyModules} \u00e0 venir \u00b7 {THEMES.length} th\u00e9matiques</span>
-          </div>
+      {/* HERO bandeau brun moyen */}
+      <div style={{ background: '#5c3d2e', padding: '32px', textAlign: 'center' }}>
+        <h1 style={{ fontSize: '28px', fontWeight: '800', marginBottom: '6px', color: 'white' }}>
+          Bienvenue sur <span style={{ color: '#e91e8c' }}>Hub Academy</span> \u{1F393}
+        </h1>
+        <p style={{ color: '#e8d5c0', marginBottom: '16px', fontSize: '15px' }}>Votre plateforme de formation r\u00e9glementaire</p>
+        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'rgba(233,30,140,0.15)', border: '1px solid rgba(233,30,140,0.3)', borderRadius: '20px', padding: '6px 16px' }}>
+          <span style={{ color: '#e91e8c', fontSize: '13px', fontWeight: '700' }}>{readyModules} module disponible</span>
+          <span style={{ color: '#e8d5c0', fontSize: '13px' }}>\u00b7 {totalModules - readyModules} \u00e0 venir \u00b7 {THEMES.length} th\u00e9matiques</span>
         </div>
+      </div>
 
+      {/* CONTENU */}
+      <div style={{ padding: '32px', maxWidth: '1200px', margin: '0 auto' }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
           {THEMES.map((theme, ti) => {
             const isOpen = !!openThemes[ti]
             const readyCount = theme.modules.filter(m => m.ready).length
             return (
-              <div key={ti} style={{ background: 'white', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 2px 12px rgba(92,61,46,0.08)', border: \`1.5px solid \${isOpen ? theme.couleur + '40' : '#e8d5c0'}\`, transition: 'all 0.2s' }}>
-                <button onClick={() => toggleTheme(ti)} style={{ width: '100%', display: 'flex', alignItems: 'center', gap: '14px', padding: '18px 24px', background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left' }}>
-                  <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: \`\${theme.couleur}15\`, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '20px', flexShrink: 0 }}>
+              <div key={ti} style={{ background: 'white', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 2px 12px rgba(61,32,16,0.08)', border: \`1.5px solid \${isOpen ? '#3d2010' : '#e8d5c0'}\`, transition: 'all 0.2s' }}>
+
+                {/* En-tête accordéon */}
+                <button onClick={() => toggleTheme(ti)} style={{ width: '100%', display: 'flex', alignItems: 'center', gap: '14px', padding: '18px 24px', background: isOpen ? '#3d2010' : 'white', border: 'none', cursor: 'pointer', textAlign: 'left', transition: 'background 0.2s' }}>
+                  <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: isOpen ? 'rgba(255,255,255,0.12)' : '#f0e6d8', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '20px', flexShrink: 0 }}>
                     {theme.emoji}
                   </div>
                   <div style={{ flex: 1 }}>
-                    <div style={{ fontWeight: '700', fontSize: '16px', color: '#3d2010', marginBottom: '2px' }}>{theme.titre}</div>
-                    <div style={{ fontSize: '12px', color: '#9c7c5e' }}>
+                    <div style={{ fontWeight: '700', fontSize: '16px', color: isOpen ? 'white' : '#3d2010', marginBottom: '2px' }}>{theme.titre}</div>
+                    <div style={{ fontSize: '12px', color: isOpen ? '#e8d5c0' : '#9c7c5e' }}>
                       {theme.modules.length} module{theme.modules.length > 1 ? 's' : ''}
-                      {readyCount > 0 && <span style={{ color: theme.couleur, fontWeight: '600' }}> \u00b7 {readyCount} disponible{readyCount > 1 ? 's' : ''}</span>}
+                      {readyCount > 0 && <span style={{ color: '#e91e8c', fontWeight: '600' }}> \u00b7 {readyCount} disponible{readyCount > 1 ? 's' : ''}</span>}
                     </div>
                   </div>
                   {readyCount > 0 && (
-                    <span style={{ background: '#d1fae5', color: '#059669', fontSize: '11px', fontWeight: '700', borderRadius: '20px', padding: '3px 10px', flexShrink: 0 }}>
+                    <span style={{ background: '#e91e8c', color: 'white', fontSize: '11px', fontWeight: '700', borderRadius: '20px', padding: '3px 10px', flexShrink: 0 }}>
                       \u2713 {readyCount} dispo
                     </span>
                   )}
-                  <div style={{ fontSize: '18px', color: theme.couleur, transition: 'transform 0.3s', transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)', flexShrink: 0 }}>\u25be</div>
+                  <div style={{ fontSize: '18px', color: isOpen ? '#e91e8c' : '#9c7c5e', transition: 'transform 0.3s', transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)', flexShrink: 0 }}>\u25be</div>
                 </button>
+
+                {/* Modules */}
                 {isOpen && (
-                  <div style={{ padding: '0 20px 20px', borderTop: \`1px solid \${theme.couleur}20\` }}>
+                  <div style={{ padding: '0 20px 20px', borderTop: '1px solid #e8d5c0', background: '#faf6f0' }}>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '12px', paddingTop: '16px' }}>
                       {theme.modules.map((m, i) => (
                         <div key={i}
                           onClick={() => m.ready && router.push(\`/modules/\${m.slug}\`)}
-                          style={{ background: m.ready ? 'white' : '#faf6f0', border: m.ready ? \`1.5px solid \${theme.couleur}30\` : '1.5px solid #e8d5c0', borderRadius: '12px', padding: '16px', cursor: m.ready ? 'pointer' : 'default', transition: 'all 0.2s', opacity: m.ready ? 1 : 0.55, position: 'relative', boxShadow: m.ready ? \`0 2px 8px \${theme.couleur}10\` : 'none' } as React.CSSProperties}
-                          onMouseOver={e => { if (m.ready) { e.currentTarget.style.borderColor = theme.couleur; e.currentTarget.style.boxShadow = \`0 4px 20px \${theme.couleur}25\`; e.currentTarget.style.transform = 'translateY(-2px)' } }}
-                          onMouseOut={e => { if (m.ready) { e.currentTarget.style.borderColor = \`\${theme.couleur}30\`; e.currentTarget.style.boxShadow = \`0 2px 8px \${theme.couleur}10\`; e.currentTarget.style.transform = 'translateY(0)' } }}>
+                          style={{ background: 'white', border: m.ready ? '1.5px solid #e8d5c0' : '1.5px solid #ede0d4', borderRadius: '12px', padding: '16px', cursor: m.ready ? 'pointer' : 'default', transition: 'all 0.2s', opacity: m.ready ? 1 : 0.5, position: 'relative' } as React.CSSProperties}
+                          onMouseOver={e => { if (m.ready) { e.currentTarget.style.borderColor = '#3d2010'; e.currentTarget.style.boxShadow = '0 4px 16px rgba(61,32,16,0.15)'; e.currentTarget.style.transform = 'translateY(-2px)' } }}
+                          onMouseOut={e => { if (m.ready) { e.currentTarget.style.borderColor = '#e8d5c0'; e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.transform = 'translateY(0)' } }}>
                           {m.ready && (
-                            <span style={{ position: 'absolute', top: '8px', right: '8px', background: '#d1fae5', color: '#059669', fontSize: '9px', fontWeight: '700', borderRadius: '20px', padding: '2px 6px' }}>DISPO</span>
+                            <span style={{ position: 'absolute', top: '8px', right: '8px', background: '#e91e8c', color: 'white', fontSize: '9px', fontWeight: '700', borderRadius: '20px', padding: '2px 7px' }}>DISPO</span>
                           )}
                           <div style={{ fontSize: '26px', marginBottom: '8px' }}>{m.icon}</div>
                           <div style={{ fontWeight: '700', fontSize: '13px', color: '#3d2010', lineHeight: 1.3, marginBottom: '4px' }}>{m.title}</div>
                           <div style={{ fontSize: '11px', color: '#9c7c5e' }}>{m.ready ? 'Fiches + quiz interactifs' : 'Bient\u00f4t disponible'}</div>
                           {m.ready && (
                             <div style={{ marginTop: '10px', background: '#f0e6d8', borderRadius: '4px', height: '3px' }}>
-                              <div style={{ background: theme.couleur, borderRadius: '4px', height: '3px', width: '0%' }} />
+                              <div style={{ background: '#e91e8c', borderRadius: '4px', height: '3px', width: '0%' }} />
                             </div>
                           )}
                         </div>
@@ -197,4 +207,4 @@ export default function Home() {
 }
 `
 require('fs').writeFileSync('app/page.tsx', content, 'utf8')
-console.log('OK! Dashboard beige ecrit!')
+console.log('OK! Dashboard beige/brun/rose ecrit!')
