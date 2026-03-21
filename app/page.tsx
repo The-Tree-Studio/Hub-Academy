@@ -57,9 +57,9 @@ export default function Home() {
             {title:'Veille réglementaire', icon:'📡'},
           ].map((m,i) => (
             <div key={i}
-              style={{background:'white',border:'1px solid #fce4ec',borderRadius:'12px',padding:'24px',cursor:'pointer',transition:'all 0.2s',boxShadow:'0 2px 8px rgba(233,30,140,0.05)'}}
-              onMouseOver={e=>{e.currentTarget.style.borderColor='#e91e8c';e.currentTarget.style.boxShadow='0 4px 16px rgba(233,30,140,0.15)'}}
-              onMouseOut={e=>{e.currentTarget.style.borderColor='#fce4ec';e.currentTarget.style.boxShadow='0 2px 8px rgba(233,30,140,0.05)'}}>
+              style={{background:'#e8f8f2',border:'1px solid #b2e8d4',borderRadius:'12px',padding:'24px',cursor:'pointer',transition:'all 0.2s',boxShadow:'0 2px 8px rgba(0,180,120,0.07)'}}
+              onMouseOver={e=>{e.currentTarget.style.borderColor='#00b478';e.currentTarget.style.boxShadow='0 4px 16px rgba(0,180,120,0.2)'}}
+              onMouseOut={e=>{e.currentTarget.style.borderColor='#b2e8d4';e.currentTarget.style.boxShadow='0 2px 8px rgba(0,180,120,0.07)'}}>
               <div style={{fontSize:'36px',marginBottom:'12px'}}>{m.icon}</div>
               <div style={{fontWeight:'600',marginBottom:'8px',color:'#1e293b'}}>{m.title}</div>
               <div style={{color:'#94a3b8',fontSize:'13px'}}>Module {i+1} · 10 fiches</div>
