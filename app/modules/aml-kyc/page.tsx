@@ -57,6 +57,17 @@ const THEMES = [
     ],
   },
   {
+    titre: '🎯 Services prestés aux clients',
+    couleur: '#c2410c',
+    modules: [
+      { title: 'Catalogue des services i-Hub', icon: '📂', slug: 'catalogue-services', ready: false },
+      { title: 'Niveaux de service (SLA)', icon: '📏', slug: 'sla', ready: false },
+      { title: 'Gestion des incidents clients', icon: '🔧', slug: 'incidents-clients', ready: false },
+      { title: 'Onboarding client', icon: '🤝', slug: 'onboarding-client', ready: false },
+      { title: 'Rapports & reporting clients', icon: '📈', slug: 'reporting-clients', ready: false },
+    ],
+  },
+  {
     titre: '🔄 Continuité de l\'activité',
     couleur: '#0369a1',
     modules: [
