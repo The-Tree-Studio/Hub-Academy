@@ -295,7 +295,7 @@ export default function Home() {
     <div style={{ minHeight: '100vh', background: '#faf6f0', display: 'flex', fontFamily: 'sans-serif', color: '#6b3a2a' }}>
 
       {/* IMAGE COLUMN */}
-      <div style={{ width: '200px', minWidth: '200px', position: 'sticky', top: 0, height: '100vh', flexShrink: 0, overflow: 'hidden', position: 'relative' } as React.CSSProperties}>
+      <div style={{ width: '200px', minWidth: '200px', position: 'sticky', top: 0, height: '100vh', flexShrink: 0, overflow: 'hidden' } as React.CSSProperties}>
         <img src={HERO_IMAGE} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.9 }} onError={e => { (e.target as HTMLImageElement).style.display = 'none' }} />
         <div style={{ position: 'absolute', inset: 0, background: 'rgba(61,32,16,0.2)' }} />
         <div style={{ position: 'relative', zIndex: 1, padding: '28px 16px' }}>
