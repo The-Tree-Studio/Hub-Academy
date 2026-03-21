@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react'
 import { createClient } from '@/lib/supabase'
 import { useRouter } from 'next/navigation'
+import { getLang, setLang as saveLang } from '@/lib/lang'
 
 const HERO_IMAGE = '/hero.jpg'
 
@@ -268,6 +269,7 @@ export default function Home() {
   const [user, setUser] = useState<any>(null)
   const [loading, setLoading] = useState(true)
   const [lang, setLang] = useState<'fr'|'en'>('fr')
+  useEffect(() => { setLang(getLang()) }, [])
   const [view, setView] = useState<'home'|'dashboard'>('home')
   const [openThemes, setOpenThemes] = useState<Record<number, boolean>>({ 0: true })
   const router = useRouter()
