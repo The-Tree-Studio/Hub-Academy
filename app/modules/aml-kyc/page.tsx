@@ -196,7 +196,7 @@ export default function ModuleAmlKyc() {
 
   const NavBar=()=>(
     <div style={{background:'#6b7280',padding:'12px 24px',display:'flex',alignItems:'center',gap:'12px',boxShadow:'0 2px 8px rgba(61,32,16,0.2)'}}>
-      <button onClick={()=>router.push('/')} style={{background:'none',border:'1px solid #e91e8c',borderRadius:'8px',padding:'6px 12px',color:'#e91e8c',cursor:'pointer',fontSize:'14px'}}>{t.home}</button>
+      <button onClick={()=>router.back()} style={{background:'none',border:'1px solid #e91e8c',borderRadius:'8px',padding:'6px 12px',color:'#e91e8c',cursor:'pointer',fontSize:'14px'}}>{t.home}</button>
       <span style={{color:'#e91e8c',fontWeight:'700',fontSize:'16px'}}>🔍 {t.title}</span>
       <div style={{marginLeft:'auto',display:'flex',alignItems:'center',gap:'10px'}}>
         <div style={{display:'flex',background:'rgba(255,255,255,0.1)',borderRadius:'16px',padding:'2px',gap:'2px'}}>
@@ -438,7 +438,7 @@ export default function ModuleAmlKyc() {
           </div>
         </div>
         <div style={{display:'flex',gap:'12px',flexDirection:'column'}}>
-          <button onClick={()=>router.push('/')} style={{padding:'16px',background:C,border:'none',borderRadius:'12px',color:'white',fontSize:'17px',fontWeight:'700',cursor:'pointer'}}>{t.backHome}</button>
+          <button onClick={()=>router.back()} style={{padding:'16px',background:C,border:'none',borderRadius:'12px',color:'white',fontSize:'17px',fontWeight:'700',cursor:'pointer'}}>{t.backHome}</button>
           <button onClick={()=>{initQuizzes(lang);setScore(0);setPhase('intro')}} style={{padding:'14px',background:'white',border:'1px solid #e5e7eb',borderRadius:'12px',color:C,fontSize:'15px',fontWeight:'600',cursor:'pointer'}}>{t.restart}</button>
         </div>
       </div>
