@@ -28,18 +28,17 @@ const THEMES_FR = [
   {
     titre: "AML/CTF", emoji: '🛡️', couleur: '#e91e8c',
     modules: [
-      { title: 'Les grands principes',          icon: '📖', slug: 'aml-grands-principes',        ready: true  },
-      { title: 'AML/KYC des clients finaux',    icon: '🔍', slug: 'aml-kyc',                     ready: true  },
-      { title: 'AML/CTF de nos clients PSF',    icon: '🏦', slug: 'aml-kyc-nos-clients',          ready: true  },
-      { title: 'Politiques & Procédures',          icon: '📜', slug: 'pol-aml',               ready: true  },
-      { title: 'Cohérence des documents',       icon: '🔎', slug: 'aml-coherence-documents',      ready: true  },
-      { title: 'DDR',                           icon: '🔴', slug: 'aml-ddr',                      ready: true  },
-      { title: 'Fraudes aux documents',         icon: '⚠️', slug: 'aml-fraudes-documents',        ready: true  },
-      { title: 'Name Screening',                icon: '🎯', slug: 'aml-name-screening',           ready: true  },
-      { title: 'Opérations suspectes',          icon: '🚨', slug: 'operations-suspectes',         ready: false },
-      { title: 'Risk Scoring client',           icon: '📊', slug: 'risk-scoring',                 ready: false },
-      { title: 'UBO — Bénéficiaire effectif',   icon: '👤', slug: 'ubo',                          ready: false },
-      { title: 'Politiques et procédures',      icon: '📋', slug: 'aml-politiques',               ready: false },
+      { title: 'Les grands principes',          icon: '📖', slug: 'aml-grands-principes',   ready: true  },
+      { title: 'AML/KYC des clients finaux',     icon: '🔍', slug: 'aml-kyc',                ready: true  },
+      { title: 'AML/CTF de nos clients PSF',   icon: '🏦', slug: 'aml-kyc-nos-clients',    ready: true  },
+      { title: 'Cohérence des documents',       icon: '🔎', slug: 'aml-coherence-documents',    ready: false },
+      { title: 'DDR',                           icon: '📋', slug: 'aml-ddr',                    ready: false },
+      { title: 'Fraudes aux documents',         icon: '⚠️', slug: 'aml-fraudes-documents',      ready: false },
+      { title: 'Name Screening',                icon: '🔎', slug: 'aml-name-screening',         ready: false },
+      { title: 'Opérations suspectes',          icon: '🚨', slug: 'operations-suspectes',   ready: false },
+      { title: 'Risk Scoring client',           icon: '📊', slug: 'risk-scoring',           ready: false },
+      { title: 'UBO — Bénéficiaire effectif',   icon: '👤', slug: 'ubo',                    ready: false },
+      { title: 'Politiques & Procédures',       icon: '📜', slug: 'pol-aml',               ready: true  },
     ],
   },
   {
@@ -52,7 +51,7 @@ const THEMES_FR = [
       { title: 'Plan de continuité (BCP)',      icon: '📆', slug: 'bcp',                    ready: false },
       { title: 'Plan de reprise IT (DRP)',      icon: '⚙️', slug: 'drp',                    ready: false },
       { title: 'Tests & exercices BCP',         icon: '🧪', slug: 'tests-bcp',              ready: false },
-      { title: 'Politiques & Procédures',          icon: '📜', slug: 'pol-bcp',               ready: true  },
+      { title: 'Politiques & Procédures',       icon: '📜', slug: 'pol-bcp',               ready: true  },
     ],
   },
   {
@@ -60,20 +59,20 @@ const THEMES_FR = [
     modules: [
       { title: 'Les grands principes',          icon: '📖', slug: 'employe-grands-principes', ready: false },
       { title: 'Droits employé',                icon: '✊', slug: 'droits-employe',          ready: false },
-      { title: 'Politiques & Procédures',          icon: '📜', slug: 'pol-hr',                ready: true  },
       { title: 'Obligations employé',           icon: '📌', slug: 'obligations-employe',     ready: false },
+      { title: 'Politiques & Procédures',       icon: '📜', slug: 'pol-hr',                ready: true  },
     ],
   },
   {
     titre: 'Fiscalité internationale', emoji: '💼', couleur: '#dc2626',
     modules: [
       { title: 'Les grands principes',                          icon: '📖', slug: 'fiscalite-grands-principes',  ready: true  },
-      { title: 'CRS — Common Reporting Standard',              icon: '🌍', slug: 'crs',                         ready: false },
-      { title: 'FATCA — Foreign Account Tax Compliance Act',   icon: '🇺🇸', slug: 'fatca',                       ready: false },
+      { title: 'CRS — Common Reporting Standard',              icon: '🌍', slug: 'crs',                         ready: true  },
+      { title: 'FATCA — Foreign Account Tax Compliance Act',   icon: '🇺🇸', slug: 'fatca',                       ready: true  },
       { title: 'FATCA vs CRS vs QI — Quelles différences ?',  icon: '↔️', slug: 'fatca-crs-qi-differences',    ready: true  },
-      { title: "Indices d'américanité",                        icon: '🦅', slug: 'indices-americanite',         ready: false },
-      { title: 'QI — Qualified Intermediary',                  icon: '💰', slug: 'qi',                          ready: false },
-      { title: 'Vérifier un W-9, W-8BEN ou Tax Self-Cert',    icon: '📋', slug: 'formulaires-fiscaux',          ready: false },
+      { title: "Indices d'américanité",                        icon: '🦅', slug: 'indices-americanite',         ready: true  },
+      { title: 'QI — Qualified Intermediary',                  icon: '💰', slug: 'qi',                          ready: true  },
+      { title: 'Vérifier un W-9, W-8BEN ou Tax Self-Cert',    icon: '📋', slug: 'formulaires-fiscaux',          ready: true  },
     ],
   },
   {
@@ -84,10 +83,12 @@ const THEMES_FR = [
       { title: 'Contrôle Interne',              icon: '🔎', slug: 'controle-interne',       ready: false },
       { title: "Gestion des Conflits d'intérêts",icon:'⚡', slug: 'conflits-interets',      ready: false },
       { title: 'Gestion des risques',           icon: '⚖️', slug: 'gestion-risques',        ready: false },
-      { title: 'Gouvernance',               icon: '🏛️', slug: 'gouvernance',            ready: false },
+      { title: 'Gouvernance',                   icon: '🏛️', slug: 'gouvernance',            ready: false },
       { title: 'Mutualisation',                 icon: '🔗', slug: 'mutualisation',          ready: false },
       { title: 'Veille réglementaire',          icon: '📡', slug: 'veille-reglementaire',   ready: false },
       { title: 'Whistleblowing',                icon: '📣', slug: 'whistleblowing',         ready: false },
+      { title: 'Circulaire 24/850',             icon: '📰', slug: 'circulaire-24-850',      ready: false },
+      { title: 'Politiques & Procédures',       icon: '📜', slug: 'pol-gouv',               ready: true  },
     ],
   },
   {
@@ -95,11 +96,9 @@ const THEMES_FR = [
     modules: [
       { title: 'Les grands principes',          icon: '📖', slug: 'data-grands-principes',  ready: false },
       { title: 'GDPR / RGPD',                   icon: '🔐', slug: 'gdpr-rgpd',              ready: false },
-      { title: 'Politiques & Procédures',          icon: '📜', slug: 'pol-data',               ready: true  },
-      { title: 'ISO 27001',                     icon: '🏅', slug: 'iso-27001',              ready: false },
-      { title: 'Politiques & Procédures',          icon: '📜', slug: 'pol-sec',               ready: true  },
       { title: 'Secret professionnel',          icon: '🤫', slug: 'secret-professionnel',   ready: false },
       { title: 'Sécurité des données',          icon: '🛡️', slug: 'securite-donnees',       ready: false },
+      { title: 'Politiques & Procédures',       icon: '📜', slug: 'pol-data',               ready: true  },
     ],
   },
   {
@@ -107,18 +106,23 @@ const THEMES_FR = [
     modules: [
       { title: 'Les grands principes',          icon: '📖', slug: 'it-grands-principes',    ready: false },
       { title: 'Circulaire 24/850',             icon: '📰', slug: 'circulaire-24-850',      ready: false },
-      { title: 'Politiques & Procédures',          icon: '📜', slug: 'pol-gouv',               ready: true  },
       { title: 'Infrastructure IT',             icon: '🖥️', slug: 'infrastructure-it',      ready: false },
       { title: 'Résilience IT (DORA)',          icon: '💻', slug: 'resilience-it',          ready: false },
-      { title: 'Externalisation 22/806',        icon: '🤝', slug: 'externalisation',        ready: false },
-      { title: 'Politiques & Procédures',          icon: '📜', slug: 'pol-ext',               ready: true  },
       { title: 'Résilience IT (non DORA)',      icon: '🖥️', slug: 'resilience-it-non-dora', ready: false },
-      { title: 'Politiques & Procédures',          icon: '📜', slug: 'pol-it',               ready: true  },
-      { title: 'Politiques et procédures',   icon: '📋', slug: 'resilience-it-politiques',  ready: false },
+      { title: 'Politiques & Procédures',       icon: '📜', slug: 'pol-it',                ready: true  },
+    ],
+},
+  {
+    titre: 'Externalisation', emoji: '🤝', couleur: '#0369a1',
+    modules: [
+      { title: 'Les grands principes',          icon: '📖', slug: 'ext-grands-principes',  ready: false },
+      { title: 'Règles CSSF 22/806',            icon: '📋', slug: 'cssf-22-806',           ready: false },
+      { title: 'Outsourcing Officer',           icon: '🤝', slug: 'outsourcing-officer',   ready: false },
+      { title: 'Politiques & Procédures',       icon: '📜', slug: 'pol-ext',               ready: true  },
     ],
   },
   {
-    titre: 'Sécurité', emoji: '🔒', couleur: '#6d28d9',
+    titre: 'Sécurité', couleur: '#6d28d9',
     modules: [
       { title: 'Les grands principes',          icon: '📖', slug: 'securite-grands-principes', ready: false },
       { title: 'Gestion des accès',             icon: '🔑', slug: 'gestion-acces',          ready: false },
@@ -126,6 +130,8 @@ const THEMES_FR = [
       { title: 'Sécurité physique',             icon: '🏢', slug: 'securite-physique',      ready: false },
       { title: 'Incidents de sécurité',         icon: '🚨', slug: 'incidents-securite',     ready: false },
       { title: 'Politique de sécurité',         icon: '📋', slug: 'politique-securite',     ready: false },
+      { title: 'ISO 27001',                     icon: '🏅', slug: 'iso-27001',              ready: false },
+      { title: 'Politiques & Procédures',       icon: '📜', slug: 'pol-sec',               ready: true  },
     ],
   },
   {
@@ -145,15 +151,17 @@ const THEMES_EN = [
   {
     titre: 'AML/CTF', emoji: '🛡️', couleur: '#e91e8c',
     modules: [
-      { title: 'Key Principles',          icon: '📖', slug: 'aml-grands-principes',   ready: false },
-      { title: 'AML/KYC des clients finaux',           icon: '🔍', slug: 'aml-kyc',                ready: true  },
-      { title: 'Document Consistency',    icon: '🔎', slug: 'coherence-documents',    ready: false },
-      { title: 'DDR',                     icon: '📋', slug: 'ddr',                    ready: false },
-      { title: 'Document Fraud',          icon: '⚠️', slug: 'fraudes-documents',      ready: false },
-      { title: 'Name Screening',          icon: '🔎', slug: 'name-screening',         ready: false },
+      { title: 'Key Principles',          icon: '📖', slug: 'aml-grands-principes',   ready: true  },
+      { title: 'AML/KYC Final Clients',   icon: '🔍', slug: 'aml-kyc',                ready: true  },
+      { title: 'AML/CTF — Our PSF clients', icon: '🏦', slug: 'aml-kyc-nos-clients',    ready: true  },
+      { title: 'Document Consistency',    icon: '🔎', slug: 'aml-coherence-documents',    ready: false },
+      { title: 'DDR',                     icon: '📋', slug: 'aml-ddr',                    ready: false },
+      { title: 'Document Fraud',          icon: '⚠️', slug: 'aml-fraudes-documents',      ready: false },
+      { title: 'Name Screening',          icon: '🔎', slug: 'aml-name-screening',         ready: false },
       { title: 'Suspicious Operations',   icon: '🚨', slug: 'operations-suspectes',   ready: false },
       { title: 'Client Risk Scoring',     icon: '📊', slug: 'risk-scoring',           ready: false },
       { title: 'UBO',                     icon: '👤', slug: 'ubo',                    ready: false },
+      { title: 'Policies & Procedures',   icon: '📜', slug: 'pol-aml',               ready: true  },
     ],
   },
   {
@@ -166,7 +174,7 @@ const THEMES_EN = [
       { title: 'BCP',                     icon: '📆', slug: 'bcp',                    ready: false },
       { title: 'DRP',                     icon: '⚙️', slug: 'drp',                    ready: false },
       { title: 'BCP Tests',               icon: '🧪', slug: 'tests-bcp',              ready: false },
-      { title: 'Politiques et procédures',   icon: '📋', slug: 'bca-politiques',  ready: false },
+      { title: 'Policies & Procedures',   icon: '📜', slug: 'pol-bcp',               ready: true  },
     ],
   },
   {
@@ -175,20 +183,19 @@ const THEMES_EN = [
       { title: 'Key Principles',          icon: '📖', slug: 'employe-grands-principes', ready: false },
       { title: 'Employee Rights',         icon: '✊', slug: 'droits-employe',          ready: false },
       { title: 'Employee Obligations',    icon: '📌', slug: 'obligations-employe',     ready: false },
-      { title: 'Politiques et procédures',   icon: '📋', slug: 'employe-politiques',  ready: false },
+      { title: 'Policies & Procedures',   icon: '📜', slug: 'pol-hr',                ready: true  },
     ],
   },
   {
     titre: 'International Taxation', emoji: '💼', couleur: '#dc2626',
     modules: [
       { title: 'Key Principles',                          icon: '📖', slug: 'fiscalite-grands-principes', ready: true  },
-      { title: 'CRS — Common Reporting Standard',        icon: '🌍', slug: 'crs',                       ready: false },
-      { title: 'FATCA',                                  icon: '🇺🇸', slug: 'fatca',                     ready: false },
+      { title: 'CRS — Common Reporting Standard',        icon: '🌍', slug: 'crs',                       ready: true  },
+      { title: 'FATCA',                                  icon: '🇺🇸', slug: 'fatca',                     ready: true  },
       { title: 'FATCA vs CRS vs QI',                    icon: '↔️', slug: 'fatca-crs-qi-differences',  ready: true  },
-      { title: 'Indicia of US Status',                   icon: '🦅', slug: 'indices-americanite',       ready: false },
-      { title: 'QI — Qualified Intermediary',            icon: '💰', slug: 'qi',                        ready: false },
-      { title: 'W-9, W-8BEN & Tax Self-Certs',          icon: '📋', slug: 'formulaires-fiscaux',        ready: false },
-      { title: 'Politiques et procédures',   icon: '📋', slug: 'fiscalite-politiques',  ready: false },
+      { title: 'Indicia of US Status',                   icon: '🦅', slug: 'indices-americanite',       ready: true  },
+      { title: 'QI — Qualified Intermediary',            icon: '💰', slug: 'qi',                        ready: true  },
+      { title: 'W-9, W-8BEN & Tax Self-Certs',          icon: '📋', slug: 'formulaires-fiscaux',        ready: true  },
     ],
   },
   {
@@ -203,7 +210,8 @@ const THEMES_EN = [
       { title: 'Mutualisation',           icon: '🔗', slug: 'mutualisation',          ready: false },
       { title: 'Regulatory Watch',        icon: '📡', slug: 'veille-reglementaire',   ready: false },
       { title: 'Whistleblowing',          icon: '📣', slug: 'whistleblowing',         ready: false },
-      { title: 'Politiques et procédures',   icon: '📋', slug: 'gouvernance-politiques',  ready: false },
+      { title: 'Circular 24/850',         icon: '📰', slug: 'circulaire-24-850',      ready: false },
+      { title: 'Policies & Procedures',   icon: '📜', slug: 'pol-gouv',               ready: true  },
     ],
   },
   {
@@ -211,11 +219,9 @@ const THEMES_EN = [
     modules: [
       { title: 'Key Principles',          icon: '📖', slug: 'data-grands-principes',  ready: false },
       { title: 'GDPR / RGPD',             icon: '🔐', slug: 'gdpr-rgpd',              ready: false },
-      { title: 'ISO 27001',               icon: '🏅', slug: 'iso-27001',              ready: false },
       { title: 'Professional Secrecy',    icon: '🤫', slug: 'secret-professionnel',   ready: false },
       { title: 'Data Security',           icon: '🛡️', slug: 'securite-donnees',       ready: false },
-      { title: 'Politiques et procédures',   icon: '📋', slug: 'data-politiques',  ready: false },
-      { title: 'Politiques et procédures',   icon: '📋', slug: 'securite-politiques',  ready: false },
+      { title: 'Policies & Procedures',   icon: '📜', slug: 'pol-data',               ready: true  },
     ],
   },
   {
@@ -225,14 +231,21 @@ const THEMES_EN = [
       { title: 'Circular 24/850',         icon: '📰', slug: 'circulaire-24-850',      ready: false },
       { title: 'IT Infrastructure',       icon: '🖥️', slug: 'infrastructure-it',      ready: false },
       { title: 'IT Resilience (DORA)',    icon: '💻', slug: 'resilience-it',          ready: false },
-      { title: 'Outsourcing 22/806',      icon: '🤝', slug: 'externalisation',        ready: false },
-      { title: 'Politiques et procédures',   icon: '📋', slug: 'externalisation-politiques',  ready: false },
-      { title: 'IT Resilience (non-DORA)',     icon: '🖥️', slug: 'resilience-it-non-dora', ready: false },
-      { title: 'Policies and Procedures',     icon: '📋', slug: 'resilience-it-politiques',  ready: false },
+      { title: 'IT Resilience (non-DORA)', icon: '🖥️', slug: 'resilience-it-non-dora', ready: false },
+      { title: 'Policies & Procedures',   icon: '📜', slug: 'pol-it',                ready: true  },
+    ],
+},
+  {
+    titre: 'Outsourcing', emoji: '🤝', couleur: '#0369a1',
+    modules: [
+      { title: 'Key Principles',          icon: '📖', slug: 'ext-grands-principes',  ready: false },
+      { title: 'CSSF 22/806 Rules',       icon: '📋', slug: 'cssf-22-806',           ready: false },
+      { title: 'Outsourcing Officer',     icon: '🤝', slug: 'outsourcing-officer',   ready: false },
+      { title: 'Policies & Procedures',   icon: '📜', slug: 'pol-ext',               ready: true  },
     ],
   },
   {
-    titre: 'Security', emoji: '🔒', couleur: '#6d28d9',
+    titre: 'Security', couleur: '#6d28d9',
     modules: [
       { title: 'Key Principles',          icon: '📖', slug: 'securite-grands-principes', ready: false },
       { title: 'Access Management',       icon: '🔑', slug: 'gestion-acces',          ready: false },
@@ -240,6 +253,8 @@ const THEMES_EN = [
       { title: 'Physical Security',       icon: '🏢', slug: 'securite-physique',      ready: false },
       { title: 'Security Incidents',      icon: '🚨', slug: 'incidents-securite',     ready: false },
       { title: 'Security Policy',         icon: '📋', slug: 'politique-securite',     ready: false },
+      { title: 'ISO 27001',               icon: '🏅', slug: 'iso-27001',              ready: false },
+      { title: 'Policies & Procedures',   icon: '📜', slug: 'pol-sec',               ready: true  },
     ],
   },
   {
@@ -251,7 +266,6 @@ const THEMES_EN = [
       { title: 'i-Hub Service Catalogue', icon: '📂', slug: 'catalogue-services',     ready: false },
       { title: 'Client Reporting',        icon: '📈', slug: 'reporting-clients',      ready: false },
       { title: 'SLA',                     icon: '📏', slug: 'sla',                    ready: false },
-      { title: 'Politiques et procédures',   icon: '📋', slug: 'services-politiques',  ready: false },
     ],
   },
 ]
@@ -326,15 +340,15 @@ export default function Home() {
   const rankIndex = Math.min(Math.floor(totalPoints / 100), t.ranks.length - 1)
 
   const ACCENT = '#e07b39'
-  const SIDEBAR_BG = '#6b7280'
-  const SIDEBAR_HOVER = '#5b6270'
-  const SIDEBAR_ACTIVE = '#4b5260'
+  const SIDEBAR_BG = '#2c1a0e'
+  const SIDEBAR_HOVER = '#3d2410'
+  const SIDEBAR_ACTIVE = '#4a2d14'
 
   const sidebarItemStyle = (active: boolean): React.CSSProperties => ({
     display: 'flex', alignItems: 'center', gap: '10px',
     padding: '9px 16px', cursor: 'pointer', fontSize: '13px',
     fontWeight: active ? '600' : '400',
-    color: active ? '#ffffff' : '#e5e7eb',
+    color: active ? '#ffffff' : '#c4a882',
     background: active ? SIDEBAR_ACTIVE : 'transparent',
     borderLeft: active ? \`3px solid \${ACCENT}\` : '3px solid transparent',
     transition: 'all 0.15s', userSelect: 'none',
@@ -353,12 +367,12 @@ export default function Home() {
       <div style={{ width: '210px', minWidth: '210px', background: SIDEBAR_BG, display: 'flex', flexDirection: 'column', position: 'sticky', top: 0, height: '100vh', overflowY: 'auto', flexShrink: 0 } as React.CSSProperties}>
 
         {/* Logo */}
-        <div style={{ padding: '20px 16px 16px', borderBottom: '1px solid #5b6270' }}>
+        <div style={{ padding: '20px 16px 16px', borderBottom: '1px solid #3d2410' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '4px' }}>
             <div style={{ width: '32px', height: '32px', background: ACCENT, borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '16px', flexShrink: 0 }}>🎓</div>
             <div>
               <div style={{ color: '#ffffff', fontWeight: '700', fontSize: '15px', lineHeight: 1.2 }}>Hub Academy</div>
-              <div style={{ color: '#d1d5db', fontSize: '10px' }}>{t.subtitle}</div>
+              <div style={{ color: '#8a6a4a', fontSize: '10px' }}>{t.subtitle}</div>
             </div>
           </div>
         </div>
@@ -367,7 +381,7 @@ export default function Home() {
         <nav style={{ flex: 1, padding: '12px 0', overflowY: 'auto' }}>
 
           {/* Section Formations */}
-          <div style={{ padding: '8px 16px 4px', fontSize: '10px', fontWeight: '700', color: '#9ca3af', letterSpacing: '1px', textTransform: 'uppercase' }}>{t.formations}</div>
+          <div style={{ padding: '8px 16px 4px', fontSize: '10px', fontWeight: '700', color: '#6a4a2a', letterSpacing: '1px', textTransform: 'uppercase' }}>{t.formations}</div>
 
           {THEMES.map((theme, ti) => {
             const readyCount = theme.modules.filter(m => m.ready).length
@@ -386,17 +400,17 @@ export default function Home() {
                   <span style={{ background: ACCENT, color: 'white', fontSize: '9px', fontWeight: '700', borderRadius: '10px', padding: '1px 5px', flexShrink: 0 }}>{readyCount}</span>
                 )}
                 {readyCount === 0 && (
-                  <span style={{ color: '#d1d5db', fontSize: '11px', flexShrink: 0 }}>{theme.modules.length}</span>
+                  <span style={{ color: '#4a3020', fontSize: '11px', flexShrink: 0 }}>{theme.modules.length}</span>
                 )}
               </div>
             )
           })}
 
           {/* Divider */}
-          <div style={{ margin: '12px 16px', borderTop: '1px solid #5b6270' }} />
+          <div style={{ margin: '12px 16px', borderTop: '1px solid #3d2410' }} />
 
           {/* Section Profil */}
-          <div style={{ padding: '4px 16px 4px', fontSize: '10px', fontWeight: '700', color: '#9ca3af', letterSpacing: '1px', textTransform: 'uppercase' }}>{t.profil}</div>
+          <div style={{ padding: '4px 16px 4px', fontSize: '10px', fontWeight: '700', color: '#6a4a2a', letterSpacing: '1px', textTransform: 'uppercase' }}>{t.profil}</div>
 
           <div
             style={sidebarItemStyle(view === 'dashboard')}
@@ -413,7 +427,7 @@ export default function Home() {
         </nav>
 
         {/* Bottom: lang + logout */}
-        <div style={{ padding: '12px 16px', borderTop: '1px solid #5b6270' }}>
+        <div style={{ padding: '12px 16px', borderTop: '1px solid #3d2410' }}>
           <div style={{ display: 'flex', gap: '4px', marginBottom: '10px' }}>
             {(['fr', 'en'] as const).map(l => (
               <button key={l} onClick={() => { saveLang(l); setLang(l) }}
@@ -422,11 +436,11 @@ export default function Home() {
               </button>
             ))}
           </div>
-          <div style={{ fontSize: '10px', color: '#9ca3af', marginBottom: '8px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{user?.email}</div>
+          <div style={{ fontSize: '10px', color: '#6a4a2a', marginBottom: '8px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{user?.email}</div>
           <button onClick={async () => { await supabase.auth.signOut(); router.push('/login') }}
-            style={{ width: '100%', padding: '7px', background: 'transparent', border: '1px solid #5b6270', borderRadius: '6px', color: '#e5e7eb', cursor: 'pointer', fontSize: '11px', fontWeight: '600', transition: 'all 0.2s' }}
+            style={{ width: '100%', padding: '7px', background: 'transparent', border: '1px solid #4a2d14', borderRadius: '6px', color: '#c4a882', cursor: 'pointer', fontSize: '11px', fontWeight: '600', transition: 'all 0.2s' }}
             onMouseOver={e => { (e.currentTarget as HTMLElement).style.borderColor = ACCENT; (e.currentTarget as HTMLElement).style.color = ACCENT }}
-            onMouseOut={e => { (e.currentTarget as HTMLElement).style.borderColor = '#5b6270'; (e.currentTarget as HTMLElement).style.color = '#e5e7eb' }}>
+            onMouseOut={e => { (e.currentTarget as HTMLElement).style.borderColor = '#4a2d14'; (e.currentTarget as HTMLElement).style.color = '#c4a882' }}>
             {t.logout}
           </button>
         </div>
