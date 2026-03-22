@@ -38,7 +38,7 @@ const FICHES_FR = [
   {id:4,emoji:'🏦',titre:q("i-Hub : Institution Financière Déclarante"),contenu:[
     {icon:'🎯',texte:q("i-Hub est une **IFD** (Institution Financière Déclarante) au sens du CRS — elle a l'obligation de déclarer")},
     {icon:'📋',texte:q("Les IFD incluent : banques, fonds d'investissement, compagnies d'assurance, **PSF de support** comme i-Hub")},
-    {icon:'🏛️',texte:q("i-Hub déclare chaque année à l'**ACD** (Administration des Contributions Directes) du Luxembourg")},
+    {icon:'🏛️',texte:q("Les **PSF clients** d’i-Hub déclarent chaque année à l'ACD (Administration des Contributions Directes) du Luxembourg")},
     {icon:'🔄',texte:q("L'ACD transmet ensuite les informations aux **autorités fiscales des pays de résidence** des clients concernés")},
   ],aretenir:q("i-Hub est en première ligne du CRS. Elle collecte, classe et déclare — l'ACD redistribue aux pays partenaires.")},
 
@@ -65,7 +65,7 @@ const FICHES_FR = [
     {icon:'🎯',texte:q("Le **NIF** est l'identifiant fiscal attribué par chaque pays à ses résidents — indispensable pour le CRS")},
     {icon:'🌍',texte:q("Chaque pays a son propre format de NIF : **Luxembourg** (matricule), **France** (numéro fiscal), **Allemagne** (Steuer-ID)...")},
     {icon:'❓',texte:q("Si le client n'a pas de NIF (certains pays n'en délivrent pas), il doit le **justifier** dans l'auto-certification")},
-    {icon:'📋',texte:q("i-Hub doit **conserver et déclarer** le NIF de chaque titulaire de compte déclarable à l'ACD")},
+    {icon:'📋',texte:q("Le **PSF** doit conserver et déclarer le NIF, i-Hub vérifie sa présence et cohérence de chaque titulaire de compte déclarable à l'ACD")},
   ],aretenir:q("Le NIF est la clé de voûte du CRS. Sans NIF, la déclaration est incomplète — i-Hub doit relancer le client.")},
 
   {id:8,emoji:'🗂️',titre:q("Classification des entités au CRS"),contenu:[
@@ -73,7 +73,7 @@ const FICHES_FR = [
     {icon:'🏢',texte:q("**ENF Active** (Entité Non Financière Active) : société dont l'activité principale est non financière — peu d'obligations")},
     {icon:'🟡',texte:q("**ENF Passive** : holding ou entité patrimoniale — doit identifier ses **personnes détenant le contrôle**")},
     {icon:'👥',texte:q("**Personnes détenant le contrôle** d'une ENF Passive = UBO au sens CRS (seuil : participation > 25% en général)")},
-  ],aretenir:q("La classification CRS d'une entité détermine ce qu'i-Hub doit collecter et déclarer. ENF Passive = vigilance accrue.")},
+  ],aretenir:q("La classification CRS d'une entité détermine ce qu'Le PSF collecte et déclare. i-Hub vérifie la cohérence des documents transmis. ENF Passive = vigilance accrue.")},
 
   {id:9,emoji:'📊',titre:q("Que déclare-t-on à l'ACD ?"),contenu:[
     {icon:'👤',texte:q("**Identité** : nom, adresse, date de naissance, NIF et pays de résidence fiscale du titulaire déclarable")},
@@ -118,7 +118,7 @@ const FICHES_FR = [
   {id:14,emoji:'🌐',titre:q("Pays participants au CRS"),contenu:[
     {icon:'✅',texte:q("Plus de **100 juridictions** participent au CRS — dont tous les pays de l'UE, le Royaume-Uni, l'Australie, le Canada, le Japon...")},
     {icon:'🚫',texte:q("**Non-participants notables** : USA (qui a son propre FATCA), quelques paradis fiscaux et petits États")},
-    {icon:'🔄',texte:q("La liste des pays participants est **mise à jour régulièrement** — i-Hub doit surveiller les adhésions nouvelles")},
+    {icon:'🔄',texte:q("La liste des pays participants est **mise à jour régulièrement** — le **PSF** et i-Hub doivent vérifier la liste avant chaque campagne de vérification nouvelles")},
     {icon:'📋',texte:q("Un compte détenu par un résident d'un pays non-participant au CRS n'est **pas déclarable** sous ce régime")},
   ],aretenir:q("La liste des pays CRS détermine quels comptes sont déclarables. Un pays qui rejoint le CRS peut rendre des comptes existants déclarables."),
   plusLoin:[
@@ -165,7 +165,7 @@ const FICHES_EN = [
   {id:4,emoji:'🏦',titre:q("i-Hub: a Reporting Financial Institution"),contenu:[
     {icon:'🎯',texte:q("i-Hub is an **RFI** (Reporting Financial Institution) under CRS — it has mandatory reporting obligations")},
     {icon:'📋',texte:q("RFIs include: banks, investment funds, insurance companies, support PSFs like i-Hub")},
-    {icon:'🏛️',texte:q("i-Hub reports annually to the **ACD** (Administration des Contributions Directes) in Luxembourg")},
+    {icon:'🏛️',texte:q("i-Hub’s **PSF clients** report annually to the ACD (Administration des Contributions Directes) in Luxembourg")},
     {icon:'🔄',texte:q("The ACD then transmits the information to the **tax authorities of the clients' countries of residence**")},
   ],aretenir:q("i-Hub is on the front line of CRS. It collects, classifies and reports — the ACD redistributes to partner countries.")},
 
@@ -200,7 +200,7 @@ const FICHES_EN = [
     {icon:'🏢',texte:q("**Active NFE** (Non-Financial Entity): company whose main activity is non-financial — limited obligations")},
     {icon:'🟡',texte:q("**Passive NFE**: holding or investment entity — must identify its **controlling persons**")},
     {icon:'👥',texte:q("**Controlling persons** of a Passive NFE = UBOs in CRS terms (threshold: ownership > 25% in general)")},
-  ],aretenir:q("CRS entity classification determines what i-Hub must collect and report. Passive NFE = enhanced scrutiny.")},
+  ],aretenir:q("CRS entity classification determines what the **PSF** must collect and report. For i-Hub: Passive NFE = enhanced documentary verification.")},
 
   {id:9,emoji:'📊',titre:q("What is reported to the ACD?"),contenu:[
     {icon:'👤',texte:q("**Identity**: name, address, date of birth, TIN and country of tax residence of the reportable holder")},
@@ -245,7 +245,7 @@ const FICHES_EN = [
   {id:14,emoji:'🌐',titre:q("CRS participating countries"),contenu:[
     {icon:'✅',texte:q("Over **100 jurisdictions** participate in CRS — including all EU countries, the UK, Australia, Canada, Japan...")},
     {icon:'🚫',texte:q("**Notable non-participants**: USA (which has its own FATCA), some tax havens and small states")},
-    {icon:'🔄',texte:q("The list of participating countries is **updated regularly** — i-Hub must monitor new additions")},
+    {icon:'🔄',texte:q("The list of participating countries is **updated regularly** — the **PSF** and i-Hub should check the list before each verification campaign")},
     {icon:'📋',texte:q("An account held by a resident of a CRS non-participant country is **not reportable** under this regime")},
   ],aretenir:q("The CRS country list determines which accounts are reportable. A new country joining CRS may make existing accounts reportable."),
   plusLoin:[
@@ -291,7 +291,7 @@ const VF_FR = [
   {texte:q("Le CRS est basé sur la nationalité du titulaire du compte"),reponse:false,explication:q("Non ! Le CRS est basé sur la résidence fiscale, pas la nationalité. C'est FATCA qui utilise la nationalité.")},
   {texte:q("Le Luxembourg a effectué ses premiers échanges CRS en 2017"),reponse:true,explication:q("Exact ! Les premiers échanges CRS luxembourgeois ont eu lieu en septembre 2017.")},
   {texte:q("Une personne peut avoir plusieurs résidences fiscales simultanément"),reponse:true,explication:q("Exact ! Une personne peut être résidente fiscale dans plusieurs pays à la fois — toutes doivent être déclarées.")},
-  {texte:q("i-Hub déclare directement aux autorités fiscales étrangères"),reponse:false,explication:q("Non ! i-Hub déclare à l'ACD luxembourgeoise, qui transmet ensuite aux pays partenaires.")},
+  {texte:q("i-Hub ne déclare pas aux autorités fiscales étrangères — c'est le rôle du PSF via l'ACD"),reponse:false,explication:q("Non ! C'est le PSF qui déclare à l'ACD luxembourgeoise, qui transmet ensuite aux pays partenaires.")},
   {texte:q("L'auto-certification doit être obtenue dans les 90 jours suivant l'ouverture du compte"),reponse:true,explication:q("Exact ! Le délai légal est de 90 jours. Au-delà, i-Hub est en infraction.")},
   {texte:q("Les USA participent au CRS"),reponse:false,explication:q("Non ! Les USA ont leur propre système (FATCA) et ne participent pas au CRS de l'OCDE.")},
   {texte:q("Une ENF Active doit déclarer ses personnes détenant le contrôle"),reponse:false,explication:q("Non ! C'est l'ENF Passive qui doit déclarer ses personnes détenant le contrôle résidentes à l'étranger.")},
@@ -305,7 +305,7 @@ const VF_EN = [
   {texte:q("The CRS is based on the account holder's nationality"),reponse:false,explication:q("No! The CRS is based on tax residence, not nationality. It's FATCA that uses nationality.")},
   {texte:q("Luxembourg conducted its first CRS exchanges in 2017"),reponse:true,explication:q("Correct! Luxembourg's first CRS exchanges took place in September 2017.")},
   {texte:q("A person can have multiple tax residences simultaneously"),reponse:true,explication:q("Correct! A person can be a tax resident in several countries at once — all must be declared.")},
-  {texte:q("i-Hub reports directly to foreign tax authorities"),reponse:false,explication:q("No! i-Hub reports to the Luxembourg ACD, which then transmits to partner countries.")},
+  {texte:q("i-Hub reports directly to foreign tax authorities"),reponse:false,explication:q("No! It is the **PSF** that reports to the Luxembourg ACD, which then transmits to partner countries.")},
   {texte:q("Self-certification must be obtained within 90 days of account opening"),reponse:true,explication:q("Correct! The legal deadline is 90 days. Beyond this, i-Hub is in breach.")},
   {texte:q("The USA participates in CRS"),reponse:false,explication:q("No! The USA has its own system (FATCA) and does not participate in the OECD CRS.")},
   {texte:q("An Active NFE must disclose its controlling persons"),reponse:false,explication:q("No! It's the Passive NFE that must disclose its controlling persons resident abroad.")},
