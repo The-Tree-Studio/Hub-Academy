@@ -69,18 +69,18 @@ const FICHES_FR = [
     {icon:'🎯',texte:"Objectif : forcer les institutions financières **hors des USA** à déclarer les comptes détenus par des **US Persons** à l’IRS"},
     {icon:'🌍',texte:"FATCA s’applique à toutes les institutions financières mondiales — y compris **i-Hub** au Luxembourg"},
     {icon:'⚡',texte:"En cas de non-coopération : retenue à la source de **30%** sur tous les paiements de source américaine"},
-  ],aretenir:"FATCA est une loi américaine à portée mondiale. Elle impose à i-Hub d’identifier et de déclarer ses clients américains à l’IRS."},
+  ],aretenir:"FATCA est une loi américaine à portée mondiale. Elle impose aux **PSF clients d’i-Hub** d’identifier et de déclarer leurs clients finaux américains à l’IRS. i-Hub les assiste dans la vérification documentaire."},
 
   {id:2,emoji:'🤝',titre:"L’accord IGA Luxembourg-USA",contenu:[
     {icon:'📜',texte:"Le Luxembourg a signé un **IGA Modèle 1** (Intergovernmental Agreement) avec les USA le **28 mars 2014**"},
     {icon:'🏛️',texte:"Grâce à l’IGA, les institutions luxembourgeoises déclarent à l'**Administration des Contributions Directes (ACD)** — pas directement à l’IRS"},
     {icon:'📋',texte:"L’ACD transmet ensuite les données à l’IRS — système de déclaration **gouvernement à gouvernement**"},
     {icon:'⚖️',texte:"La loi luxembourgeoise du **24 juillet 2015** transpose l’IGA en droit national — contraignant pour toutes les IFE luxembourgeoises"},
-  ],aretenir:"Grâce à l’IGA Modèle 1, i-Hub déclare à l’ACD (Luxembourg), pas directement à l’IRS américain.",
+  ],aretenir:"Grâce à l’IGA Modèle 1, les PSF luxembourgeois déclarent à l’ACD, pas directement à l’IRS. i-Hub assiste les PSF en vérifiant les formulaires de leurs clients finaux.",
   plusLoin:[
     {icon:'🌍',texte:"**IGA Modèle 1** (Luxembourg) = déclaration via gouvernement local. **IGA Modèle 2** = déclaration directe à l’IRS"},
     {icon:'📅',texte:"Le Luxembourg a été parmi les **premiers pays européens** à signer un IGA Modèle 1 en 2014"},
-    {icon:'🔄',texte:"L’IGA est mis à jour régulièrement — i-Hub doit surveiller les évolutions de l’ACD"},
+    {icon:'🔄',texte:"L’IGA est mis à jour régulièrement — i-Hub adapte ses procédures de vérification en conséquence"},
   ]},
 
   {id:3,emoji:'👤',titre:"C’est quoi une US Person ?",contenu:[
@@ -108,8 +108,8 @@ const FICHES_FR = [
     {icon:'🎯',texte:"Le **W-9** est rempli par les **US Persons** — il certifie leur statut de contribuable américain"},
     {icon:'🔢',texte:"Il contient le **TIN** (Taxpayer Identification Number) — l’équivalent du numéro fiscal américain (SSN ou EIN)"},
     {icon:'✍️',texte:"Le client signe le W-9 **sous peine de parjure** — fausse déclaration = infraction pénale aux USA"},
-    {icon:'📁',texte:"i-Hub doit conserver le W-9 et le **déclarer à l’ACD** avec les informations du compte"},
-  ],aretenir:"W-9 = formulaire des US Persons. Sans TIN valide, i-Hub doit appliquer une retenue de substitution de 24%."},
+    {icon:'📁',texte:"i-Hub conserve le W-9 vérifié et le transmet au **PSF** — c’est le PSF qui le déclare à l’ACD"},
+  ],aretenir:"W-9 = formulaire des US Persons. Sans TIN valide, le PSF ne peut pas correctement déclarer à l’ACD. i-Hub signale les W-9 incomplets ou incohérents au PSF."},
 
   {id:6,emoji:'📝',titre:"Le formulaire W-8BEN (personnes physiques)",contenu:[
     {icon:'🎯',texte:"Le **W-8BEN** est rempli par les **non-US Persons** (personnes physiques) pour certifier leur statut non-américain"},
@@ -134,7 +134,7 @@ const FICHES_FR = [
     {icon:'🎯',texte:"i-Hub est une **IFE** (Institution Financière Étrangère) — une Foreign Financial Institution (FFI) selon FATCA"},
     {icon:'✅',texte:"i-Hub est une **IFE Participante** — elle a conclu un accord avec l’IRS via l’IGA luxembourgeois"},
     {icon:'🔢',texte:"i-Hub dispose d’un **GIIN** (Global Intermediary Identification Number) — son identifiant FATCA unique enregistré auprès de l’IRS"},
-    {icon:'📋',texte:"En tant qu’IFE participante, i-Hub doit **classifier ses clients**, collecter les formulaires et déclarer à l’ACD"},
+    {icon:'📋',texte:"En tant qu’IFE participante, le **PSF** doit classifier ses clients finaux, collecter les formulaires et déclarer à l’ACD — i-Hub assiste dans la vérification documentaire"},
   ],aretenir:"i-Hub n’est pas lui-même soumis à FATCA. Ce sont ses clients PSF qui déclarent à l’ACD. i-Hub les assiste dans la vérification documentaire sur instruction et dans les limites du SLA."},
 
   {id:9,emoji:'🗂️',titre:"Classification des clients : les grandes catégories",contenu:[
@@ -149,8 +149,8 @@ const FICHES_FR = [
     {icon:'2️⃣',texte:"**Documenter** : obtenir le formulaire W approprié (W-9, W-8BEN ou W-8BEN-E) selon le statut"},
     {icon:'3️⃣',texte:"**Classifier** : attribuer la catégorie FATCA correcte dans les systèmes d’i-Hub"},
     {icon:'4️⃣',texte:"**Surveiller** : mettre à jour les formulaires à l’expiration ou en cas de changement de circonstances"},
-    {icon:'5️⃣',texte:"**Déclarer** : transmettre chaque année les données des comptes US à l’ACD avant le **30 juin**"},
-  ],aretenir:"Le due diligence FATCA n’est pas un exercice unique — il s’étale sur toute la durée de la relation avec le client."},
+    {icon:'5️⃣',texte:"**Transmettre** : i-Hub fournit les données vérifiées au PSF — le **PSF déclare à l’ACD** avant le 30 juin"},
+  ],aretenir:"Le rôle de vérification d’i-Hub s’inscrit dans la durée de la relation entre le PSF et son client final — pas seulement à l’onboarding."},
 
   {id:11,emoji:'📊',titre:"Qu’est-ce qu’on déclare à l’ACD ?",contenu:[
     {icon:'👤',texte:"**Nom, adresse et TIN** du titulaire du compte américain"},
@@ -181,8 +181,8 @@ const FICHES_FR = [
   {id:14,emoji:'🏢',titre:"FATCA et les entités : NFFE active vs passive",contenu:[
     {icon:'🔵',texte:"**NFFE Active** : société opérationnelle dont moins de 50% des revenus et actifs sont passifs (ex: holding industrielle)"},
     {icon:'🟡',texte:"**NFFE Passive** : entité patrimoniale ou holding dont plus de 50% des revenus ou actifs sont passifs (intérêts, dividendes, loyers)"},
-    {icon:'⚠️',texte:"Pour une **NFFE Passive**, i-Hub doit identifier les UBO qui sont des US Persons avec une participation > 10%"},
-    {icon:'📋',texte:"Si des UBO américains sont identifiés dans une NFFE Passive, i-Hub **les déclare à l’ACD** comme comptes US"},
+    {icon:'⚠️',texte:"Pour une **NFFE Passive**, i-Hub vérifie dans le W-8BEN-E si des UBO américains (> 10%) sont déclarés — et signale toute incohérence au PSF"},
+    {icon:'📋',texte:"Si des UBO américains sont identifiés dans une NFFE Passive, i-Hub **signale les UBO américains au PSF** — c’est le PSF qui les déclare à l’ACD"},
   ],aretenir:"Une NFFE passive avec des actionnaires américains > 10% est déclarable. La classification NFFE active ou passive est donc cruciale."},
 
   {id:15,emoji:'🔄',titre:"Surveillance continue et changements de circonstances",contenu:[
@@ -214,7 +214,7 @@ const FICHES_FR = [
   {id:18,emoji:'📁',titre:"Conservation des documents FATCA",contenu:[
     {icon:'📅',texte:"Tous les formulaires W et documents FATCA doivent être conservés **au minimum 5 ans** après la fin de la relation"},
     {icon:'🔒',texte:"Les données doivent être stockées de manière **sécurisée et confidentielle** — conformément au RGPD également"},
-    {icon:'🔍',texte:"En cas de contrôle par l’ACD ou la CSSF, i-Hub doit être capable de **produire tout document** dans des délais courts"},
+    {icon:'🔍',texte:"En cas de contrôle ACD/CSSF du PSF, i-Hub doit pouvoir **produire ses documents de vérification** rapidement, sur demande du PSF"},
     {icon:'📋',texte:"Les formulaires doivent être **archivés par compte** avec leur date de collecte et leur statut (valide / expiré)"},
   ],aretenir:"Conserver = se protéger. Sans documentation traçable, i-Hub ne peut pas prouver sa conformité en cas de contrôle."},
 
@@ -246,11 +246,11 @@ const FICHES_EN = [
     {icon:'🏛️',texte:"Under the IGA, Luxembourg institutions report to the **Administration des Contributions Directes (ACD)** — not directly to the IRS"},
     {icon:'📋',texte:"The ACD then transmits data to the IRS — a **government-to-government** reporting system"},
     {icon:'⚖️',texte:"The Luxembourg law of **24 July 2015** transposes the IGA into national law — binding on all Luxembourg FFIs"},
-  ],aretenir:"Thanks to the Model 1 IGA, i-Hub reports to the ACD (Luxembourg), not directly to the US IRS.",
+  ],aretenir:"Thanks to the Model 1 IGA, Luxembourg PSFs report to the ACD, not directly to the US IRS. i-Hub assists PSFs by verifying their final clients’ documents.",
   plusLoin:[
     {icon:'🌍',texte:"**Model 1 IGA** (Luxembourg) = reporting via local government. **Model 2 IGA** = direct reporting to the IRS"},
     {icon:'📅',texte:"Luxembourg was among the **first European countries** to sign a Model 1 IGA in 2014"},
-    {icon:'🔄',texte:"The IGA is updated regularly — i-Hub must monitor ACD developments"},
+    {icon:'🔄',texte:"The IGA is updated regularly — i-Hub adapts its verification procedures accordingly"},
   ]},
 
   {id:3,emoji:'👤',titre:"What is a US Person?",contenu:[
@@ -278,8 +278,8 @@ const FICHES_EN = [
     {icon:'🎯',texte:"The **W-9** is completed by **US Persons** — it certifies their US taxpayer status"},
     {icon:'🔢',texte:"It contains the **TIN** (Taxpayer Identification Number) — the US tax ID (SSN or EIN)"},
     {icon:'✍️',texte:"The client signs the W-9 **under penalty of perjury** — false declaration = criminal offence under US law"},
-    {icon:'📁',texte:"i-Hub must retain the W-9 and **report it to the ACD** with the account information"},
-  ],aretenir:"W-9 = US Person form. Without a valid TIN, i-Hub must apply a 24% backup withholding tax."},
+    {icon:'📁',texte:"i-Hub retains the verified W-9 and transmits it to the **PSF** — it is the PSF that reports it to the ACD"},
+  ],aretenir:"W-9 = US Person form. Without a valid TIN, the PSF cannot correctly report to the ACD. i-Hub flags incomplete or inconsistent W-9s to the PSF."},
 
   {id:6,emoji:'📝',titre:"The W-8BEN Form (individuals)",contenu:[
     {icon:'🎯',texte:"The **W-8BEN** is completed by **non-US Persons** (individuals) to certify their non-US status"},
@@ -319,8 +319,8 @@ const FICHES_EN = [
     {icon:'2️⃣',texte:"**Document**: obtain the appropriate W form (W-9, W-8BEN or W-8BEN-E) based on status"},
     {icon:'3️⃣',texte:"**Classify**: assign the correct FATCA category in i-Hub’s systems"},
     {icon:'4️⃣',texte:"**Monitor**: update forms on expiry or upon change of circumstances"},
-    {icon:'5️⃣',texte:"**Report**: transmit account data for US accounts to the ACD annually before **30 June**"},
-  ],aretenir:"FATCA due diligence is not a one-off exercise — it spans the entire client relationship."},
+    {icon:'5️⃣',texte:"**Transmit**: i-Hub provides verified data to the PSF — the **PSF reports to the ACD** before 30 June"},
+  ],aretenir:"i-Hub’s verification role is ongoing — it spans the entire relationship between the PSF and its final client."},
 
   {id:11,emoji:'📊',titre:"What is reported to the ACD?",contenu:[
     {icon:'👤',texte:"**Name, address and TIN** of the US account holder"},
@@ -335,25 +335,25 @@ const FICHES_EN = [
   ]},
 
   {id:12,emoji:'💰',titre:"The 30% withholding tax",contenu:[
-    {icon:'⚡',texte:"If i-Hub does not cooperate with FATCA, the IRS imposes a **30% withholding** on all US-source payments received"},
+    {icon:'⚡',texte:"If a **PSF client** does not cooperate with FATCA, the IRS imposes a **30% withholding** on its US-source payments — this penalty targets PSFs, not i-Hub directly"},
     {icon:'📋',texte:"Payments covered: US-source interest, dividends, rents, wages, commissions"},
     {icon:'🛡️',texte:"Thanks to the signed IGA, i-Hub avoids this withholding — provided it meets its FATCA obligations"},
     {icon:'⚠️',texte:"A **recalcitrant** client (who refuses to provide documentation) may themselves be subject to 30% withholding"},
   ],aretenir:"The 30% withholding is FATCA’s ultimate sanction. The Luxembourg IGA protects i-Hub — as long as rules are followed."},
 
   {id:13,emoji:'🚫',titre:"Recalcitrant accounts and clients",contenu:[
-    {icon:'🔴',texte:"An account is **recalcitrant** if the holder refuses to provide the requested information or forms"},
-    {icon:'📋',texte:"i-Hub must **report these accounts to the ACD** in a specific category — even without complete data"},
+    {icon:'🔴',texte:"A final client is **recalcitrant** if they refuse to provide their FATCA information or forms to the PSF"},
+    {icon:'📋',texte:"The PSF must **report these accounts to the ACD** — i-Hub flags the refusals identified during verification"},
     {icon:'⏱️',texte:"A reasonable deadline is given to the client to comply — but i-Hub cannot defer indefinitely"},
-    {icon:'🚪',texte:"As a last resort, i-Hub may need to **close the account or end the relationship** with a recalcitrant client"},
+    {icon:'🚪',texte:"As a last resort, it is the **PSF** that decides to close the account — i-Hub does not take this decision unilaterally"},
   ],aretenir:"A client who refuses to self-certify does not block the report — they appear as 'recalcitrant'."},
 
   {id:14,emoji:'🏢',titre:"FATCA and entities: Active vs Passive NFFE",contenu:[
     {icon:'🔵',texte:"**Active NFFE**: operating company where less than 50% of income and assets are passive (e.g. industrial holding)"},
     {icon:'🟡',texte:"**Passive NFFE**: investment or patrimonial entity where more than 50% of income or assets are passive (interest, dividends, rent)"},
-    {icon:'⚠️',texte:"For a **Passive NFFE**, i-Hub must identify UBOs who are US Persons with an ownership interest > 10%"},
-    {icon:'📋',texte:"If US UBOs are identified in a Passive NFFE, i-Hub **reports them to the ACD** as US accounts"},
-  ],aretenir:"A passive NFFE with US shareholders > 10% is reportable. Active vs Passive NFFE classification is therefore critical."},
+    {icon:'⚠️',texte:"For a **Passive NFFE**, i-Hub checks in the W-8BEN-E whether US UBOs (> 10%) are declared — and flags any inconsistency to the PSF"},
+    {icon:'📋',texte:"If US UBOs are identified, i-Hub **notifies the PSF** — it is the PSF that reports them to the ACD"},
+  ],aretenir:"A passive NFFE with US UBOs > 10% must be flagged to the PSF. i-Hub must know this distinction to verify forms correctly."},
 
   {id:15,emoji:'🔄',titre:"Ongoing monitoring and change of circumstances",contenu:[
     {icon:'📅',texte:"W forms have a **limited lifespan**: W-8 valid 3 years, W-9 indefinite but must be renewed on change"},
@@ -365,9 +365,9 @@ const FICHES_EN = [
   {id:16,emoji:'⚖️',titre:"Penalties for non-compliance",contenu:[
     {icon:'💸',texte:"**30% withholding** on US-source payments — main penalty for non-cooperating FFIs"},
     {icon:'📋',texte:"**ACD fines** for incomplete, incorrect or late declarations — up to several thousand euros per account"},
-    {icon:'🏛️',texte:"**Criminal sanctions** for managers in cases of serious or wilful FATCA breaches"},
+    {icon:'🏛️',texte:"**Criminal sanctions** for **PSF** managers in serious cases — with potential contractual repercussions for i-Hub"},
     {icon:'📰',texte:"**Major reputational risk** — the IRS publishes a list of non-cooperating FFIs"},
-  ],aretenir:"The cost of FATCA non-compliance far exceeds the cost of compliance. No breach can be ignored.",
+  ],aretenir:"FATCA sanctions target PSFs — but i-Hub is contractually exposed if a verification error contributed to the breach. Verification quality is therefore critical.",
   plusLoin:[
     {icon:'🔍',texte:"The IRS has a **public search tool** (FATCA FFI List) to verify whether an FFI is properly registered"},
     {icon:'⚡',texte:"In 2023, the IRS strengthened **penalties for missing TINs** — FFIs without valid TINs face increased sanctions"},
@@ -384,7 +384,7 @@ const FICHES_EN = [
   {id:18,emoji:'📁',titre:"Retention of FATCA documents",contenu:[
     {icon:'📅',texte:"All W forms and FATCA documents must be retained for **at least 5 years** after the end of the relationship"},
     {icon:'🔒',texte:"Data must be stored **securely and confidentially** — also in line with GDPR requirements"},
-    {icon:'🔍',texte:"In the event of an ACD or CSSF audit, i-Hub must be able to **produce any document** within short deadlines"},
+    {icon:'🔍',texte:"In the event of an ACD or CSSF audit of the PSF, i-Hub must be able to **produce its verification documents** within short deadlines, at the PSF’s request"},
     {icon:'📋',texte:"Forms must be **archived by account** with their collection date and status (valid / expired)"},
   ],aretenir:"Retention = protection. Without traceable documentation, i-Hub cannot prove compliance in an audit."},
 
@@ -434,12 +434,12 @@ const MATCHING_EN = [
 
 const VF_FR = [
   {texte:"FATCA a été adoptée en 2010 par le gouvernement américain",reponse:true,explication:"Exact ! FATCA est une loi de 2010, adoptée sous la présidence Obama."},
-  {texte:"i-Hub déclare directement à l’IRS américain",reponse:false,explication:"Non ! Grâce à l’IGA Modèle 1, i-Hub déclare à l’ACD luxembourgeoise, qui transmet ensuite à l’IRS."},
+  {texte:"Les PSF déclarent directement à l’IRS américain",reponse:false,explication:"Non ! Grâce à l’IGA Modèle 1, i-Hub déclare à l’ACD luxembourgeoise, qui transmet ensuite à l’IRS."},
   {texte:"Un citoyen américain vivant au Luxembourg est une US Person",reponse:true,explication:"Exact ! La citoyenneté américaine entraîne le statut de US Person indépendamment du lieu de résidence."},
   {texte:"Le W-8BEN est valable indéfiniment",reponse:false,explication:"Non ! Le W-8BEN est valide 3 ans seulement. i-Hub doit surveiller les dates d’expiration."},
   {texte:"La retenue FATCA peut atteindre 30% des paiements de source US",reponse:true,explication:"Exact ! C’est la sanction principale pour les IFE non-coopérantes avec FATCA."},
   {texte:"Une NFFE Active doit déclarer ses UBO américains",reponse:false,explication:"Non ! C’est la NFFE Passive qui doit déclarer ses UBO américains au-delà de 10%."},
-  {texte:"Un compte récalcitrant doit être déclaré à l’ACD",reponse:true,explication:"Exact ! i-Hub déclare les comptes récalcitrants dans une catégorie spécifique, même sans données complètes."},
+  {texte:"Un compte récalcitrant doit être signalé au PSF, qui le déclare à l’ACD",reponse:true,explication:"Exact ! i-Hub signale les comptes récalcitrants au PSF, qui les déclare à l’ACD dans une catégorie spécifique."},
   {texte:"FATCA et CRS sont des dispositifs identiques",reponse:false,explication:"Non ! FATCA est américain et basé sur la nationalité. CRS est multilatéral et basé sur la résidence fiscale."},
   {texte:"Le W-9 est rempli par les personnes qui ne sont pas américaines",reponse:false,explication:"Non ! Le W-9 est rempli par les US Persons. Les non-américains remplissent le W-8BEN ou W-8BEN-E."},
   {texte:"Les documents FATCA doivent être conservés au moins 5 ans",reponse:true,explication:"Exact ! La durée minimale de conservation est de 5 ans après la fin de la relation d’affaires."},
@@ -448,12 +448,12 @@ const VF_FR = [
 ]
 const VF_EN = [
   {texte:"FATCA was enacted in 2010 by the US government",reponse:true,explication:"Correct! FATCA is a 2010 law enacted under the Obama presidency."},
-  {texte:"i-Hub reports directly to the US IRS",reponse:false,explication:"No! Thanks to the Model 1 IGA, i-Hub reports to the Luxembourg ACD, which then forwards to the IRS."},
+  {texte:"PSFs report directly to the US IRS",reponse:false,explication:"No! It is the PSF clients that report to the Luxembourg ACD. i-Hub verifies their documents on their behalf."},
   {texte:"A US citizen living in Luxembourg is a US Person",reponse:true,explication:"Correct! US citizenship creates US Person status regardless of place of residence."},
   {texte:"The W-8BEN is valid indefinitely",reponse:false,explication:"No! The W-8BEN is only valid for 3 years. i-Hub must monitor expiry dates."},
   {texte:"FATCA withholding can reach 30% of US-source payments",reponse:true,explication:"Correct! This is the main penalty for FFIs not cooperating with FATCA."},
   {texte:"An Active NFFE must disclose its US beneficial owners",reponse:false,explication:"No! It’s the Passive NFFE that must disclose US beneficial owners above 10%."},
-  {texte:"A recalcitrant account must be reported to the ACD",reponse:true,explication:"Correct! i-Hub reports recalcitrant accounts in a specific category, even without complete data."},
+  {texte:"A recalcitrant account must be flagged to the PSF, who reports it to the ACD",reponse:true,explication:"Correct! i-Hub flags recalcitrant accounts to the PSF, who reports them to the ACD in a specific category."},
   {texte:"FATCA and CRS are identical frameworks",reponse:false,explication:"No! FATCA is a US initiative based on nationality. CRS is multilateral and based on tax residency."},
   {texte:"The W-9 is completed by non-US persons",reponse:false,explication:"No! The W-9 is completed by US Persons. Non-US persons complete the W-8BEN or W-8BEN-E."},
   {texte:"FATCA documents must be retained for at least 5 years",reponse:true,explication:"Correct! The minimum retention period is 5 years after the end of the business relationship."},
@@ -466,14 +466,14 @@ const CAS_FR = [
   {situation:"Une société luxembourgeoise (fonds SICAV) enregistrée à l’IRS fournit son GIIN.",action:"W-8BEN-E avec GIIN — pas de déclaration compte",options:["W-9 obligatoire","W-8BEN-E avec GIIN — pas de déclaration compte","Pas de formulaire nécessaire","Déclarer à l’ACD comme US Person"],explication:"Une IFE participante (SICAV enregistrée) fournit son GIIN via W-8BEN-E — pas de déclaration de compte."},
   {situation:"Une holding luxembourgeoise passive a un actionnaire américain détenant 15% du capital.",action:"W-8BEN-E NFFE Passive + déclarer l’UBO américain à l’ACD",options:["W-8BEN-E NFFE Active — rien à déclarer","W-8BEN-E NFFE Passive + déclarer l’UBO américain à l’ACD","Pas de déclaration — seuil de 25% non atteint","W-9 pour la holding"],explication:"15% > 10% → l’UBO américain dans une NFFE Passive doit être déclaré à l’ACD. Le seuil FATCA est 10%, pas 25%."},
   {situation:"Un client remet un W-8BEN signé en 2021. Nous sommes en 2025.",action:"Demander un nouveau W-8BEN — l’ancien a expiré",options:["Conserver l’ancien — il reste valable","Demander un nouveau W-8BEN — l’ancien a expiré","Reclassifier comme US Person","Aucune action nécessaire"],explication:"Le W-8BEN de 2021 a expiré en 2024 (valide 3 ans). Un nouveau formulaire est obligatoire."},
-  {situation:"Un particulier américain (Green Card) souhaite utiliser les services d’i-Hub.",action:"W-9 obligatoire + déclaration à l’ACD",options:["W-8BEN car il réside au Luxembourg","W-9 obligatoire + déclaration à l’ACD","Aucun formulaire — pas de lien avec les USA","W-8BEN-E car c’est une entité"],explication:"Un détenteur de Green Card est une US Person — W-9 obligatoire et déclaration à l’ACD."},
+  {situation:"Un PSF demande à i-Hub de vérifier le dossier d’un client final détenteur de Green Card (résident américain).",action:"W-9 à vérifier + signalement au PSF pour déclaration à l’ACD",options:["W-8BEN car il réside au Luxembourg","W-9 à vérifier + signalement au PSF pour déclaration à l’ACD","Aucun formulaire — pas de lien avec les USA","W-8BEN-E car c’est une entité"],explication:"Un détenteur de Green Card est une US Person — i-Hub vérifie que le W-9 est bien fourni et cohérent, puis signale au PSF pour déclaration à l’ACD."},
 ]
 const CAS_EN = [
   {situation:"A client states they were born in Miami but has held Luxembourg nationality for 10 years. They refuse to complete any form.",action:"Recalcitrant account — report to ACD and consider closure",options:["Nothing — they are Luxembourg national","W-8BEN is sufficient","Recalcitrant account — report to ACD and consider closure","W-9 mandatory"],explication:"Birth in Miami is a US indicium. Without documentation, the account is recalcitrant."},
   {situation:"A Luxembourg SICAV registered with the IRS provides its GIIN.",action:"W-8BEN-E with GIIN — no account report",options:["W-9 mandatory","W-8BEN-E with GIIN — no account report","No form required","Report to ACD as US Person"],explication:"A participating FFI (registered SICAV) provides its GIIN via W-8BEN-E — no account report."},
   {situation:"A Luxembourg passive holding company has a US shareholder holding 15% of capital.",action:"W-8BEN-E Passive NFFE + report US UBO to ACD",options:["W-8BEN-E Active NFFE — nothing to report","W-8BEN-E Passive NFFE + report US UBO to ACD","No report — 25% threshold not reached","W-9 for the holding"],explication:"15% > 10% → the US UBO in a Passive NFFE must be reported to the ACD. FATCA threshold is 10%, not 25%."},
   {situation:"A client submits a W-8BEN signed in 2021. We are now in 2025.",action:"Request a new W-8BEN — the old one has expired",options:["Keep the old one — still valid","Request a new W-8BEN — the old one has expired","Reclassify as US Person","No action needed"],explication:"The 2021 W-8BEN expired in 2024 (valid 3 years). A new form is mandatory."},
-  {situation:"A US individual (Green Card holder) wishes to use i-Hub’s services.",action:"W-9 mandatory + report to ACD",options:["W-8BEN as they reside in Luxembourg","W-9 mandatory + report to ACD","No form — no US link","W-8BEN-E as it is an entity"],explication:"A Green Card holder is a US Person — W-9 is mandatory and reporting to ACD required."},
+  {situation:"A PSF asks i-Hub to verify the file of a final client who is a Green Card holder (US resident).",action:"W-9 to verify + notify PSF for ACD reporting",options:["W-8BEN as they reside in Luxembourg","W-9 to verify + notify PSF for ACD reporting","No form — no US link","W-8BEN-E as it is an entity"],explication:"A Green Card holder is a US Person — i-Hub verifies the W-9 is present and consistent, then notifies the PSF for ACD reporting."},
 ]
 
 export default function ModuleFatca() {
