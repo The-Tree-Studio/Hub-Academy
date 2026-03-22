@@ -437,7 +437,7 @@ export default function Home() {
               </div>
 
               {/* Stats */}
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', marginBottom: '28px', maxWidth: '700px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', marginBottom: '28px', }}>
                 {[
                   { value: totalModules, label: t.statTotal, icon: '📚', color: '#3b82f6' },
                   { value: readyModules, label: t.statDispo, icon: '✅', color: '#10b981' },
@@ -452,7 +452,7 @@ export default function Home() {
               </div>
 
               {/* All themes summary */}
-              <div style={{ background: 'white', borderRadius: '12px', border: '1px solid #e5e7eb', overflow: 'hidden', maxWidth: '900px' }}>
+              <div style={{ background: 'white', borderRadius: '12px', border: '1px solid #e5e7eb', overflow: 'hidden', }}>
                 <div style={{ padding: '16px 20px', borderBottom: '1px solid #f3f4f6' }}>
                   <h2 style={{ fontSize: '16px', fontWeight: '600', color: '#1f2937', margin: 0 }}>{t.allModules}</h2>
                 </div>
@@ -502,7 +502,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '12px', maxWidth: '1000px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '12px', }}>
                 {THEMES[activeTheme].modules.map((m, i) => (
                   <div key={i}
                     onClick={() => m.ready && router.push(`/modules/${m.slug}`)}
@@ -540,7 +540,7 @@ export default function Home() {
 
           {/* DASHBOARD VIEW */}
           {view === 'dashboard' && (
-            <div style={{ maxWidth: '900px' }}>
+            <div style={{ }}>
               <div style={{ marginBottom: '24px' }}>
                 <h1 style={{ fontSize: '22px', fontWeight: '700', color: '#1f2937', margin: '0 0 4px' }}>{t.dashboard}</h1>
                 <p style={{ color: '#4b5563', fontSize: '13px', margin: 0 }}>{user?.email}</p>
