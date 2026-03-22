@@ -188,7 +188,7 @@ const FICHES_FR = [
   {id:15,emoji:'🔄',titre:"Surveillance continue et changements de circonstances",contenu:[
     {icon:'📅',texte:"Les formulaires W ont une **durée de vie limitée** : W-8 valide 3 ans, W-9 indéfini mais à renouveler si changement"},
     {icon:'🚨',texte:"Tout **changement de circonstances** (mariage, déménagement, acquisition de nationalité US) impose un nouveau formulaire"},
-    {icon:'📰',texte:"i-Hub doit surveiller les **negative news** et les changements dans les bases publiques pouvant indiquer une américanité"},
+    {icon:'📰',texte:"Le **PSF** surveille les negative news et les changements pouvant indiquer une américanité — i-Hub signale toute anomalie visible lors de ses vérifications"},
     {icon:'🔔',texte:"Les systèmes d’i-Hub doivent générer des **alertes automatiques** avant l’expiration des formulaires W"},
   ],aretenir:"La classification FATCA n’est pas définitive. Un client non-US peut devenir US Person — i-Hub doit le détecter."},
 
@@ -358,7 +358,7 @@ const FICHES_EN = [
   {id:15,emoji:'🔄',titre:"Ongoing monitoring and change of circumstances",contenu:[
     {icon:'📅',texte:"W forms have a **limited lifespan**: W-8 valid 3 years, W-9 indefinite but must be renewed on change"},
     {icon:'🚨',texte:"Any **change of circumstances** (marriage, relocation, acquisition of US nationality) requires a new form"},
-    {icon:'📰',texte:"i-Hub must monitor **negative news** and changes in public records that may indicate US status"},
+    {icon:'📰',texte:"The **PSF** monitors negative news and public record changes — i-Hub flags any anomaly visible during its verifications"},
     {icon:'🔔',texte:"i-Hub’s systems must generate **automatic alerts** before W forms expire"},
   ],aretenir:"FATCA classification is not final. A non-US client can become a US Person — i-Hub must detect this."},
 
@@ -436,7 +436,7 @@ const VF_FR = [
   {texte:"FATCA a été adoptée en 2010 par le gouvernement américain",reponse:true,explication:"Exact ! FATCA est une loi de 2010, adoptée sous la présidence Obama."},
   {texte:"Les PSF déclarent directement à l’IRS américain",reponse:false,explication:"Non ! Grâce à l’IGA Modèle 1, i-Hub déclare à l’ACD luxembourgeoise, qui transmet ensuite à l’IRS."},
   {texte:"Un citoyen américain vivant au Luxembourg est une US Person",reponse:true,explication:"Exact ! La citoyenneté américaine entraîne le statut de US Person indépendamment du lieu de résidence."},
-  {texte:"Le W-8BEN est valable indéfiniment",reponse:false,explication:"Non ! Le W-8BEN est valide 3 ans seulement. i-Hub doit surveiller les dates d’expiration."},
+  {texte:"Le W-8BEN est valable indéfiniment",reponse:false,explication:"Non ! Le W-8BEN est valide 3 ans seulement. C’est le **PSF** qui surveille les dates d’expiration — i-Hub signale les formulaires expirés détectés lors de ses vérifications."},
   {texte:"La retenue FATCA peut atteindre 30% des paiements de source US",reponse:true,explication:"Exact ! C’est la sanction principale pour les IFE non-coopérantes avec FATCA."},
   {texte:"Une NFFE Active doit déclarer ses UBO américains",reponse:false,explication:"Non ! C’est la NFFE Passive qui doit déclarer ses UBO américains au-delà de 10%."},
   {texte:"Un compte récalcitrant doit être signalé au PSF, qui le déclare à l’ACD",reponse:true,explication:"Exact ! i-Hub signale les comptes récalcitrants au PSF, qui les déclare à l’ACD dans une catégorie spécifique."},
@@ -450,7 +450,7 @@ const VF_EN = [
   {texte:"FATCA was enacted in 2010 by the US government",reponse:true,explication:"Correct! FATCA is a 2010 law enacted under the Obama presidency."},
   {texte:"PSFs report directly to the US IRS",reponse:false,explication:"No! It is the PSF clients that report to the Luxembourg ACD. i-Hub verifies their documents on their behalf."},
   {texte:"A US citizen living in Luxembourg is a US Person",reponse:true,explication:"Correct! US citizenship creates US Person status regardless of place of residence."},
-  {texte:"The W-8BEN is valid indefinitely",reponse:false,explication:"No! The W-8BEN is only valid for 3 years. i-Hub must monitor expiry dates."},
+  {texte:"The W-8BEN is valid indefinitely",reponse:false,explication:"No! The W-8BEN is only valid for 3 years. It is the **PSF** that monitors expiry dates — i-Hub flags expired forms detected during its verifications."},
   {texte:"FATCA withholding can reach 30% of US-source payments",reponse:true,explication:"Correct! This is the main penalty for FFIs not cooperating with FATCA."},
   {texte:"An Active NFFE must disclose its US beneficial owners",reponse:false,explication:"No! It’s the Passive NFFE that must disclose US beneficial owners above 10%."},
   {texte:"A recalcitrant account must be flagged to the PSF, who reports it to the ACD",reponse:true,explication:"Correct! i-Hub flags recalcitrant accounts to the PSF, who reports them to the ACD in a specific category."},
