@@ -550,7 +550,7 @@ export default function ModuleFatcaCrsQi() {
           </div>
           <div style={{display:'flex',flexDirection:'column',gap:'10px',marginBottom:'24px'}}>
             {activeFeatures.map((f,i)=>(
-              <div key={i} style={{background:'white',borderRadius:'12px',padding:'14px 16px',border:\`1.5px solid \${q1Submitted?(q1Answers[i]===f.a?'#6ee7b7':'#fca5a5'):'#e5e7eb'}\`,display:'flex',alignItems:'center',gap:'12px',background:q1Submitted?(q1Answers[i]===f.a?'#f0fdf4':'#fff1f1'):'white'}}>
+              <div key={i} style={{background:q1Submitted?(q1Answers[i]===f.a?'#f0fdf4':'#fff1f1'):'white',borderRadius:'12px',padding:'14px 16px',border:\`1.5px solid \${q1Submitted?(q1Answers[i]===f.a?'#6ee7b7':'#fca5a5'):'#e5e7eb'}\`,display:'flex',alignItems:'center',gap:'12px'}}>
                 <span style={{flex:1,fontSize:'14px',fontWeight:'600',color:'#374151'}}>{f.q}</span>
                 <div style={{display:'flex',gap:'6px'}}>
                   {options.map(opt=>(
