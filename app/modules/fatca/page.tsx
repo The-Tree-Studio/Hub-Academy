@@ -505,7 +505,7 @@ export default function ModuleFatca() {
   const [casRepondu, setCasRepondu] = useState<string|null>(null)
   const [casScore, setCasScore] = useState(0)
 
-  function initQuizzes(l) {
+  function initQuizzes(l: 'fr'|'en') {
     const bm = l==='fr'?MATCHING_FR:MATCHING_EN
     const bv = l==='fr'?VF_FR:VF_EN
     const bc = l==='fr'?CAS_FR:CAS_EN
@@ -517,12 +517,12 @@ export default function ModuleFatca() {
     setCasIndex(0); setCasScore(0); setCasRepondu(null)
   }
 
-  function switchLang(l) {
+  function switchLang(l: 'fr'|'en') {
     saveLang(l); setLang(l); setPhase('intro'); setFicheIndex(0); setScore(0); setPlusLoinOpen(false); initQuizzes(l)
   }
 
-  function handleMatchSigle(sigle) { if (matchPairs[sigle]) return; setMatchSelected(sigle); setMatchError(null) }
-  function handleMatchDef(def) {
+  function handleMatchSigle(sigle: string) { if (matchPairs[sigle]) return; setMatchSelected(sigle); setMatchError(null) }
+  function handleMatchDef(def: string) {
     if (!matchSelected) return
     const correct = activeMatching.find(m => m.sigle===matchSelected)?.definition
     if (correct===def) {
@@ -531,7 +531,7 @@ export default function ModuleFatca() {
     } else { setMatchError(lang==='fr'?`❌ "${def}" ne correspond pas à ${matchSelected}.`:`❌ "${def}" does not match ${matchSelected}.`); setMatchSelected(null) }
   }
 
-  function repondreVF(rep) {
+  function repondreVF(rep: boolean) {
     if (vfRepondu!==null) return
     const correct=activeVF[vfIndex].reponse===rep; setVfRepondu(rep); setVfAnimation(correct?'correct':'wrong')
     if (correct) setVfScore(s=>s+1)
@@ -542,7 +542,7 @@ export default function ModuleFatca() {
     }, 2200)
   }
 
-  function repCas(opt) {
+  function repCas(opt: string) {
     if (casRepondu!==null) return
     const correct=opt===activeCas[casIndex].action
     setCasRepondu(opt)
