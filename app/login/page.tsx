@@ -24,7 +24,7 @@ export default function LoginPage() {
       <div style={{ background: 'white', borderRadius: '16px', padding: '40px', width: '100%', maxWidth: '400px', boxShadow: '0 4px 24px rgba(0,0,0,0.08)', border: '1px solid #e5e7eb' }}>
         <div style={{ textAlign: 'center', marginBottom: '32px' }}>
           <div style={{ fontSize: '40px', marginBottom: '12px' }}>🎓</div>
-          <h1 style={{ fontSize: '22px', fontWeight: '800', color: '#111827', margin: '0 0 6px' }}>Hub Academy</h1>
+          <h1 style={{ fontSize: '22px', fontWeight: '800', color: '#6b7280', margin: '0 0 6px' }}>Hub Academy</h1>
           <p style={{ color: '#6b7280', fontSize: '14px', margin: 0 }}>Connectez-vous pour accéder à vos formations</p>
         </div>
 
@@ -65,9 +65,9 @@ export default function LoginPage() {
         <button
           onClick={handleLogin}
           disabled={loading}
-          style={{ width: '100%', padding: '12px', background: loading ? '#9ca3af' : '#111827', color: 'white', border: 'none', borderRadius: '8px', fontSize: '15px', fontWeight: '700', cursor: loading ? 'not-allowed' : 'pointer', transition: 'background 0.2s' }}
-          onMouseOver={e => { if (!loading) (e.currentTarget as HTMLElement).style.background = '#374151' }}
-          onMouseOut={e => { if (!loading) (e.currentTarget as HTMLElement).style.background = '#111827' }}
+          style={{ width: '100%', padding: '12px', background: loading ? '#d1d5db' : '#9ca3af', color: 'white', border: 'none', borderRadius: '8px', fontSize: '15px', fontWeight: '700', cursor: loading ? 'not-allowed' : 'pointer', transition: 'background 0.2s' }}
+          onMouseOver={e => { if (!loading) (e.currentTarget as HTMLElement).style.background = '#6b7280' }}
+          onMouseOut={e => { if (!loading) (e.currentTarget as HTMLElement).style.background = '#9ca3af' }}
         >
           {loading ? 'Connexion...' : 'Se connecter'}
         </button>
