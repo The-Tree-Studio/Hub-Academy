@@ -54,7 +54,7 @@ const FICHES_FR = [
     {icon:'✍️',texte:q("Elle doit être signée par le client et doit contenir : nom, adresse, pays de résidence fiscale, **NIF** (numéro d'identification fiscale)")},
     {icon:'⏱️',texte:q("Le **PSF** doit obtenir l'auto-certification du client final dans les **90 jours** suivant l'ouverture — i-Hub vérifie sa présence et sa cohérence")},
     {icon:'🔄',texte:q("L'auto-certification doit être **mise à jour** si la situation du client final change — le client final notifie le **PSF**, qui sollicite i-Hub pour re-vérifier si nécessaire")},
-  ],aretenir:q("Sans auto-certification valide, le **PSF** ne peut pas finaliser l'entrée en relation avec son client final. i-Hub vérifie que le document est présent et cohérent."),
+  ],aretenir:q("Sans auto-certification valide, le **PSF** ne peut pas finaliser l'entrée en relation. i-Hub vérifie la présence et la cohérence du document \u2014 et signale toute absence au PSF."),
   plusLoin:[
     {icon:'📋',texte:q("Le format de l'auto-certification n'est pas imposé — le **PSF** utilise son propre formulaire ou un modèle OCDE, qu'i-Hub reçoit et vérifie")},
     {icon:'🔍',texte:q("i-Hub vérifie la **plausibilité** de l'auto-certification reçue par rapport aux autres documents d'identité du client final")},
@@ -94,7 +94,7 @@ const FICHES_FR = [
     {icon:'📋',texte:q("Exemples : déménagement dans un nouveau pays, obtention d'une nouvelle nationalité, changement d'adresse postale")},
     {icon:'⚡',texte:q("Le **PSF** doit traiter le changement dans les **90 jours** — obtenir une nouvelle auto-certification du client final et reclassifier — i-Hub vérifie le nouveau document")},
     {icon:'🚫',texte:q("Si le client final ne fournit pas de nouvelle auto-certification, le **PSF** applique la **présomption de résidence** basée sur les indices disponibles")},
-  ],aretenir:q("i-Hub ne peut pas ignorer un changement de circonstances. Toute mise à jour d'adresse peut déclencher une reclassification CRS.")},
+  ],aretenir:q("i-Hub ne peut pas ignorer un changement de circonstances visible. Toute mise à jour d'adresse est signalée au PSF qui décide de la reclassification CRS.")},
 
   {id:12,emoji:'⚖️',titre:q("Sanctions en cas de manquement au CRS"),contenu:[
     {icon:'💸',texte:q("**Amendes ACD** : jusqu'à **250 000 €** par déclaration incorrecte, incomplète ou tardive au Luxembourg")},
@@ -221,7 +221,7 @@ const FICHES_EN = [
     {icon:'📋',texte:q("Examples: relocation to a new country, acquisition of a new nationality, change of postal address")},
     {icon:'⚡',texte:q("The **PSF** must process the change within **90 days** — obtain a new self-certification from the final client and reclassify — i-Hub verifies the new document")},
     {icon:'🚫',texte:q("If the final client does not provide a new self-certification, the **PSF** applies a **residence presumption** based on available indicators")},
-  ],aretenir:q("i-Hub cannot ignore a change of circumstances. Any address update may trigger a CRS reclassification.")},
+  ],aretenir:q("i-Hub cannot ignore a visible change of circumstances. Any address update is flagged to the PSF which decides on reclassification.")},
 
   {id:12,emoji:'⚖️',titre:q("Penalties for CRS non-compliance"),contenu:[
     {icon:'💸',texte:q("**ACD fines**: up to **€250,000** per incorrect, incomplete or late declaration in Luxembourg")},
@@ -318,21 +318,21 @@ const VF_EN = [
 
 const CAS_FR = [
   {
-    situation:q("Un résident belge est client final d'un PSF. Il refuse de remplir l'auto-certification auprès du PSF."),
-    action:q("Bloquer l'ouverture — auto-certification obligatoire dans les 90 jours"),
-    options:[q("Ouvrir le compte — la Belgique est un pays ami"),q("Bloquer l'ouverture — auto-certification obligatoire dans les 90 jours"),q("Ouvrir et déclarer à l'ACD sans auto-certification"),q("Appliquer FATCA à la place du CRS")],
-    explication:q("L'auto-certification est obligatoire dans les 90 jours. Sans elle, le **PSF** ne peut pas finaliser l'entrée en relation avec son client final.")
+    situation:q("Un résident belge est client final d'un PSF. Il refuse de fournir son auto-certification au PSF. Le PSF demande à i-Hub d'analyser le dossier."),
+    action:q("Signaler au PSF : sans auto-certification, le PSF ne peut pas finaliser l'entrée en relation"),
+    options:[q("Accepter le dossier sans auto-certification"),q("Signaler au PSF : sans auto-certification, le PSF ne peut pas finaliser l'entrée en relation"),q("Déclarer à l'ACD à l'ACD sans auto-certification"),q("Appliquer FATCA à la place du CRS")],
+    explication:q("L'auto-certification est obligatoire. Sans elle, le **PSF** ne peut pas finaliser l'entrée en relation. i-Hub signale cette anomalie au PSF \u2014 c'est le PSF qui prend la décision.")
   },
   {
     situation:q("Une holding luxembourgeoise a un actionnaire français détenant 30% du capital. Elle se déclare ENF Active."),
-    action:q("Reclassifier en ENF Passive — 30% = personne détenant le contrôle à déclarer"),
-    options:[q("Accepter — ENF Active = pas d'obligation CRS"),q("Demander un W-8BEN-E"),q("Reclassifier en ENF Passive — 30% = personne détenant le contrôle à déclarer"),q("Déclarer la holding comme résidente française")],
-    explication:q("Une holding dont les revenus sont majoritairement passifs est une ENF Passive. 30% > 25% → actionnaire français à déclarer.")
+    action:q("Signaler au PSF : ENF probablement Passive (30% > 25%), actionnaire français à vérifier"),
+    options:[q("Accepter — ENF Active déclarée par le client"),q("Signaler au PSF : ENF probablement Passive (30% > 25%), actionnaire français à vérifier"),q("Déclarer directement le contrôle à déclarer"),q("Déclarer la holding comme résidente française")],
+    explication:q("30% > 25% → probable ENF Passive. i-Hub signale l'incohérence au PSF. C'est le PSF qui reclassifie et décide des obligations de déclaration.")
   },
   {
     situation:q("Un client déménage d'Allemagne en Thaïlande (non-participant CRS). Il soumet une nouvelle auto-certification."),
-    action:q("Reclassifier comme non-déclarable — la Thaïlande ne participe pas au CRS"),
-    options:[q("Continuer à déclarer à l'ACD — prudence"),q("Reclassifier comme non-déclarable — la Thaïlande ne participe pas au CRS"),q("Appliquer FATCA à la place"),q("Déclarer à l'Allemagne car il y résidait avant")],
+    action:q("Signaler au PSF : nouvelle résidence en Thaïlande (non-CRS), à lui de mettre à jour la classification"),
+    options:[q("Continuer à signaler au PSF comme avant"),q("Signaler au PSF : nouvelle résidence en Thaïlande (non-CRS), à lui de mettre à jour la classification"),q("Déclarer à l'ACD quand même CRS"),q("Appliquer FATCA à la place"),q("Déclarer à l'Allemagne car il y résidait avant")],
     explication:q("La Thaïlande ne participe pas au CRS. Un résident thaïlandais n'est pas déclarable sous ce régime — sous réserve de vérification.")
   },
   {
@@ -350,21 +350,21 @@ const CAS_FR = [
 ];
 const CAS_EN = [
   {
-    situation:q("A Belgian resident is a final client of a PSF. They refuse to complete the self-certification with the PSF."),
-    action:q("Block opening — self-certification mandatory within 90 days"),
-    options:[q("Open the account — Belgium is a partner country"),q("Block opening — self-certification mandatory within 90 days"),q("Open and report to ACD without self-certification"),q("Apply FATCA instead of CRS")],
-    explication:q("Self-certification is mandatory within 90 days. Without it, the **PSF** cannot complete the onboarding of its final client.")
+    situation:q("A Belgian resident is a final client of a PSF. They refuse to provide their self-certification to the PSF. The PSF asks i-Hub to analyse the file."),
+    action:q("Flag to PSF: without self-certification, the PSF cannot finalise onboarding"),
+    options:[q("Accept the file without self-certification"),q("Flag to PSF: without self-certification, the PSF cannot finalise onboarding"),q("Report to ACD without self-certification"),q("Apply FATCA instead of CRS")],
+    explication:q("Self-certification is mandatory. Without it, the **PSF** cannot complete onboarding. i-Hub flags this anomaly to the PSF \u2014 it is the PSF that makes the decision.")
   },
   {
     situation:q("A Luxembourg holding has a French shareholder holding 30% of capital. It declares itself an Active NFE."),
-    action:q("Reclassify as Passive NFE — 30% = controlling person to be reported"),
-    options:[q("Accept — Active NFE = no CRS obligation"),q("Request a W-8BEN-E"),q("Reclassify as Passive NFE — 30% = controlling person to be reported"),q("Report the holding as a French resident")],
+    action:q("Flag to PSF: probable Passive NFE (30% > 25%), French shareholder to verify"),
+    options:[q("Accept — Active NFE as declared"),q("Flag to PSF: probable Passive NFE (30% > 25%), French shareholder to verify"),q("Report directly to ACD person to be reported"),q("Report the holding as a French resident")],
     explication:q("A holding with mainly passive income is a Passive NFE. 30% > 25% → French shareholder must be reported.")
   },
   {
     situation:q("A client moves from Germany to Thailand (CRS non-participant). They submit a new self-certification."),
-    action:q("Reclassify as non-reportable — Thailand does not participate in CRS"),
-    options:[q("Continue reporting to ACD — caution prevails"),q("Reclassify as non-reportable — Thailand does not participate in CRS"),q("Apply FATCA instead"),q("Report to Germany as they previously resided there")],
+    action:q("Flag to PSF: new residency in Thailand (non-CRS), PSF to update classification"),
+    options:[q("Continue flagging to PSF as before"),q("Flag to PSF: new residency in Thailand (non-CRS), PSF to update classification"),q("Report to ACD anyway CRS"),q("Apply FATCA instead"),q("Report to Germany as they previously resided there")],
     explication:q("Thailand does not participate in CRS. A Thai resident is not reportable under this regime — subject to verification.")
   },
   {
