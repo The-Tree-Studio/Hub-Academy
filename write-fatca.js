@@ -312,7 +312,7 @@ const FICHES_EN = [
     {icon:'🏦',texte:"**Participating / registered FFI**: financial institution itself subject to FATCA — GIIN exchange"},
     {icon:'🔵',texte:"**Active NFFE**: operating company whose main activity is non-financial — presumed non-US"},
     {icon:'🟡',texte:"**Passive NFFE**: holding or investment entity — must disclose any US beneficial owners"},
-  ],aretenir:"Every client must be classified under a FATCA category. Classification determines documentary obligations."},
+  ],aretenir:"This classification applies to the **PSFs\u2019 final clients** \u2014 not to the PSFs themselves. i-Hub verifies that the forms received match the declared category, on instruction from the PSF."},
 
   {id:10,emoji:'📅',titre:"The FATCA due diligence process",contenu:[
     {icon:'1️⃣',texte:"**Identify**: collect onboarding information and search for US indicia"},
