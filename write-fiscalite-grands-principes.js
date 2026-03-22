@@ -423,7 +423,7 @@ export default function ModuleFiscaliteGrandsPrincipes() {
           <button onClick={()=>switchLang('fr')} style={{padding:'4px 10px',borderRadius:'12px',border:'none',cursor:'pointer',fontSize:'12px',fontWeight:'700',background:lang==='fr'?C:'transparent',color:'white',transition:'all 0.2s'}}>\ud83c\uddeb\ud83c\uddf7 FR</button>
           <button onClick={()=>switchLang('en')} style={{padding:'4px 10px',borderRadius:'12px',border:'none',cursor:'pointer',fontSize:'12px',fontWeight:'700',background:lang==='en'?C:'transparent',color:'white',transition:'all 0.2s'}}>\ud83c\uddec\ud83c\udde7 EN</button>
         </div>
-        <span style={{background:'white',border:\`1px solid \${C}\`,borderRadius:'20px',padding:'4px 14px',fontSize:'13px',color:C,fontWeight:'600'}}>\u2b50 {score} {t.pts}</span>
+
       </div>
     </div>
   )
