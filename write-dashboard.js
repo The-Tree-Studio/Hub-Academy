@@ -28,16 +28,18 @@ const THEMES_FR = [
   {
     titre: "AML/CTF", emoji: '🛡️', couleur: '#e91e8c',
     modules: [
-      { title: 'Les grands principes',          icon: '📖', slug: 'aml-grands-principes',   ready: true },
-      { title: 'AML/KYC des clients finaux',     icon: '🔍', slug: 'aml-kyc',                ready: true  },
-      { title: 'AML/CTF de nos clients PSF',   icon: '🏦', slug: 'aml-kyc-nos-clients',    ready: true  },
-      { title: 'Cohérence des documents',       icon: '🔎', slug: 'aml-coherence-documents',    ready: true  },
-      { title: 'DDR',                           icon: '📋', slug: 'aml-ddr',                    ready: true },
-      { title: 'Fraudes aux documents',         icon: '⚠️', slug: 'aml-fraudes-documents',      ready: true },
-      { title: 'Name Screening',                icon: '🔎', slug: 'aml-name-screening',         ready: true },
-      { title: 'Opérations suspectes',          icon: '🚨', slug: 'operations-suspectes',   ready: false },
-      { title: 'Risk Scoring client',           icon: '📊', slug: 'risk-scoring',           ready: false },
-      { title: 'UBO — Bénéficiaire effectif',   icon: '👤', slug: 'ubo',                    ready: false },
+      { title: 'Les grands principes',          icon: '📖', slug: 'aml-grands-principes',        ready: true  },
+      { title: 'AML/KYC des clients finaux',    icon: '🔍', slug: 'aml-kyc',                     ready: true  },
+      { title: 'AML/CTF de nos clients PSF',    icon: '🏦', slug: 'aml-kyc-nos-clients',          ready: true  },
+      { title: 'Politiques & Procédures',          icon: '📜', slug: 'pol-aml',               ready: true  },
+      { title: 'Cohérence des documents',       icon: '🔎', slug: 'aml-coherence-documents',      ready: true  },
+      { title: 'DDR',                           icon: '🔴', slug: 'aml-ddr',                      ready: true  },
+      { title: 'Fraudes aux documents',         icon: '⚠️', slug: 'aml-fraudes-documents',        ready: true  },
+      { title: 'Name Screening',                icon: '🎯', slug: 'aml-name-screening',           ready: true  },
+      { title: 'Opérations suspectes',          icon: '🚨', slug: 'operations-suspectes',         ready: false },
+      { title: 'Risk Scoring client',           icon: '📊', slug: 'risk-scoring',                 ready: false },
+      { title: 'UBO — Bénéficiaire effectif',   icon: '👤', slug: 'ubo',                          ready: false },
+      { title: 'Politiques et procédures',      icon: '📋', slug: 'aml-politiques',               ready: false },
     ],
   },
   {
@@ -50,6 +52,7 @@ const THEMES_FR = [
       { title: 'Plan de continuité (BCP)',      icon: '📆', slug: 'bcp',                    ready: false },
       { title: 'Plan de reprise IT (DRP)',      icon: '⚙️', slug: 'drp',                    ready: false },
       { title: 'Tests & exercices BCP',         icon: '🧪', slug: 'tests-bcp',              ready: false },
+      { title: 'Politiques & Procédures',          icon: '📜', slug: 'pol-bcp',               ready: true  },
     ],
   },
   {
@@ -57,19 +60,20 @@ const THEMES_FR = [
     modules: [
       { title: 'Les grands principes',          icon: '📖', slug: 'employe-grands-principes', ready: false },
       { title: 'Droits employé',                icon: '✊', slug: 'droits-employe',          ready: false },
+      { title: 'Politiques & Procédures',          icon: '📜', slug: 'pol-hr',                ready: true  },
       { title: 'Obligations employé',           icon: '📌', slug: 'obligations-employe',     ready: false },
     ],
   },
   {
-    titre: 'Fiscalité internationale', emoji: '💼', couleur: '#e07b39',
+    titre: 'Fiscalité internationale', emoji: '💼', couleur: '#dc2626',
     modules: [
       { title: 'Les grands principes',                          icon: '📖', slug: 'fiscalite-grands-principes',  ready: true  },
-      { title: 'CRS — Common Reporting Standard',              icon: '🌍', slug: 'crs',                         ready: true  },
-      { title: 'FATCA — Foreign Account Tax Compliance Act',   icon: '🇺🇸', slug: 'fatca',                       ready: true  },
+      { title: 'CRS — Common Reporting Standard',              icon: '🌍', slug: 'crs',                         ready: false },
+      { title: 'FATCA — Foreign Account Tax Compliance Act',   icon: '🇺🇸', slug: 'fatca',                       ready: false },
       { title: 'FATCA vs CRS vs QI — Quelles différences ?',  icon: '↔️', slug: 'fatca-crs-qi-differences',    ready: true  },
-      { title: "Indices d'américanité",                        icon: '🦅', slug: 'indices-americanite',         ready: true  },
-      { title: 'QI — Qualified Intermediary',                  icon: '💰', slug: 'qi',                          ready: true  },
-      { title: 'Vérifier un W-9, W-8BEN ou Tax Self-Cert',    icon: '📋', slug: 'formulaires-fiscaux',          ready: true  },
+      { title: "Indices d'américanité",                        icon: '🦅', slug: 'indices-americanite',         ready: false },
+      { title: 'QI — Qualified Intermediary',                  icon: '💰', slug: 'qi',                          ready: false },
+      { title: 'Vérifier un W-9, W-8BEN ou Tax Self-Cert',    icon: '📋', slug: 'formulaires-fiscaux',          ready: false },
     ],
   },
   {
@@ -83,7 +87,6 @@ const THEMES_FR = [
       { title: 'Gouvernance',               icon: '🏛️', slug: 'gouvernance',            ready: false },
       { title: 'Mutualisation',                 icon: '🔗', slug: 'mutualisation',          ready: false },
       { title: 'Veille réglementaire',          icon: '📡', slug: 'veille-reglementaire',   ready: false },
-      { title: 'Circulaire 24/850',             icon: '📰', slug: 'circulaire-24-850',      ready: false },
       { title: 'Whistleblowing',                icon: '📣', slug: 'whistleblowing',         ready: false },
     ],
   },
@@ -92,7 +95,9 @@ const THEMES_FR = [
     modules: [
       { title: 'Les grands principes',          icon: '📖', slug: 'data-grands-principes',  ready: false },
       { title: 'GDPR / RGPD',                   icon: '🔐', slug: 'gdpr-rgpd',              ready: false },
-
+      { title: 'Politiques & Procédures',          icon: '📜', slug: 'pol-data',               ready: true  },
+      { title: 'ISO 27001',                     icon: '🏅', slug: 'iso-27001',              ready: false },
+      { title: 'Politiques & Procédures',          icon: '📜', slug: 'pol-sec',               ready: true  },
       { title: 'Secret professionnel',          icon: '🤫', slug: 'secret-professionnel',   ready: false },
       { title: 'Sécurité des données',          icon: '🛡️', slug: 'securite-donnees',       ready: false },
     ],
@@ -101,11 +106,15 @@ const THEMES_FR = [
     titre: 'Résilience & Infrastructure IT', emoji: '💻', couleur: '#059669',
     modules: [
       { title: 'Les grands principes',          icon: '📖', slug: 'it-grands-principes',    ready: false },
-
+      { title: 'Circulaire 24/850',             icon: '📰', slug: 'circulaire-24-850',      ready: false },
+      { title: 'Politiques & Procédures',          icon: '📜', slug: 'pol-gouv',               ready: true  },
       { title: 'Infrastructure IT',             icon: '🖥️', slug: 'infrastructure-it',      ready: false },
       { title: 'Résilience IT (DORA)',          icon: '💻', slug: 'resilience-it',          ready: false },
+      { title: 'Externalisation 22/806',        icon: '🤝', slug: 'externalisation',        ready: false },
+      { title: 'Politiques & Procédures',          icon: '📜', slug: 'pol-ext',               ready: true  },
       { title: 'Résilience IT (non DORA)',      icon: '🖥️', slug: 'resilience-it-non-dora', ready: false },
-
+      { title: 'Politiques & Procédures',          icon: '📜', slug: 'pol-it',               ready: true  },
+      { title: 'Politiques et procédures',   icon: '📋', slug: 'resilience-it-politiques',  ready: false },
     ],
   },
   {
@@ -115,20 +124,12 @@ const THEMES_FR = [
       { title: 'Gestion des accès',             icon: '🔑', slug: 'gestion-acces',          ready: false },
       { title: 'Cybersécurité',                 icon: '🛡️', slug: 'cybersecurite',          ready: false },
       { title: 'Sécurité physique',             icon: '🏢', slug: 'securite-physique',      ready: false },
-      { title: 'ISO 27001',                     icon: '🏅', slug: 'iso-27001',              ready: false },
       { title: 'Incidents de sécurité',         icon: '🚨', slug: 'incidents-securite',     ready: false },
       { title: 'Politique de sécurité',         icon: '📋', slug: 'politique-securite',     ready: false },
     ],
   },
   {
-    titre: 'Externalisation', emoji: '🤝', couleur: '#0369a1',
-    modules: [
-      { title: 'Circulaire 22/806',              icon: '🤝', slug: 'externalisation',        ready: false },
-    ],
-
-  },
-  {
-    titre: 'Services clients', emoji: '🎯', couleur: '#f59e0b',
+    titre: 'Services clients', emoji: '🎯', couleur: '#c2410c',
     modules: [
       { title: 'Les grands principes',          icon: '📖', slug: 'services-grands-principes', ready: false },
       { title: 'Gestion incidents clients',     icon: '🔧', slug: 'incidents-clients',      ready: false },
@@ -144,13 +145,12 @@ const THEMES_EN = [
   {
     titre: 'AML/CTF', emoji: '🛡️', couleur: '#e91e8c',
     modules: [
-      { title: 'Key Principles',          icon: '📖', slug: 'aml-grands-principes',   ready: true },
-      { title: 'AML/KYC Final Clients',   icon: '🔍', slug: 'aml-kyc',                ready: true  },
-      { title: 'AML/CTF — Our PSF clients', icon: '🏦', slug: 'aml-kyc-nos-clients',    ready: true  },
-      { title: 'Document Consistency',    icon: '🔎', slug: 'aml-coherence-documents',    ready: true  },
-      { title: 'DDR',                     icon: '📋', slug: 'aml-ddr',                    ready: true },
-      { title: 'Document Fraud',          icon: '⚠️', slug: 'aml-fraudes-documents',      ready: true },
-      { title: 'Name Screening',          icon: '🔎', slug: 'aml-name-screening',         ready: true },
+      { title: 'Key Principles',          icon: '📖', slug: 'aml-grands-principes',   ready: false },
+      { title: 'AML/KYC des clients finaux',           icon: '🔍', slug: 'aml-kyc',                ready: true  },
+      { title: 'Document Consistency',    icon: '🔎', slug: 'coherence-documents',    ready: false },
+      { title: 'DDR',                     icon: '📋', slug: 'ddr',                    ready: false },
+      { title: 'Document Fraud',          icon: '⚠️', slug: 'fraudes-documents',      ready: false },
+      { title: 'Name Screening',          icon: '🔎', slug: 'name-screening',         ready: false },
       { title: 'Suspicious Operations',   icon: '🚨', slug: 'operations-suspectes',   ready: false },
       { title: 'Client Risk Scoring',     icon: '📊', slug: 'risk-scoring',           ready: false },
       { title: 'UBO',                     icon: '👤', slug: 'ubo',                    ready: false },
@@ -166,6 +166,7 @@ const THEMES_EN = [
       { title: 'BCP',                     icon: '📆', slug: 'bcp',                    ready: false },
       { title: 'DRP',                     icon: '⚙️', slug: 'drp',                    ready: false },
       { title: 'BCP Tests',               icon: '🧪', slug: 'tests-bcp',              ready: false },
+      { title: 'Politiques et procédures',   icon: '📋', slug: 'bca-politiques',  ready: false },
     ],
   },
   {
@@ -174,18 +175,20 @@ const THEMES_EN = [
       { title: 'Key Principles',          icon: '📖', slug: 'employe-grands-principes', ready: false },
       { title: 'Employee Rights',         icon: '✊', slug: 'droits-employe',          ready: false },
       { title: 'Employee Obligations',    icon: '📌', slug: 'obligations-employe',     ready: false },
+      { title: 'Politiques et procédures',   icon: '📋', slug: 'employe-politiques',  ready: false },
     ],
   },
   {
-    titre: 'International Taxation', emoji: '💼', couleur: '#e07b39',
+    titre: 'International Taxation', emoji: '💼', couleur: '#dc2626',
     modules: [
-      { title: 'Key Principles',                          icon: '📖', slug: 'fiscalite-grands-principes', ready: false },
-      { title: 'CRS — Common Reporting Standard',        icon: '🌍', slug: 'crs',                       ready: true  },
-      { title: 'FATCA',                                  icon: '🇺🇸', slug: 'fatca',                     ready: true  },
+      { title: 'Key Principles',                          icon: '📖', slug: 'fiscalite-grands-principes', ready: true  },
+      { title: 'CRS — Common Reporting Standard',        icon: '🌍', slug: 'crs',                       ready: false },
+      { title: 'FATCA',                                  icon: '🇺🇸', slug: 'fatca',                     ready: false },
       { title: 'FATCA vs CRS vs QI',                    icon: '↔️', slug: 'fatca-crs-qi-differences',  ready: true  },
       { title: 'Indicia of US Status',                   icon: '🦅', slug: 'indices-americanite',       ready: false },
-      { title: 'QI — Qualified Intermediary',            icon: '💰', slug: 'qi',                        ready: true  },
+      { title: 'QI — Qualified Intermediary',            icon: '💰', slug: 'qi',                        ready: false },
       { title: 'W-9, W-8BEN & Tax Self-Certs',          icon: '📋', slug: 'formulaires-fiscaux',        ready: false },
+      { title: 'Politiques et procédures',   icon: '📋', slug: 'fiscalite-politiques',  ready: false },
     ],
   },
   {
@@ -200,7 +203,7 @@ const THEMES_EN = [
       { title: 'Mutualisation',           icon: '🔗', slug: 'mutualisation',          ready: false },
       { title: 'Regulatory Watch',        icon: '📡', slug: 'veille-reglementaire',   ready: false },
       { title: 'Whistleblowing',          icon: '📣', slug: 'whistleblowing',         ready: false },
-      { title: 'Circular 24/850',         icon: '📰', slug: 'circulaire-24-850',      ready: false },
+      { title: 'Politiques et procédures',   icon: '📋', slug: 'gouvernance-politiques',  ready: false },
     ],
   },
   {
@@ -208,18 +211,24 @@ const THEMES_EN = [
     modules: [
       { title: 'Key Principles',          icon: '📖', slug: 'data-grands-principes',  ready: false },
       { title: 'GDPR / RGPD',             icon: '🔐', slug: 'gdpr-rgpd',              ready: false },
-
+      { title: 'ISO 27001',               icon: '🏅', slug: 'iso-27001',              ready: false },
       { title: 'Professional Secrecy',    icon: '🤫', slug: 'secret-professionnel',   ready: false },
       { title: 'Data Security',           icon: '🛡️', slug: 'securite-donnees',       ready: false },
+      { title: 'Politiques et procédures',   icon: '📋', slug: 'data-politiques',  ready: false },
+      { title: 'Politiques et procédures',   icon: '📋', slug: 'securite-politiques',  ready: false },
     ],
   },
   {
     titre: 'IT Resilience & Infrastructure', emoji: '💻', couleur: '#059669',
     modules: [
       { title: 'Key Principles',          icon: '📖', slug: 'it-grands-principes',    ready: false },
+      { title: 'Circular 24/850',         icon: '📰', slug: 'circulaire-24-850',      ready: false },
       { title: 'IT Infrastructure',       icon: '🖥️', slug: 'infrastructure-it',      ready: false },
       { title: 'IT Resilience (DORA)',    icon: '💻', slug: 'resilience-it',          ready: false },
-      { title: 'IT Resilience (non-DORA)', icon: '🖥️', slug: 'resilience-it-non-dora', ready: false },
+      { title: 'Outsourcing 22/806',      icon: '🤝', slug: 'externalisation',        ready: false },
+      { title: 'Politiques et procédures',   icon: '📋', slug: 'externalisation-politiques',  ready: false },
+      { title: 'IT Resilience (non-DORA)',     icon: '🖥️', slug: 'resilience-it-non-dora', ready: false },
+      { title: 'Policies and Procedures',     icon: '📋', slug: 'resilience-it-politiques',  ready: false },
     ],
   },
   {
@@ -228,14 +237,13 @@ const THEMES_EN = [
       { title: 'Key Principles',          icon: '📖', slug: 'securite-grands-principes', ready: false },
       { title: 'Access Management',       icon: '🔑', slug: 'gestion-acces',          ready: false },
       { title: 'Cybersecurity',           icon: '🛡️', slug: 'cybersecurite',          ready: false },
-      { title: 'ISO 27001',               icon: '🏅', slug: 'iso-27001',              ready: false },
       { title: 'Physical Security',       icon: '🏢', slug: 'securite-physique',      ready: false },
       { title: 'Security Incidents',      icon: '🚨', slug: 'incidents-securite',     ready: false },
       { title: 'Security Policy',         icon: '📋', slug: 'politique-securite',     ready: false },
     ],
   },
   {
-    titre: 'Client Services', emoji: '🎯', couleur: '#f59e0b',
+    titre: 'Client Services', emoji: '🎯', couleur: '#c2410c',
     modules: [
       { title: 'Key Principles',          icon: '📖', slug: 'services-grands-principes', ready: false },
       { title: 'Client Incidents',        icon: '🔧', slug: 'incidents-clients',      ready: false },
@@ -243,6 +251,7 @@ const THEMES_EN = [
       { title: 'i-Hub Service Catalogue', icon: '📂', slug: 'catalogue-services',     ready: false },
       { title: 'Client Reporting',        icon: '📈', slug: 'reporting-clients',      ready: false },
       { title: 'SLA',                     icon: '📏', slug: 'sla',                    ready: false },
+      { title: 'Politiques et procédures',   icon: '📋', slug: 'services-politiques',  ready: false },
     ],
   },
 ]
@@ -317,15 +326,15 @@ export default function Home() {
   const rankIndex = Math.min(Math.floor(totalPoints / 100), t.ranks.length - 1)
 
   const ACCENT = '#e07b39'
-  const SIDEBAR_BG = '#ffffff'
-  const SIDEBAR_HOVER = '#f3f4f6'
-  const SIDEBAR_ACTIVE = '#fff7ed'
+  const SIDEBAR_BG = '#6b7280'
+  const SIDEBAR_HOVER = '#5b6270'
+  const SIDEBAR_ACTIVE = '#4b5260'
 
   const sidebarItemStyle = (active: boolean): React.CSSProperties => ({
     display: 'flex', alignItems: 'center', gap: '10px',
     padding: '9px 16px', cursor: 'pointer', fontSize: '13px',
     fontWeight: active ? '600' : '400',
-    color: active ? '#111827' : '#374151',
+    color: active ? '#ffffff' : '#e5e7eb',
     background: active ? SIDEBAR_ACTIVE : 'transparent',
     borderLeft: active ? \`3px solid \${ACCENT}\` : '3px solid transparent',
     transition: 'all 0.15s', userSelect: 'none',
@@ -341,15 +350,15 @@ export default function Home() {
     <div style={{ minHeight: '100vh', display: 'flex', fontFamily: "'Segoe UI', system-ui, sans-serif", background: '#f0f2f5' }}>
 
       {/* ── SIDEBAR ── */}
-      <div style={{ width: '210px', minWidth: '210px', background: SIDEBAR_BG, borderRight: '1px solid #e5e7eb', display: 'flex', flexDirection: 'column', position: 'sticky', top: 0, height: '100vh', overflowY: 'auto', flexShrink: 0 } as React.CSSProperties}>
+      <div style={{ width: '210px', minWidth: '210px', background: SIDEBAR_BG, display: 'flex', flexDirection: 'column', position: 'sticky', top: 0, height: '100vh', overflowY: 'auto', flexShrink: 0 } as React.CSSProperties}>
 
         {/* Logo */}
-        <div style={{ padding: '20px 16px 16px', borderBottom: '1px solid #e5e7eb' }}>
+        <div style={{ padding: '20px 16px 16px', borderBottom: '1px solid #5b6270' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '4px' }}>
             <div style={{ width: '32px', height: '32px', background: ACCENT, borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '16px', flexShrink: 0 }}>🎓</div>
             <div>
               <div style={{ color: '#ffffff', fontWeight: '700', fontSize: '15px', lineHeight: 1.2 }}>Hub Academy</div>
-              <div style={{ color: '#6b7280', fontSize: '10px' }}>{t.subtitle}</div>
+              <div style={{ color: '#d1d5db', fontSize: '10px' }}>{t.subtitle}</div>
             </div>
           </div>
         </div>
@@ -358,7 +367,7 @@ export default function Home() {
         <nav style={{ flex: 1, padding: '12px 0', overflowY: 'auto' }}>
 
           {/* Section Formations */}
-          <div style={{ padding: '8px 16px 4px', fontSize: '10px', fontWeight: '700', color: '#6b7280', letterSpacing: '1px', textTransform: 'uppercase' }}>{t.formations}</div>
+          <div style={{ padding: '8px 16px 4px', fontSize: '10px', fontWeight: '700', color: '#9ca3af', letterSpacing: '1px', textTransform: 'uppercase' }}>{t.formations}</div>
 
           {THEMES.map((theme, ti) => {
             const readyCount = theme.modules.filter(m => m.ready).length
@@ -377,17 +386,17 @@ export default function Home() {
                   <span style={{ background: ACCENT, color: 'white', fontSize: '9px', fontWeight: '700', borderRadius: '10px', padding: '1px 5px', flexShrink: 0 }}>{readyCount}</span>
                 )}
                 {readyCount === 0 && (
-                  <span style={{ color: '#6b7280', fontSize: '11px', flexShrink: 0 }}>{theme.modules.length}</span>
+                  <span style={{ color: '#d1d5db', fontSize: '11px', flexShrink: 0 }}>{theme.modules.length}</span>
                 )}
               </div>
             )
           })}
 
           {/* Divider */}
-          <div style={{ margin: '12px 16px', borderTop: '1px solid #e5e7eb' }} />
+          <div style={{ margin: '12px 16px', borderTop: '1px solid #5b6270' }} />
 
           {/* Section Profil */}
-          <div style={{ padding: '4px 16px 4px', fontSize: '10px', fontWeight: '700', color: '#6b7280', letterSpacing: '1px', textTransform: 'uppercase' }}>{t.profil}</div>
+          <div style={{ padding: '4px 16px 4px', fontSize: '10px', fontWeight: '700', color: '#9ca3af', letterSpacing: '1px', textTransform: 'uppercase' }}>{t.profil}</div>
 
           <div
             style={sidebarItemStyle(view === 'dashboard')}
@@ -404,20 +413,20 @@ export default function Home() {
         </nav>
 
         {/* Bottom: lang + logout */}
-        <div style={{ padding: '12px 16px', borderTop: '1px solid #e5e7eb' }}>
+        <div style={{ padding: '12px 16px', borderTop: '1px solid #5b6270' }}>
           <div style={{ display: 'flex', gap: '4px', marginBottom: '10px' }}>
             {(['fr', 'en'] as const).map(l => (
               <button key={l} onClick={() => { saveLang(l); setLang(l) }}
-                style={{ flex: 1, padding: '5px', borderRadius: '6px', border: 'none', cursor: 'pointer', fontSize: '11px', fontWeight: '700', background: lang === l ? ACCENT : '#3d2410', color: lang === l ? 'white' : '#6b7280', transition: 'all 0.2s' }}>
+                style={{ flex: 1, padding: '5px', borderRadius: '6px', border: 'none', cursor: 'pointer', fontSize: '11px', fontWeight: '700', background: lang === l ? ACCENT : '#3d2410', color: lang === l ? 'white' : '#8a6a4a', transition: 'all 0.2s' }}>
                 {l === 'fr' ? '🇫🇷 FR' : '🇬🇧 EN'}
               </button>
             ))}
           </div>
-          <div style={{ fontSize: '10px', color: '#6b7280', marginBottom: '8px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{user?.email}</div>
+          <div style={{ fontSize: '10px', color: '#9ca3af', marginBottom: '8px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{user?.email}</div>
           <button onClick={async () => { await supabase.auth.signOut(); router.push('/login') }}
-            style={{ width: '100%', padding: '7px', background: 'transparent', border: '1px solid #e5e7eb', borderRadius: '6px', color: '#374151', cursor: 'pointer', fontSize: '11px', fontWeight: '600', transition: 'all 0.2s' }}
+            style={{ width: '100%', padding: '7px', background: 'transparent', border: '1px solid #5b6270', borderRadius: '6px', color: '#e5e7eb', cursor: 'pointer', fontSize: '11px', fontWeight: '600', transition: 'all 0.2s' }}
             onMouseOver={e => { (e.currentTarget as HTMLElement).style.borderColor = ACCENT; (e.currentTarget as HTMLElement).style.color = ACCENT }}
-            onMouseOut={e => { (e.currentTarget as HTMLElement).style.borderColor = '#e5e7eb'; (e.currentTarget as HTMLElement).style.color = '#6b7280' }}>
+            onMouseOut={e => { (e.currentTarget as HTMLElement).style.borderColor = '#5b6270'; (e.currentTarget as HTMLElement).style.color = '#e5e7eb' }}>
             {t.logout}
           </button>
         </div>
@@ -428,11 +437,11 @@ export default function Home() {
 
         {/* Top bar */}
         <div style={{ background: 'white', borderBottom: '1px solid #e5e7eb', padding: '0 28px', height: '52px', display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '16px', flexShrink: 0 }}>
-          <span style={{ fontSize: '13px', color: '#6b7280' }}>{user?.email}</span>
+          <span style={{ fontSize: '13px', color: '#9ca3af' }}>{user?.email}</span>
           <div style={{ width: '1px', height: '20px', background: '#e5e7eb' }} />
-          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13px', color: '#4b5563' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13px', color: '#6b7280' }}>
             <span style={{ fontSize: '14px' }}>🪙</span>
-            <span style={{ fontWeight: '700', color: '#1f2937' }}>{totalPoints}</span>
+            <span style={{ fontWeight: '700', color: '#374151' }}>{totalPoints}</span>
             <span>HubCoins</span>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '6px', background: '#fff7ed', border: '1px solid #fed7aa', borderRadius: '6px', padding: '4px 10px', fontSize: '12px', fontWeight: '600', color: ACCENT }}>
@@ -447,12 +456,12 @@ export default function Home() {
           {view === 'welcome' && (
             <div>
               <div style={{ marginBottom: '28px' }}>
-                <h1 style={{ fontSize: '24px', fontWeight: '700', color: '#1f2937', margin: '0 0 4px' }}>{t.welcome}</h1>
-                <p style={{ color: '#4b5563', fontSize: '14px', margin: 0 }}>{t.welcomeSub}</p>
+                <h1 style={{ fontSize: '24px', fontWeight: '700', color: '#111827', margin: '0 0 4px' }}>{t.welcome}</h1>
+                <p style={{ color: '#6b7280', fontSize: '14px', margin: 0 }}>{t.welcomeSub}</p>
               </div>
 
               {/* Stats */}
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', marginBottom: '28px', }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', marginBottom: '28px', maxWidth: '700px' }}>
                 {[
                   { value: totalModules, label: t.statTotal, icon: '📚', color: '#3b82f6' },
                   { value: readyModules, label: t.statDispo, icon: '✅', color: '#10b981' },
@@ -461,15 +470,15 @@ export default function Home() {
                   <div key={i} style={{ background: 'white', borderRadius: '12px', padding: '20px', border: '1px solid #e5e7eb', boxShadow: '0 1px 4px rgba(0,0,0,0.04)' }}>
                     <div style={{ fontSize: '22px', marginBottom: '8px' }}>{s.icon}</div>
                     <div style={{ fontSize: '28px', fontWeight: '800', color: s.color, marginBottom: '2px' }}>{s.value}</div>
-                    <div style={{ fontSize: '12px', color: '#4b5563' }}>{s.label}</div>
+                    <div style={{ fontSize: '12px', color: '#6b7280' }}>{s.label}</div>
                   </div>
                 ))}
               </div>
 
               {/* All themes summary */}
-              <div style={{ background: 'white', borderRadius: '12px', border: '1px solid #e5e7eb', overflow: 'hidden', }}>
+              <div style={{ background: 'white', borderRadius: '12px', border: '1px solid #e5e7eb', overflow: 'hidden', maxWidth: '900px' }}>
                 <div style={{ padding: '16px 20px', borderBottom: '1px solid #f3f4f6' }}>
-                  <h2 style={{ fontSize: '16px', fontWeight: '600', color: '#1f2937', margin: 0 }}>{t.allModules}</h2>
+                  <h2 style={{ fontSize: '16px', fontWeight: '600', color: '#111827', margin: 0 }}>{t.allModules}</h2>
                 </div>
                 <div>
                   {THEMES.map((theme, ti) => {
@@ -483,13 +492,13 @@ export default function Home() {
                       >
                         <div style={{ width: '36px', height: '36px', borderRadius: '8px', background: \`\${theme.couleur}15\`, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px', flexShrink: 0 }}>{theme.emoji}</div>
                         <div style={{ flex: 1 }}>
-                          <div style={{ fontWeight: '600', fontSize: '14px', color: '#1f2937', marginBottom: '2px' }}>{theme.titre}</div>
-                          <div style={{ fontSize: '12px', color: '#6b7280' }}>{theme.modules.length} {theme.modules.length > 1 ? 'modules' : 'module'}</div>
+                          <div style={{ fontWeight: '600', fontSize: '14px', color: '#111827', marginBottom: '2px' }}>{theme.titre}</div>
+                          <div style={{ fontSize: '12px', color: '#9ca3af' }}>{theme.modules.length} {theme.modules.length > 1 ? 'modules' : 'module'}</div>
                         </div>
                         {rc > 0 ? (
                           <span style={{ background: '#dcfce7', color: '#16a34a', fontSize: '11px', fontWeight: '700', borderRadius: '20px', padding: '3px 10px' }}>✓ {rc} {lang === 'fr' ? 'dispo' : 'avail.'}</span>
                         ) : (
-                          <span style={{ color: '#6b7280', fontSize: '13px' }}>›</span>
+                          <span style={{ color: '#d1d5db', fontSize: '13px' }}>›</span>
                         )}
                       </div>
                     )
@@ -506,8 +515,8 @@ export default function Home() {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '4px' }}>
                   <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: \`\${THEMES[activeTheme].couleur}18\`, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '22px' }}>{THEMES[activeTheme].emoji}</div>
                   <div>
-                    <h1 style={{ fontSize: '22px', fontWeight: '700', color: '#1f2937', margin: '0 0 2px' }}>{THEMES[activeTheme].titre}</h1>
-                    <p style={{ color: '#4b5563', fontSize: '13px', margin: 0 }}>
+                    <h1 style={{ fontSize: '22px', fontWeight: '700', color: '#111827', margin: '0 0 2px' }}>{THEMES[activeTheme].titre}</h1>
+                    <p style={{ color: '#6b7280', fontSize: '13px', margin: 0 }}>
                       {THEMES[activeTheme].modules.length} {THEMES[activeTheme].modules.length > 1 ? (lang === 'fr' ? 'modules' : 'modules') : 'module'}
                       {THEMES[activeTheme].modules.filter(m => m.ready).length > 0 && (
                         <span style={{ color: '#10b981', fontWeight: '600' }}> · {THEMES[activeTheme].modules.filter(m => m.ready).length} {lang === 'fr' ? 'disponible' : 'available'}</span>
@@ -517,7 +526,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '12px', }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '12px', maxWidth: '1000px' }}>
                 {THEMES[activeTheme].modules.map((m, i) => (
                   <div key={i}
                     onClick={() => m.ready && router.push(\`/modules/\${m.slug}\`)}
@@ -538,8 +547,8 @@ export default function Home() {
                       <span style={{ position: 'absolute', top: '10px', left: '10px', fontSize: '13px' }}>✅</span>
                     )}
                     <div style={{ fontSize: '26px', marginBottom: '10px' }}>{m.icon}</div>
-                    <div style={{ fontWeight: '600', fontSize: '13px', color: '#1f2937', lineHeight: 1.4, marginBottom: '4px' }}>{m.title}</div>
-                    <div style={{ fontSize: '11px', color: '#6b7280', marginBottom: m.ready ? '10px' : 0 }}>
+                    <div style={{ fontWeight: '600', fontSize: '13px', color: '#111827', lineHeight: 1.4, marginBottom: '4px' }}>{m.title}</div>
+                    <div style={{ fontSize: '11px', color: '#9ca3af', marginBottom: m.ready ? '10px' : 0 }}>
                       {m.ready ? t.quizzes : t.soon}
                     </div>
                     {m.ready && (
@@ -555,10 +564,10 @@ export default function Home() {
 
           {/* DASHBOARD VIEW */}
           {view === 'dashboard' && (
-            <div style={{ }}>
+            <div style={{ maxWidth: '900px' }}>
               <div style={{ marginBottom: '24px' }}>
-                <h1 style={{ fontSize: '22px', fontWeight: '700', color: '#1f2937', margin: '0 0 4px' }}>{t.dashboard}</h1>
-                <p style={{ color: '#4b5563', fontSize: '13px', margin: 0 }}>{user?.email}</p>
+                <h1 style={{ fontSize: '22px', fontWeight: '700', color: '#111827', margin: '0 0 4px' }}>{t.dashboard}</h1>
+                <p style={{ color: '#6b7280', fontSize: '13px', margin: 0 }}>{user?.email}</p>
               </div>
 
               {/* Stats */}
@@ -571,7 +580,7 @@ export default function Home() {
                   <div key={i} style={{ background: 'white', borderRadius: '12px', padding: '20px', border: '1px solid #e5e7eb', boxShadow: '0 1px 4px rgba(0,0,0,0.04)', textAlign: 'center' }}>
                     <div style={{ fontSize: '26px', marginBottom: '8px' }}>{card.icon}</div>
                     <div style={{ fontSize: (card as any).small ? '13px' : '28px', fontWeight: '800', color: card.color, marginBottom: '4px' }}>{card.value}</div>
-                    <div style={{ fontSize: '12px', color: '#4b5563' }}>{card.label}</div>
+                    <div style={{ fontSize: '12px', color: '#6b7280' }}>{card.label}</div>
                   </div>
                 ))}
               </div>
@@ -579,7 +588,7 @@ export default function Home() {
               {/* Progress bar */}
               <div style={{ background: 'white', borderRadius: '12px', padding: '20px', border: '1px solid #e5e7eb', marginBottom: '24px' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
-                  <span style={{ fontWeight: '600', color: '#1f2937', fontSize: '14px' }}>{t.progress}</span>
+                  <span style={{ fontWeight: '600', color: '#374151', fontSize: '14px' }}>{t.progress}</span>
                   <span style={{ color: '#e91e8c', fontWeight: '700', fontSize: '14px' }}>{earnedCerts.length}/{Object.keys(CERTIFICATIONS).length}</span>
                 </div>
                 <div style={{ background: '#f3f4f6', borderRadius: '8px', height: '10px', overflow: 'hidden' }}>
@@ -588,12 +597,12 @@ export default function Home() {
               </div>
 
               {/* Certs */}
-              <h3 style={{ fontSize: '16px', fontWeight: '600', color: '#1f2937', marginBottom: '14px' }}>{t.yourCerts}</h3>
+              <h3 style={{ fontSize: '16px', fontWeight: '600', color: '#374151', marginBottom: '14px' }}>{t.yourCerts}</h3>
               {earnedCerts.length === 0 ? (
                 <div style={{ background: 'white', borderRadius: '12px', padding: '48px', textAlign: 'center', border: '2px dashed #e5e7eb' }}>
                   <div style={{ fontSize: '44px', marginBottom: '14px' }}>🌱</div>
-                  <p style={{ fontWeight: '600', color: '#1f2937', fontSize: '17px', margin: '0 0 8px' }}>{t.noModules}</p>
-                  <p style={{ color: '#6b7280', margin: '0 0 20px', fontSize: '13px' }}>{t.noModulesDesc}</p>
+                  <p style={{ fontWeight: '600', color: '#374151', fontSize: '17px', margin: '0 0 8px' }}>{t.noModules}</p>
+                  <p style={{ color: '#9ca3af', margin: '0 0 20px', fontSize: '13px' }}>{t.noModulesDesc}</p>
                   <button onClick={() => setView('welcome')} style={{ padding: '10px 24px', background: ACCENT, border: 'none', borderRadius: '8px', color: 'white', fontWeight: '700', cursor: 'pointer', fontSize: '14px' }}>
                     {t.seeModules}
                   </button>
@@ -604,8 +613,8 @@ export default function Home() {
                     <div key={slug} style={{ background: 'white', borderRadius: '12px', padding: '22px', border: '1.5px solid #fce7f3', boxShadow: '0 2px 10px rgba(233,30,140,0.06)', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
                       <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(90deg, #e91e8c, #f472b6)' }} />
                       <div style={{ fontSize: '34px', marginBottom: '10px' }}>{(cert as any).emoji}</div>
-                      <div style={{ fontWeight: '700', fontSize: '13px', color: '#1f2937', marginBottom: '4px' }}>{lang === 'fr' ? (cert as any).fr : (cert as any).en}</div>
-                      <div style={{ fontSize: '11px', color: '#6b7280', marginBottom: '12px' }}>{lang === 'fr' ? (cert as any).desc_fr : (cert as any).desc_en}</div>
+                      <div style={{ fontWeight: '700', fontSize: '13px', color: '#111827', marginBottom: '4px' }}>{lang === 'fr' ? (cert as any).fr : (cert as any).en}</div>
+                      <div style={{ fontSize: '11px', color: '#9ca3af', marginBottom: '12px' }}>{lang === 'fr' ? (cert as any).desc_fr : (cert as any).desc_en}</div>
                       <div style={{ background: '#e91e8c', color: 'white', borderRadius: '20px', padding: '3px 12px', fontSize: '11px', fontWeight: '700', display: 'inline-block' }}>
                         ✓ {t.earned}
                       </div>
@@ -615,14 +624,14 @@ export default function Home() {
               )}
 
               {/* To unlock */}
-              <h3 style={{ fontSize: '14px', fontWeight: '600', color: '#6b7280', marginBottom: '12px' }}>{t.toUnlock}</h3>
+              <h3 style={{ fontSize: '14px', fontWeight: '600', color: '#9ca3af', marginBottom: '12px' }}>{t.toUnlock}</h3>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(190px, 1fr))', gap: '10px' }}>
                 {Object.entries(CERTIFICATIONS).filter(([slug]) => !completedModules.includes(slug)).map(([slug, cert]) => (
                   <div key={slug} style={{ background: 'white', borderRadius: '10px', padding: '12px', border: '1px solid #f3f4f6', opacity: 0.55, display: 'flex', alignItems: 'center', gap: '10px' }}>
                     <div style={{ fontSize: '22px', filter: 'grayscale(1)', flexShrink: 0 }}>{(cert as any).emoji}</div>
                     <div>
-                      <div style={{ fontWeight: '600', fontSize: '12px', color: '#1f2937' }}>{lang === 'fr' ? (cert as any).fr : (cert as any).en}</div>
-                      <div style={{ fontSize: '10px', color: '#6b7280' }}>🔒 {t.toUnlock}</div>
+                      <div style={{ fontWeight: '600', fontSize: '12px', color: '#374151' }}>{lang === 'fr' ? (cert as any).fr : (cert as any).en}</div>
+                      <div style={{ fontSize: '10px', color: '#9ca3af' }}>🔒 {t.toUnlock}</div>
                     </div>
                   </div>
                 ))}
