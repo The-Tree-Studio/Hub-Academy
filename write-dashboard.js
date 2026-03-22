@@ -589,7 +589,7 @@ export default function Home() {
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(210px, 1fr))', gap: '14px', marginBottom: '28px' }}>
                   {earnedCerts.map(({ slug, cert }) => (
                     <div key={slug} style={{ background: 'white', borderRadius: '12px', padding: '22px', border: '1.5px solid #c8ddd0', boxShadow: '0 2px 10px rgba(74,124,89,0.08)', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
-                      <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(90deg, #4a7c59, #7db591)' }}
+                      <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(90deg, #4a7c59, #7db591)' }} />
                       <div style={{ fontSize: '34px', marginBottom: '10px' }}>{(cert as any).emoji}</div>
                       <div style={{ fontWeight: '700', fontSize: '13px', color: '#111827', marginBottom: '4px' }}>{lang === 'fr' ? (cert as any).fr : (cert as any).en}</div>
                       <div style={{ fontSize: '11px', color: '#9ca3af', marginBottom: '12px' }}>{lang === 'fr' ? (cert as any).desc_fr : (cert as any).desc_en}</div>
