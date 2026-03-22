@@ -313,7 +313,7 @@ export default function ModuleAMLKYCNosClients() {
         <p style={{fontSize:'16px',color:'#4b5563',marginBottom:'32px'}}>{t.subtitle}</p>
         <div style={{background:\`\${C}10\`,border:\`2px solid \${C}30\`,borderRadius:'16px',padding:'20px',marginBottom:'24px'}}>
           <p style={{margin:'0 0 8px',fontWeight:'800',color:C,fontSize:'14px'}}>⚠️ {lang==='fr'?'MODULE SPÉCIFIQUE i-Hub':'i-Hub SPECIFIC MODULE'}</p>
-          <p style={{margin:0,fontSize:'14px',color:'#374151'}}>{lang==='fr'?'Ce module traite des obligations réglementaires d\'i-Hub en tant que PSF de support — pas des obligations envers les clients finaux des PSF.':'This module covers i-Hub\'s regulatory obligations as a support PSF — not obligations towards PSFs\' final clients.'}</p>
+          <p style={{margin:0,fontSize:'14px',color:'#374151'}}>{lang==='fr'?'Ce module traite des obligations r\u00e9glementaires d\u2019i-Hub en tant que PSF de support \u2014 pas des obligations envers les clients finaux des PSF.':'This module covers i-Hub\u2019s regulatory obligations as a support PSF \u2014 not obligations towards PSFs\u2019 final clients.'}</p>
         </div>
         <div style={{background:'white',border:'1px solid #e5e7eb',borderRadius:'16px',padding:'24px',marginBottom:'28px',textAlign:'left'}}>
           <p style={{margin:'0 0 16px',fontWeight:'700',color:C}}>{t.learn}</p>
