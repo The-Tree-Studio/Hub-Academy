@@ -135,7 +135,7 @@ const FICHES_FR = [
     {icon:'✅',texte:"i-Hub est une **IFE Participante** — elle a conclu un accord avec l’IRS via l’IGA luxembourgeois"},
     {icon:'🔢',texte:"i-Hub dispose d’un **GIIN** (Global Intermediary Identification Number) — son identifiant FATCA unique enregistré auprès de l’IRS"},
     {icon:'📋',texte:"En tant qu’IFE participante, i-Hub doit **classifier ses clients**, collecter les formulaires et déclarer à l’ACD"},
-  ],aretenir:"i-Hub est une IFE participante avec un GIIN. Elle est directement responsable de ses obligations FATCA."},
+  ],aretenir:"i-Hub n\u2019est pas lui-m\u00eame soumis \u00e0 FATCA. Ce sont ses clients PSF qui d\u00e9clarent \u00e0 l\u2019ACD. i-Hub les assiste dans la v\u00e9rification documentaire sur instruction et dans les limites du SLA."},
 
   {id:9,emoji:'🗂️',titre:"Classification des clients : les grandes catégories",contenu:[
     {icon:'🇺🇸',texte:"**US Person spécifiée** : personne physique ou entité américaine à déclarer à l’IRS — le cœur de FATCA"},
@@ -304,8 +304,8 @@ const FICHES_EN = [
     {icon:'🎯',texte:"i-Hub is an **FFI** (Foreign Financial Institution) — a financial institution outside the US under FATCA"},
     {icon:'✅',texte:"i-Hub is a **Participating FFI** — it has entered into an agreement with the IRS via the Luxembourg IGA"},
     {icon:'🔢',texte:"i-Hub has a **GIIN** (Global Intermediary Identification Number) — its unique FATCA identifier registered with the IRS"},
-    {icon:'📋',texte:"As a participating FFI, i-Hub must **classify clients**, collect forms and report to the ACD"},
-  ],aretenir:"i-Hub is a participating FFI with a GIIN. It is directly responsible for its FATCA obligations."},
+    {icon:'📋',texte:"The PSF bears full **reporting responsibility** to the ACD \u2014 i-Hub assists with document verification on instruction"},
+  ],aretenir:"i-Hub is not itself subject to FATCA. Its PSF clients are. i-Hub assists them with documentary verification, within the SLA scope. Reporting to ACD is always the PSF\u2019s responsibility."},
 
   {id:9,emoji:'🗂️',titre:"Client classification: main categories",contenu:[
     {icon:'🇺🇸',texte:"**Specified US Person**: US individual or entity to be reported to the IRS — the core of FATCA"},
