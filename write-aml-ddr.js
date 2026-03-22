@@ -110,20 +110,6 @@ const FICHES_FR = [
     { icon:'\ud83d\udd0d', texte:'i-Hub peut \u00eatre mandat\u00e9 pour une revue documentaire du dossier existant suite \u00e0 une alerte transaction \u2014 sur instruction du PSF' },
   ], aretenir:'Transaction inhabituelle = possible DDR ou revue du dossier. Le PSF d\u00e9cide. i-Hub intervient sur instruction pour la revue documentaire.' },
 
-  { id:7, emoji:'\ud83d\udcb5', titre:'La Source des Fonds (SOF) en DDR', contenu:[
-    { icon:'\ud83d\udcb5', texte:'En DDR, la **source des fonds** doit \u00eatre justifi\u00e9e de mani\u00e8re d\u00e9taill\u00e9e\u00a0: chaque d\u00e9p\u00f4t significatif doit avoir un justificatif' },
-    { icon:'\ud83d\udcdd', texte:'Documents attendus\u00a0: acte notari\u00e9 de vente, contrat de donation, attestation bancaire de d\u00e9p\u00f4t, d\u00e9cision de justice pour h\u00e9ritage' },
-    { icon:'\ud83d\udd0d', texte:'i-Hub v\u00e9rifie\u00a0: justificatif pr\u00e9sent + montant coh\u00e9rent + date compatible avec l\u2019op\u00e9ration concern\u00e9e' },
-    { icon:'\u274c', texte:'i-Hub ne v\u00e9rifie PAS si les fonds sont r\u00e9ellement l\u00e9gitimes \u2014 il v\u00e9rifie la pr\u00e9sence et la coh\u00e9rence documentaire' },
-  ], aretenir:'SOF en DDR = justificatif d\u00e9taill\u00e9 par op\u00e9ration. i-Hub v\u00e9rifie la pr\u00e9sence et la coh\u00e9rence, pas la l\u00e9gitimit\u00e9 r\u00e9elle.' },
-
-  { id:8, emoji:'\ud83c\udfe0', titre:'La Source du Patrimoine (SOW) en DDR', contenu:[
-    { icon:'\ud83c\udfe0', texte:'La **source du patrimoine** (SOW) explique comment le client final a constitu\u00e9 l\u2019ensemble de sa fortune au fil du temps' },
-    { icon:'\ud83d\udcdd', texte:'Documents attendus\u00a0: historique professionnel, d\u00e9clarations fiscales, actes de vente d\u2019actifs, documents d\u2019h\u00e9ritage ou donation' },
-    { icon:'\u26a0\ufe0f', texte:'La SOW est particuli\u00e8rement critique pour les PPE \u2014 expliquer un patrimoine important \u00e0 partir d\u2019une fonction publique' },
-    { icon:'\ud83d\udd0d', texte:'i-Hub v\u00e9rifie la pr\u00e9sence des documents SOW demand\u00e9s par le PSF et leur coh\u00e9rence visible avec le profil' },
-  ], aretenir:'SOW = histoire du patrimoine. Critique pour les PPE. i-Hub v\u00e9rifie la pr\u00e9sence et la coh\u00e9rence des documents transmis.' },
-
   { id:9, emoji:'\ud83d\udcf0', titre:'Les m\u00e9dias adverses (Negative News)', contenu:[
     { icon:'\ud83d\udcf0', texte:'La recherche de **m\u00e9dias adverses** consiste \u00e0 rechercher des articles de presse n\u00e9gatifs sur un client final (enquêtes, condamnations, scandales)' },
     { icon:'\ud83c\udfe6', texte:'C\u2019est une obligation **du PSF** en DDR \u2014 pas une t\u00e2che d\u2019i-Hub sauf si le SLA le pr\u00e9voit explicitement' },
@@ -222,7 +208,7 @@ const FICHES_EN = [
     { icon:'\ud83d\udd34', texte:'**EDD**: same + detailed source of funds (SOF) + source of wealth (SOW) + UBO information + enhanced monitoring' },
     { icon:'\ud83d\udcc5', texte:'**Review frequency**: standard = periodic. EDD = more frequent, defined by PSF per risk profile' },
     { icon:'\ud83d\udcbb', texte:'**Hierarchical approval**: EDD relationship entry often requires Compliance management approval within the PSF' },
-  ], aretenir:'EDD = standard vigilance + more documents + detailed SOF/SOW + more frequent review. PSF decides, i-Hub verifies.' },
+  ], aretenir:'EDD = standard vigilance + more documents collected by PSF + more frequent review. PSF decides, i-Hub verifies.' },
   { id:3, emoji:'\ud83d\udc65', titre:'Trigger #1: PEPs', contenu:[
     { icon:'\ud83d\udc65', texte:'Any **PEP** (Politically Exposed Person) **automatically** triggers EDD \u2014 no exceptions, no discretionary assessment' },
     { icon:'\ud83d\udc68\u200d\ud83d\udc69\u200d\ud83d\udc67', texte:'Also PEPs: **immediate family members** (spouse, children, parents) and **close associates**' },
@@ -247,18 +233,7 @@ const FICHES_EN = [
     { icon:'\ud83d\udcca', texte:'The PSF uses its **transaction monitoring** tools to detect these anomalies' },
     { icon:'\ud83d\udd0d', texte:'i-Hub may be mandated for a documentary review of the existing file following a transaction alert \u2014 on PSF instruction' },
   ], aretenir:'Unusual transaction = possible EDD or file review. PSF decides. i-Hub intervenes on instruction for documentary review.' },
-  { id:7, emoji:'\ud83d\udcb5', titre:'Source of Funds (SOF) in EDD', contenu:[
-    { icon:'\ud83d\udcb5', texte:'In EDD, the **source of funds** must be justified in detail: each significant deposit must have a supporting document' },
-    { icon:'\ud83d\udcdd', texte:'Expected documents: notarial sale deed, donation agreement, bank deposit certificate, court decision for inheritance' },
-    { icon:'\ud83d\udd0d', texte:'i-Hub verifies: document present + amount consistent + date compatible with the relevant transaction' },
-    { icon:'\u274c', texte:'i-Hub does NOT verify whether the funds are genuinely legitimate \u2014 it checks documentary presence and consistency' },
-  ], aretenir:'SOF in EDD = detailed document per transaction. i-Hub checks presence and consistency, not real legitimacy.' },
-  { id:8, emoji:'\ud83c\udfe0', titre:'Source of Wealth (SOW) in EDD', contenu:[
-    { icon:'\ud83c\udfe0', texte:'The **source of wealth** (SOW) explains how the final client built their overall fortune over time' },
-    { icon:'\ud83d\udcdd', texte:'Expected documents: professional history, tax declarations, asset sale deeds, inheritance or donation documents' },
-    { icon:'\u26a0\ufe0f', texte:'SOW is particularly critical for PEPs \u2014 explaining a large wealth from a public function' },
-    { icon:'\ud83d\udd0d', texte:'i-Hub verifies the presence of SOW documents requested by the PSF and their visible consistency with the profile' },
-  ], aretenir:'SOW = wealth history. Critical for PEPs. i-Hub checks presence and consistency of transmitted documents.' },
+
   { id:9, emoji:'\ud83d\udcf0', titre:'Adverse media (Negative News)', contenu:[
     { icon:'\ud83d\udcf0', texte:'**Adverse media screening** involves searching for negative press articles about a final client (investigations, convictions, scandals)' },
     { icon:'\ud83c\udfe6', texte:'This is a **PSF obligation** in EDD \u2014 not an i-Hub task unless explicitly provided for in the SLA' },
@@ -270,7 +245,7 @@ const FICHES_EN = [
     { icon:'\u23f1\ufe0f', texte:'**PEP status duration**: a person remains PEP for **12 months** after leaving their function \u2014 controls maintained' },
     { icon:'\ud83d\udcb5', texte:'**Source of wealth**: a minister cannot justify \u20ac10 million solely with their salary \u2014 must be documented' },
     { icon:'\ud83d\udd0d', texte:'i-Hub verifies presence of documents identifying the function and SOW \u2014 flags if missing or inconsistent' },
-  ], aretenir:'PEP: verify function + SOW + negative news (PSF). PEP status lasts 12 months after leaving the function.' },
+  ], aretenir:'PEP: verify presence of function documents. PEP status lasts 12 months after leaving the function.' },
   { id:11, emoji:'\ud83c\udfe2', titre:'Structures: identifying the real UBO', contenu:[
     { icon:'\ud83c\udfe2', texte:'The **UBO** (Ultimate Beneficial Owner) is the individual who ultimately controls the client entity (> 25%)' },
     { icon:'\ud83d\udcca', texte:'In EDD, the **complete organisational chart** must be provided \u2014 down to the final individual' },
@@ -294,7 +269,7 @@ const FICHES_EN = [
     { icon:'\ud83c\udfe0', texte:'**SOW documents**: tax declarations, notarial deeds, transfer agreements \u2014 justifying wealth build-up' },
     { icon:'\ud83c\udfe2', texte:'**Certified org chart**: dated, signed, consistent with each company\u2019s articles in the chain' },
     { icon:'\ud83d\udc64', texte:'**Each UBO\u2019s identity**: valid passport + proof of residence for each individual holding > 25%' },
-  ], aretenir:'4 key EDD documents: function certificate + SOW + certified org chart + each UBO\u2019s identity. Any missing = flag to PSF.' },
+  ], aretenir:'3 key EDD documents for i-Hub: function certificate + certified org chart + each UBO\u2019s identity. Any missing = flag to PSF.' },
   { id:15, emoji:'\ud83c\udf10', titre:'EDD and high-risk countries: what i-Hub verifies', contenu:[
     { icon:'\ud83c\udf10', texte:'For a final client linked to a high-risk country: verify the file contains **legitimate activity justification** in that country' },
     { icon:'\ud83d\udcb5', texte:'**Source of funds** from a high-risk country must be justified in particularly detailed manner' },
@@ -312,7 +287,7 @@ const FICHES_EN = [
     { icon:'\ud83d\udd34', texte:'**UBO that changes** with each update request \u2014 visibly opaque structure' },
     { icon:'\ud83d\udd34', texte:'**SOW incompatible** with function or profile: disproportionate wealth vs declared activity' },
     { icon:'\ud83d\udd34', texte:'**Incomplete org chart** or one that stops before reaching the final individual' },
-  ], aretenir:'EDD red flags: refusal to provide, unstable UBO, disproportionate SOW, truncated org chart. Each = immediate flag to PSF.' },
+  ], aretenir:'EDD red flags: refusal to provide, unstable UBO, truncated org chart. Each = immediate flag to PSF.' },
   { id:18, emoji:'\ud83d\udcca', titre:'Summary: the 4 EDD triggers', contenu:[
     { icon:'\ud83d\udc65', texte:'**PEP**: politically exposed person or associate \u2014 automatic and mandatory EDD' },
     { icon:'\ud83c\udf0d', texte:'**High-risk country**: nationality, residency or source of funds linked to FATF/EU high-risk country' },
