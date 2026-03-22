@@ -318,28 +318,28 @@ const VF_EN = [
 
 const CAS_FR = [
   {
-    situation:q("Un résident belge est client final d'un PSF. Il refuse de fournir son auto-certification au PSF. Le PSF demande à i-Hub d'analyser le dossier."),
+    situation:q("Un PSF signale qu'un client final belge Il refuse de fournir son auto-certification au PSF. Le PSF demande à i-Hub d'analyser le dossier."),
     action:q("Signaler au PSF : sans auto-certification, le PSF ne peut pas finaliser l'entrée en relation"),
     options:[q("Accepter le dossier sans auto-certification"),q("Signaler au PSF : sans auto-certification, le PSF ne peut pas finaliser l'entrée en relation"),q("Déclarer à l'ACD à l'ACD sans auto-certification"),q("Appliquer FATCA à la place du CRS")],
     explication:q("L'auto-certification est obligatoire. Sans elle, le **PSF** ne peut pas finaliser l'entrée en relation. i-Hub signale cette anomalie au PSF \u2014 c'est le PSF qui prend la décision.")
   },
   {
-    situation:q("Une holding luxembourgeoise a un actionnaire français détenant 30% du capital. Elle se déclare ENF Active."),
+    situation:q("Un PSF transmet le dossier d'une holding luxembourgeoise dont un actionnaire français détient 30% du capital. Elle se déclare ENF Active."),
     action:q("Signaler au PSF : ENF probablement Passive (30% > 25%), actionnaire français à vérifier"),
-    options:[q("Accepter — ENF Active déclarée par le client"),q("Signaler au PSF : ENF probablement Passive (30% > 25%), actionnaire français à vérifier"),q("Déclarer directement le contrôle à déclarer"),q("Déclarer la holding comme résidente française")],
+    options:[q("Accepter — ENF Active déclarée par le client"),q("Signaler au PSF : ENF probablement Passive (30% > 25%), actionnaire français à vérifier"),q("Transmettre directement le contrôle à déclarer"),q("Déclarer la holding comme résidente française")],
     explication:q("30% > 25% → probable ENF Passive. i-Hub signale l'incohérence au PSF. C'est le PSF qui reclassifie et décide des obligations de déclaration.")
   },
   {
-    situation:q("Un client déménage d'Allemagne en Thaïlande (non-participant CRS). Il soumet une nouvelle auto-certification."),
+    situation:q("Un PSF vous informe qu'un client final déménage d'Allemagne en Thaïlande (non-participant CRS). Il soumet une nouvelle auto-certification."),
     action:q("Signaler au PSF : nouvelle résidence en Thaïlande (non-CRS), à lui de mettre à jour la classification"),
     options:[q("Continuer à signaler au PSF comme avant"),q("Signaler au PSF : nouvelle résidence en Thaïlande (non-CRS), à lui de mettre à jour la classification"),q("Déclarer à l'ACD quand même CRS"),q("Appliquer FATCA à la place"),q("Déclarer à l'Allemagne car il y résidait avant")],
     explication:q("La Thaïlande ne participe pas au CRS. Un résident thaïlandais n'est pas déclarable sous ce régime — sous réserve de vérification.")
   },
   {
-    situation:q("Un client ouvre un compte le 1er mars 2025. Au 30 juin 2025, il n'a toujours pas fourni son auto-certification."),
-    action:q("Infraction — délai de 90 jours dépassé, signaler à l'équipe Compliance"),
-    options:[q("Pas de problème — 30 juin est la date limite de déclaration"),q("Accorder 90 jours supplémentaires"),q("Infraction — délai de 90 jours dépassé, signaler à l'équipe Compliance"),q("Clôturer le compte immédiatement")],
-    explication:q("90 jours à partir du 1er mars = 30 mai. Au 30 juin le délai est largement dépassé. Il faut escalader à Compliance.")
+    situation:q("Un PSF signale qu'un client final a ouvert un compte le 1er mars 2025. Au 30 juin 2025, il n'a toujours pas fourni son auto-certification au PSF."),
+    action:q("Signaler au PSF : délai de 90 jours dépassé, le PSF doit agir"),
+    options:[q("Pas de problème — 30 juin est la date limite de déclaration"),q("Accorder 90 jours supplémentaires"),q("Signaler au PSF : délai de 90 jours dépassé, le PSF doit agir"),q("Escalader au PSF : délai dépassé, décision à prendre")],
+    explication:q("90 jours à partir du 1er mars 2025 = 30 mai. Au 30 juin le délai est dépassé. i-Hub signale l'anomalie au **PSF** qui doit prendre les mesures nécessaires avec son client final.")
   },
   {
     situation:q("Un résident luxembourgeois d'origine américaine déclare une résidence fiscale aux USA uniquement dans son auto-certification."),
@@ -350,7 +350,7 @@ const CAS_FR = [
 ];
 const CAS_EN = [
   {
-    situation:q("A Belgian resident is a final client of a PSF. They refuse to provide their self-certification to the PSF. The PSF asks i-Hub to analyse the file."),
+    situation:q("A PSF reports that a Belgian final client They refuse to provide their self-certification to the PSF. The PSF asks i-Hub to analyse the file."),
     action:q("Flag to PSF: without self-certification, the PSF cannot finalise onboarding"),
     options:[q("Accept the file without self-certification"),q("Flag to PSF: without self-certification, the PSF cannot finalise onboarding"),q("Report to ACD without self-certification"),q("Apply FATCA instead of CRS")],
     explication:q("Self-certification is mandatory. Without it, the **PSF** cannot complete onboarding. i-Hub flags this anomaly to the PSF \u2014 it is the PSF that makes the decision.")
@@ -362,16 +362,16 @@ const CAS_EN = [
     explication:q("A holding with mainly passive income is a Passive NFE. 30% > 25% → French shareholder must be reported.")
   },
   {
-    situation:q("A client moves from Germany to Thailand (CRS non-participant). They submit a new self-certification."),
+    situation:q("A PSF informs you that a final client moves from Germany to Thailand (CRS non-participant). They submit a new self-certification."),
     action:q("Flag to PSF: new residency in Thailand (non-CRS), PSF to update classification"),
     options:[q("Continue flagging to PSF as before"),q("Flag to PSF: new residency in Thailand (non-CRS), PSF to update classification"),q("Report to ACD anyway CRS"),q("Apply FATCA instead"),q("Report to Germany as they previously resided there")],
     explication:q("Thailand does not participate in CRS. A Thai resident is not reportable under this regime — subject to verification.")
   },
   {
-    situation:q("A client opens an account on 1 March 2025. By 30 June 2025, they have still not provided their self-certification."),
-    action:q("Breach — 90-day deadline exceeded, escalate to Compliance team"),
-    options:[q("No problem — 30 June is the reporting deadline"),q("Grant an additional 90 days"),q("Breach — 90-day deadline exceeded, escalate to Compliance team"),q("Close the account immediately")],
-    explication:q("90 days from 1 March = 30 May. By 30 June the deadline has long passed. Escalate to Compliance.")
+    situation:q("A PSF reports that a final client opened an account on 1 March 2025. By 30 June 2025, they have still not provided their self-certification to the PSF."),
+    action:q("Flag to PSF: 90-day deadline exceeded, PSF must take action"),
+    options:[q("No problem — 30 June is the reporting deadline"),q("Grant an additional 90 days"),q("Flag to PSF: 90-day deadline exceeded, PSF must take action"),q("Close the account immediately")],
+    explication:q("90 days from 1 March 2025 = 30 May. By 30 June the deadline has passed. i-Hub flags the anomaly to the **PSF** which must take the necessary steps with its final client.")
   },
   {
     situation:q("A Luxembourg resident of US origin declares US tax residence only in their self-certification."),
