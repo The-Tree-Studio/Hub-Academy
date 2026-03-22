@@ -22,7 +22,7 @@ const UI = {
       'Les 4 r\u00e8gles d\u2019or d\u2019i-Hub en mati\u00e8re AML',
       'Ce qu\u2019i-Hub fait et ne fait pas dans le cadre AML',
     ],
-    fiches: '18 fiches', time: '\u223c15 min',
+    fiches: '19 fiches', time: '\u223c15 min',
     start: "C\u2019est parti\u00a0! \ud83d\ude80", prev: '\u2190 Pr\u00e9c\u00e9dent', next: 'Fiche suivante',
     toRetain: '\u00c0 RETENIR', goFurther: '\ud83d\udd0d Aller plus loin',
     home: '\u2190 Accueil',
@@ -42,7 +42,7 @@ const UI = {
       'i-Hub\u2019s 4 golden rules for AML',
       'What i-Hub does and does not do in the AML framework',
     ],
-    fiches: '18 cards', time: '\u223c15 min',
+    fiches: '19 cards', time: '\u223c15 min',
     start: "Let\u2019s go! \ud83d\ude80", prev: '\u2190 Previous', next: 'Next card',
     toRetain: 'KEY TAKEAWAY', goFurther: '\ud83d\udd0d Go further',
     home: '\u2190 Home',
@@ -172,7 +172,14 @@ const FICHES_FR = [
     { icon:'\u274c', texte:'i-Hub ne **contacte pas** le client final directement pour des questions AML \u2014 sauf disposition sp\u00e9cifique du SLA' },
   ], aretenir:'i-Hub ne d\u00e9cide pas, ne d\u00e9clare pas, ne bloque pas, ne contacte pas. Il d\u00e9tecte et signale au PSF. Les d\u00e9cisions appartiennent au PSF.' },
 
-  { id:18, emoji:'\ud83c\udf93', titre:'R\u00e9sum\u00e9\u00a0: AML/CTF en 5 points', contenu:[
+    { id:18, emoji:'\ud83d\udd04', titre:'Deux dimensions\u00a0: contractuel vs r\u00e9glementaire', contenu:[
+    { icon:'\ud83d\udcdc', texte:'Les modules de cette plateforme couvrent principalement les **obligations contractuelles** d\u2019i-Hub\u00a0: ce que i-Hub fait *pour* ses clients PSF et leurs clients finaux, dans le cadre des SLA sign\u00e9s' },
+    { icon:'\ud83c\udfe6', texte:'Mais i-Hub est aussi un **PSF de support agr\u00e9\u00e9 par la CSSF**\u00a0: il a ses propres obligations r\u00e9glementaires AML/CTF vis-\u00e0-vis de ses propres clients PSF, ind\u00e9pendamment de tout SLA' },
+    { icon:'\ud83d\udd04', texte:'**Dimension 1 \u2014 Contractuelle**\u00a0: ce que i-Hub fait *pour* le PSF et ses clients finaux (d\u00e9fini dans le SLA, varie selon les clients)' },
+    { icon:'\ud83c\udfe6', texte:'**Dimension 2 \u2014 R\u00e9glementaire**\u00a0: ce que i-Hub fait *sur* ses propres clients PSF (impos\u00e9 par la loi, s\u2019applique \u00e0 tous les clients sans exception)' },
+  ], aretenir:'Tous les modules de la plateforme = obligations contractuelles. Un module d\u00e9di\u00e9 \u00ab\u00a0AML/KYC \u2014 Nos clients PSF\u00a0\u00bb couvre les obligations r\u00e9glementaires d\u2019i-Hub sur ses propres clients.' },
+
+  { id:19, emoji:'\ud83c\udf93', titre:'R\u00e9sum\u00e9\u00a0: AML/CTF en 5 points', contenu:[
     { icon:'1\ufe0f\u20e3', texte:'**AML/CTF** = lutter contre le blanchiment et le financement du terrorisme via des contr\u00f4les sur les clients finaux des PSF' },
     { icon:'2\ufe0f\u20e3', texte:'**PSF**\u00a0: obligations de KYC, UBO, scoring, d\u00e9claration de soup\u00e7on \u2014 responsabilit\u00e9 l\u00e9gale et p\u00e9nale' },
     { icon:'3\ufe0f\u20e3', texte:'**RBA**\u00a0: contr\u00f4les proportionn\u00e9s au risque \u2014 simplifi\u00e9s, standards ou renforc\u00e9s selon le profil du client final' },
@@ -301,7 +308,14 @@ const FICHES_EN = [
     { icon:'\u274c', texte:'i-Hub does **not contact** the final client directly for AML matters \u2014 unless specifically provided in the SLA' },
   ], aretenir:'i-Hub does not decide, report, block or contact. It detects and flags to the PSF. Decisions belong to the PSF.' },
 
-  { id:18, emoji:'\ud83c\udf93', titre:'Summary: AML/CTF in 5 points', contenu:[
+    { id:18, emoji:'\ud83d\udd04', titre:'Two dimensions: contractual vs regulatory', contenu:[
+    { icon:'\ud83d\udcdc', texte:'The modules on this platform primarily cover i-Hub\u2019s **contractual obligations**: what i-Hub does *for* its PSF clients and their final clients, within the SLA framework' },
+    { icon:'\ud83c\udfe6', texte:'But i-Hub is also a **CSSF-approved support PSF**: it has its own regulatory AML/CTF obligations towards its own PSF clients, independently of any SLA' },
+    { icon:'\ud83d\udd04', texte:'**Dimension 1 \u2014 Contractual**: what i-Hub does *for* the PSF and its final clients (defined in the SLA, varies between clients)' },
+    { icon:'\ud83c\udfe6', texte:'**Dimension 2 \u2014 Regulatory**: what i-Hub does *regarding* its own PSF clients (imposed by law, applies to all clients without exception)' },
+  ], aretenir:'All platform modules = contractual obligations. A dedicated module \u201cAML/KYC \u2014 Our PSF clients\u201d covers i-Hub\u2019s regulatory obligations on its own clients.' },
+
+  { id:19, emoji:'\ud83c\udf93', titre:'Summary: AML/CTF in 5 points', contenu:[
     { icon:'1\ufe0f\u20e3', texte:'**AML/CTF** = combating money laundering and terrorist financing via controls on PSFs\u2019 final clients' },
     { icon:'2\ufe0f\u20e3', texte:'**PSF**: KYC, UBO, scoring, STR obligations \u2014 legal and criminal responsibility' },
     { icon:'3\ufe0f\u20e3', texte:'**RBA**: controls proportionate to risk \u2014 simplified, standard or enhanced per final client profile' },
