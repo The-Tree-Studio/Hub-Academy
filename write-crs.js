@@ -36,11 +36,11 @@ const FICHES_FR = [
   ]},
 
   {id:4,emoji:'🏦',titre:q("i-Hub : Institution Financière Déclarante"),contenu:[
-    {icon:'🎯',texte:q("i-Hub est une **IFD** (Institution Financière Déclarante) au sens du CRS — elle a l'obligation de déclarer")},
-    {icon:'📋',texte:q("Les IFD incluent : banques, fonds d'investissement, compagnies d'assurance, **PSF de support** comme i-Hub")},
+    {icon:'🎯',texte:q("i-Hub **n’est pas** une IFD (Institution Financière Déclarante) — il ne reçoit pas de dépôts et ne gère pas de comptes pour ses propres clients")},
+    {icon:'📋',texte:q("Les IFD (banques, fonds, assureurs) sont les **PSF clients d’i-Hub** — ce sont eux qui déclarent au CRS sous leur propre responsabilité")},
     {icon:'🏛️',texte:q("Les **PSF clients** d’i-Hub déclarent chaque année à l'ACD (Administration des Contributions Directes) du Luxembourg")},
     {icon:'🔄',texte:q("L'ACD transmet ensuite les informations aux **autorités fiscales des pays de résidence** des clients concernés")},
-  ],aretenir:q("i-Hub est en première ligne du CRS. Elle collecte, classe et déclare — l'ACD redistribue aux pays partenaires.")},
+  ],aretenir:q("i-Hub est un **PSF de support** : il vérifie la cohérence documentaire pour le compte des PSF. Ce sont les PSF qui collectent, classent et déclarent — pas i-Hub.")},
 
   {id:5,emoji:'📋',titre:q("Les comptes déclarables au CRS"),contenu:[
     {icon:'👤',texte:q("**Comptes de personnes physiques** : tout compte détenu par un résident fiscal d'un pays CRS autre que le Luxembourg")},
@@ -163,7 +163,7 @@ const FICHES_EN = [
   ]},
 
   {id:4,emoji:'🏦',titre:q("i-Hub: a Reporting Financial Institution"),contenu:[
-    {icon:'🎯',texte:q("i-Hub is an **RFI** (Reporting Financial Institution) under CRS — it has mandatory reporting obligations")},
+    {icon:'🎯',texte:q("i-Hub is **not** an RFI (Reporting Financial Institution) — it does not hold deposits or manage accounts for its own clients")},
     {icon:'📋',texte:q("RFIs include: banks, investment funds, insurance companies, support PSFs like i-Hub")},
     {icon:'🏛️',texte:q("i-Hub’s **PSF clients** report annually to the ACD (Administration des Contributions Directes) in Luxembourg")},
     {icon:'🔄',texte:q("The ACD then transmits the information to the **tax authorities of the clients' countries of residence**")},

@@ -143,11 +143,11 @@ const FICHES_FR = [
     "contenu": [
       {
         "icon": "🎯",
-        "texte": "i-Hub est une **IFD** (Institution Financière Déclarante) au sens du CRS — elle a l’obligation de déclarer"
+        "texte": "i-Hub **n’est pas** une IFD (Institution Financière Déclarante) — il ne reçoit pas de dépôts et ne gère pas de comptes pour ses propres clients"
       },
       {
         "icon": "📋",
-        "texte": "Les IFD incluent : banques, fonds d’investissement, compagnies d’assurance, **PSF de support** comme i-Hub"
+        "texte": "Les IFD (banques, fonds, assureurs) sont les **PSF clients d’i-Hub** — ce sont eux qui déclarent au CRS sous leur propre responsabilité"
       },
       {
         "icon": "🏛️",
@@ -158,7 +158,7 @@ const FICHES_FR = [
         "texte": "L’ACD transmet ensuite les informations aux **autorités fiscales des pays de résidence** des clients concernés"
       }
     ],
-    "aretenir": "i-Hub est en première ligne du CRS. Elle collecte, classe et déclare — l’ACD redistribue aux pays partenaires."
+    "aretenir": "i-Hub est un **PSF de support** : il vérifie la cohérence documentaire pour le compte des PSF. Ce sont les PSF qui collectent, classent et déclarent — pas i-Hub."
   },
   {
     "id": 5,
@@ -561,7 +561,7 @@ const FICHES_EN = [
     "contenu": [
       {
         "icon": "🎯",
-        "texte": "i-Hub is an **RFI** (Reporting Financial Institution) under CRS — it has mandatory reporting obligations"
+        "texte": "i-Hub is **not** an RFI (Reporting Financial Institution) — it does not hold deposits or manage accounts for its own clients"
       },
       {
         "icon": "📋",
