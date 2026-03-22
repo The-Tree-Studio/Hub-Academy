@@ -343,7 +343,7 @@ export default function Home() {
         <nav style={{ flex: 1, padding: '12px 0', overflowY: 'auto' }}>
 
           {/* Section Formations */}
-          <div style={{ padding: '8px 16px 4px', fontSize: '10px', fontWeight: '700', color: '#9ca3af', letterSpacing: '1px', textTransform: 'uppercase' }}>{t.formations}</div>
+          <div style={{ padding: '8px 16px 4px', fontSize: '10px', fontWeight: '700', color: '#6b7280', letterSpacing: '1px', textTransform: 'uppercase' }}>{t.formations}</div>
 
           {THEMES.map((theme, ti) => {
             const readyCount = theme.modules.filter(m => m.ready).length
@@ -372,7 +372,7 @@ export default function Home() {
           <div style={{ margin: '12px 16px', borderTop: '1px solid #5b6270' }} />
 
           {/* Section Profil */}
-          <div style={{ padding: '4px 16px 4px', fontSize: '10px', fontWeight: '700', color: '#9ca3af', letterSpacing: '1px', textTransform: 'uppercase' }}>{t.profil}</div>
+          <div style={{ padding: '4px 16px 4px', fontSize: '10px', fontWeight: '700', color: '#6b7280', letterSpacing: '1px', textTransform: 'uppercase' }}>{t.profil}</div>
 
           <div
             style={sidebarItemStyle(view === 'dashboard')}
@@ -398,7 +398,7 @@ export default function Home() {
               </button>
             ))}
           </div>
-          <div style={{ fontSize: '10px', color: '#9ca3af', marginBottom: '8px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{user?.email}</div>
+          <div style={{ fontSize: '10px', color: '#6b7280', marginBottom: '8px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{user?.email}</div>
           <button onClick={async () => { await supabase.auth.signOut(); router.push('/login') }}
             style={{ width: '100%', padding: '7px', background: 'transparent', border: '1px solid #5b6270', borderRadius: '6px', color: '#e5e7eb', cursor: 'pointer', fontSize: '11px', fontWeight: '600', transition: 'all 0.2s' }}
             onMouseOver={e => { (e.currentTarget as HTMLElement).style.borderColor = ACCENT; (e.currentTarget as HTMLElement).style.color = ACCENT }}
@@ -413,11 +413,11 @@ export default function Home() {
 
         {/* Top bar */}
         <div style={{ background: 'white', borderBottom: '1px solid #e5e7eb', padding: '0 28px', height: '52px', display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '16px', flexShrink: 0 }}>
-          <span style={{ fontSize: '13px', color: '#9ca3af' }}>{user?.email}</span>
+          <span style={{ fontSize: '13px', color: '#6b7280' }}>{user?.email}</span>
           <div style={{ width: '1px', height: '20px', background: '#e5e7eb' }} />
-          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13px', color: '#6b7280' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13px', color: '#4b5563' }}>
             <span style={{ fontSize: '14px' }}>🪙</span>
-            <span style={{ fontWeight: '700', color: '#374151' }}>{totalPoints}</span>
+            <span style={{ fontWeight: '700', color: '#1f2937' }}>{totalPoints}</span>
             <span>HubCoins</span>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '6px', background: '#fff7ed', border: '1px solid #fed7aa', borderRadius: '6px', padding: '4px 10px', fontSize: '12px', fontWeight: '600', color: ACCENT }}>
@@ -432,8 +432,8 @@ export default function Home() {
           {view === 'welcome' && (
             <div>
               <div style={{ marginBottom: '28px' }}>
-                <h1 style={{ fontSize: '24px', fontWeight: '700', color: '#111827', margin: '0 0 4px' }}>{t.welcome}</h1>
-                <p style={{ color: '#6b7280', fontSize: '14px', margin: 0 }}>{t.welcomeSub}</p>
+                <h1 style={{ fontSize: '24px', fontWeight: '700', color: '#1f2937', margin: '0 0 4px' }}>{t.welcome}</h1>
+                <p style={{ color: '#4b5563', fontSize: '14px', margin: 0 }}>{t.welcomeSub}</p>
               </div>
 
               {/* Stats */}
@@ -446,7 +446,7 @@ export default function Home() {
                   <div key={i} style={{ background: 'white', borderRadius: '12px', padding: '20px', border: '1px solid #e5e7eb', boxShadow: '0 1px 4px rgba(0,0,0,0.04)' }}>
                     <div style={{ fontSize: '22px', marginBottom: '8px' }}>{s.icon}</div>
                     <div style={{ fontSize: '28px', fontWeight: '800', color: s.color, marginBottom: '2px' }}>{s.value}</div>
-                    <div style={{ fontSize: '12px', color: '#6b7280' }}>{s.label}</div>
+                    <div style={{ fontSize: '12px', color: '#4b5563' }}>{s.label}</div>
                   </div>
                 ))}
               </div>
@@ -454,7 +454,7 @@ export default function Home() {
               {/* All themes summary */}
               <div style={{ background: 'white', borderRadius: '12px', border: '1px solid #e5e7eb', overflow: 'hidden', maxWidth: '900px' }}>
                 <div style={{ padding: '16px 20px', borderBottom: '1px solid #f3f4f6' }}>
-                  <h2 style={{ fontSize: '16px', fontWeight: '600', color: '#111827', margin: 0 }}>{t.allModules}</h2>
+                  <h2 style={{ fontSize: '16px', fontWeight: '600', color: '#1f2937', margin: 0 }}>{t.allModules}</h2>
                 </div>
                 <div>
                   {THEMES.map((theme, ti) => {
@@ -468,8 +468,8 @@ export default function Home() {
                       >
                         <div style={{ width: '36px', height: '36px', borderRadius: '8px', background: `${theme.couleur}15`, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px', flexShrink: 0 }}>{theme.emoji}</div>
                         <div style={{ flex: 1 }}>
-                          <div style={{ fontWeight: '600', fontSize: '14px', color: '#111827', marginBottom: '2px' }}>{theme.titre}</div>
-                          <div style={{ fontSize: '12px', color: '#9ca3af' }}>{theme.modules.length} {theme.modules.length > 1 ? 'modules' : 'module'}</div>
+                          <div style={{ fontWeight: '600', fontSize: '14px', color: '#1f2937', marginBottom: '2px' }}>{theme.titre}</div>
+                          <div style={{ fontSize: '12px', color: '#6b7280' }}>{theme.modules.length} {theme.modules.length > 1 ? 'modules' : 'module'}</div>
                         </div>
                         {rc > 0 ? (
                           <span style={{ background: '#dcfce7', color: '#16a34a', fontSize: '11px', fontWeight: '700', borderRadius: '20px', padding: '3px 10px' }}>✓ {rc} {lang === 'fr' ? 'dispo' : 'avail.'}</span>
@@ -491,8 +491,8 @@ export default function Home() {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '4px' }}>
                   <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: `${THEMES[activeTheme].couleur}18`, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '22px' }}>{THEMES[activeTheme].emoji}</div>
                   <div>
-                    <h1 style={{ fontSize: '22px', fontWeight: '700', color: '#111827', margin: '0 0 2px' }}>{THEMES[activeTheme].titre}</h1>
-                    <p style={{ color: '#6b7280', fontSize: '13px', margin: 0 }}>
+                    <h1 style={{ fontSize: '22px', fontWeight: '700', color: '#1f2937', margin: '0 0 2px' }}>{THEMES[activeTheme].titre}</h1>
+                    <p style={{ color: '#4b5563', fontSize: '13px', margin: 0 }}>
                       {THEMES[activeTheme].modules.length} {THEMES[activeTheme].modules.length > 1 ? (lang === 'fr' ? 'modules' : 'modules') : 'module'}
                       {THEMES[activeTheme].modules.filter(m => m.ready).length > 0 && (
                         <span style={{ color: '#10b981', fontWeight: '600' }}> · {THEMES[activeTheme].modules.filter(m => m.ready).length} {lang === 'fr' ? 'disponible' : 'available'}</span>
@@ -523,8 +523,8 @@ export default function Home() {
                       <span style={{ position: 'absolute', top: '10px', left: '10px', fontSize: '13px' }}>✅</span>
                     )}
                     <div style={{ fontSize: '26px', marginBottom: '10px' }}>{m.icon}</div>
-                    <div style={{ fontWeight: '600', fontSize: '13px', color: '#111827', lineHeight: 1.4, marginBottom: '4px' }}>{m.title}</div>
-                    <div style={{ fontSize: '11px', color: '#9ca3af', marginBottom: m.ready ? '10px' : 0 }}>
+                    <div style={{ fontWeight: '600', fontSize: '13px', color: '#1f2937', lineHeight: 1.4, marginBottom: '4px' }}>{m.title}</div>
+                    <div style={{ fontSize: '11px', color: '#6b7280', marginBottom: m.ready ? '10px' : 0 }}>
                       {m.ready ? t.quizzes : t.soon}
                     </div>
                     {m.ready && (
@@ -542,8 +542,8 @@ export default function Home() {
           {view === 'dashboard' && (
             <div style={{ maxWidth: '900px' }}>
               <div style={{ marginBottom: '24px' }}>
-                <h1 style={{ fontSize: '22px', fontWeight: '700', color: '#111827', margin: '0 0 4px' }}>{t.dashboard}</h1>
-                <p style={{ color: '#6b7280', fontSize: '13px', margin: 0 }}>{user?.email}</p>
+                <h1 style={{ fontSize: '22px', fontWeight: '700', color: '#1f2937', margin: '0 0 4px' }}>{t.dashboard}</h1>
+                <p style={{ color: '#4b5563', fontSize: '13px', margin: 0 }}>{user?.email}</p>
               </div>
 
               {/* Stats */}
@@ -556,7 +556,7 @@ export default function Home() {
                   <div key={i} style={{ background: 'white', borderRadius: '12px', padding: '20px', border: '1px solid #e5e7eb', boxShadow: '0 1px 4px rgba(0,0,0,0.04)', textAlign: 'center' }}>
                     <div style={{ fontSize: '26px', marginBottom: '8px' }}>{card.icon}</div>
                     <div style={{ fontSize: (card as any).small ? '13px' : '28px', fontWeight: '800', color: card.color, marginBottom: '4px' }}>{card.value}</div>
-                    <div style={{ fontSize: '12px', color: '#6b7280' }}>{card.label}</div>
+                    <div style={{ fontSize: '12px', color: '#4b5563' }}>{card.label}</div>
                   </div>
                 ))}
               </div>
@@ -564,7 +564,7 @@ export default function Home() {
               {/* Progress bar */}
               <div style={{ background: 'white', borderRadius: '12px', padding: '20px', border: '1px solid #e5e7eb', marginBottom: '24px' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
-                  <span style={{ fontWeight: '600', color: '#374151', fontSize: '14px' }}>{t.progress}</span>
+                  <span style={{ fontWeight: '600', color: '#1f2937', fontSize: '14px' }}>{t.progress}</span>
                   <span style={{ color: '#e91e8c', fontWeight: '700', fontSize: '14px' }}>{earnedCerts.length}/{Object.keys(CERTIFICATIONS).length}</span>
                 </div>
                 <div style={{ background: '#f3f4f6', borderRadius: '8px', height: '10px', overflow: 'hidden' }}>
@@ -573,12 +573,12 @@ export default function Home() {
               </div>
 
               {/* Certs */}
-              <h3 style={{ fontSize: '16px', fontWeight: '600', color: '#374151', marginBottom: '14px' }}>{t.yourCerts}</h3>
+              <h3 style={{ fontSize: '16px', fontWeight: '600', color: '#1f2937', marginBottom: '14px' }}>{t.yourCerts}</h3>
               {earnedCerts.length === 0 ? (
                 <div style={{ background: 'white', borderRadius: '12px', padding: '48px', textAlign: 'center', border: '2px dashed #e5e7eb' }}>
                   <div style={{ fontSize: '44px', marginBottom: '14px' }}>🌱</div>
-                  <p style={{ fontWeight: '600', color: '#374151', fontSize: '17px', margin: '0 0 8px' }}>{t.noModules}</p>
-                  <p style={{ color: '#9ca3af', margin: '0 0 20px', fontSize: '13px' }}>{t.noModulesDesc}</p>
+                  <p style={{ fontWeight: '600', color: '#1f2937', fontSize: '17px', margin: '0 0 8px' }}>{t.noModules}</p>
+                  <p style={{ color: '#6b7280', margin: '0 0 20px', fontSize: '13px' }}>{t.noModulesDesc}</p>
                   <button onClick={() => setView('welcome')} style={{ padding: '10px 24px', background: ACCENT, border: 'none', borderRadius: '8px', color: 'white', fontWeight: '700', cursor: 'pointer', fontSize: '14px' }}>
                     {t.seeModules}
                   </button>
@@ -589,8 +589,8 @@ export default function Home() {
                     <div key={slug} style={{ background: 'white', borderRadius: '12px', padding: '22px', border: '1.5px solid #fce7f3', boxShadow: '0 2px 10px rgba(233,30,140,0.06)', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
                       <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(90deg, #e91e8c, #f472b6)' }} />
                       <div style={{ fontSize: '34px', marginBottom: '10px' }}>{(cert as any).emoji}</div>
-                      <div style={{ fontWeight: '700', fontSize: '13px', color: '#111827', marginBottom: '4px' }}>{lang === 'fr' ? (cert as any).fr : (cert as any).en}</div>
-                      <div style={{ fontSize: '11px', color: '#9ca3af', marginBottom: '12px' }}>{lang === 'fr' ? (cert as any).desc_fr : (cert as any).desc_en}</div>
+                      <div style={{ fontWeight: '700', fontSize: '13px', color: '#1f2937', marginBottom: '4px' }}>{lang === 'fr' ? (cert as any).fr : (cert as any).en}</div>
+                      <div style={{ fontSize: '11px', color: '#6b7280', marginBottom: '12px' }}>{lang === 'fr' ? (cert as any).desc_fr : (cert as any).desc_en}</div>
                       <div style={{ background: '#e91e8c', color: 'white', borderRadius: '20px', padding: '3px 12px', fontSize: '11px', fontWeight: '700', display: 'inline-block' }}>
                         ✓ {t.earned}
                       </div>
@@ -600,14 +600,14 @@ export default function Home() {
               )}
 
               {/* To unlock */}
-              <h3 style={{ fontSize: '14px', fontWeight: '600', color: '#9ca3af', marginBottom: '12px' }}>{t.toUnlock}</h3>
+              <h3 style={{ fontSize: '14px', fontWeight: '600', color: '#6b7280', marginBottom: '12px' }}>{t.toUnlock}</h3>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(190px, 1fr))', gap: '10px' }}>
                 {Object.entries(CERTIFICATIONS).filter(([slug]) => !completedModules.includes(slug)).map(([slug, cert]) => (
                   <div key={slug} style={{ background: 'white', borderRadius: '10px', padding: '12px', border: '1px solid #f3f4f6', opacity: 0.55, display: 'flex', alignItems: 'center', gap: '10px' }}>
                     <div style={{ fontSize: '22px', filter: 'grayscale(1)', flexShrink: 0 }}>{(cert as any).emoji}</div>
                     <div>
-                      <div style={{ fontWeight: '600', fontSize: '12px', color: '#374151' }}>{lang === 'fr' ? (cert as any).fr : (cert as any).en}</div>
-                      <div style={{ fontSize: '10px', color: '#9ca3af' }}>🔒 {t.toUnlock}</div>
+                      <div style={{ fontWeight: '600', fontSize: '12px', color: '#1f2937' }}>{lang === 'fr' ? (cert as any).fr : (cert as any).en}</div>
+                      <div style={{ fontSize: '10px', color: '#6b7280' }}>🔒 {t.toUnlock}</div>
                     </div>
                   </div>
                 ))}
