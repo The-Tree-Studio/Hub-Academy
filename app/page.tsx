@@ -24,19 +24,17 @@ const CERTIFICATIONS = {
 
 const THEMES_FR = [
   {
-    titre: "AML/CTF", emoji: '🛡️', couleur: '#e91e8c',
+    titre: "Anti-blanchiment d'argent", emoji: '🛡️', couleur: '#4a7c59',
     modules: [
-      { title: 'Les grands principes',          icon: '📖', slug: 'aml-grands-principes',   ready: true  },
-      { title: 'AML/KYC des clients finaux',     icon: '🔍', slug: 'aml-kyc',                ready: true  },
-      { title: 'AML/CTF de nos clients PSF',   icon: '🏦', slug: 'aml-kyc-nos-clients',    ready: true  },
-      { title: 'Cohérence des documents',       icon: '🔎', slug: 'aml-coherence-documents',    ready: false },
-      { title: 'DDR',                           icon: '📋', slug: 'aml-ddr',                    ready: false },
-      { title: 'Fraudes aux documents',         icon: '⚠️', slug: 'aml-fraudes-documents',      ready: false },
-      { title: 'Name Screening',                icon: '🔎', slug: 'aml-name-screening',         ready: false },
+      { title: 'Les grands principes',          icon: '📖', slug: 'aml-grands-principes',   ready: false },
+      { title: 'AML/KYC Rules',                 icon: '🔍', slug: 'aml-kyc',                ready: true  },
+      { title: 'Cohérence des documents',       icon: '🔎', slug: 'coherence-documents',    ready: false },
+      { title: 'DDR',                           icon: '📋', slug: 'ddr',                    ready: false },
+      { title: 'Fraudes aux documents',         icon: '⚠️', slug: 'fraudes-documents',      ready: false },
+      { title: 'Name Screening',                icon: '🔎', slug: 'name-screening',         ready: false },
       { title: 'Opérations suspectes',          icon: '🚨', slug: 'operations-suspectes',   ready: false },
       { title: 'Risk Scoring client',           icon: '📊', slug: 'risk-scoring',           ready: false },
       { title: 'UBO — Bénéficiaire effectif',   icon: '👤', slug: 'ubo',                    ready: false },
-      { title: 'Politiques & Procédures',       icon: '📜', slug: 'pol-aml',               ready: true  },
     ],
   },
   {
@@ -49,7 +47,6 @@ const THEMES_FR = [
       { title: 'Plan de continuité (BCP)',      icon: '📆', slug: 'bcp',                    ready: false },
       { title: 'Plan de reprise IT (DRP)',      icon: '⚙️', slug: 'drp',                    ready: false },
       { title: 'Tests & exercices BCP',         icon: '🧪', slug: 'tests-bcp',              ready: false },
-      { title: 'Politiques & Procédures',       icon: '📜', slug: 'pol-bcp',               ready: true  },
     ],
   },
   {
@@ -58,19 +55,18 @@ const THEMES_FR = [
       { title: 'Les grands principes',          icon: '📖', slug: 'employe-grands-principes', ready: false },
       { title: 'Droits employé',                icon: '✊', slug: 'droits-employe',          ready: false },
       { title: 'Obligations employé',           icon: '📌', slug: 'obligations-employe',     ready: false },
-      { title: 'Politiques & Procédures',       icon: '📜', slug: 'pol-hr',                ready: true  },
     ],
   },
   {
     titre: 'Fiscalité internationale', emoji: '💼', couleur: '#dc2626',
     modules: [
-      { title: 'Les grands principes',                          icon: '📖', slug: 'fiscalite-grands-principes',  ready: true  },
-      { title: 'CRS — Common Reporting Standard',              icon: '🌍', slug: 'crs',                         ready: true  },
-      { title: 'FATCA — Foreign Account Tax Compliance Act',   icon: '🇺🇸', slug: 'fatca',                       ready: true  },
-      { title: 'FATCA vs CRS vs QI — Quelles différences ?',  icon: '↔️', slug: 'fatca-crs-qi-differences',    ready: true  },
-      { title: "Indices d'américanité",                        icon: '🦅', slug: 'indices-americanite',         ready: true  },
-      { title: 'QI — Qualified Intermediary',                  icon: '💰', slug: 'qi',                          ready: true  },
-      { title: 'Vérifier un W-9, W-8BEN ou Tax Self-Cert',    icon: '📋', slug: 'formulaires-fiscaux',          ready: true  },
+      { title: 'Les grands principes',                          icon: '📖', slug: 'fiscalite-grands-principes',  ready: false },
+      { title: 'CRS — Common Reporting Standard',              icon: '🌍', slug: 'crs',                         ready: false },
+      { title: 'FATCA — Foreign Account Tax Compliance Act',   icon: '🇺🇸', slug: 'fatca',                       ready: false },
+      { title: 'FATCA vs CRS vs QI — Quelles différences ?',  icon: '↔️', slug: 'fatca-crs-qi-differences',    ready: false },
+      { title: "Indices d'américanité",                        icon: '🦅', slug: 'indices-americanite',         ready: false },
+      { title: 'QI — Qualified Intermediary',                  icon: '💰', slug: 'qi',                          ready: false },
+      { title: 'Vérifier un W-9, W-8BEN ou Tax Self-Cert',    icon: '📋', slug: 'formulaires-fiscaux',          ready: false },
     ],
   },
   {
@@ -81,12 +77,10 @@ const THEMES_FR = [
       { title: 'Contrôle Interne',              icon: '🔎', slug: 'controle-interne',       ready: false },
       { title: "Gestion des Conflits d'intérêts",icon:'⚡', slug: 'conflits-interets',      ready: false },
       { title: 'Gestion des risques',           icon: '⚖️', slug: 'gestion-risques',        ready: false },
-      { title: 'Gouvernance',                   icon: '🏛️', slug: 'gouvernance',            ready: false },
+      { title: 'Gouvernance PSF',               icon: '🏛️', slug: 'gouvernance',            ready: false },
       { title: 'Mutualisation',                 icon: '🔗', slug: 'mutualisation',          ready: false },
       { title: 'Veille réglementaire',          icon: '📡', slug: 'veille-reglementaire',   ready: false },
       { title: 'Whistleblowing',                icon: '📣', slug: 'whistleblowing',         ready: false },
-      { title: 'Circulaire 24/850',             icon: '📰', slug: 'circulaire-24-850',      ready: false },
-      { title: 'Politiques & Procédures',       icon: '📜', slug: 'pol-gouv',               ready: true  },
     ],
   },
   {
@@ -94,9 +88,9 @@ const THEMES_FR = [
     modules: [
       { title: 'Les grands principes',          icon: '📖', slug: 'data-grands-principes',  ready: false },
       { title: 'GDPR / RGPD',                   icon: '🔐', slug: 'gdpr-rgpd',              ready: false },
+      { title: 'ISO 27001',                     icon: '🏅', slug: 'iso-27001',              ready: false },
       { title: 'Secret professionnel',          icon: '🤫', slug: 'secret-professionnel',   ready: false },
       { title: 'Sécurité des données',          icon: '🛡️', slug: 'securite-donnees',       ready: false },
-      { title: 'Politiques & Procédures',       icon: '📜', slug: 'pol-data',               ready: true  },
     ],
   },
   {
@@ -106,21 +100,11 @@ const THEMES_FR = [
       { title: 'Circulaire 24/850',             icon: '📰', slug: 'circulaire-24-850',      ready: false },
       { title: 'Infrastructure IT',             icon: '🖥️', slug: 'infrastructure-it',      ready: false },
       { title: 'Résilience IT (DORA)',          icon: '💻', slug: 'resilience-it',          ready: false },
-      { title: 'Résilience IT (non DORA)',      icon: '🖥️', slug: 'resilience-it-non-dora', ready: false },
-      { title: 'Politiques & Procédures',       icon: '📜', slug: 'pol-it',                ready: true  },
-    ],
-},
-  {
-    titre: 'Externalisation', emoji: '🤝', couleur: '#0369a1',
-    modules: [
-      { title: 'Les grands principes',          icon: '📖', slug: 'ext-grands-principes',  ready: false },
-      { title: 'Règles CSSF 22/806',            icon: '📋', slug: 'cssf-22-806',           ready: false },
-      { title: 'Outsourcing Officer',           icon: '🤝', slug: 'outsourcing-officer',   ready: false },
-      { title: 'Politiques & Procédures',       icon: '📜', slug: 'pol-ext',               ready: true  },
+      { title: 'Externalisation 22/806',        icon: '🤝', slug: 'externalisation',        ready: false },
     ],
   },
   {
-    titre: 'Sécurité', couleur: '#6d28d9',
+    titre: 'Sécurité', emoji: '🔒', couleur: '#6d28d9',
     modules: [
       { title: 'Les grands principes',          icon: '📖', slug: 'securite-grands-principes', ready: false },
       { title: 'Gestion des accès',             icon: '🔑', slug: 'gestion-acces',          ready: false },
@@ -128,8 +112,6 @@ const THEMES_FR = [
       { title: 'Sécurité physique',             icon: '🏢', slug: 'securite-physique',      ready: false },
       { title: 'Incidents de sécurité',         icon: '🚨', slug: 'incidents-securite',     ready: false },
       { title: 'Politique de sécurité',         icon: '📋', slug: 'politique-securite',     ready: false },
-      { title: 'ISO 27001',                     icon: '🏅', slug: 'iso-27001',              ready: false },
-      { title: 'Politiques & Procédures',       icon: '📜', slug: 'pol-sec',               ready: true  },
     ],
   },
   {
@@ -147,19 +129,17 @@ const THEMES_FR = [
 
 const THEMES_EN = [
   {
-    titre: 'AML/CTF', emoji: '🛡️', couleur: '#e91e8c',
+    titre: 'Anti-Money Laundering', emoji: '🛡️', couleur: '#4a7c59',
     modules: [
-      { title: 'Key Principles',          icon: '📖', slug: 'aml-grands-principes',   ready: true  },
-      { title: 'AML/KYC Final Clients',   icon: '🔍', slug: 'aml-kyc',                ready: true  },
-      { title: 'AML/CTF — Our PSF clients', icon: '🏦', slug: 'aml-kyc-nos-clients',    ready: true  },
-      { title: 'Document Consistency',    icon: '🔎', slug: 'aml-coherence-documents',    ready: false },
-      { title: 'DDR',                     icon: '📋', slug: 'aml-ddr',                    ready: false },
-      { title: 'Document Fraud',          icon: '⚠️', slug: 'aml-fraudes-documents',      ready: false },
-      { title: 'Name Screening',          icon: '🔎', slug: 'aml-name-screening',         ready: false },
+      { title: 'Key Principles',          icon: '📖', slug: 'aml-grands-principes',   ready: false },
+      { title: 'AML/KYC Rules',           icon: '🔍', slug: 'aml-kyc',                ready: true  },
+      { title: 'Document Consistency',    icon: '🔎', slug: 'coherence-documents',    ready: false },
+      { title: 'DDR',                     icon: '📋', slug: 'ddr',                    ready: false },
+      { title: 'Document Fraud',          icon: '⚠️', slug: 'fraudes-documents',      ready: false },
+      { title: 'Name Screening',          icon: '🔎', slug: 'name-screening',         ready: false },
       { title: 'Suspicious Operations',   icon: '🚨', slug: 'operations-suspectes',   ready: false },
       { title: 'Client Risk Scoring',     icon: '📊', slug: 'risk-scoring',           ready: false },
       { title: 'UBO',                     icon: '👤', slug: 'ubo',                    ready: false },
-      { title: 'Policies & Procedures',   icon: '📜', slug: 'pol-aml',               ready: true  },
     ],
   },
   {
@@ -172,7 +152,6 @@ const THEMES_EN = [
       { title: 'BCP',                     icon: '📆', slug: 'bcp',                    ready: false },
       { title: 'DRP',                     icon: '⚙️', slug: 'drp',                    ready: false },
       { title: 'BCP Tests',               icon: '🧪', slug: 'tests-bcp',              ready: false },
-      { title: 'Policies & Procedures',   icon: '📜', slug: 'pol-bcp',               ready: true  },
     ],
   },
   {
@@ -181,19 +160,18 @@ const THEMES_EN = [
       { title: 'Key Principles',          icon: '📖', slug: 'employe-grands-principes', ready: false },
       { title: 'Employee Rights',         icon: '✊', slug: 'droits-employe',          ready: false },
       { title: 'Employee Obligations',    icon: '📌', slug: 'obligations-employe',     ready: false },
-      { title: 'Policies & Procedures',   icon: '📜', slug: 'pol-hr',                ready: true  },
     ],
   },
   {
     titre: 'International Taxation', emoji: '💼', couleur: '#dc2626',
     modules: [
-      { title: 'Key Principles',                          icon: '📖', slug: 'fiscalite-grands-principes', ready: true  },
-      { title: 'CRS — Common Reporting Standard',        icon: '🌍', slug: 'crs',                       ready: true  },
-      { title: 'FATCA',                                  icon: '🇺🇸', slug: 'fatca',                     ready: true  },
-      { title: 'FATCA vs CRS vs QI',                    icon: '↔️', slug: 'fatca-crs-qi-differences',  ready: true  },
-      { title: 'Indicia of US Status',                   icon: '🦅', slug: 'indices-americanite',       ready: true  },
-      { title: 'QI — Qualified Intermediary',            icon: '💰', slug: 'qi',                        ready: true  },
-      { title: 'W-9, W-8BEN & Tax Self-Certs',          icon: '📋', slug: 'formulaires-fiscaux',        ready: true  },
+      { title: 'Key Principles',                          icon: '📖', slug: 'fiscalite-grands-principes', ready: false },
+      { title: 'CRS — Common Reporting Standard',        icon: '🌍', slug: 'crs',                       ready: false },
+      { title: 'FATCA',                                  icon: '🇺🇸', slug: 'fatca',                     ready: false },
+      { title: 'FATCA vs CRS vs QI',                    icon: '↔️', slug: 'fatca-crs-qi-differences',  ready: false },
+      { title: 'Indicia of US Status',                   icon: '🦅', slug: 'indices-americanite',       ready: false },
+      { title: 'QI — Qualified Intermediary',            icon: '💰', slug: 'qi',                        ready: false },
+      { title: 'W-9, W-8BEN & Tax Self-Certs',          icon: '📋', slug: 'formulaires-fiscaux',        ready: false },
     ],
   },
   {
@@ -204,12 +182,10 @@ const THEMES_EN = [
       { title: 'Internal Control',        icon: '🔎', slug: 'controle-interne',       ready: false },
       { title: 'Conflicts of Interest',   icon: '⚡', slug: 'conflits-interets',      ready: false },
       { title: 'Risk Management',         icon: '⚖️', slug: 'gestion-risques',        ready: false },
-      { title: 'Governance',          icon: '🏛️', slug: 'gouvernance',            ready: false },
+      { title: 'PSF Governance',          icon: '🏛️', slug: 'gouvernance',            ready: false },
       { title: 'Mutualisation',           icon: '🔗', slug: 'mutualisation',          ready: false },
       { title: 'Regulatory Watch',        icon: '📡', slug: 'veille-reglementaire',   ready: false },
       { title: 'Whistleblowing',          icon: '📣', slug: 'whistleblowing',         ready: false },
-      { title: 'Circular 24/850',         icon: '📰', slug: 'circulaire-24-850',      ready: false },
-      { title: 'Policies & Procedures',   icon: '📜', slug: 'pol-gouv',               ready: true  },
     ],
   },
   {
@@ -217,9 +193,9 @@ const THEMES_EN = [
     modules: [
       { title: 'Key Principles',          icon: '📖', slug: 'data-grands-principes',  ready: false },
       { title: 'GDPR / RGPD',             icon: '🔐', slug: 'gdpr-rgpd',              ready: false },
+      { title: 'ISO 27001',               icon: '🏅', slug: 'iso-27001',              ready: false },
       { title: 'Professional Secrecy',    icon: '🤫', slug: 'secret-professionnel',   ready: false },
       { title: 'Data Security',           icon: '🛡️', slug: 'securite-donnees',       ready: false },
-      { title: 'Policies & Procedures',   icon: '📜', slug: 'pol-data',               ready: true  },
     ],
   },
   {
@@ -229,21 +205,11 @@ const THEMES_EN = [
       { title: 'Circular 24/850',         icon: '📰', slug: 'circulaire-24-850',      ready: false },
       { title: 'IT Infrastructure',       icon: '🖥️', slug: 'infrastructure-it',      ready: false },
       { title: 'IT Resilience (DORA)',    icon: '💻', slug: 'resilience-it',          ready: false },
-      { title: 'IT Resilience (non-DORA)', icon: '🖥️', slug: 'resilience-it-non-dora', ready: false },
-      { title: 'Policies & Procedures',   icon: '📜', slug: 'pol-it',                ready: true  },
-    ],
-},
-  {
-    titre: 'Outsourcing', emoji: '🤝', couleur: '#0369a1',
-    modules: [
-      { title: 'Key Principles',          icon: '📖', slug: 'ext-grands-principes',  ready: false },
-      { title: 'CSSF 22/806 Rules',       icon: '📋', slug: 'cssf-22-806',           ready: false },
-      { title: 'Outsourcing Officer',     icon: '🤝', slug: 'outsourcing-officer',   ready: false },
-      { title: 'Policies & Procedures',   icon: '📜', slug: 'pol-ext',               ready: true  },
+      { title: 'Outsourcing 22/806',      icon: '🤝', slug: 'externalisation',        ready: false },
     ],
   },
   {
-    titre: 'Security', couleur: '#6d28d9',
+    titre: 'Security', emoji: '🔒', couleur: '#6d28d9',
     modules: [
       { title: 'Key Principles',          icon: '📖', slug: 'securite-grands-principes', ready: false },
       { title: 'Access Management',       icon: '🔑', slug: 'gestion-acces',          ready: false },
@@ -251,8 +217,6 @@ const THEMES_EN = [
       { title: 'Physical Security',       icon: '🏢', slug: 'securite-physique',      ready: false },
       { title: 'Security Incidents',      icon: '🚨', slug: 'incidents-securite',     ready: false },
       { title: 'Security Policy',         icon: '📋', slug: 'politique-securite',     ready: false },
-      { title: 'ISO 27001',               icon: '🏅', slug: 'iso-27001',              ready: false },
-      { title: 'Policies & Procedures',   icon: '📜', slug: 'pol-sec',               ready: true  },
     ],
   },
   {
@@ -337,40 +301,40 @@ export default function Home() {
   const totalPoints = earnedCerts.length * 100
   const rankIndex = Math.min(Math.floor(totalPoints / 100), t.ranks.length - 1)
 
-  const ACCENT = '#e07b39'
-  const SIDEBAR_BG = '#2c1a0e'
-  const SIDEBAR_HOVER = '#3d2410'
-  const SIDEBAR_ACTIVE = '#4a2d14'
+  const ACCENT = '#4a7c59'
+  const SIDEBAR_BG = '#faf7f2'
+  const SIDEBAR_HOVER = '#eee8de'
+  const SIDEBAR_ACTIVE = '#e2d9cc'
 
   const sidebarItemStyle = (active: boolean): React.CSSProperties => ({
     display: 'flex', alignItems: 'center', gap: '10px',
     padding: '9px 16px', cursor: 'pointer', fontSize: '13px',
     fontWeight: active ? '600' : '400',
-    color: active ? '#ffffff' : '#c4a882',
+    color: active ? '#4a7c59' : '#4a4038',
     background: active ? SIDEBAR_ACTIVE : 'transparent',
-    borderLeft: active ? `3px solid ${ACCENT}` : '3px solid transparent',
+    borderLeft: active ? '3px solid #4a7c59' : '3px solid transparent',
     transition: 'all 0.15s', userSelect: 'none',
   })
 
   if (loading) return (
-    <div style={{ minHeight: '100vh', background: SIDEBAR_BG, display: 'flex', alignItems: 'center', justifyContent: 'center', color: ACCENT, fontSize: '16px', fontFamily: 'sans-serif' }}>
+    <div style={{ minHeight: '100vh', background: '#faf7f2', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#4a7c59', fontSize: '16px', fontFamily: 'sans-serif' }}>
       Chargement...
     </div>
   )
 
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', fontFamily: "'Segoe UI', system-ui, sans-serif", background: '#f0f2f5' }}>
+    <div style={{ minHeight: '100vh', display: 'flex', fontFamily: "'Segoe UI', system-ui, sans-serif", background: '#f5f0e8' }}>
 
       {/* ── SIDEBAR ── */}
       <div style={{ width: '210px', minWidth: '210px', background: SIDEBAR_BG, display: 'flex', flexDirection: 'column', position: 'sticky', top: 0, height: '100vh', overflowY: 'auto', flexShrink: 0 } as React.CSSProperties}>
 
         {/* Logo */}
-        <div style={{ padding: '20px 16px 16px', borderBottom: '1px solid #3d2410' }}>
+        <div style={{ padding: '20px 16px 16px', borderBottom: '1px solid #ddd5c8' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '4px' }}>
             <div style={{ width: '32px', height: '32px', background: ACCENT, borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '16px', flexShrink: 0 }}>🎓</div>
             <div>
-              <div style={{ color: '#ffffff', fontWeight: '700', fontSize: '15px', lineHeight: 1.2 }}>Hub Academy</div>
-              <div style={{ color: '#8a6a4a', fontSize: '10px' }}>{t.subtitle}</div>
+              <div style={{ color: '#1a1a1a', fontWeight: '700', fontSize: '15px', lineHeight: 1.2 }}>Hub Academy</div>
+              <div style={{ color: '#7a7268', fontSize: '10px' }}>{t.subtitle}</div>
             </div>
           </div>
         </div>
@@ -379,7 +343,7 @@ export default function Home() {
         <nav style={{ flex: 1, padding: '12px 0', overflowY: 'auto' }}>
 
           {/* Section Formations */}
-          <div style={{ padding: '8px 16px 4px', fontSize: '10px', fontWeight: '700', color: '#6a4a2a', letterSpacing: '1px', textTransform: 'uppercase' }}>{t.formations}</div>
+          <div style={{ padding: '8px 16px 4px', fontSize: '10px', fontWeight: '700', color: '#9a9088', letterSpacing: '1px', textTransform: 'uppercase' }}>{t.formations}</div>
 
           {THEMES.map((theme, ti) => {
             const readyCount = theme.modules.filter(m => m.ready).length
@@ -389,56 +353,56 @@ export default function Home() {
                 key={ti}
                 style={sidebarItemStyle(isActive)}
                 onClick={() => { setView('theme'); setActiveTheme(ti) }}
-                onMouseOver={e => { if (!isActive) (e.currentTarget as HTMLElement).style.background = SIDEBAR_HOVER }}
+                onMouseOver={e => { if (!isActive) (e.currentTarget as HTMLElement).style.background = '#eee8de' }}
                 onMouseOut={e => { if (!isActive) (e.currentTarget as HTMLElement).style.background = 'transparent' }}
               >
                 <span style={{ fontSize: '14px', flexShrink: 0 }}>{theme.emoji}</span>
                 <span style={{ flex: 1, lineHeight: 1.3 }}>{theme.titre}</span>
                 {readyCount > 0 && (
-                  <span style={{ background: ACCENT, color: 'white', fontSize: '9px', fontWeight: '700', borderRadius: '10px', padding: '1px 5px', flexShrink: 0 }}>{readyCount}</span>
+                  <span style={{ background: '#4a7c59', color: 'white', fontSize: '9px', fontWeight: '700', borderRadius: '10px', padding: '1px 5px', flexShrink: 0 }}>{readyCount}</span>
                 )}
                 {readyCount === 0 && (
-                  <span style={{ color: '#4a3020', fontSize: '11px', flexShrink: 0 }}>{theme.modules.length}</span>
+                  <span style={{ color: '#b0a898', fontSize: '11px', flexShrink: 0 }}>{theme.modules.length}</span>
                 )}
               </div>
             )
           })}
 
           {/* Divider */}
-          <div style={{ margin: '12px 16px', borderTop: '1px solid #3d2410' }} />
+          <div style={{ margin: '12px 16px', borderTop: '1px solid #ddd5c8' }} />
 
           {/* Section Profil */}
-          <div style={{ padding: '4px 16px 4px', fontSize: '10px', fontWeight: '700', color: '#6a4a2a', letterSpacing: '1px', textTransform: 'uppercase' }}>{t.profil}</div>
+          <div style={{ padding: '4px 16px 4px', fontSize: '10px', fontWeight: '700', color: '#9a9088', letterSpacing: '1px', textTransform: 'uppercase' }}>{t.profil}</div>
 
           <div
             style={sidebarItemStyle(view === 'dashboard')}
             onClick={() => setView('dashboard')}
-            onMouseOver={e => { if (view !== 'dashboard') (e.currentTarget as HTMLElement).style.background = SIDEBAR_HOVER }}
+            onMouseOver={e => { if (view !== 'dashboard') (e.currentTarget as HTMLElement).style.background = '#eee8de' }}
             onMouseOut={e => { if (view !== 'dashboard') (e.currentTarget as HTMLElement).style.background = 'transparent' }}
           >
             <span style={{ fontSize: '14px' }}>🏆</span>
             <span style={{ flex: 1 }}>{t.dashboard}</span>
             {earnedCerts.length > 0 && (
-              <span style={{ background: '#e91e8c', color: 'white', fontSize: '9px', fontWeight: '700', borderRadius: '10px', padding: '1px 5px' }}>{earnedCerts.length}</span>
+              <span style={{ background: '#4a7c59', color: 'white', fontSize: '9px', fontWeight: '700', borderRadius: '10px', padding: '1px 5px' }}>{earnedCerts.length}</span>
             )}
           </div>
         </nav>
 
         {/* Bottom: lang + logout */}
-        <div style={{ padding: '12px 16px', borderTop: '1px solid #3d2410' }}>
+        <div style={{ padding: '12px 16px', borderTop: '1px solid #ddd5c8' }}>
           <div style={{ display: 'flex', gap: '4px', marginBottom: '10px' }}>
             {(['fr', 'en'] as const).map(l => (
               <button key={l} onClick={() => { saveLang(l); setLang(l) }}
-                style={{ flex: 1, padding: '5px', borderRadius: '6px', border: 'none', cursor: 'pointer', fontSize: '11px', fontWeight: '700', background: lang === l ? ACCENT : '#3d2410', color: lang === l ? 'white' : '#8a6a4a', transition: 'all 0.2s' }}>
+                style={{ flex: 1, padding: '5px', borderRadius: '6px', border: 'none', cursor: 'pointer', fontSize: '11px', fontWeight: '700', background: lang === l ? '#4a7c59' : '#e2d9cc', color: lang === l ? 'white' : '#4a4038', transition: 'all 0.2s' }}>
                 {l === 'fr' ? '🇫🇷 FR' : '🇬🇧 EN'}
               </button>
             ))}
           </div>
-          <div style={{ fontSize: '10px', color: '#6a4a2a', marginBottom: '8px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{user?.email}</div>
+          <div style={{ fontSize: '10px', color: '#9a9088', marginBottom: '8px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{user?.email}</div>
           <button onClick={async () => { await supabase.auth.signOut(); router.push('/login') }}
-            style={{ width: '100%', padding: '7px', background: 'transparent', border: '1px solid #4a2d14', borderRadius: '6px', color: '#c4a882', cursor: 'pointer', fontSize: '11px', fontWeight: '600', transition: 'all 0.2s' }}
-            onMouseOver={e => { (e.currentTarget as HTMLElement).style.borderColor = ACCENT; (e.currentTarget as HTMLElement).style.color = ACCENT }}
-            onMouseOut={e => { (e.currentTarget as HTMLElement).style.borderColor = '#4a2d14'; (e.currentTarget as HTMLElement).style.color = '#c4a882' }}>
+            style={{ width: '100%', padding: '7px', background: 'transparent', border: '1px solid #c8bfb4', borderRadius: '6px', color: '#4a4038', cursor: 'pointer', fontSize: '11px', fontWeight: '600', transition: 'all 0.2s' }}
+            onMouseOver={e => { (e.currentTarget as HTMLElement).style.borderColor = '#4a7c59'; (e.currentTarget as HTMLElement).style.color = '#4a7c59' }}
+            onMouseOut={e => { (e.currentTarget as HTMLElement).style.borderColor = '#c8bfb4'; (e.currentTarget as HTMLElement).style.color = '#4a4038' }}>
             {t.logout}
           </button>
         </div>
@@ -448,7 +412,7 @@ export default function Home() {
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minWidth: 0 }}>
 
         {/* Top bar */}
-        <div style={{ background: 'white', borderBottom: '1px solid #e5e7eb', padding: '0 28px', height: '52px', display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '16px', flexShrink: 0 }}>
+        <div style={{ background: '#faf7f2', borderBottom: '1px solid #ddd5c8', padding: '0 28px', height: '52px', display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '16px', flexShrink: 0 }}>
           <span style={{ fontSize: '13px', color: '#9ca3af' }}>{user?.email}</span>
           <div style={{ width: '1px', height: '20px', background: '#e5e7eb' }} />
           <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13px', color: '#6b7280' }}>
@@ -456,7 +420,7 @@ export default function Home() {
             <span style={{ fontWeight: '700', color: '#374151' }}>{totalPoints}</span>
             <span>HubCoins</span>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', background: '#fff7ed', border: '1px solid #fed7aa', borderRadius: '6px', padding: '4px 10px', fontSize: '12px', fontWeight: '600', color: ACCENT }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', background: '#eef5f1', border: '1px solid #b8d4c2', borderRadius: '6px', padding: '4px 10px', fontSize: '12px', fontWeight: '600', color: '#4a7c59' }}>
             🎓 {t.ranks[rankIndex]}
           </div>
         </div>
@@ -477,7 +441,7 @@ export default function Home() {
                 {[
                   { value: totalModules, label: t.statTotal, icon: '📚', color: '#3b82f6' },
                   { value: readyModules, label: t.statDispo, icon: '✅', color: '#10b981' },
-                  { value: THEMES.length, label: t.statThemes, icon: '🗂️', color: ACCENT },
+                  { value: THEMES.length, label: t.statThemes, icon: '🗂️', color: '#c07d3e' },
                 ].map((s, i) => (
                   <div key={i} style={{ background: 'white', borderRadius: '12px', padding: '20px', border: '1px solid #e5e7eb', boxShadow: '0 1px 4px rgba(0,0,0,0.04)' }}>
                     <div style={{ fontSize: '22px', marginBottom: '8px' }}>{s.icon}</div>
@@ -508,7 +472,7 @@ export default function Home() {
                           <div style={{ fontSize: '12px', color: '#9ca3af' }}>{theme.modules.length} {theme.modules.length > 1 ? 'modules' : 'module'}</div>
                         </div>
                         {rc > 0 ? (
-                          <span style={{ background: '#dcfce7', color: '#16a34a', fontSize: '11px', fontWeight: '700', borderRadius: '20px', padding: '3px 10px' }}>✓ {rc} {lang === 'fr' ? 'dispo' : 'avail.'}</span>
+                          <span style={{ background: '#eef5f1', color: '#4a7c59', fontSize: '11px', fontWeight: '700', borderRadius: '20px', padding: '3px 10px' }}>✓ {rc} {lang === 'fr' ? 'dispo' : 'avail.'}</span>
                         ) : (
                           <span style={{ color: '#d1d5db', fontSize: '13px' }}>›</span>
                         )}
@@ -585,7 +549,7 @@ export default function Home() {
               {/* Stats */}
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', marginBottom: '24px' }}>
                 {[
-                  { label: lang === 'fr' ? 'Certifications' : 'Certifications', value: String(earnedCerts.length), icon: '🏅', color: '#e91e8c' },
+                  { label: lang === 'fr' ? 'Certifications' : 'Certifications', value: String(earnedCerts.length), icon: '🏅', color: '#4a7c59' },
                   { label: t.totalScore, value: String(totalPoints), icon: '⭐', color: '#7c3aed' },
                   { label: t.rank, value: t.ranks[rankIndex], icon: '🎓', color: '#059669', small: true },
                 ].map((card, i) => (
@@ -601,10 +565,10 @@ export default function Home() {
               <div style={{ background: 'white', borderRadius: '12px', padding: '20px', border: '1px solid #e5e7eb', marginBottom: '24px' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
                   <span style={{ fontWeight: '600', color: '#374151', fontSize: '14px' }}>{t.progress}</span>
-                  <span style={{ color: '#e91e8c', fontWeight: '700', fontSize: '14px' }}>{earnedCerts.length}/{Object.keys(CERTIFICATIONS).length}</span>
+                  <span style={{ color: '#4a7c59', fontWeight: '700', fontSize: '14px' }}>{earnedCerts.length}/{Object.keys(CERTIFICATIONS).length}</span>
                 </div>
                 <div style={{ background: '#f3f4f6', borderRadius: '8px', height: '10px', overflow: 'hidden' }}>
-                  <div style={{ background: 'linear-gradient(90deg, #e91e8c, #f472b6)', height: '10px', width: `${(earnedCerts.length / Object.keys(CERTIFICATIONS).length) * 100}%`, borderRadius: '8px', transition: 'width 1s ease' }} />
+                  <div style={{ background: 'linear-gradient(90deg, #4a7c59, #7db591)', height: '10px', width: `${(earnedCerts.length / Object.keys(CERTIFICATIONS).length) * 100}%`, borderRadius: '8px', transition: 'width 1s ease' }} />
                 </div>
               </div>
 
@@ -615,19 +579,19 @@ export default function Home() {
                   <div style={{ fontSize: '44px', marginBottom: '14px' }}>🌱</div>
                   <p style={{ fontWeight: '600', color: '#374151', fontSize: '17px', margin: '0 0 8px' }}>{t.noModules}</p>
                   <p style={{ color: '#9ca3af', margin: '0 0 20px', fontSize: '13px' }}>{t.noModulesDesc}</p>
-                  <button onClick={() => setView('welcome')} style={{ padding: '10px 24px', background: ACCENT, border: 'none', borderRadius: '8px', color: 'white', fontWeight: '700', cursor: 'pointer', fontSize: '14px' }}>
+                  <button onClick={() => setView('welcome')} style={{ padding: '10px 24px', background: '#4a7c59', border: 'none', borderRadius: '8px', color: 'white', fontWeight: '700', cursor: 'pointer', fontSize: '14px' }}>
                     {t.seeModules}
                   </button>
                 </div>
               ) : (
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(210px, 1fr))', gap: '14px', marginBottom: '28px' }}>
                   {earnedCerts.map(({ slug, cert }) => (
-                    <div key={slug} style={{ background: 'white', borderRadius: '12px', padding: '22px', border: '1.5px solid #fce7f3', boxShadow: '0 2px 10px rgba(233,30,140,0.06)', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
-                      <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(90deg, #e91e8c, #f472b6)' }} />
+                    <div key={slug} style={{ background: 'white', borderRadius: '12px', padding: '22px', border: '1.5px solid #c8ddd0', boxShadow: '0 2px 10px rgba(74,124,89,0.08)', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+                      <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(90deg, #4a7c59, #7db591)' }}
                       <div style={{ fontSize: '34px', marginBottom: '10px' }}>{(cert as any).emoji}</div>
                       <div style={{ fontWeight: '700', fontSize: '13px', color: '#111827', marginBottom: '4px' }}>{lang === 'fr' ? (cert as any).fr : (cert as any).en}</div>
                       <div style={{ fontSize: '11px', color: '#9ca3af', marginBottom: '12px' }}>{lang === 'fr' ? (cert as any).desc_fr : (cert as any).desc_en}</div>
-                      <div style={{ background: '#e91e8c', color: 'white', borderRadius: '20px', padding: '3px 12px', fontSize: '11px', fontWeight: '700', display: 'inline-block' }}>
+                      <div style={{ background: '#4a7c59', color: 'white', borderRadius: '20px', padding: '3px 12px', fontSize: '11px', fontWeight: '700', display: 'inline-block' }}>
                         ✓ {t.earned}
                       </div>
                     </div>

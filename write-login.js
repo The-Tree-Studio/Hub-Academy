@@ -22,38 +22,38 @@ export default function LoginPage() {
   }
 
   return (
-    <div style={{ minHeight: '100vh', background: '#f3f4f6', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Segoe UI', system-ui, sans-serif" }}>
-      <div style={{ background: 'white', borderRadius: '16px', padding: '40px', width: '100%', maxWidth: '400px', boxShadow: '0 4px 24px rgba(0,0,0,0.08)', border: '1px solid #e5e7eb' }}>
+    <div style={{ minHeight: '100vh', background: '#f5f0e8', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Segoe UI', system-ui, sans-serif" }}>
+      <div style={{ background: '#faf7f2', borderRadius: '16px', padding: '40px', width: '100%', maxWidth: '400px', boxShadow: '0 4px 24px rgba(0,0,0,0.08)', border: '1px solid #ddd5c8' }}>
         <div style={{ textAlign: 'center', marginBottom: '32px' }}>
           <div style={{ fontSize: '40px', marginBottom: '12px' }}>🎓</div>
-          <h1 style={{ fontSize: '22px', fontWeight: '800', color: '#6b7280', margin: '0 0 6px' }}>Hub Academy</h1>
-          <p style={{ color: '#6b7280', fontSize: '14px', margin: 0 }}>Connectez-vous pour accéder à vos formations</p>
+          <h1 style={{ fontSize: '22px', fontWeight: '800', color: '#111827', margin: '0 0 6px' }}>Hub Academy</h1>
+          <p style={{ color: '#7a7268', fontSize: '14px', margin: 0 }}>Connectez-vous pour accéder à vos formations</p>
         </div>
 
         <div style={{ marginBottom: '16px' }}>
-          <label style={{ display: 'block', fontSize: '13px', fontWeight: '600', color: '#374151', marginBottom: '6px' }}>Email</label>
+          <label style={{ display: 'block', fontSize: '13px', fontWeight: '600', color: '#4a4038', marginBottom: '6px' }}>Email</label>
           <input
             type="email"
             value={email}
             onChange={e => setEmail(e.target.value)}
             onKeyDown={e => e.key === 'Enter' && handleLogin()}
-            style={{ width: '100%', padding: '11px 14px', border: '1.5px solid #e5e7eb', borderRadius: '8px', fontSize: '14px', color: '#111827', background: '#f9fafb', boxSizing: 'border-box', outline: 'none', transition: 'border-color 0.2s' }}
-            onFocus={e => e.target.style.borderColor = '#374151'}
-            onBlur={e => e.target.style.borderColor = '#e5e7eb'}
+            style={{ width: '100%', padding: '11px 14px', border: '1.5px solid #ddd5c8', borderRadius: '8px', fontSize: '14px', color: '#2a2218', background: '#f5f0e8', boxSizing: 'border-box', outline: 'none', transition: 'border-color 0.2s' }}
+            onFocus={e => e.target.style.borderColor = '#4a7c59'}
+            onBlur={e => e.target.style.borderColor = '#ddd5c8'}
             placeholder="votre@email.com"
           />
         </div>
 
         <div style={{ marginBottom: '24px' }}>
-          <label style={{ display: 'block', fontSize: '13px', fontWeight: '600', color: '#374151', marginBottom: '6px' }}>Mot de passe</label>
+          <label style={{ display: 'block', fontSize: '13px', fontWeight: '600', color: '#4a4038', marginBottom: '6px' }}>Mot de passe</label>
           <input
             type="password"
             value={password}
             onChange={e => setPassword(e.target.value)}
             onKeyDown={e => e.key === 'Enter' && handleLogin()}
-            style={{ width: '100%', padding: '11px 14px', border: '1.5px solid #e5e7eb', borderRadius: '8px', fontSize: '14px', color: '#111827', background: '#f9fafb', boxSizing: 'border-box', outline: 'none', transition: 'border-color 0.2s' }}
-            onFocus={e => e.target.style.borderColor = '#374151'}
-            onBlur={e => e.target.style.borderColor = '#e5e7eb'}
+            style={{ width: '100%', padding: '11px 14px', border: '1.5px solid #ddd5c8', borderRadius: '8px', fontSize: '14px', color: '#2a2218', background: '#f5f0e8', boxSizing: 'border-box', outline: 'none', transition: 'border-color 0.2s' }}
+            onFocus={e => e.target.style.borderColor = '#4a7c59'}
+            onBlur={e => e.target.style.borderColor = '#ddd5c8'}
             placeholder="••••••••••••"
           />
         </div>
@@ -67,9 +67,9 @@ export default function LoginPage() {
         <button
           onClick={handleLogin}
           disabled={loading}
-          style={{ width: '100%', padding: '12px', background: loading ? '#d1d5db' : '#9ca3af', color: 'white', border: 'none', borderRadius: '8px', fontSize: '15px', fontWeight: '700', cursor: loading ? 'not-allowed' : 'pointer', transition: 'background 0.2s' }}
-          onMouseOver={e => { if (!loading) (e.currentTarget as HTMLElement).style.background = '#6b7280' }}
-          onMouseOut={e => { if (!loading) (e.currentTarget as HTMLElement).style.background = '#9ca3af' }}
+          style={{ width: '100%', padding: '12px', background: loading ? '#9ca3af' : '#111827', color: 'white', border: 'none', borderRadius: '8px', fontSize: '15px', fontWeight: '700', cursor: loading ? 'not-allowed' : 'pointer', transition: 'background 0.2s' }}
+          onMouseOver={e => { if (!loading) (e.currentTarget as HTMLElement).style.background = '#374151' }}
+          onMouseOut={e => { if (!loading) (e.currentTarget as HTMLElement).style.background = '#111827' }}
         >
           {loading ? 'Connexion...' : 'Se connecter'}
         </button>
