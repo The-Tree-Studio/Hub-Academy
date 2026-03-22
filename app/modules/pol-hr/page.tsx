@@ -7,8 +7,8 @@ const C = '#b45309'
 
 const UI = {
   fr: {
-    title: "Politiques & Proc\u00e9dures \u2014 Droits & Obligations RH",
-    subtitle: "14 politiques et proc\u00e9dures RH applicables \u00e0 tous les collaborateurs",
+    title: "Politiques & Procédures — Droits & Obligations RH",
+    subtitle: "14 politiques et procédures RH applicables à tous les collaborateurs",
     fiches: '14 fiches', time: '∼28 min',
     start: 'Découvrir les documents 📚', prev: '← Précédent', next: 'Document suivant',
     home: '← Accueil', ref: 'Référence', obj: '🎯 Objectif', app: '👥 Applicable à', res: '📝 Résumé',
@@ -17,7 +17,7 @@ const UI = {
     total: 'Total',
   },
   en: {
-    title: "Policies & Procedures \u2014 Employee Rights & Duties",
+    title: "Policies & Procedures — Employee Rights & Duties",
     subtitle: "14 HR policies and procedures applicable to all employees",
     fiches: '14 cards', time: '∼28 min',
     start: 'Discover the documents 📚', prev: '← Previous', next: 'Next document',
@@ -33,79 +33,79 @@ type Fiche = { id: number; ref: string; emoji: string; titre: string; objectif: 
 const FICHES_FR: Fiche[] = [
   { id:1, ref:'POL-HR-030', emoji:'🔄', titre:"Change process",
     objectif:"Encadrer les changements de situation professionnelle des collaborateurs",
-    applicable:"RH, managers, collaborateurs concern\u00e9s",
-    resume:"Proc\u00e9dure de gestion des changements RH (mobilit\u00e9 interne, \u00e9volution de poste, modification contractuelle).",
+    applicable:"RH, managers, collaborateurs concernés",
+    resume:"Procédure de gestion des changements RH (mobilité interne, évolution de poste, modification contractuelle).",
   },
   { id:2, ref:'POL-HR-031', emoji:'📜', titre:"Code of Conduct",
-    objectif:"D\u00e9finir les standards \u00e9thiques et comportementaux attendus de tous",
+    objectif:"Définir les standards éthiques et comportementaux attendus de tous",
     applicable:"Tous les collaborateurs i-Hub",
-    resume:"Code de conduite d\u00e9finissant les valeurs, principes \u00e9thiques et comportements attendus de l'ensemble des collaborateurs.",
+    resume:"Code de conduite définissant les valeurs, principes éthiques et comportements attendus de l'ensemble des collaborateurs.",
   },
   { id:3, ref:'POL-HR-032', emoji:'🚶', titre:"Offboarding process",
-    objectif:"Assurer un d\u00e9part structur\u00e9, s\u00e9curis\u00e9 et conforme des collaborateurs",
+    objectif:"Assurer un départ structuré, sécurisé et conforme des collaborateurs",
     applicable:"RH, IT, managers, collaborateur sortant",
-    resume:"Processus de d\u00e9part des collaborateurs incluant la restitution des acc\u00e8s, la transmission des connaissances et les formalit\u00e9s administratives.",
+    resume:"Processus de départ des collaborateurs incluant la restitution des accès, la transmission des connaissances et les formalités administratives.",
   },
   { id:4, ref:'POL-HR-033', emoji:'👋', titre:"Onboarding process",
-    objectif:"Garantir une int\u00e9gration r\u00e9ussie et conforme des nouveaux collaborateurs",
+    objectif:"Garantir une intégration réussie et conforme des nouveaux collaborateurs",
     applicable:"RH, managers, nouveau collaborateur",
-    resume:"Processus d'int\u00e9gration des nouveaux collaborateurs couvrant l'accueil, les acc\u00e8s syst\u00e8mes, les formations obligatoires et le suivi de la p\u00e9riode d'essai.",
+    resume:"Processus d'intégration des nouveaux collaborateurs couvrant l'accueil, les accès systèmes, les formations obligatoires et le suivi de la période d'essai.",
   },
   { id:5, ref:'POL-HR-034', emoji:'🏠', titre:"Teleworking Policy",
-    objectif:"Encadrer le t\u00e9l\u00e9travail dans le respect des droits et obligations l\u00e9gaux",
-    applicable:"Collaborateurs \u00e9ligibles au t\u00e9l\u00e9travail, managers",
-    resume:"Politique de t\u00e9l\u00e9travail d\u00e9finissant les conditions d'\u00e9ligibilit\u00e9, les droits et obligations des t\u00e9l\u00e9travailleurs et les modalit\u00e9s de contr\u00f4le.",
+    objectif:"Encadrer le télétravail dans le respect des droits et obligations légaux",
+    applicable:"Collaborateurs éligibles au télétravail, managers",
+    resume:"Politique de télétravail définissant les conditions d'éligibilité, les droits et obligations des télétravailleurs et les modalités de contrôle.",
   },
   { id:6, ref:'POL-HR-035', emoji:'🎓', titre:"Training Policy",
-    objectif:"D\u00e9finir les engagements d\u2019i-Hub en mati\u00e8re de formation et d\u00e9veloppement",
+    objectif:"Définir les engagements d’i-Hub en matière de formation et développement",
     applicable:"Tous les collaborateurs i-Hub, direction, RH",
-    resume:"Politique de formation d\u00e9finissant les objectifs, le budget, les parcours obligatoires et les modalit\u00e9s de validation des comp\u00e9tences.",
+    resume:"Politique de formation définissant les objectifs, le budget, les parcours obligatoires et les modalités de validation des compétences.",
   },
   { id:7, ref:'POL-HR-036', emoji:'⛔', titre:"Anti Discrimination and Harassment Policy",
-    objectif:"Pr\u00e9venir et traiter toute forme de discrimination et harc\u00e8lement",
+    objectif:"Prévenir et traiter toute forme de discrimination et harcèlement",
     applicable:"Tous les collaborateurs i-Hub",
-    resume:"Politique d\u00e9finissant l'engagement d'i-Hub en mati\u00e8re de lutte contre toute forme de discrimination et de harc\u00e8lement (moral, sexuel) au travail, incluant les proc\u00e9dures de signalement et de traitement.",
+    resume:"Politique définissant l'engagement d'i-Hub en matière de lutte contre toute forme de discrimination et de harcèlement (moral, sexuel) au travail, incluant les procédures de signalement et de traitement.",
   },
   { id:8, ref:'POL-HR-039', emoji:'🚶', titre:"Internal Mobility Procedure",
-    objectif:"Faciliter et encadrer la mobilit\u00e9 interne des collaborateurs",
+    objectif:"Faciliter et encadrer la mobilité interne des collaborateurs",
     applicable:"Collaborateurs postulant en interne, RH, managers",
-    resume:"Proc\u00e9dure encadrant les demandes et processus de mobilit\u00e9 interne au sein d'i-Hub, incluant les crit\u00e8res d'\u00e9ligibilit\u00e9, les \u00e9tapes de candidature et les modalit\u00e9s de transition de poste.",
+    resume:"Procédure encadrant les demandes et processus de mobilité interne au sein d'i-Hub, incluant les critères d'éligibilité, les étapes de candidature et les modalités de transition de poste.",
   },
   { id:9, ref:'POL-HR-040', emoji:'🚗', titre:"Parking Policy",
-    objectif:"Organiser et s\u00e9curiser l\u2019acc\u00e8s au parking des collaborateurs",
+    objectif:"Organiser et sécuriser l’accès au parking des collaborateurs",
     applicable:"Tous les collaborateurs utilisant le parking i-Hub",
-    resume:"Politique d\u00e9finissant les r\u00e8gles d'acc\u00e8s, d'utilisation et de gestion du parking mis \u00e0 disposition des collaborateurs d'i-Hub.",
+    resume:"Politique définissant les règles d'accès, d'utilisation et de gestion du parking mis à disposition des collaborateurs d'i-Hub.",
   },
   { id:10, ref:'POL-HR-041', emoji:'📊', titre:"Performance Management Policy",
-    objectif:"Encadrer l\u2019\u00e9valuation des performances en lien avec les exigences ISO 27001",
+    objectif:"Encadrer l’évaluation des performances en lien avec les exigences ISO 27001",
     applicable:"Tous les collaborateurs i-Hub, managers, RH",
-    resume:"Politique encadrant le processus d'\u00e9valuation des performances des collaborateurs d'i-Hub, incluant les crit\u00e8res d'\u00e9valuation, la p\u00e9riodicit\u00e9 et les modalit\u00e9s de feedback, en lien avec les exigences ISO 27001.",
+    resume:"Politique encadrant le processus d'évaluation des performances des collaborateurs d'i-Hub, incluant les critères d'évaluation, la périodicité et les modalités de feedback, en lien avec les exigences ISO 27001.",
   },
   { id:11, ref:'POL-HR-042', emoji:'📖', titre:"Policy and Procedure Manual",
-    objectif:"Centraliser toutes les politiques et proc\u00e9dures en vigueur chez i-Hub",
-    applicable:"Toute l\u2019organisation i-Hub",
-    resume:"Manuel de r\u00e9f\u00e9rence centralisant l'ensemble des politiques et proc\u00e9dures applicables au sein d'i-Hub, servant de guide pour la gestion documentaire et la conformit\u00e9 interne.",
+    objectif:"Centraliser toutes les politiques et procédures en vigueur chez i-Hub",
+    applicable:"Toute l’organisation i-Hub",
+    resume:"Manuel de référence centralisant l'ensemble des politiques et procédures applicables au sein d'i-Hub, servant de guide pour la gestion documentaire et la conformité interne.",
   },
   { id:12, ref:'POL-HR-043', emoji:'👤', titre:"Recruitment Procedure",
-    objectif:"D\u00e9finir un processus de recrutement \u00e9quitable, structur\u00e9 et conforme",
+    objectif:"Définir un processus de recrutement équitable, structuré et conforme",
     applicable:"RH, managers recruteurs, candidats",
-    resume:"Proc\u00e9dure d\u00e9finissant les \u00e9tapes du processus de recrutement d'i-Hub, incluant la publication des offres, la s\u00e9lection des candidats, les entretiens et la prise de d\u00e9cision.",
+    resume:"Procédure définissant les étapes du processus de recrutement d'i-Hub, incluant la publication des offres, la sélection des candidats, les entretiens et la prise de décision.",
   },
   { id:13, ref:'POL-HR-044', emoji:'💰', titre:"Remuneration Policy",
-    objectif:"D\u00e9finir les r\u00e8gles de r\u00e9mun\u00e9ration \u00e9quitables et transparentes",
+    objectif:"Définir les règles de rémunération équitables et transparentes",
     applicable:"Direction, RH, tous les collaborateurs",
-    resume:"Politique d\u00e9finissant les principes et r\u00e8gles de r\u00e9mun\u00e9ration applicables au personnel d'i-Hub, incluant les composantes fixes et variables et les modalit\u00e9s de r\u00e9vision salariale.",
+    resume:"Politique définissant les principes et règles de rémunération applicables au personnel d'i-Hub, incluant les composantes fixes et variables et les modalités de révision salariale.",
   },
   { id:14, ref:'POL-HR-045', emoji:'🏠', titre:"Teleworking Policy and Best Practices",
-    objectif:"D\u00e9finir les r\u00e8gles et bonnes pratiques du t\u00e9l\u00e9travail incluant la s\u00e9curit\u00e9",
-    applicable:"Collaborateurs en t\u00e9l\u00e9travail, managers, IT",
-    resume:"Politique et bonnes pratiques encadrant le t\u00e9l\u00e9travail au sein d'i-Hub, d\u00e9finissant les conditions d'\u00e9ligibilit\u00e9, les obligations des collaborateurs et les r\u00e8gles de s\u00e9curit\u00e9 applicables.",
+    objectif:"Définir les règles et bonnes pratiques du télétravail incluant la sécurité",
+    applicable:"Collaborateurs en télétravail, managers, IT",
+    resume:"Politique et bonnes pratiques encadrant le télétravail au sein d'i-Hub, définissant les conditions d'éligibilité, les obligations des collaborateurs et les règles de sécurité applicables.",
   },
 ]
 
 const FICHES_EN: Fiche[] = [
   { id:1, ref:'POL-HR-030', emoji:'🔄', titre:"Change process",
-    objectif:"Govern changes to employees\u2019 professional situation",
+    objectif:"Govern changes to employees’ professional situation",
     applicable:"HR, managers, concerned employees",
     resume:"Procedure for managing HR changes including internal mobility, role changes and contractual amendments.",
   },
@@ -130,7 +130,7 @@ const FICHES_EN: Fiche[] = [
     resume:"Teleworking policy defining eligibility criteria, rights and obligations of remote workers and monitoring arrangements.",
   },
   { id:6, ref:'POL-HR-035', emoji:'🎓', titre:"Training Policy",
-    objectif:"Define i-Hub\u2019s commitments regarding training and development",
+    objectif:"Define i-Hub’s commitments regarding training and development",
     applicable:"All i-Hub employees, management, HR",
     resume:"Training policy defining objectives, budget, mandatory learning paths and competency validation modalities.",
   },
@@ -204,8 +204,8 @@ export default function ModulePolHR() {
       <NavBar />
       <div style={{maxWidth:'680px',margin:'0 auto',padding:'60px 24px',textAlign:'center'}}>
         <div style={{fontSize:'72px',marginBottom:'20px'}}>👥</div>
-        <h1 style={{fontSize:'24px',fontWeight:'800',color:'#1f2937',marginBottom:'12px'}}>{{'fr'===lang ? "Politiques & Proc\u00e9dures \u2014 Droits & Obligations RH" : "Policies & Procedures \u2014 Employee Rights & Duties"}}</h1>
-        <p style={{fontSize:'15px',color:'#4b5563',marginBottom:'32px'}}>{{'fr'===lang ? "14 politiques et proc\u00e9dures RH applicables \u00e0 tous les collaborateurs" : "14 HR policies and procedures applicable to all employees"}}</p>
+        <h1 style={{fontSize:'24px',fontWeight:'800',color:'#1f2937',marginBottom:'12px'}}>{'fr'===lang ? "Politiques & Procédures — Droits & Obligations RH" : "Policies & Procedures — Employee Rights & Duties"}</h1>
+        <p style={{fontSize:'15px',color:'#4b5563',marginBottom:'32px'}}>{'fr'===lang ? "14 politiques et procédures RH applicables à tous les collaborateurs" : "14 HR policies and procedures applicable to all employees"}</p>
         <div style={{background:'white',border:`1px solid ${C}30`,borderRadius:'16px',padding:'20px',marginBottom:'28px'}}>
           <div style={{display:'flex',gap:'16px',justifyContent:'center',flexWrap:'wrap'}}>
             {[{icon:'📜',label:t.fiches},{icon:'⏱️',label:t.time}].map((b,i) => <div key={i} style={{background:'#f9fafb',border:'1px solid #e5e7eb',borderRadius:'12px',padding:'12px 20px',display:'flex',alignItems:'center',gap:'8px',fontSize:'15px',color:'#374151'}}><span>{b.icon}</span><span>{b.label}</span></div>)}
@@ -214,7 +214,7 @@ export default function ModulePolHR() {
         <div style={{background:`${C}10`,border:`1px solid ${C}30`,borderRadius:'12px',padding:'16px',marginBottom:'28px',fontSize:'14px',color:'#374151'}}>
           💡 {'fr'===lang ? 'Chaque fiche présente : référence, objectif, destinataires et résumé.' : 'Each card shows: the official reference, objective, audience and a summary.'}
         </div>
-        <button onClick={() => setPhase('fiches')} style={{background:C,color:'white',border:'none',borderRadius:'12px',padding:'16px 48px',fontSize:'18px',fontWeight:'700',cursor:'pointer'}}>{{'fr'===lang ? 'Découvrir les documents 📚' : 'Discover the documents 📚'}}</button>
+        <button onClick={() => setPhase('fiches')} style={{background:C,color:'white',border:'none',borderRadius:'12px',padding:'16px 48px',fontSize:'18px',fontWeight:'700',cursor:'pointer'}}>{'fr'===lang ? 'Découvrir les documents 📚' : 'Discover the documents 📚'}</button>
       </div>
     </div>
   )
@@ -237,7 +237,7 @@ export default function ModulePolHR() {
             <div style={{background:C,padding:'24px 28px',display:'flex',alignItems:'center',gap:'16px'}}>
               <span style={{fontSize:'44px'}}>📜</span>
               <div style={{flex:1}}>
-                <p style={{margin:'0 0 4px',color:'rgba(255,255,255,0.75)',fontSize:'12px',fontWeight:'600',letterSpacing:'1px'}}>{{'fr'===lang ? 'RÉFÉRENCE' : 'REFERENCE'}} : {fiche.ref}</p>
+                <p style={{margin:'0 0 4px',color:'rgba(255,255,255,0.75)',fontSize:'12px',fontWeight:'600',letterSpacing:'1px'}}>{'fr'===lang ? 'RÉFÉRENCE' : 'REFERENCE'} : {fiche.ref}</p>
                 <h2 style={{color:'white',fontSize:'19px',fontWeight:'800',margin:0,lineHeight:1.3}}>📜 {fiche.titre}</h2>
               </div>
             </div>
@@ -257,7 +257,7 @@ export default function ModulePolHR() {
             </div>
           </div>
           <div style={{display:'flex',gap:'12px'}}>
-            {idx > 0 && <button onClick={()=>setIdx(i=>i-1)} style={{flex:1,padding:'14px',background:'white',border:'1px solid #e5e7eb',borderRadius:'12px',color:'#6b7280',cursor:'pointer',fontWeight:'600',fontSize:'15px'}}>{{'fr'===lang?'← Précédent':'← Previous'}}</button>}
+            {idx > 0 && <button onClick={()=>setIdx(i=>i-1)} style={{flex:1,padding:'14px',background:'white',border:'1px solid #e5e7eb',borderRadius:'12px',color:'#6b7280',cursor:'pointer',fontWeight:'600',fontSize:'15px'}}>{'fr'===lang?'← Précédent':'← Previous'}</button>}
             <button onClick={()=>idx<FICHES.length-1?setIdx(i=>i+1):setPhase('fin')} style={{flex:2,padding:'14px',background:C,border:'none',borderRadius:'12px',color:'white',cursor:'pointer',fontSize:'16px',fontWeight:'700'}}>
               {idx<FICHES.length-1 ? `${lang==='fr'?'Document suivant':'Next document'} (${idx+2}/${FICHES.length}) →` : (lang==='fr'?'Terminer ✔':'Complete ✔')}
             </button>
@@ -272,15 +272,15 @@ export default function ModulePolHR() {
       <NavBar />
       <div style={{maxWidth:'560px',margin:'0 auto',padding:'60px 24px',textAlign:'center'}}>
         <div style={{fontSize:'72px',marginBottom:'16px'}}>🏆</div>
-        <h2 style={{fontSize:'26px',fontWeight:'800',color:'#1f2937',margin:'0 0 8px'}}>{{'fr'===lang?'Documents consultés !':'Documents reviewed!'}}</h2>
-        <p style={{color:'#4b5563',marginBottom:'32px',fontSize:'15px'}}>{{'fr'===lang ? "14 politiques et proc\u00e9dures RH applicables \u00e0 tous les collaborateurs" : "14 HR policies and procedures applicable to all employees"}}</p>
+        <h2 style={{fontSize:'26px',fontWeight:'800',color:'#1f2937',margin:'0 0 8px'}}>{'fr'===lang?'Documents consultés !':'Documents reviewed!'}</h2>
+        <p style={{color:'#4b5563',marginBottom:'32px',fontSize:'15px'}}>{'fr'===lang ? "14 politiques et procédures RH applicables à tous les collaborateurs" : "14 HR policies and procedures applicable to all employees"}</p>
         <div style={{background:'white',borderRadius:'16px',border:`2px solid ${C}30`,padding:'24px',marginBottom:'28px'}}>
           <div style={{fontSize:'40px',fontWeight:'800',color:C,marginBottom:'4px'}}>14</div>
-          <p style={{color:'#6b7280',margin:0,fontSize:'14px'}}>{{'fr'===lang?'documents passés en revue':'documents reviewed'}}</p>
+          <p style={{color:'#6b7280',margin:0,fontSize:'14px'}}>{'fr'===lang?'documents passés en revue':'documents reviewed'}</p>
         </div>
         <div style={{display:'flex',gap:'12px',flexDirection:'column'}}>
-          <button onClick={()=>router.back()} style={{padding:'16px',background:C,border:'none',borderRadius:'12px',color:'white',fontSize:'17px',fontWeight:'700',cursor:'pointer'}}>{{'fr'===lang?'← Retour':'← Back'}}</button>
-          <button onClick={()=>{setPhase('intro');setIdx(0)}} style={{padding:'14px',background:'white',border:'1px solid #e5e7eb',borderRadius:'12px',color:C,fontSize:'15px',fontWeight:'600',cursor:'pointer'}}>{{'fr'===lang?'🔄 Recommencer':'🔄 Restart'}}</button>
+          <button onClick={()=>router.back()} style={{padding:'16px',background:C,border:'none',borderRadius:'12px',color:'white',fontSize:'17px',fontWeight:'700',cursor:'pointer'}}>{'fr'===lang?'← Retour':'← Back'}</button>
+          <button onClick={()=>{setPhase('intro');setIdx(0)}} style={{padding:'14px',background:'white',border:'1px solid #e5e7eb',borderRadius:'12px',color:C,fontSize:'15px',fontWeight:'600',cursor:'pointer'}}>{'fr'===lang?'🔄 Recommencer':'🔄 Restart'}</button>
         </div>
       </div>
     </div>

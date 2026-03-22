@@ -7,8 +7,8 @@ const C = '#059669'
 
 const UI = {
   fr: {
-    title: "Politiques & Proc\u00e9dures \u2014 R\u00e9silience IT",
-    subtitle: "Les proc\u00e9dures ICT et strat\u00e9gie IT d\u2019i-Hub",
+    title: "Politiques & Procédures — Résilience IT",
+    subtitle: "Les procédures ICT et stratégie IT d’i-Hub",
     fiches: '4 fiches', time: '∼8 min',
     start: 'Découvrir les documents 📚', prev: '← Précédent', next: 'Document suivant',
     home: '← Accueil', ref: 'Référence', obj: '🎯 Objectif', app: '👥 Applicable à', res: '📝 Résumé',
@@ -17,8 +17,8 @@ const UI = {
     total: 'Total',
   },
   en: {
-    title: "Policies & Procedures \u2014 IT Resilience",
-    subtitle: "i-Hub\u2019s ICT procedures and IT strategy",
+    title: "Policies & Procedures — IT Resilience",
+    subtitle: "i-Hub’s ICT procedures and IT strategy",
     fiches: '4 cards', time: '∼8 min',
     start: 'Discover the documents 📚', prev: '← Previous', next: 'Next document',
     home: '← Home', ref: 'Reference', obj: '🎯 Objective', app: '👥 Applies to', res: '📝 Summary',
@@ -32,24 +32,24 @@ type Fiche = { id: number; ref: string; emoji: string; titre: string; objectif: 
 
 const FICHES_FR: Fiche[] = [
   { id:1, ref:'POL-ICT-046', emoji:'🚨', titre:"Incident Management Procedure",
-    objectif:"Assurer une gestion efficace et document\u00e9e des incidents ICT",
-    applicable:"IT, \u00e9quipes op\u00e9rationnelles, help desk",
-    resume:"Proc\u00e9dure de gestion des incidents ICT couvrant la d\u00e9tection, la classification, l'escalade, la r\u00e9solution et le reporting post-incident.",
+    objectif:"Assurer une gestion efficace et documentée des incidents ICT",
+    applicable:"IT, équipes opérationnelles, help desk",
+    resume:"Procédure de gestion des incidents ICT couvrant la détection, la classification, l'escalade, la résolution et le reporting post-incident.",
   },
   { id:2, ref:'POL-ICT-047', emoji:'💼', titre:"IT Business Strategy",
-    objectif:"Aligner la strat\u00e9gie IT sur les objectifs business et d\u00e9finir la roadmap",
-    applicable:"Direction IT, direction g\u00e9n\u00e9rale, Compliance",
-    resume:"Strat\u00e9gie IT align\u00e9e sur les objectifs m\u00e9tier, d\u00e9finissant les orientations technologiques, les priorit\u00e9s d'investissement et la roadmap.",
+    objectif:"Aligner la stratégie IT sur les objectifs business et définir la roadmap",
+    applicable:"Direction IT, direction générale, Compliance",
+    resume:"Stratégie IT alignée sur les objectifs métier, définissant les orientations technologiques, les priorités d'investissement et la roadmap.",
   },
   { id:3, ref:'POL-ICT-048', emoji:'🖥️', titre:"IT Infrastructure",
-    objectif:"Documenter et maintenir l\u2019architecture de l\u2019infrastructure IT d\u2019i-Hub",
-    applicable:"\u00c9quipe IT, architecture, direction technique",
-    resume:"Document d\u00e9crivant l'architecture et les composants de l'infrastructure informatique (serveurs, r\u00e9seau, cloud, h\u00e9bergement).",
+    objectif:"Documenter et maintenir l’architecture de l’infrastructure IT d’i-Hub",
+    applicable:"Équipe IT, architecture, direction technique",
+    resume:"Document décrivant l'architecture et les composants de l'infrastructure informatique (serveurs, réseau, cloud, hébergement).",
   },
   { id:4, ref:'POL-PDT-050', emoji:'🔄', titre:"Change management procedure",
-    objectif:"Encadrer les changements sur la plateforme de mani\u00e8re s\u00e9curis\u00e9e et tra\u00e7able",
-    applicable:"\u00c9quipe Produits, IT, op\u00e9rations, Compliance",
-    resume:"Proc\u00e9dure de gestion des changements sur la plateforme et les syst\u00e8mes de production, incluant les tests, validations et d\u00e9ploiements.",
+    objectif:"Encadrer les changements sur la plateforme de manière sécurisée et traçable",
+    applicable:"Équipe Produits, IT, opérations, Compliance",
+    resume:"Procédure de gestion des changements sur la plateforme et les systèmes de production, incluant les tests, validations et déploiements.",
   },
 ]
 
@@ -65,7 +65,7 @@ const FICHES_EN: Fiche[] = [
     resume:"IT strategy aligned with business objectives, defining technology directions, investment priorities and the IT roadmap.",
   },
   { id:3, ref:'POL-ICT-048', emoji:'🖥️', titre:"IT Infrastructure",
-    objectif:"Document and maintain i-Hub\u2019s IT infrastructure architecture",
+    objectif:"Document and maintain i-Hub’s IT infrastructure architecture",
     applicable:"IT team, architecture, technical management",
     resume:"Document describing the architecture and components of the IT infrastructure (servers, network, cloud, hosting).",
   },
@@ -104,8 +104,8 @@ export default function ModulePolIT() {
       <NavBar />
       <div style={{maxWidth:'680px',margin:'0 auto',padding:'60px 24px',textAlign:'center'}}>
         <div style={{fontSize:'72px',marginBottom:'20px'}}>💻</div>
-        <h1 style={{fontSize:'24px',fontWeight:'800',color:'#1f2937',marginBottom:'12px'}}>{{'fr'===lang ? "Politiques & Proc\u00e9dures \u2014 R\u00e9silience IT" : "Policies & Procedures \u2014 IT Resilience"}}</h1>
-        <p style={{fontSize:'15px',color:'#4b5563',marginBottom:'32px'}}>{{'fr'===lang ? "Les proc\u00e9dures ICT et strat\u00e9gie IT d\u2019i-Hub" : "i-Hub\u2019s ICT procedures and IT strategy"}}</p>
+        <h1 style={{fontSize:'24px',fontWeight:'800',color:'#1f2937',marginBottom:'12px'}}>{'fr'===lang ? "Politiques & Procédures — Résilience IT" : "Policies & Procedures — IT Resilience"}</h1>
+        <p style={{fontSize:'15px',color:'#4b5563',marginBottom:'32px'}}>{'fr'===lang ? "Les procédures ICT et stratégie IT d’i-Hub" : "i-Hub’s ICT procedures and IT strategy"}</p>
         <div style={{background:'white',border:`1px solid ${C}30`,borderRadius:'16px',padding:'20px',marginBottom:'28px'}}>
           <div style={{display:'flex',gap:'16px',justifyContent:'center',flexWrap:'wrap'}}>
             {[{icon:'📜',label:t.fiches},{icon:'⏱️',label:t.time}].map((b,i) => <div key={i} style={{background:'#f9fafb',border:'1px solid #e5e7eb',borderRadius:'12px',padding:'12px 20px',display:'flex',alignItems:'center',gap:'8px',fontSize:'15px',color:'#374151'}}><span>{b.icon}</span><span>{b.label}</span></div>)}
@@ -114,7 +114,7 @@ export default function ModulePolIT() {
         <div style={{background:`${C}10`,border:`1px solid ${C}30`,borderRadius:'12px',padding:'16px',marginBottom:'28px',fontSize:'14px',color:'#374151'}}>
           💡 {'fr'===lang ? 'Chaque fiche présente : référence, objectif, destinataires et résumé.' : 'Each card shows: the official reference, objective, audience and a summary.'}
         </div>
-        <button onClick={() => setPhase('fiches')} style={{background:C,color:'white',border:'none',borderRadius:'12px',padding:'16px 48px',fontSize:'18px',fontWeight:'700',cursor:'pointer'}}>{{'fr'===lang ? 'Découvrir les documents 📚' : 'Discover the documents 📚'}}</button>
+        <button onClick={() => setPhase('fiches')} style={{background:C,color:'white',border:'none',borderRadius:'12px',padding:'16px 48px',fontSize:'18px',fontWeight:'700',cursor:'pointer'}}>{'fr'===lang ? 'Découvrir les documents 📚' : 'Discover the documents 📚'}</button>
       </div>
     </div>
   )
@@ -137,7 +137,7 @@ export default function ModulePolIT() {
             <div style={{background:C,padding:'24px 28px',display:'flex',alignItems:'center',gap:'16px'}}>
               <span style={{fontSize:'44px'}}>📜</span>
               <div style={{flex:1}}>
-                <p style={{margin:'0 0 4px',color:'rgba(255,255,255,0.75)',fontSize:'12px',fontWeight:'600',letterSpacing:'1px'}}>{{'fr'===lang ? 'RÉFÉRENCE' : 'REFERENCE'}} : {fiche.ref}</p>
+                <p style={{margin:'0 0 4px',color:'rgba(255,255,255,0.75)',fontSize:'12px',fontWeight:'600',letterSpacing:'1px'}}>{'fr'===lang ? 'RÉFÉRENCE' : 'REFERENCE'} : {fiche.ref}</p>
                 <h2 style={{color:'white',fontSize:'19px',fontWeight:'800',margin:0,lineHeight:1.3}}>📜 {fiche.titre}</h2>
               </div>
             </div>
@@ -157,7 +157,7 @@ export default function ModulePolIT() {
             </div>
           </div>
           <div style={{display:'flex',gap:'12px'}}>
-            {idx > 0 && <button onClick={()=>setIdx(i=>i-1)} style={{flex:1,padding:'14px',background:'white',border:'1px solid #e5e7eb',borderRadius:'12px',color:'#6b7280',cursor:'pointer',fontWeight:'600',fontSize:'15px'}}>{{'fr'===lang?'← Précédent':'← Previous'}}</button>}
+            {idx > 0 && <button onClick={()=>setIdx(i=>i-1)} style={{flex:1,padding:'14px',background:'white',border:'1px solid #e5e7eb',borderRadius:'12px',color:'#6b7280',cursor:'pointer',fontWeight:'600',fontSize:'15px'}}>{'fr'===lang?'← Précédent':'← Previous'}</button>}
             <button onClick={()=>idx<FICHES.length-1?setIdx(i=>i+1):setPhase('fin')} style={{flex:2,padding:'14px',background:C,border:'none',borderRadius:'12px',color:'white',cursor:'pointer',fontSize:'16px',fontWeight:'700'}}>
               {idx<FICHES.length-1 ? `${lang==='fr'?'Document suivant':'Next document'} (${idx+2}/${FICHES.length}) →` : (lang==='fr'?'Terminer ✔':'Complete ✔')}
             </button>
@@ -172,15 +172,15 @@ export default function ModulePolIT() {
       <NavBar />
       <div style={{maxWidth:'560px',margin:'0 auto',padding:'60px 24px',textAlign:'center'}}>
         <div style={{fontSize:'72px',marginBottom:'16px'}}>🏆</div>
-        <h2 style={{fontSize:'26px',fontWeight:'800',color:'#1f2937',margin:'0 0 8px'}}>{{'fr'===lang?'Documents consultés !':'Documents reviewed!'}}</h2>
-        <p style={{color:'#4b5563',marginBottom:'32px',fontSize:'15px'}}>{{'fr'===lang ? "Les proc\u00e9dures ICT et strat\u00e9gie IT d\u2019i-Hub" : "i-Hub\u2019s ICT procedures and IT strategy"}}</p>
+        <h2 style={{fontSize:'26px',fontWeight:'800',color:'#1f2937',margin:'0 0 8px'}}>{'fr'===lang?'Documents consultés !':'Documents reviewed!'}</h2>
+        <p style={{color:'#4b5563',marginBottom:'32px',fontSize:'15px'}}>{'fr'===lang ? "Les procédures ICT et stratégie IT d’i-Hub" : "i-Hub’s ICT procedures and IT strategy"}</p>
         <div style={{background:'white',borderRadius:'16px',border:`2px solid ${C}30`,padding:'24px',marginBottom:'28px'}}>
           <div style={{fontSize:'40px',fontWeight:'800',color:C,marginBottom:'4px'}}>4</div>
-          <p style={{color:'#6b7280',margin:0,fontSize:'14px'}}>{{'fr'===lang?'documents passés en revue':'documents reviewed'}}</p>
+          <p style={{color:'#6b7280',margin:0,fontSize:'14px'}}>{'fr'===lang?'documents passés en revue':'documents reviewed'}</p>
         </div>
         <div style={{display:'flex',gap:'12px',flexDirection:'column'}}>
-          <button onClick={()=>router.back()} style={{padding:'16px',background:C,border:'none',borderRadius:'12px',color:'white',fontSize:'17px',fontWeight:'700',cursor:'pointer'}}>{{'fr'===lang?'← Retour':'← Back'}}</button>
-          <button onClick={()=>{setPhase('intro');setIdx(0)}} style={{padding:'14px',background:'white',border:'1px solid #e5e7eb',borderRadius:'12px',color:C,fontSize:'15px',fontWeight:'600',cursor:'pointer'}}>{{'fr'===lang?'🔄 Recommencer':'🔄 Restart'}}</button>
+          <button onClick={()=>router.back()} style={{padding:'16px',background:C,border:'none',borderRadius:'12px',color:'white',fontSize:'17px',fontWeight:'700',cursor:'pointer'}}>{'fr'===lang?'← Retour':'← Back'}</button>
+          <button onClick={()=>{setPhase('intro');setIdx(0)}} style={{padding:'14px',background:'white',border:'1px solid #e5e7eb',borderRadius:'12px',color:C,fontSize:'15px',fontWeight:'600',cursor:'pointer'}}>{'fr'===lang?'🔄 Recommencer':'🔄 Restart'}</button>
         </div>
       </div>
     </div>
