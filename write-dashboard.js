@@ -30,7 +30,7 @@ const THEMES_FR = [
     modules: [
       { title: 'Les grands principes',          icon: '📖', slug: 'aml-grands-principes',   ready: true },
       { title: 'AML/KYC Rules',                 icon: '🔍', slug: 'aml-kyc',                ready: true  },
-      { title: 'Cohérence des documents',       icon: '🔎', slug: 'coherence-documents',    ready: false },
+      { title: 'Cohérence des documents',       icon: '🔎', slug: 'aml-coherence-documents',    ready: true  },
       { title: 'DDR',                           icon: '📋', slug: 'ddr',                    ready: false },
       { title: 'Fraudes aux documents',         icon: '⚠️', slug: 'fraudes-documents',      ready: false },
       { title: 'Name Screening',                icon: '🔎', slug: 'name-screening',         ready: false },
@@ -135,7 +135,7 @@ const THEMES_EN = [
     modules: [
       { title: 'Key Principles',          icon: '📖', slug: 'aml-grands-principes',   ready: true },
       { title: 'AML/KYC Rules',           icon: '🔍', slug: 'aml-kyc',                ready: true  },
-      { title: 'Document Consistency',    icon: '🔎', slug: 'coherence-documents',    ready: false },
+      { title: 'Document Consistency',    icon: '🔎', slug: 'aml-coherence-documents',    ready: true  },
       { title: 'DDR',                     icon: '📋', slug: 'ddr',                    ready: false },
       { title: 'Document Fraud',          icon: '⚠️', slug: 'fraudes-documents',      ready: false },
       { title: 'Name Screening',          icon: '🔎', slug: 'name-screening',         ready: false },
