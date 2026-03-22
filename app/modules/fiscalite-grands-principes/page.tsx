@@ -3,9 +3,6 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { getLang, setLang as saveLang } from '@/lib/lang'
 
-function shuffle<T>(arr: T[]): T[] { return [...arr].sort(() => Math.random() - 0.5) }
-function pickRandom<T>(arr: T[], n: number): T[] { return shuffle(arr).slice(0, n) }
-
 const UI = {
   fr: {
     title: 'Les grands principes',
@@ -18,25 +15,13 @@ const UI = {
       'Ce qu’i-Hub vérifie et ce qu’il ne vérifie pas (SLA)',
       'Pourquoi ces règles existent et ce qu’elles changent concrètement',
     ],
-    fiches: '18 fiches', quiz: '3 quiz fun', time: '~18 min',
+    fiches: '18 fiches', time: '~15 min',
     start: "C’est parti ! 🚀", prev: '← Précédent', next: 'Fiche suivante',
-    quizBtn: '🎮 Passer aux quiz !', toRetain: 'À RETENIR', goFurther: '🔍 Aller plus loin',
-    home: '← Accueil', pts: '🪙',
-    quiz1label: 'QUIZ 1/3 · ASSOCIER LES PAIRES',
-    quiz1title: '🧩 Reliez chaque concept à sa définition',
-    quiz1sub: "Cliquez d’abord sur un concept, puis sur sa définition",
-    sigles: 'Concepts', definitions: 'Définitions', quiz1done: 'Parfait ! Tous les concepts associés !',
-    quiz2label: 'QUIZ 2/3 · VRAI OU FAUX',
-    quiz2title: '✅ Vrai ou Faux — Rôle d’i-Hub',
-    true: '✅ VRAI', false: '❌ FAUX', correct: 'Bravo !', wrong: 'Pas tout à fait…',
-    quiz3label: 'QUIZ 3/3 · QUI FAIT QUOI ?',
-    quiz3title: '🤔 PSF ou i-Hub ?',
-    quiz3sub: 'Qui est responsable de cette action ?',
+    finBtn: '✓ Terminer le module', toRetain: 'À RETENIR', goFurther: '🔍 Aller plus loin',
+    home: '← Accueil',
     resultTitle: 'Module terminé — Le cadre est clair !',
+    resultSub: 'Vous avez parcouru les 18 fiches. Ce module est le socle de tous les autres modules Fiscalité Internationale.',
     backHome: '← Retour aux modules', restart: '🔄 Recommencer ce module',
-    pts_gained: 'points gagnés', medal_gold: 'Expert du cadre !',
-    medal_silver: 'Bon résultat, continuez !', medal_bronze: 'Relisez les fiches et réessayez !',
-    score: 'Score total', next2: 'Quiz suivant →', last: 'Dernier quiz →',
   },
   en: {
     title: 'Key Principles',
@@ -49,25 +34,13 @@ const UI = {
       'What i-Hub checks and what it does not (SLA)',
       'Why these rules exist and what they concretely change',
     ],
-    fiches: '18 cards', quiz: '3 fun quizzes', time: '~18 min',
+    fiches: '18 cards', time: '~15 min',
     start: "Let’s go! 🚀", prev: '← Previous', next: 'Next card',
-    quizBtn: '🎮 Go to quizzes!', toRetain: 'KEY TAKEAWAY', goFurther: '🔍 Go further',
-    home: '← Home', pts: '🪙',
-    quiz1label: 'QUIZ 1/3 · MATCH THE PAIRS',
-    quiz1title: '🧩 Match each concept to its definition',
-    quiz1sub: 'Click a concept first, then its definition',
-    sigles: 'Concepts', definitions: 'Definitions', quiz1done: 'Perfect! All concepts matched!',
-    quiz2label: 'QUIZ 2/3 · TRUE OR FALSE',
-    quiz2title: '✅ True or False — i-Hub’s role',
-    true: '✅ TRUE', false: '❌ FALSE', correct: 'Well done!', wrong: 'Not quite…',
-    quiz3label: 'QUIZ 3/3 · WHO DOES WHAT?',
-    quiz3title: '🤔 PSF or i-Hub?',
-    quiz3sub: 'Who is responsible for this action?',
+    finBtn: '✓ Complete module', toRetain: 'KEY TAKEAWAY', goFurther: '🔍 Go further',
+    home: '← Home',
     resultTitle: 'Module complete — The framework is clear!',
+    resultSub: 'You have completed all 18 cards. This module is the foundation for all other International Taxation modules.',
     backHome: '← Back to modules', restart: '🔄 Restart this module',
-    pts_gained: 'points earned', medal_gold: 'Framework Expert!',
-    medal_silver: 'Good result, keep going!', medal_bronze: 'Review the cards and try again!',
-    score: 'Total score', next2: 'Next quiz →', last: 'Last quiz →',
   },
 }
 
@@ -428,50 +401,16 @@ export default function ModuleFiscaliteGrandsPrincipes() {
   const router = useRouter()
   const [lang, setLang] = useState<'fr'|'en'>('fr')
   useEffect(() => { setLang(getLang()) }, [])
-  const [phase, setPhase] = useState<'intro'|'fiches'|'quiz1'|'quiz2'|'quiz3'|'resultat'>('intro')
+  const [phase, setPhase] = useState<'intro'|'fiches'|'resultat'>('intro')
   const [ficheIndex, setFicheIndex] = useState(0)
-  const [score, setScore] = useState(0)
   const [plusLoinOpen, setPlusLoinOpen] = useState(false)
   const t = UI[lang]
   const FICHES = lang === 'fr' ? FICHES_FR : FICHES_EN
   const C = '#e07b39'
 
-  const [activeMatching, setActiveMatching] = useState(() => pickRandom(MATCHING_FR, 6))
-  const [matchSelected, setMatchSelected] = useState<string|null>(null)
-  const [matchPairs, setMatchPairs] = useState<Record<string,string>>({})
-  const [matchError, setMatchError] = useState<string|null>(null)
-  const [activeVF, setActiveVF] = useState(() => pickRandom(VF_FR, 6))
-  const [vfIndex, setVfIndex] = useState(0)
-  const [vfRepondu, setVfRepondu] = useState<boolean|null>(null)
-  const [vfScore, setVfScore] = useState(0)
-  const [vfAnimation, setVfAnimation] = useState<'correct'|'wrong'|null>(null)
-  const [activeCas, setActiveCas] = useState(() => pickRandom(CAS_FR, 3))
-  const [casIndex, setCasIndex] = useState(0)
-  const [casRepondu, setCasRepondu] = useState<string|null>(null)
-  const [casScore, setCasScore] = useState(0)
 
-  function initQuizzes(l: 'fr'|'en') {
-    const bm = l==='fr'?MATCHING_FR:MATCHING_EN; const bv = l==='fr'?VF_FR:VF_EN; const bc = l==='fr'?CAS_FR:CAS_EN
-    setActiveMatching(pickRandom(bm,6)); setMatchPairs({}); setMatchSelected(null); setMatchError(null)
-    setActiveVF(pickRandom(bv,6)); setVfIndex(0); setVfScore(0); setVfRepondu(null); setVfAnimation(null)
-    setActiveCas(pickRandom(bc,3)); setCasIndex(0); setCasScore(0); setCasRepondu(null)
-  }
-  function switchLang(l: 'fr'|'en') { saveLang(l); setLang(l); setPhase('intro'); setFicheIndex(0); setScore(0); setPlusLoinOpen(false); initQuizzes(l) }
-  function handleMatchSigle(sigle: string) { if (matchPairs[sigle]) return; setMatchSelected(sigle); setMatchError(null) }
-  function handleMatchDef(def: string) {
-    if (!matchSelected) return
-    const correct = activeMatching.find(m => m.sigle===matchSelected)?.definition
-    if (correct===def) { const np={...matchPairs,[matchSelected]:def}; setMatchPairs(np); setMatchSelected(null); if (Object.keys(np).length===activeMatching.length) setScore(s=>s+15) }
-    else { setMatchError(lang==='fr'?`❌ "${def}" ne correspond pas à ${matchSelected}.`:`❌ "${def}" does not match ${matchSelected}.`); setMatchSelected(null) }
-  }
-  function repondreVF(rep: boolean) {
-    if (vfRepondu!==null) return
-    const correct=activeVF[vfIndex].reponse===rep; setVfRepondu(rep); setVfAnimation(correct?'correct':'wrong')
-    if (correct) setVfScore(s=>s+1)
-    setTimeout(() => { setVfAnimation(null); setVfRepondu(null); if (vfIndex+1<activeVF.length) { setVfIndex(i=>i+1) } else { const fs=correct?vfScore+1:vfScore; setScore(s=>s+fs*5); setPhase('quiz3') } }, 2200)
-  }
-  function repCas(opt: string) { if (casRepondu!==null) return; const correct=opt===activeCas[casIndex].action; setCasRepondu(opt); if (correct) setCasScore(s=>s+1) }
-  function nextCas() { if (casIndex+1<activeCas.length) { setCasIndex(i=>i+1); setCasRepondu(null) } else { setScore(s=>s+casScore*7); setPhase('resultat') } }
+
+  function switchLang(l: 'fr'|'en') { saveLang(l); setLang(l); setPhase('intro'); setFicheIndex(0); setPlusLoinOpen(false) }
 
   const base: React.CSSProperties = { minHeight:'100vh', background:'#f3f4f6', fontFamily:"'Segoe UI',system-ui,sans-serif", color:'#1f2937' }
   const NavBar = () => (
@@ -565,7 +504,7 @@ export default function ModuleFiscaliteGrandsPrincipes() {
           </div>
           <div style={{display:'flex',gap:'12px'}}>
             {ficheIndex>0 && <button onClick={()=>{setFicheIndex(i=>i-1);setPlusLoinOpen(false)}} style={{flex:1,padding:'14px',background:'white',border:'1px solid #e5e7eb',borderRadius:'12px',color:'#6b7280',cursor:'pointer',fontSize:'15px',fontWeight:'600'}}>{t.prev}</button>}
-            <button onClick={()=>ficheIndex<FICHES.length-1?(setFicheIndex(i=>i+1),setPlusLoinOpen(false)):setPhase('quiz1')} style={{flex:2,padding:'14px',background:C,border:'none',borderRadius:'12px',color:'white',cursor:'pointer',fontSize:'16px',fontWeight:'700',boxShadow:`0 4px 16px ${C}40`}}>
+            <button onClick={()=>ficheIndex<FICHES.length-1?(setFicheIndex(i=>i+1),setPlusLoinOpen(false)):setPhase('resultat')} style={{flex:2,padding:'14px',background:C,border:'none',borderRadius:'12px',color:'white',cursor:'pointer',fontSize:'16px',fontWeight:'700',boxShadow:`0 4px 16px ${C}40`}}>
               {ficheIndex<FICHES.length-1?`${t.next} (${ficheIndex+2}/${FICHES.length}) →`:t.quizBtn}
             </button>
           </div>
@@ -574,146 +513,29 @@ export default function ModuleFiscaliteGrandsPrincipes() {
     )
   }
 
-  if (phase==='quiz1') {
-    const done=Object.keys(matchPairs).length===activeMatching.length
-    return (
-      <div style={base}><NavBar/>
-        <div style={{maxWidth:'680px',margin:'0 auto',padding:'40px 24px'}}>
-          <div style={{textAlign:'center',marginBottom:'28px'}}>
-            <span style={{background:`${C}15`,color:C,borderRadius:'20px',padding:'6px 16px',fontSize:'13px',fontWeight:'700',display:'inline-block',marginBottom:'12px'}}>{t.quiz1label}</span>
-            <h2 style={{fontSize:'22px',fontWeight:'800',color:'#1f2937',margin:'0 0 8px'}}>{t.quiz1title}</h2>
-            <p style={{color:'#6b7280',fontSize:'14px',margin:0}}>{t.quiz1sub}</p>
-          </div>
-          {matchError && <div style={{background:'#fee2e2',border:'1px solid #fca5a5',borderRadius:'12px',padding:'12px 16px',marginBottom:'16px',color:'#dc2626',fontSize:'14px',textAlign:'center'}}>{matchError}</div>}
-          <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'16px',marginBottom:'20px'}}>
-            <div>
-              <p style={{fontSize:'12px',fontWeight:'700',color:'#6b7280',textTransform:'uppercase',letterSpacing:'1px',marginBottom:'10px'}}>{t.sigles}</p>
-              <div style={{display:'flex',flexDirection:'column',gap:'8px'}}>
-                {activeMatching.map(m=>{const ip=!!matchPairs[m.sigle],is=matchSelected===m.sigle;return(
-                  <button key={m.sigle} onClick={()=>handleMatchSigle(m.sigle)} disabled={ip} style={{padding:'12px',borderRadius:'10px',fontSize:'13px',fontWeight:'700',cursor:ip?'default':'pointer',transition:'all 0.2s',background:ip?'#d1fae5':is?C:'white',color:ip?'#059669':is?'white':'#1f2937',border:ip?'1.5px solid #6ee7b7':is?`1.5px solid ${C}`:'1.5px solid #e5e7eb'}}>
-                    {ip?'✓ ':''}{m.sigle}
-                  </button>
-                )})}
-              </div>
-            </div>
-            <div>
-              <p style={{fontSize:'12px',fontWeight:'700',color:'#6b7280',textTransform:'uppercase',letterSpacing:'1px',marginBottom:'10px'}}>{t.definitions}</p>
-              <div style={{display:'flex',flexDirection:'column',gap:'8px'}}>
-                {shuffle(activeMatching.map(m=>({definition:m.definition}))).map(m=>{const ip=Object.values(matchPairs).includes(m.definition);return(
-                  <button key={m.definition} onClick={()=>handleMatchDef(m.definition)} disabled={ip||!matchSelected} style={{padding:'12px',borderRadius:'10px',fontSize:'13px',fontWeight:'500',cursor:(ip||!matchSelected)?'default':'pointer',transition:'all 0.2s',textAlign:'left',background:ip?'#d1fae5':matchSelected?'white':'#f9fafb',color:ip?'#059669':'#374151',border:ip?'1.5px solid #6ee7b7':'1.5px solid #e5e7eb',opacity:(!matchSelected&&!ip)?0.6:1}}>
-                    {ip?'✓ ':''}{m.definition}
-                  </button>
-                )})}
-              </div>
-            </div>
-          </div>
-          {done&&<><div style={{background:'#d1fae5',border:'1px solid #6ee7b7',borderRadius:'16px',padding:'20px',textAlign:'center',marginBottom:'16px'}}>
-            <p style={{fontSize:'28px',margin:'0 0 8px'}}>🎉</p>
-            <p style={{fontWeight:'800',color:'#059669',fontSize:'18px',margin:'0 0 4px'}}>{t.quiz1done}</p>
-            <p style={{color:'#6ee7b7',margin:0,fontSize:'14px'}}>+15 {t.pts_gained}</p>
-          </div>
-          <button onClick={()=>setPhase('quiz2')} style={{width:'100%',padding:'16px',background:C,border:'none',borderRadius:'12px',color:'white',fontSize:'17px',fontWeight:'700',cursor:'pointer'}}>{t.next2}</button></>}
-        </div>
-      </div>
-    )
-  }
-
-  if (phase==='quiz2') {
-    const q=activeVF[vfIndex]
-    return (
-      <div style={{...base,background:vfAnimation==='correct'?'#d1fae5':vfAnimation==='wrong'?'#fee2e2':'#f3f4f6',transition:'background 0.3s'}}><NavBar/>
-        <div style={{background:vfAnimation==='correct'?'#6ee7b7':vfAnimation==='wrong'?'#fca5a5':'#e5e7eb',height:'6px'}}>
-          <div style={{background:C,height:'6px',width:`${(vfIndex/activeVF.length)*100}%`,transition:'width 0.4s ease'}}/>
-        </div>
-        <div style={{maxWidth:'560px',margin:'0 auto',padding:'40px 24px',textAlign:'center'}}>
-          <span style={{background:`${C}15`,color:C,borderRadius:'20px',padding:'6px 16px',fontSize:'13px',fontWeight:'700',display:'inline-block',marginBottom:'24px'}}>{t.quiz2label} — {vfIndex+1}/{activeVF.length}</span>
-          <h2 style={{fontSize:'20px',fontWeight:'800',color:'#1f2937',marginBottom:'20px'}}>{t.quiz2title}</h2>
-          <div style={{background:'white',borderRadius:'20px',padding:'32px 24px',boxShadow:'0 8px 32px rgba(0,0,0,0.08)',marginBottom:'28px',minHeight:'80px',display:'flex',alignItems:'center',justifyContent:'center'}}>
-            <p style={{fontSize:'18px',fontWeight:'600',color:'#1f2937',lineHeight:1.5,margin:0}}>{q.texte}</p>
-          </div>
-          {vfRepondu===null?(
-            <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'16px'}}>
-              <button onClick={()=>repondreVF(true)} style={{padding:'20px',background:'#d1fae5',border:'2px solid #6ee7b7',borderRadius:'16px',fontSize:'20px',fontWeight:'800',color:'#059669',cursor:'pointer'}}>{t.true}</button>
-              <button onClick={()=>repondreVF(false)} style={{padding:'20px',background:'#fee2e2',border:'2px solid #fca5a5',borderRadius:'16px',fontSize:'20px',fontWeight:'800',color:'#dc2626',cursor:'pointer'}}>{t.false}</button>
-            </div>
-          ):(
-            <div style={{background:vfAnimation==='correct'?'#d1fae5':'#fee2e2',border:`2px solid ${vfAnimation==='correct'?'#6ee7b7':'#fca5a5'}`,borderRadius:'16px',padding:'20px'}}>
-              <p style={{fontSize:'28px',margin:'0 0 8px'}}>{vfAnimation==='correct'?'🎉':'😅'}</p>
-              <p style={{fontWeight:'800',color:vfAnimation==='correct'?'#059669':'#dc2626',fontSize:'18px',margin:'0 0 8px'}}>{vfAnimation==='correct'?t.correct:t.wrong}</p>
-              <p style={{color:'#374151',fontSize:'15px',margin:0,fontStyle:'italic'}}>{q.explication}</p>
-            </div>
-          )}
-          <div style={{display:'flex',justifyContent:'center',gap:'8px',marginTop:'24px'}}>
-            {activeVF.map((_,i)=><div key={i} style={{width:'10px',height:'10px',borderRadius:'50%',background:i<=vfIndex?C:'#e5e7eb'}}/>)}
-          </div>
-        </div>
-      </div>
-    )
-  }
-
-  if (phase==='quiz3') {
-    const cas=activeCas[casIndex]
-    return (
-      <div style={base}><NavBar/>
-        <div style={{background:'#e5e7eb',height:'6px'}}><div style={{background:C,height:'6px',width:`${(casIndex/activeCas.length)*100}%`,transition:'width 0.4s ease'}}/></div>
-        <div style={{maxWidth:'620px',margin:'0 auto',padding:'40px 24px'}}>
-          <div style={{textAlign:'center',marginBottom:'24px'}}>
-            <span style={{background:`${C}15`,color:C,borderRadius:'20px',padding:'6px 16px',fontSize:'13px',fontWeight:'700',display:'inline-block',marginBottom:'12px'}}>{t.quiz3label} — {casIndex+1}/{activeCas.length}</span>
-            <h2 style={{fontSize:'20px',fontWeight:'800',color:'#1f2937',margin:'0 0 6px'}}>{t.quiz3title}</h2>
-            <p style={{color:'#6b7280',fontSize:'14px',margin:0}}>{t.quiz3sub}</p>
-          </div>
-          <div style={{background:'white',borderRadius:'16px',padding:'24px',border:`2px solid ${C}30`,marginBottom:'20px',boxShadow:`0 4px 20px ${C}10`}}>
-            <p style={{fontSize:'16px',fontWeight:'600',color:'#1f2937',lineHeight:1.6,margin:0}}>📋 {cas.situation}</p>
-          </div>
-          {casRepondu===null?(
-            <div style={{display:'flex',flexDirection:'column',gap:'10px'}}>
-              {cas.options.map((opt,i)=>(
-                <button key={i} onClick={()=>repCas(opt)} style={{padding:'16px 20px',background:'white',border:'1.5px solid #e5e7eb',borderRadius:'12px',cursor:'pointer',fontSize:'14px',fontWeight:'600',color:'#374151',textAlign:'left',transition:'all 0.15s'}}
-                  onMouseOver={e=>{(e.currentTarget as HTMLElement).style.borderColor=C;(e.currentTarget as HTMLElement).style.background=`${C}08`}}
-                  onMouseOut={e=>{(e.currentTarget as HTMLElement).style.borderColor='#e5e7eb';(e.currentTarget as HTMLElement).style.background='white'}}>
-                  {String.fromCharCode(65+i)}. {opt}
-                </button>
-              ))}
-            </div>
-          ):(
-            <div>
-              <div style={{display:'flex',flexDirection:'column',gap:'10px',marginBottom:'16px'}}>
-                {cas.options.map((opt,i)=>{const isC=opt===cas.action,isCh=opt===casRepondu;return(
-                  <div key={i} style={{padding:'16px 20px',background:isC?'#d1fae5':isCh?'#fee2e2':'white',border:`1.5px solid ${isC?'#6ee7b7':isCh?'#fca5a5':'#e5e7eb'}`,borderRadius:'12px',fontSize:'14px',fontWeight:'600',color:isC?'#059669':isCh?'#dc2626':'#9ca3af'}}>
-                    {isC?'✅ ':isCh?'❌ ':''}{opt}
-                  </div>
-                )})}
-              </div>
-              <div style={{background:'#f0fdf4',border:'1px solid #6ee7b7',borderRadius:'12px',padding:'16px',marginBottom:'16px'}}>
-                <p style={{margin:0,fontSize:'14px',color:'#374151',fontStyle:'italic'}}>💡 {cas.explication}</p>
-              </div>
-              <button onClick={nextCas} style={{width:'100%',padding:'16px',background:C,border:'none',borderRadius:'12px',color:'white',fontSize:'16px',fontWeight:'700',cursor:'pointer'}}>
-                {casIndex<activeCas.length-1?t.next2:t.last}
-              </button>
-            </div>
-          )}
-        </div>
-      </div>
-    )
-  }
-
-  const total=Math.min(100,score),medal=total>=80?'🥇':total>=50?'🥈':'🥉',msg=total>=80?t.medal_gold:total>=50?t.medal_silver:t.medal_bronze
   return (
     <div style={base}><NavBar/>
       <div style={{maxWidth:'560px',margin:'0 auto',padding:'60px 24px',textAlign:'center'}}>
-        <div style={{fontSize:'80px',marginBottom:'16px'}}>{medal}</div>
-        <h2 style={{fontSize:'32px',fontWeight:'800',color:'#1f2937',margin:'0 0 8px'}}>{msg}</h2>
-        <p style={{color:'#4b5563',fontSize:'16px',marginBottom:'32px'}}>{t.resultTitle}</p>
-        <div style={{background:'white',borderRadius:'20px',padding:'32px',boxShadow:`0 8px 32px ${C}10`,marginBottom:'24px'}}>
-          <div style={{fontSize:'56px',fontWeight:'800',color:C,marginBottom:'4px'}}>{total}<span style={{fontSize:'24px'}}>/100</span></div>
-          <p style={{color:'#6b7280',margin:'0 0 20px',fontSize:'14px'}}>{t.score}</p>
-          <div style={{background:'#f3f4f6',borderRadius:'8px',height:'12px',overflow:'hidden'}}>
-            <div style={{background:`linear-gradient(90deg,${C},#f87171)`,height:'12px',width:`${total}%`,borderRadius:'8px'}}/>
+        <div style={{fontSize:'80px',marginBottom:'20px'}}>🎓</div>
+        <h2 style={{fontSize:'28px',fontWeight:'800',color:'#1f2937',margin:'0 0 12px'}}>{t.resultTitle}</h2>
+        <p style={{color:'#4b5563',fontSize:'16px',marginBottom:'32px',lineHeight:1.6}}>{t.resultSub}</p>
+        <div style={{background:'white',borderRadius:'16px',padding:'28px',border:`2px solid ${C}30`,marginBottom:'24px',boxShadow:`0 4px 20px ${C}10`}}>
+          <div style={{display:'flex',flexDirection:'column',gap:'12px'}}>
+            {[lang==='fr'?'i-Hub vérifie — le PSF déclare':'i-Hub verifies — the PSF reports',
+              lang==='fr'?'Le SLA définit le périmètre':'The SLA defines the scope',
+              lang==='fr'?'Tout red flag se signale':'Always flag red flags',
+              lang==='fr'?'La confidentialité est absolue':'Confidentiality is absolute',
+            ].map((rule,i)=>(
+              <div key={i} style={{display:'flex',alignItems:'center',gap:'12px',padding:'10px 16px',background:`${C}08`,borderRadius:'10px',border:`1px solid ${C}20`}}>
+                <span style={{color:C,fontWeight:'800',fontSize:'18px'}}>{i+1}</span>
+                <span style={{fontSize:'15px',fontWeight:'600',color:'#374151'}}>{rule}</span>
+              </div>
+            ))}
           </div>
         </div>
         <div style={{display:'flex',gap:'12px',flexDirection:'column'}}>
           <button onClick={()=>router.push('/')} style={{padding:'16px',background:C,border:'none',borderRadius:'12px',color:'white',fontSize:'17px',fontWeight:'700',cursor:'pointer'}}>{t.backHome}</button>
-          <button onClick={()=>{initQuizzes(lang);setScore(0);setPhase('intro')}} style={{padding:'14px',background:'white',border:'1px solid #e5e7eb',borderRadius:'12px',color:C,fontSize:'15px',fontWeight:'600',cursor:'pointer'}}>{t.restart}</button>
+          <button onClick={()=>{setFicheIndex(0);setPlusLoinOpen(false);setPhase('intro')}} style={{padding:'14px',background:'white',border:'1px solid #e5e7eb',borderRadius:'12px',color:C,fontSize:'15px',fontWeight:'600',cursor:'pointer'}}>{t.restart}</button>
         </div>
       </div>
     </div>
