@@ -903,7 +903,7 @@ export default function ModuleCRS() {
 
   const t = UI[lang]
   const FICHES = lang === 'fr' ? FICHES_FR : FICHES_EN
-  const C = '#0891b2'
+  const C = '#e07b39'
 
   const [activeMatching, setActiveMatching] = useState(() => pickRandom(lang==='fr'?MATCHING_FR:MATCHING_EN, 6))
   const [matchSelected, setMatchSelected] = useState<string|null>(null)

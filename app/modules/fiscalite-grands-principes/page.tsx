@@ -434,7 +434,7 @@ export default function ModuleFiscaliteGrandsPrincipes() {
   const [plusLoinOpen, setPlusLoinOpen] = useState(false)
   const t = UI[lang]
   const FICHES = lang === 'fr' ? FICHES_FR : FICHES_EN
-  const C = '#dc2626'
+  const C = '#e07b39'
 
   const [activeMatching, setActiveMatching] = useState(() => pickRandom(MATCHING_FR, 6))
   const [matchSelected, setMatchSelected] = useState<string|null>(null)

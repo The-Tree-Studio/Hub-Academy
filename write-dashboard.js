@@ -60,7 +60,7 @@ const THEMES_FR = [
     ],
   },
   {
-    titre: 'Fiscalité internationale', emoji: '💼', couleur: '#dc2626',
+    titre: 'Fiscalité internationale', emoji: '💼', couleur: '#e07b39',
     modules: [
       { title: 'Les grands principes',                          icon: '📖', slug: 'fiscalite-grands-principes',  ready: true  },
       { title: 'CRS — Common Reporting Standard',              icon: '🌍', slug: 'crs',                         ready: true  },
@@ -117,7 +117,7 @@ const THEMES_FR = [
     ],
   },
   {
-    titre: 'Services clients', emoji: '🎯', couleur: '#c2410c',
+    titre: 'Services clients', emoji: '🎯', couleur: '#f59e0b',
     modules: [
       { title: 'Les grands principes',          icon: '📖', slug: 'services-grands-principes', ready: false },
       { title: 'Gestion incidents clients',     icon: '🔧', slug: 'incidents-clients',      ready: false },
@@ -165,7 +165,7 @@ const THEMES_EN = [
     ],
   },
   {
-    titre: 'International Taxation', emoji: '💼', couleur: '#dc2626',
+    titre: 'International Taxation', emoji: '💼', couleur: '#e07b39',
     modules: [
       { title: 'Key Principles',                          icon: '📖', slug: 'fiscalite-grands-principes', ready: false },
       { title: 'CRS — Common Reporting Standard',        icon: '🌍', slug: 'crs',                       ready: true  },
@@ -222,7 +222,7 @@ const THEMES_EN = [
     ],
   },
   {
-    titre: 'Client Services', emoji: '🎯', couleur: '#c2410c',
+    titre: 'Client Services', emoji: '🎯', couleur: '#f59e0b',
     modules: [
       { title: 'Key Principles',          icon: '📖', slug: 'services-grands-principes', ready: false },
       { title: 'Client Incidents',        icon: '🔧', slug: 'incidents-clients',      ready: false },
