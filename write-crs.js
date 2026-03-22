@@ -35,7 +35,7 @@ const FICHES_FR = [
     {icon:'🌍',texte:q("Certains pays (ex: Monaco, Bahamas) ne participent pas au CRS — leurs résidents ne font pas l'objet d'un échange automatique")},
   ]},
 
-  {id:4,emoji:'🏦',titre:q("i-Hub face au CRS : vérificateur, pas déclarant ?"),contenu:[
+  {id:4,emoji:'🏦',titre:q("i-Hub face au CRS : vérificateur, pas déclarant"),contenu:[
     {icon:'🎯',texte:q("i-Hub **n’est pas** une IFD (Institution Financière Déclarante) — il ne reçoit pas de dépôts et ne gère pas de comptes pour ses propres clients")},
     {icon:'📋',texte:q("Les IFD (banques, fonds, assureurs) sont les **PSF clients d’i-Hub** — ce sont eux qui déclarent au CRS sous leur propre responsabilité")},
     {icon:'🏛️',texte:q("Les **PSF clients** d’i-Hub déclarent chaque année à l'ACD (Administration des Contributions Directes) du Luxembourg")},
@@ -162,7 +162,7 @@ const FICHES_EN = [
     {icon:'🌍',texte:q("Some countries (e.g. Monaco, Bahamas) do not participate in CRS — their residents are not subject to automatic exchange")},
   ]},
 
-  {id:4,emoji:'🏦',titre:q("i-Hub and CRS: verifier, not reporter?"),contenu:[
+  {id:4,emoji:'🏦',titre:q("i-Hub and CRS: verifier, not reporter"),contenu:[
     {icon:'🎯',texte:q("i-Hub is **not** an RFI (Reporting Financial Institution) — it does not hold deposits or manage accounts for its own clients")},
     {icon:'📋',texte:q("RFIs include: banks, investment funds, insurance companies, support PSFs like i-Hub")},
     {icon:'🏛️',texte:q("i-Hub’s **PSF clients** report annually to the ACD (Administration des Contributions Directes) in Luxembourg")},

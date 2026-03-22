@@ -139,7 +139,7 @@ const FICHES_FR = [
   {
     "id": 4,
     "emoji": "🏦",
-    "titre": "i-Hub face au CRS : vérificateur, pas déclarant ?",
+    "titre": "i-Hub face au CRS : vérificateur, pas déclarant",
     "contenu": [
       {
         "icon": "🎯",
@@ -557,7 +557,7 @@ const FICHES_EN = [
   {
     "id": 4,
     "emoji": "🏦",
-    "titre": "i-Hub and CRS: verifier, not reporter?",
+    "titre": "i-Hub and CRS: verifier, not reporter",
     "contenu": [
       {
         "icon": "🎯",
