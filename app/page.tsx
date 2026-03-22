@@ -129,7 +129,7 @@ const THEMES_FR = [
 
 const THEMES_EN = [
   {
-    titre: 'Anti-Money Laundering', emoji: '🛡️', couleur: '#e91e8c',
+    titre: 'AML/CTF', emoji: '🛡️', couleur: '#e91e8c',
     modules: [
       { title: 'Key Principles',          icon: '📖', slug: 'aml-grands-principes',   ready: false },
       { title: 'AML/KYC Rules',           icon: '🔍', slug: 'aml-kyc',                ready: true  },
