@@ -139,7 +139,7 @@ const FICHES_FR = [
   {
     "id": 4,
     "emoji": "🏦",
-    "titre": "i-Hub : Institution Financière Déclarante",
+    "titre": "i-Hub face au CRS : vérificateur, pas déclarant ?",
     "contenu": [
       {
         "icon": "🎯",
@@ -273,7 +273,7 @@ const FICHES_FR = [
   {
     "id": 9,
     "emoji": "📊",
-    "titre": "Que déclare-t-on à l’ACD ?",
+    "titre": "Que déclare notre client PSF à l’ACD ?",
     "contenu": [
       {
         "icon": "👤",
@@ -292,7 +292,7 @@ const FICHES_FR = [
         "texte": "Déclaration annuelle à l’ACD — délai : **30 juin** de l’année suivante (ex : données 2024 → 30 juin 2025)"
       }
     ],
-    "aretenir": "La déclaration CRS est exhaustive : identité + solde + revenus. Une omission partielle est une infraction."
+    "aretenir": "La déclaration CRS du PSF est exhaustive : identité + solde + revenus du client final. i-Hub vérifie les données d’identification — le PSF est responsable de la déclaration complète."
   },
   {
     "id": 10,
@@ -383,7 +383,7 @@ const FICHES_FR = [
   {
     "id": 13,
     "emoji": "🔒",
-    "titre": "CRS et protection des données (RGPD)",
+    "titre": "RGPD et CRS : ce que cela implique pour i-Hub",
     "contenu": [
       {
         "icon": "⚖️",
@@ -391,7 +391,7 @@ const FICHES_FR = [
       },
       {
         "icon": "📋",
-        "texte": "i-Hub doit **informer ses clients** de la collecte et transmission de leurs données dans le cadre du CRS (droit à l’information)"
+        "texte": "C’est le **PSF** qui informe ses clients finaux de la collecte et transmission de leurs données CRS — i-Hub, sous-traitant, traite ces données sur instruction du PSF"
       },
       {
         "icon": "🔒",
@@ -399,10 +399,10 @@ const FICHES_FR = [
       },
       {
         "icon": "🚫",
-        "texte": "La finalité de la collecte (CRS) est **légalement imposée** — le client ne peut pas s’y opposer en invoquant le RGPD"
+        "texte": "La finalité de la collecte CRS est **légalement imposée** au PSF — le client final du PSF ne peut pas s’y opposer en invoquant le RGPD"
       }
     ],
-    "aretenir": "RGPD et CRS s’appliquent simultanément. i-Hub doit informer ses clients de la transmission de leurs données fiscales."
+    "aretenir": "RGPD et CRS s’appliquent simultanément au **PSF**. i-Hub traite les données sur instruction du PSF et doit sécuriser les données des clients finaux qu’il vérifie."
   },
   {
     "id": 14,
@@ -445,26 +445,26 @@ const FICHES_FR = [
   {
     "id": 15,
     "emoji": "👨‍💼",
-    "titre": "Rôles et responsabilités chez i-Hub",
+    "titre": "Le rôle d’i-Hub dans le processus CRS de nos clients",
     "contenu": [
       {
         "icon": "🎯",
-        "texte": "**Onboarding** : collecte l’auto-certification et vérifie sa cohérence avec le dossier KYC dès l’entrée en relation"
+        "texte": "**i-Hub onboarding** : vérifie la cohérence de l’auto-certification du client final transmise par le PSF — dans le périmètre du SLA"
       },
       {
         "icon": "🔍",
-        "texte": "**Compliance** : valide les classifications complexes (ENF Passive, doubles résidences fiscales), tranche les cas ambigus"
+        "texte": "**Compliance i-Hub** : valide les cas complexes signalés lors des vérifications, informe le PSF des anomalies — la décision finale appartient au **PSF**"
       },
       {
         "icon": "💻",
-        "texte": "**IT / Data** : gère les systèmes de classification, génère les fichiers XML annuels et envoie à l’ACD"
+        "texte": "**IT / Data i-Hub** : gère les outils de vérification documentaire et la transmission sécurisée des données vérifiées aux PSF — c’est le **PSF** qui génère et envoie les fichiers XML à l’ACD"
       },
       {
         "icon": "👤",
-        "texte": "**Chaque employé** : doit signaler tout indice de changement de résidence fiscale d’un client à l’équipe Compliance"
+        "texte": "**Chaque collaborateur i-Hub** : signale toute anomalie visible dans les documents vérifiés — i-Hub ne déclare pas, il vérifie et alerte le PSF"
       }
     ],
-    "aretenir": "Le CRS est un processus d’équipe. Onboarding, Compliance, IT et management ont chacun un rôle précis et complémentaire."
+    "aretenir": "Chez i-Hub, CRS = vérification documentaire pour le compte des PSF. C’est le **PSF** qui collecte, classe et déclare à l’ACD. i-Hub ne fait jamais partie de la chaîne de déclaration."
   }
 ]
 const FICHES_EN = [
@@ -557,7 +557,7 @@ const FICHES_EN = [
   {
     "id": 4,
     "emoji": "🏦",
-    "titre": "i-Hub: a Reporting Financial Institution",
+    "titre": "i-Hub and CRS: verifier, not reporter?",
     "contenu": [
       {
         "icon": "🎯",
@@ -691,7 +691,7 @@ const FICHES_EN = [
   {
     "id": 9,
     "emoji": "📊",
-    "titre": "What is reported to the ACD?",
+    "titre": "What does our PSF client report to the ACD?",
     "contenu": [
       {
         "icon": "👤",
@@ -809,7 +809,7 @@ const FICHES_EN = [
       },
       {
         "icon": "📋",
-        "texte": "i-Hub must **inform clients** of the collection and transmission of their data under CRS (right to information)"
+        "texte": "It is the **PSF** that informs its final clients of the collection and transmission of their CRS data — i-Hub, as subcontractor, processes this data on the PSF’s instruction"
       },
       {
         "icon": "🔒",
@@ -820,7 +820,7 @@ const FICHES_EN = [
         "texte": "The purpose of collection (CRS) is **legally mandated** — clients cannot object on GDPR grounds"
       }
     ],
-    "aretenir": "GDPR and CRS apply simultaneously. i-Hub must inform its clients of the transmission of their tax data."
+    "aretenir": "GDPR and CRS apply simultaneously to the **PSF**. i-Hub processes data on the PSF’s instruction and must secure the final clients' data it verifies."
   },
   {
     "id": 14,
@@ -863,26 +863,26 @@ const FICHES_EN = [
   {
     "id": 15,
     "emoji": "👨‍💼",
-    "titre": "Roles and responsibilities at i-Hub",
+    "titre": "i-Hub’s role in our clients' CRS process",
     "contenu": [
       {
         "icon": "🎯",
-        "texte": "**Onboarding**: collects self-certification and checks its consistency with KYC file at relationship opening"
+        "texte": "**i-Hub onboarding**: verifies consistency of the final client’s self-certification transmitted by the PSF — within the SLA scope"
       },
       {
         "icon": "🔍",
-        "texte": "**Compliance**: validates complex classifications (Passive NFE, dual tax residences), decides ambiguous cases"
+        "texte": "**i-Hub Compliance**: validates complex cases flagged during verifications, notifies the PSF of anomalies — the final decision belongs to the **PSF**"
       },
       {
         "icon": "💻",
-        "texte": "**IT / Data**: manages classification systems, generates annual XML files and submits to ACD"
+        "texte": "**i-Hub IT / Data**: manages verification tools and secure transmission of verified data to PSFs — it is the **PSF** that generates and submits XML files to the ACD"
       },
       {
         "icon": "👤",
-        "texte": "**Every employee**: must flag any indicator of a client’s change of tax residence to the Compliance team"
+        "texte": "**Every i-Hub staff member**: flags any visible anomaly in verified documents — i-Hub does not report, it verifies and alerts the PSF"
       }
     ],
-    "aretenir": "CRS is a team process. Onboarding, Compliance, IT and management each have a precise and complementary role."
+    "aretenir": "At i-Hub, CRS = documentary verification on behalf of PSFs. It is the **PSF** that collects, classifies and reports to the ACD. i-Hub is never part of the reporting chain."
   }
 ]
 const MATCHING_FR = [{"sigle":"CRS","definition":"Norme commune de déclaration OCDE"},{"sigle":"IFD","definition":"Institution financière qui déclare au CRS"},{"sigle":"Résidence fiscale","definition":"Pays où une personne est imposable sur ses revenus mondiaux"},{"sigle":"NIF","definition":"Numéro d’identification fiscale d’un contribuable"},{"sigle":"Auto-certification","definition":"Document par lequel le client déclare sa résidence fiscale"},{"sigle":"ENF Passive","definition":"Entité patrimoniale devant déclarer ses UBO étrangers"},{"sigle":"ACD","definition":"Autorité luxembourgeoise recevant les déclarations CRS"},{"sigle":"ENF Active","definition":"Société opérationnelle peu soumise aux obligations CRS"},{"sigle":"Changement de circonstances","definition":"Événement modifiant la résidence fiscale d’un client"},{"sigle":"90 jours","definition":"Délai pour obtenir une auto-certification après ouverture"}]

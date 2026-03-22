@@ -35,7 +35,7 @@ const FICHES_FR = [
     {icon:'🌍',texte:q("Certains pays (ex: Monaco, Bahamas) ne participent pas au CRS — leurs résidents ne font pas l'objet d'un échange automatique")},
   ]},
 
-  {id:4,emoji:'🏦',titre:q("i-Hub : Institution Financière Déclarante"),contenu:[
+  {id:4,emoji:'🏦',titre:q("i-Hub face au CRS : vérificateur, pas déclarant ?"),contenu:[
     {icon:'🎯',texte:q("i-Hub **n’est pas** une IFD (Institution Financière Déclarante) — il ne reçoit pas de dépôts et ne gère pas de comptes pour ses propres clients")},
     {icon:'📋',texte:q("Les IFD (banques, fonds, assureurs) sont les **PSF clients d’i-Hub** — ce sont eux qui déclarent au CRS sous leur propre responsabilité")},
     {icon:'🏛️',texte:q("Les **PSF clients** d’i-Hub déclarent chaque année à l'ACD (Administration des Contributions Directes) du Luxembourg")},
@@ -75,12 +75,12 @@ const FICHES_FR = [
     {icon:'👥',texte:q("**Personnes détenant le contrôle** d'une ENF Passive = UBO au sens CRS (seuil : participation > 25% en général)")},
   ],aretenir:q("La classification CRS d'une entité détermine ce qu'Le PSF collecte et déclare. i-Hub vérifie la cohérence des documents transmis. ENF Passive = vigilance accrue.")},
 
-  {id:9,emoji:'📊',titre:q("Que déclare-t-on à l'ACD ?"),contenu:[
+  {id:9,emoji:'📊',titre:q("Que déclare notre client PSF à l'ACD ?"),contenu:[
     {icon:'👤',texte:q("**Identité** : nom, adresse, date de naissance, NIF et pays de résidence fiscale du titulaire déclarable")},
     {icon:'🔢',texte:q("**Numéro de compte** et **solde ou valeur** au 31 décembre de l'année de déclaration")},
     {icon:'💰',texte:q("**Revenus** : intérêts, dividendes, autres revenus générés sur le compte durant l'année")},
     {icon:'📅',texte:q("Déclaration annuelle à l'ACD — délai : **30 juin** de l'année suivante (ex : données 2024 → 30 juin 2025)")},
-  ],aretenir:q("La déclaration CRS est exhaustive : identité + solde + revenus. Une omission partielle est une infraction.")},
+  ],aretenir:q("La déclaration CRS du PSF est exhaustive : identité + solde + revenus du client final. i-Hub vérifie les données d'identification \u2014 le PSF est responsable de la déclaration complète.")},
 
   {id:10,emoji:'🔍',titre:q("Procédures de diligence raisonnable"),contenu:[
     {icon:'🆕',texte:q("**Nouveaux comptes** : auto-certification obligatoire dès l'ouverture — aucune ouverture sans résidence fiscale identifiée")},
@@ -108,12 +108,12 @@ const FICHES_FR = [
     {icon:'🌍',texte:q("Le **Forum mondial de l'OCDE** surveille la mise en œuvre du CRS dans chaque pays — Luxembourg est régulièrement évalué")},
   ]},
 
-  {id:13,emoji:'🔒',titre:q("CRS et protection des données (RGPD)"),contenu:[
+  {id:13,emoji:'🔒',titre:q("RGPD et CRS : ce que cela implique pour i-Hub"),contenu:[
     {icon:'⚖️',texte:q("La collecte de données CRS implique des **données personnelles** — le RGPD s'applique en parallèle")},
-    {icon:'📋',texte:q("i-Hub doit **informer ses clients** de la collecte et transmission de leurs données dans le cadre du CRS (droit à l'information)")},
+    {icon:'📋',texte:q("C'est le **PSF** qui informe ses clients finaux de la collecte et transmission de leurs données CRS \u2014 i-Hub, sous-traitant, traite ces données sur instruction du PSF")},
     {icon:'🔒',texte:q("Les données CRS doivent être stockées de façon **sécurisée** et conservées **5 ans minimum** après la déclaration")},
-    {icon:'🚫',texte:q("La finalité de la collecte (CRS) est **légalement imposée** — le client ne peut pas s'y opposer en invoquant le RGPD")},
-  ],aretenir:q("RGPD et CRS s'appliquent simultanément. i-Hub doit informer ses clients de la transmission de leurs données fiscales.")},
+    {icon:'🚫',texte:q("La finalité de la collecte CRS est **légalement imposée** au PSF \u2014 le client final du PSF ne peut pas s'y opposer en invoquant le RGPD")},
+  ],aretenir:q("RGPD et CRS s'appliquent simultanément au **PSF**. i-Hub traite les données sur instruction du PSF et doit sécuriser les données des clients finaux qu'il vérifie.")},
 
   {id:14,emoji:'🌐',titre:q("Pays participants au CRS"),contenu:[
     {icon:'✅',texte:q("Plus de **100 juridictions** participent au CRS — dont tous les pays de l'UE, le Royaume-Uni, l'Australie, le Canada, le Japon...")},
@@ -127,12 +127,12 @@ const FICHES_FR = [
     {icon:'🔍',texte:q("Le **Forum mondial** surveille la qualité des échanges — un pays qui transmet des données incomplètes peut être sanctionné")},
   ]},
 
-  {id:15,emoji:'👨‍💼',titre:q("Rôles et responsabilités chez i-Hub"),contenu:[
-    {icon:'🎯',texte:q("**Onboarding** : collecte l'auto-certification et vérifie sa cohérence avec le dossier KYC dès l'entrée en relation")},
-    {icon:'🔍',texte:q("**Compliance** : valide les classifications complexes (ENF Passive, doubles résidences fiscales), tranche les cas ambigus")},
-    {icon:'💻',texte:q("**IT / Data** : gère les systèmes de classification, génère les fichiers XML annuels et envoie à l'ACD")},
-    {icon:'👤',texte:q("**Chaque employé** : doit signaler tout indice de changement de résidence fiscale d'un client à l'équipe Compliance")},
-  ],aretenir:q("Le CRS est un processus d'équipe. Onboarding, Compliance, IT et management ont chacun un rôle précis et complémentaire.")},
+  {id:15,emoji:'👨‍💼',titre:q("Le rôle d'i-Hub dans le processus CRS de nos clients"),contenu:[
+    {icon:'🎯',texte:q("**i-Hub onboarding** : vérifie la cohérence de l'auto-certification du client final transmise par le PSF \u2014 dans le périmètre du SLA")},
+    {icon:'🔍',texte:q("**Compliance i-Hub** : valide les cas complexes signalés lors des vérifications, informe le PSF des anomalies \u2014 la décision finale appartient au **PSF**")},
+    {icon:'💻',texte:q("**IT / Data i-Hub** : gère les outils de vérification documentaire et la transmission sécurisée des données vérifiées aux PSF \u2014 c'est le **PSF** qui génère et envoie les fichiers XML à l'ACD")},
+    {icon:'👤',texte:q("**Chaque collaborateur i-Hub** : signale toute anomalie visible dans les documents vérifiés \u2014 i-Hub ne déclare pas, il vérifie et alerte le PSF")},
+  ],aretenir:q("Chez i-Hub, CRS = vérification documentaire pour le compte des PSF. C'est le **PSF** qui collecte, classe et déclare à l'ACD. i-Hub ne fait jamais partie de la chaîne de déclaration.")},
 ];
 
 const FICHES_EN = [
@@ -162,7 +162,7 @@ const FICHES_EN = [
     {icon:'🌍',texte:q("Some countries (e.g. Monaco, Bahamas) do not participate in CRS — their residents are not subject to automatic exchange")},
   ]},
 
-  {id:4,emoji:'🏦',titre:q("i-Hub: a Reporting Financial Institution"),contenu:[
+  {id:4,emoji:'🏦',titre:q("i-Hub and CRS: verifier, not reporter?"),contenu:[
     {icon:'🎯',texte:q("i-Hub is **not** an RFI (Reporting Financial Institution) — it does not hold deposits or manage accounts for its own clients")},
     {icon:'📋',texte:q("RFIs include: banks, investment funds, insurance companies, support PSFs like i-Hub")},
     {icon:'🏛️',texte:q("i-Hub’s **PSF clients** report annually to the ACD (Administration des Contributions Directes) in Luxembourg")},
@@ -202,7 +202,7 @@ const FICHES_EN = [
     {icon:'👥',texte:q("**Controlling persons** of a Passive NFE = UBOs in CRS terms (threshold: ownership > 25% in general)")},
   ],aretenir:q("CRS entity classification determines what the **PSF** must collect and report. For i-Hub: Passive NFE = enhanced documentary verification.")},
 
-  {id:9,emoji:'📊',titre:q("What is reported to the ACD?"),contenu:[
+  {id:9,emoji:'📊',titre:q("What does our PSF client report to the ACD?"),contenu:[
     {icon:'👤',texte:q("**Identity**: name, address, date of birth, TIN and country of tax residence of the reportable holder")},
     {icon:'🔢',texte:q("**Account number** and **balance or value** as of 31 December of the reporting year")},
     {icon:'💰',texte:q("**Income**: interest, dividends, other income generated on the account during the year")},
@@ -237,10 +237,10 @@ const FICHES_EN = [
 
   {id:13,emoji:'🔒',titre:q("CRS and data protection (GDPR)"),contenu:[
     {icon:'⚖️',texte:q("CRS data collection involves **personal data** — GDPR applies in parallel")},
-    {icon:'📋',texte:q("i-Hub must **inform clients** of the collection and transmission of their data under CRS (right to information)")},
+    {icon:'📋',texte:q("It is the **PSF** that informs its final clients of the collection and transmission of their CRS data \u2014 i-Hub, as subcontractor, processes this data on the PSF's instruction")},
     {icon:'🔒',texte:q("CRS data must be stored **securely** and retained for a **minimum of 5 years** after declaration")},
     {icon:'🚫',texte:q("The purpose of collection (CRS) is **legally mandated** — clients cannot object on GDPR grounds")},
-  ],aretenir:q("GDPR and CRS apply simultaneously. i-Hub must inform its clients of the transmission of their tax data.")},
+  ],aretenir:q("GDPR and CRS apply simultaneously to the **PSF**. i-Hub processes data on the PSF's instruction and must secure the final clients' data it verifies.")},
 
   {id:14,emoji:'🌐',titre:q("CRS participating countries"),contenu:[
     {icon:'✅',texte:q("Over **100 jurisdictions** participate in CRS — including all EU countries, the UK, Australia, Canada, Japan...")},
@@ -254,12 +254,12 @@ const FICHES_EN = [
     {icon:'🔍',texte:q("The **Global Forum** monitors exchange quality — a country transmitting incomplete data may face consequences")},
   ]},
 
-  {id:15,emoji:'👨‍💼',titre:q("Roles and responsibilities at i-Hub"),contenu:[
-    {icon:'🎯',texte:q("**Onboarding**: collects self-certification and checks its consistency with KYC file at relationship opening")},
-    {icon:'🔍',texte:q("**Compliance**: validates complex classifications (Passive NFE, dual tax residences), decides ambiguous cases")},
-    {icon:'💻',texte:q("**IT / Data**: manages classification systems, generates annual XML files and submits to ACD")},
-    {icon:'👤',texte:q("**Every employee**: must flag any indicator of a client's change of tax residence to the Compliance team")},
-  ],aretenir:q("CRS is a team process. Onboarding, Compliance, IT and management each have a precise and complementary role.")},
+  {id:15,emoji:'👨‍💼',titre:q("i-Hub's role in our clients' CRS process"),contenu:[
+    {icon:'🎯',texte:q("**i-Hub onboarding**: verifies consistency of the final client's self-certification transmitted by the PSF \u2014 within the SLA scope")},
+    {icon:'🔍',texte:q("**i-Hub Compliance**: validates complex cases flagged during verifications, notifies the PSF of anomalies \u2014 the final decision belongs to the **PSF**")},
+    {icon:'💻',texte:q("**i-Hub IT / Data**: manages verification tools and secure transmission of verified data to PSFs \u2014 it is the **PSF** that generates and submits XML files to the ACD")},
+    {icon:'👤',texte:q("**Every i-Hub staff member**: flags any visible anomaly in verified documents \u2014 i-Hub does not report, it verifies and alerts the PSF")},
+  ],aretenir:q("At i-Hub, CRS = documentary verification on behalf of PSFs. It is the **PSF** that collects, classifies and reports to the ACD. i-Hub is never part of the reporting chain.")},
 ];
 
 const MATCHING_FR = [
