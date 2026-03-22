@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { getLang, setLang as saveLang } from '@/lib/lang'
 
-function shuffle(arr) { return [...arr].sort(() => Math.random() - 0.5) }
-function pickRandom(arr, n) { return shuffle(arr).slice(0, n) }
+function shuffle<T>(arr: T[]): T[] { return [...arr].sort(() => Math.random() - 0.5) }
+function pickRandom<T>(arr: T[], n: number): T[] { return shuffle(arr).slice(0, n) }
 
 const UI = {
   fr: {
@@ -478,9 +478,9 @@ const CAS_EN = [
 
 export default function ModuleFatca() {
   const router = useRouter()
-  const [lang, setLang] = useState('fr')
+  const [lang, setLang] = useState<'fr'|'en'>('fr')
   useEffect(() => { setLang(getLang()) }, [])
-  const [phase, setPhase] = useState('intro')
+  const [phase, setPhase] = useState<'intro'|'fiches'|'quiz1'|'quiz2'|'quiz3'|'resultat'>('intro')
   const [ficheIndex, setFicheIndex] = useState(0)
   const [score, setScore] = useState(0)
   const [plusLoinOpen, setPlusLoinOpen] = useState(false)
@@ -490,19 +490,19 @@ export default function ModuleFatca() {
   const C = '#e07b39'
 
   const [activeMatching, setActiveMatching] = useState(() => pickRandom(MATCHING_FR, 6))
-  const [matchSelected, setMatchSelected] = useState(null)
-  const [matchPairs, setMatchPairs] = useState({})
-  const [matchError, setMatchError] = useState(null)
+  const [matchSelected, setMatchSelected] = useState<string|null>(null)
+  const [matchPairs, setMatchPairs] = useState<Record<string,string>>({})
+  const [matchError, setMatchError] = useState<string|null>(null)
 
   const [activeVF, setActiveVF] = useState(() => pickRandom(VF_FR, 6))
   const [vfIndex, setVfIndex] = useState(0)
-  const [vfRepondu, setVfRepondu] = useState(null)
+  const [vfRepondu, setVfRepondu] = useState<boolean|null>(null)
   const [vfScore, setVfScore] = useState(0)
-  const [vfAnimation, setVfAnimation] = useState(null)
+  const [vfAnimation, setVfAnimation] = useState<'correct'|'wrong'|null>(null)
 
   const [activeCas, setActiveCas] = useState(() => pickRandom(CAS_FR, 3))
   const [casIndex, setCasIndex] = useState(0)
-  const [casRepondu, setCasRepondu] = useState(null)
+  const [casRepondu, setCasRepondu] = useState<string|null>(null)
   const [casScore, setCasScore] = useState(0)
 
   function initQuizzes(l) {
