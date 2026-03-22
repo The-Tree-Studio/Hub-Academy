@@ -62,7 +62,7 @@ const THEMES_FR = [
     modules: [
       { title: 'Les grands principes',                          icon: '📖', slug: 'fiscalite-grands-principes',  ready: false },
       { title: 'CRS — Common Reporting Standard',              icon: '🌍', slug: 'crs',                         ready: false },
-      { title: 'FATCA — Foreign Account Tax Compliance Act',   icon: '🇺🇸', slug: 'fatca',                       ready: false },
+      { title: 'FATCA — Foreign Account Tax Compliance Act',   icon: '🇺🇸', slug: 'fatca',                       ready: true  },
       { title: 'FATCA vs CRS vs QI — Quelles différences ?',  icon: '↔️', slug: 'fatca-crs-qi-differences',    ready: false },
       { title: "Indices d'américanité",                        icon: '🦅', slug: 'indices-americanite',         ready: false },
       { title: 'QI — Qualified Intermediary',                  icon: '💰', slug: 'qi',                          ready: false },
@@ -167,7 +167,7 @@ const THEMES_EN = [
     modules: [
       { title: 'Key Principles',                          icon: '📖', slug: 'fiscalite-grands-principes', ready: false },
       { title: 'CRS — Common Reporting Standard',        icon: '🌍', slug: 'crs',                       ready: false },
-      { title: 'FATCA',                                  icon: '🇺🇸', slug: 'fatca',                     ready: false },
+      { title: 'FATCA',                                  icon: '🇺🇸', slug: 'fatca',                     ready: true  },
       { title: 'FATCA vs CRS vs QI',                    icon: '↔️', slug: 'fatca-crs-qi-differences',  ready: false },
       { title: 'Indicia of US Status',                   icon: '🦅', slug: 'indices-americanite',       ready: false },
       { title: 'QI — Qualified Intermediary',            icon: '💰', slug: 'qi',                        ready: false },
