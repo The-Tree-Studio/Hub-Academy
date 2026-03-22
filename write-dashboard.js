@@ -121,8 +121,7 @@ const THEMES_FR = [
   {
     titre: 'Externalisation', emoji: '🤝', couleur: '#0369a1',
     modules: [
-      { title: 'Externalisation 22/806',        icon: '🤝', slug: 'externalisation',        ready: false },
-      { title: 'Outsourcing 22/806',            icon: '🤝', slug: 'externalisation',        ready: false },
+      { title: 'Circulaire 22/806',              icon: '🤝', slug: 'externalisation',        ready: false },
     ],
 
   },
