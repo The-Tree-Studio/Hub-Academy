@@ -26,7 +26,7 @@ const THEMES_FR = [
   {
     titre: "AML/CTF", emoji: '🛡️', couleur: '#e91e8c',
     modules: [
-      { title: 'Les grands principes',          icon: '📖', slug: 'aml-grands-principes',   ready: false },
+      { title: 'Les grands principes',          icon: '📖', slug: 'aml-grands-principes',   ready: true },
       { title: 'AML/KYC Rules',                 icon: '🔍', slug: 'aml-kyc',                ready: true  },
       { title: 'Cohérence des documents',       icon: '🔎', slug: 'coherence-documents',    ready: false },
       { title: 'DDR',                           icon: '📋', slug: 'ddr',                    ready: false },
@@ -131,7 +131,7 @@ const THEMES_EN = [
   {
     titre: 'AML/CTF', emoji: '🛡️', couleur: '#e91e8c',
     modules: [
-      { title: 'Key Principles',          icon: '📖', slug: 'aml-grands-principes',   ready: false },
+      { title: 'Key Principles',          icon: '📖', slug: 'aml-grands-principes',   ready: true },
       { title: 'AML/KYC Rules',           icon: '🔍', slug: 'aml-kyc',                ready: true  },
       { title: 'Document Consistency',    icon: '🔎', slug: 'coherence-documents',    ready: false },
       { title: 'DDR',                     icon: '📋', slug: 'ddr',                    ready: false },
