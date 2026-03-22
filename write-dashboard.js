@@ -304,15 +304,15 @@ export default function Home() {
   const rankIndex = Math.min(Math.floor(totalPoints / 100), t.ranks.length - 1)
 
   const ACCENT = '#e07b39'
-  const SIDEBAR_BG = '#6b7280'
-  const SIDEBAR_HOVER = '#5b6270'
-  const SIDEBAR_ACTIVE = '#4b5260'
+  const SIDEBAR_BG = '#ffffff'
+  const SIDEBAR_HOVER = '#f3f4f6'
+  const SIDEBAR_ACTIVE = '#fff7ed'
 
   const sidebarItemStyle = (active: boolean): React.CSSProperties => ({
     display: 'flex', alignItems: 'center', gap: '10px',
     padding: '9px 16px', cursor: 'pointer', fontSize: '13px',
     fontWeight: active ? '600' : '400',
-    color: active ? '#ffffff' : '#e5e7eb',
+    color: active ? '#111827' : '#374151',
     background: active ? SIDEBAR_ACTIVE : 'transparent',
     borderLeft: active ? \`3px solid \${ACCENT}\` : '3px solid transparent',
     transition: 'all 0.15s', userSelect: 'none',
@@ -328,15 +328,15 @@ export default function Home() {
     <div style={{ minHeight: '100vh', display: 'flex', fontFamily: "'Segoe UI', system-ui, sans-serif", background: '#f0f2f5' }}>
 
       {/* ── SIDEBAR ── */}
-      <div style={{ width: '210px', minWidth: '210px', background: SIDEBAR_BG, display: 'flex', flexDirection: 'column', position: 'sticky', top: 0, height: '100vh', overflowY: 'auto', flexShrink: 0 } as React.CSSProperties}>
+      <div style={{ width: '210px', minWidth: '210px', background: SIDEBAR_BG, borderRight: '1px solid #e5e7eb', display: 'flex', flexDirection: 'column', position: 'sticky', top: 0, height: '100vh', overflowY: 'auto', flexShrink: 0 } as React.CSSProperties}>
 
         {/* Logo */}
-        <div style={{ padding: '20px 16px 16px', borderBottom: '1px solid #5b6270' }}>
+        <div style={{ padding: '20px 16px 16px', borderBottom: '1px solid #e5e7eb' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '4px' }}>
             <div style={{ width: '32px', height: '32px', background: ACCENT, borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '16px', flexShrink: 0 }}>🎓</div>
             <div>
               <div style={{ color: '#ffffff', fontWeight: '700', fontSize: '15px', lineHeight: 1.2 }}>Hub Academy</div>
-              <div style={{ color: '#d1d5db', fontSize: '10px' }}>{t.subtitle}</div>
+              <div style={{ color: '#6b7280', fontSize: '10px' }}>{t.subtitle}</div>
             </div>
           </div>
         </div>
@@ -364,14 +364,14 @@ export default function Home() {
                   <span style={{ background: ACCENT, color: 'white', fontSize: '9px', fontWeight: '700', borderRadius: '10px', padding: '1px 5px', flexShrink: 0 }}>{readyCount}</span>
                 )}
                 {readyCount === 0 && (
-                  <span style={{ color: '#d1d5db', fontSize: '11px', flexShrink: 0 }}>{theme.modules.length}</span>
+                  <span style={{ color: '#6b7280', fontSize: '11px', flexShrink: 0 }}>{theme.modules.length}</span>
                 )}
               </div>
             )
           })}
 
           {/* Divider */}
-          <div style={{ margin: '12px 16px', borderTop: '1px solid #5b6270' }} />
+          <div style={{ margin: '12px 16px', borderTop: '1px solid #e5e7eb' }} />
 
           {/* Section Profil */}
           <div style={{ padding: '4px 16px 4px', fontSize: '10px', fontWeight: '700', color: '#6b7280', letterSpacing: '1px', textTransform: 'uppercase' }}>{t.profil}</div>
@@ -391,20 +391,20 @@ export default function Home() {
         </nav>
 
         {/* Bottom: lang + logout */}
-        <div style={{ padding: '12px 16px', borderTop: '1px solid #5b6270' }}>
+        <div style={{ padding: '12px 16px', borderTop: '1px solid #e5e7eb' }}>
           <div style={{ display: 'flex', gap: '4px', marginBottom: '10px' }}>
             {(['fr', 'en'] as const).map(l => (
               <button key={l} onClick={() => { saveLang(l); setLang(l) }}
-                style={{ flex: 1, padding: '5px', borderRadius: '6px', border: 'none', cursor: 'pointer', fontSize: '11px', fontWeight: '700', background: lang === l ? ACCENT : '#3d2410', color: lang === l ? 'white' : '#8a6a4a', transition: 'all 0.2s' }}>
+                style={{ flex: 1, padding: '5px', borderRadius: '6px', border: 'none', cursor: 'pointer', fontSize: '11px', fontWeight: '700', background: lang === l ? ACCENT : '#3d2410', color: lang === l ? 'white' : '#6b7280', transition: 'all 0.2s' }}>
                 {l === 'fr' ? '🇫🇷 FR' : '🇬🇧 EN'}
               </button>
             ))}
           </div>
           <div style={{ fontSize: '10px', color: '#6b7280', marginBottom: '8px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{user?.email}</div>
           <button onClick={async () => { await supabase.auth.signOut(); router.push('/login') }}
-            style={{ width: '100%', padding: '7px', background: 'transparent', border: '1px solid #5b6270', borderRadius: '6px', color: '#e5e7eb', cursor: 'pointer', fontSize: '11px', fontWeight: '600', transition: 'all 0.2s' }}
+            style={{ width: '100%', padding: '7px', background: 'transparent', border: '1px solid #e5e7eb', borderRadius: '6px', color: '#374151', cursor: 'pointer', fontSize: '11px', fontWeight: '600', transition: 'all 0.2s' }}
             onMouseOver={e => { (e.currentTarget as HTMLElement).style.borderColor = ACCENT; (e.currentTarget as HTMLElement).style.color = ACCENT }}
-            onMouseOut={e => { (e.currentTarget as HTMLElement).style.borderColor = '#5b6270'; (e.currentTarget as HTMLElement).style.color = '#e5e7eb' }}>
+            onMouseOut={e => { (e.currentTarget as HTMLElement).style.borderColor = '#e5e7eb'; (e.currentTarget as HTMLElement).style.color = '#6b7280' }}>
             {t.logout}
           </button>
         </div>
@@ -476,7 +476,7 @@ export default function Home() {
                         {rc > 0 ? (
                           <span style={{ background: '#dcfce7', color: '#16a34a', fontSize: '11px', fontWeight: '700', borderRadius: '20px', padding: '3px 10px' }}>✓ {rc} {lang === 'fr' ? 'dispo' : 'avail.'}</span>
                         ) : (
-                          <span style={{ color: '#d1d5db', fontSize: '13px' }}>›</span>
+                          <span style={{ color: '#6b7280', fontSize: '13px' }}>›</span>
                         )}
                       </div>
                     )
