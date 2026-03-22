@@ -166,12 +166,12 @@ const FICHES_FR = [
     { icon:'4\ufe0f\u20e3', texte:'**Archiver** le rapport \u2014 i-Hub conserve la trace de chaque v\u00e9rification pour sa propre protection' },
   ], aretenir:'Documenter = pr\u00e9cision + description + rapport. Pas de vague ment\u00e9 \u00ab\u00a0incoh\u00e9rence\u00a0\u00bb \u2014 d\u00e9crire exactement ce qui diff\u00e8re.' },
 
-  { id:14, emoji:'\ud83c\udf1f', titre:'La notion d\u2019incoh\u00e9rence mat\u00e9rielle', contenu:[
-    { icon:'\ud83d\udfe2', texte:'**Incoh\u00e9rence non-mat\u00e9rielle**\u00a0: diff\u00e9rence mineure sans impact sur l\u2019identification (ex\u00a0: \u00ab\u00a0Rue\u00a0\u00bb vs \u00ab\u00a0Avenue\u00a0\u00bb) \u2014 signal\u00e9 quand m\u00eame' },
-    { icon:'\ud83d\udfe1', texte:'**Incoh\u00e9rence mat\u00e9rielle**\u00a0: diff\u00e9rence sur le nom, la date de naissance ou la nationalit\u00e9 \u2014 signal d\u2019alerte prioritaire' },
-    { icon:'\ud83d\udd34', texte:'**Incoh\u00e9rence critique**\u00a0: document expir\u00e9 + incoh\u00e9rence sur le nom + adresse incompatible \u2014 cumul qui augmente le risque' },
-    { icon:'\ud83d\udccc', texte:'Toute incoh\u00e9rence \u2014 quelle que soit son importance apparent \u2014 est signal\u00e9e. C\u2019est le PSF qui \u00e9value l\u2019impact' },
-  ], aretenir:'i-Hub signale toute incoh\u00e9rence, m\u00eame mineure. C\u2019est le PSF qui d\u00e9cide si c\u2019est mat\u00e9riel ou non. Ne pas filtrer.' },
+  { id:14, emoji:'\ud83c\udf1f', titre:'L\u2019exactitude de la saisie des donn\u00e9es', contenu:[
+    { icon:'\ud83d\udccc', texte:'i-Hub a une obligation d\u2019**exactitude absolue** dans la saisie et l\u2019enregistrement des donn\u00e9es clients' },
+    { icon:'\ud83c\udfe0', texte:'\"Rue\" et \"Avenue\" sont **deux adresses diff\u00e9rentes** \u2014 une erreur de saisie peut invalider un contr\u00f4le ou g\u00e9n\u00e9rer un faux positif en Name Screening' },
+    { icon:'\ud83d\udcdd', texte:'Tout écart entre le document source et les données saisies dans le système doit être **corrigé immédiatement**' },
+    { icon:'\ud83d\uded1', texte:'Les données saisies d\u00e9rivent directement des documents officels — ne jamais approximer ou simplifier' },
+  ], aretenir:'Exactitude = obligation absolue. Rue ≠ Avenue. Une mauvaise saisie peut fausser tous les contrôles en aval. Toujours copier les données exactes du document.' },
 
   { id:15, emoji:'\ud83c\udf10', titre:'Les diff\u00e9rences culturelles et orthographiques', contenu:[
     { icon:'\ud83c\udf10', texte:'Certaines incoh\u00e9rences apparentes sont des **diff\u00e9rences culturelles l\u00e9gitimes**\u00a0: translitt\u00e9ration arabe/cyrillique/chinoise' },
@@ -182,10 +182,10 @@ const FICHES_FR = [
 
   { id:16, emoji:'\ud83d\udcca', titre:'Le dossier incomplet', contenu:[
     { icon:'\ud83d\uded1', texte:'Un dossier **incomplet** (document manquant) est signal\u00e9 au PSF avec la liste pr\u00e9cise des documents manquants' },
-    { icon:'\ud83d\udcdd', texte:'i-Hub ne valide pas un dossier partiel \u2014 m\u00eame si les documents pr\u00e9sents sont tous coh\u00e9rents' },
+    { icon:'\ud83d\udcdd', texte:'Un dossier avec documents manquants peut être **validé partiellement** après escalade au client \u2014 mais il est **marqué comme incomplet** dans le système jusqu’à réception des éléments manquants' },
     { icon:'\ud83d\udce2', texte:'Le signal au PSF pr\u00e9cise\u00a0: document attendu selon le SLA, nature de ce qui manque, impact sur la validation possible' },
     { icon:'\u23f0', texte:'i-Hub ne fixe pas de d\u00e9lai au PSF \u2014 c\u2019est le PSF qui g\u00e8re le suivi avec son client final et les \u00e9ch\u00e9ances r\u00e9glementaires' },
-  ], aretenir:'Dossier incomplet = signal avec liste des manquants. i-Hub ne valide pas partiellement. Le PSF g\u00e8re les relances.' },
+  ], aretenir:'Dossier avec manquants = signal + marquage incomplet dans le système. Après escalade, peut être validé partiellement. Le PSF gère les relances.' },
 
   { id:17, emoji:'\ud83d\udd25', titre:'Les red flags suppl\u00e9mentaires', contenu:[
     { icon:'\ud83d\udd34', texte:'**Multiple versions** d\u2019un m\u00eame document dans le dossier (deux justificatifs de domicile contradictoires)' },
@@ -296,12 +296,12 @@ const FICHES_EN = [
     { icon:'3\ufe0f\u20e3', texte:'**Flag to PSF** in the verification report, with a clear mention of the detected anomaly' },
     { icon:'4\ufe0f\u20e3', texte:'**Archive** the report \u2014 i-Hub retains a record of every verification for its own protection' },
   ], aretenir:'Document = precision + description + report. Not a vague \u201cinconsistency\u201d \u2014 describe exactly what differs.' },
-  { id:14, emoji:'\ud83c\udf1f', titre:'The concept of material inconsistency', contenu:[
-    { icon:'\ud83d\udfe2', texte:'**Non-material inconsistency**: minor difference with no identification impact (e.g. \u201cStreet\u201d vs \u201cRoad\u201d) \u2014 still flagged' },
-    { icon:'\ud83d\udfe1', texte:'**Material inconsistency**: difference on name, date of birth or nationality \u2014 priority alert signal' },
-    { icon:'\ud83d\udd34', texte:'**Critical inconsistency**: expired document + name inconsistency + incompatible address \u2014 accumulation increases risk' },
-    { icon:'\ud83d\udccc', texte:'Any inconsistency \u2014 whatever its apparent importance \u2014 is flagged. The PSF assesses the impact' },
-  ], aretenir:'i-Hub flags every inconsistency, even minor ones. The PSF decides whether it is material. Do not filter.' },
+  { id:14, emoji:'\ud83c\udf1f', titre:'Data entry accuracy', contenu:[
+    { icon:'\ud83d\udccc', texte:'i-Hub has an obligation of **absolute accuracy** in entering and recording client data' },
+    { icon:'\ud83c\udfe0', texte:'"Street" and "Avenue" are **two different addresses** \u2014 a data entry error can invalidate a control or generate a false positive in Name Screening' },
+    { icon:'\ud83d\udcdd', texte:'Any discrepancy between the source document and data entered in the system must be **corrected immediately**' },
+    { icon:'\ud83d\uded1', texte:'Data entered derives directly from official documents \u2014 never approximate or simplify' },
+  ], aretenir:'Accuracy = absolute obligation. Street \u2260 Avenue. A bad entry can distort all downstream controls. Always copy exact data from the document.' },
   { id:15, emoji:'\ud83c\udf10', titre:'Cultural and spelling differences', contenu:[
     { icon:'\ud83c\udf10', texte:'Some apparent inconsistencies are **legitimate cultural differences**: Arabic/Cyrillic/Chinese transliteration' },
     { icon:'\ud83d\udcdd', texte:'Examples: \u201cMohammed\u201d / \u201cMohamed\u201d / \u201cMuhammad\u201d may be the same person with different documents' },
@@ -310,10 +310,10 @@ const FICHES_EN = [
   ], aretenir:'Cultural differences = flag with possible explanation note. i-Hub does not decide alone \u2014 the PSF confirms with its final client.' },
   { id:16, emoji:'\ud83d\udcca', titre:'The incomplete file', contenu:[
     { icon:'\ud83d\uded1', texte:'An **incomplete** file (missing document) is flagged to the PSF with the precise list of missing documents' },
-    { icon:'\ud83d\udcdd', texte:'i-Hub does not validate a partial file \u2014 even if the documents present are all consistent' },
+    { icon:'\ud83d\udcdd', texte:'A file with missing documents may be **partially validated** after escalation to the client \u2014 but it is **marked as incomplete** in the system until missing items are received' },
     { icon:'\ud83d\udce2', texte:'The flag to PSF specifies: document expected per SLA, nature of what is missing, impact on possible validation' },
     { icon:'\u23f0', texte:'i-Hub does not set deadlines for the PSF \u2014 the PSF manages follow-up with its final client and regulatory deadlines' },
-  ], aretenir:'Incomplete file = flag with list of missing items. i-Hub does not partially validate. PSF manages follow-ups.' },
+  ], aretenir:'File with missing items = flag + marked incomplete in system. After escalation, may be partially validated. PSF manages follow-ups.' },
   { id:17, emoji:'\ud83d\udd25', titre:'Additional red flags', contenu:[
     { icon:'\ud83d\udd34', texte:'**Multiple versions** of the same document in the file (two contradictory proofs of residence)' },
     { icon:'\ud83d\udd34', texte:'**Visually modified document**: suspicious pixels, irregular edges, different font on part of the document' },
@@ -367,7 +367,7 @@ const VF_FR = [
   { texte:'i-Hub peut d\u00e9tecter un faux passeport lors de la v\u00e9rification documentaire', reponse:false, explication:'Non ! i-Hub n\u2019est pas expert en authentification. Il d\u00e9tecte les incoh\u00e9rences visibles, pas les faux.' },
   { texte:'Un justificatif de domicile dat\u00e9 de 4 mois est acceptable', reponse:false, explication:'Non ! Un justificatif de domicile doit dater de moins de 3 mois. 4 mois = expir\u00e9, \u00e0 signaler au PSF.' },
   { texte:'i-Hub signale les incoh\u00e9rences m\u00eame si elles sont peut-\u00eatre dues \u00e0 des diff\u00e9rences culturelles', reponse:true, explication:'Exact ! i-Hub signale avec une note d\u2019explication possible. C\u2019est le PSF qui confirme avec son client final.' },
-  { texte:'Si un document manque, i-Hub peut valider le reste du dossier partiellement', reponse:false, explication:'Non ! Un dossier incomplet ne peut pas \u00eatre valid\u00e9 partiellement. i-Hub signale les documents manquants au PSF.' },
+  { texte:'Un dossier incomplet ne peut jamais être validé, même partiellement', reponse:false, explication:'Non ! Après escalade au client, un dossier peut être validé partiellement mais il est marqué comme incomplet dans le système jusqu’à réception des éléments.' },
 ]
 const VF_EN = [
   { texte:'i-Hub can validate a file even if a document is expired', reponse:false, explication:'No! Any expired document is flagged to PSF. i-Hub does not validate a file with outdated documents.' },
@@ -375,7 +375,7 @@ const VF_EN = [
   { texte:'i-Hub can detect a forged passport during documentary verification', reponse:false, explication:'No! i-Hub is not an authentication expert. It detects visible inconsistencies, not forgeries.' },
   { texte:'A proof of residence dated 4 months ago is acceptable', reponse:false, explication:'No! Proof of residence must be less than 3 months old. 4 months = expired, flag to PSF.' },
   { texte:'i-Hub flags inconsistencies even if they may be due to cultural differences', reponse:true, explication:'Correct! i-Hub flags with a possible explanation note. The PSF confirms with its final client.' },
-  { texte:'If a document is missing, i-Hub can partially validate the rest of the file', reponse:false, explication:'No! An incomplete file cannot be partially validated. i-Hub flags missing documents to PSF.' },
+  { texte:'An incomplete file can never be validated, even partially', reponse:false, explication:'No! After client escalation, a file may be partially validated but it is marked as incomplete in the system until missing items are received.' },
 ]
 
 const CAS_FR = [
