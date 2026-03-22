@@ -93,7 +93,7 @@ const FICHES_FR = [
     {icon:'🔔',texte:q("Un **changement de circonstances** = tout événement modifiant la résidence fiscale d'un client")},
     {icon:'📋',texte:q("Exemples : déménagement dans un nouveau pays, obtention d'une nouvelle nationalité, changement d'adresse postale")},
     {icon:'⚡',texte:q("Le **PSF** doit traiter le changement dans les **90 jours** — obtenir une nouvelle auto-certification du client final et reclassifier — i-Hub vérifie le nouveau document")},
-    {icon:'🚫',texte:q("Si le client final ne fournit pas de nouvelle auto-certification, le **PSF** applique la **présomption de résidence** basée sur les indices disponibles"),
+    {icon:'🚫',texte:q("Si le client final ne fournit pas de nouvelle auto-certification, le **PSF** applique la **présomption de résidence** basée sur les indices disponibles")},
   ],aretenir:q("i-Hub ne peut pas ignorer un changement de circonstances. Toute mise à jour d'adresse peut déclencher une reclassification CRS.")},
 
   {id:12,emoji:'⚖️',titre:q("Sanctions en cas de manquement au CRS"),contenu:[
