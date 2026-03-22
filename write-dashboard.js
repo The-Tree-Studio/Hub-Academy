@@ -29,7 +29,7 @@ const THEMES_FR = [
     titre: "AML/CTF", emoji: '🛡️', couleur: '#e91e8c',
     modules: [
       { title: 'Les grands principes',          icon: '📖', slug: 'aml-grands-principes',   ready: true },
-      { title: 'AML/KYC Rules',                 icon: '🔍', slug: 'aml-kyc',                ready: true  },
+      { title: 'AML/KYC des clients finaux',     icon: '🔍', slug: 'aml-kyc',                ready: true  },
       { title: 'AML/KYC — Nos clients PSF',    icon: '🏦', slug: 'aml-kyc-nos-clients',    ready: true  },
       { title: 'Cohérence des documents',       icon: '🔎', slug: 'aml-coherence-documents',    ready: true  },
       { title: 'DDR',                           icon: '📋', slug: 'aml-ddr',                    ready: true },
@@ -144,7 +144,7 @@ const THEMES_EN = [
     titre: 'AML/CTF', emoji: '🛡️', couleur: '#e91e8c',
     modules: [
       { title: 'Key Principles',          icon: '📖', slug: 'aml-grands-principes',   ready: true },
-      { title: 'AML/KYC Rules',           icon: '🔍', slug: 'aml-kyc',                ready: true  },
+      { title: 'AML/KYC Final Clients',   icon: '🔍', slug: 'aml-kyc',                ready: true  },
       { title: 'AML/KYC — Our PSF clients', icon: '🏦', slug: 'aml-kyc-nos-clients',    ready: true  },
       { title: 'Document Consistency',    icon: '🔎', slug: 'aml-coherence-documents',    ready: true  },
       { title: 'DDR',                     icon: '📋', slug: 'aml-ddr',                    ready: true },
