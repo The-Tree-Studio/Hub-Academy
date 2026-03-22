@@ -79,9 +79,10 @@ const THEMES_FR = [
       { title: 'Contrôle Interne',              icon: '🔎', slug: 'controle-interne',       ready: false },
       { title: "Gestion des Conflits d'intérêts",icon:'⚡', slug: 'conflits-interets',      ready: false },
       { title: 'Gestion des risques',           icon: '⚖️', slug: 'gestion-risques',        ready: false },
-      { title: 'Gouvernance PSF',               icon: '🏛️', slug: 'gouvernance',            ready: false },
+      { title: 'Gouvernance',               icon: '🏛️', slug: 'gouvernance',            ready: false },
       { title: 'Mutualisation',                 icon: '🔗', slug: 'mutualisation',          ready: false },
       { title: 'Veille réglementaire',          icon: '📡', slug: 'veille-reglementaire',   ready: false },
+      { title: 'Circulaire 24/850',             icon: '📰', slug: 'circulaire-24-850',      ready: false },
       { title: 'Whistleblowing',                icon: '📣', slug: 'whistleblowing',         ready: false },
     ],
   },
@@ -90,7 +91,7 @@ const THEMES_FR = [
     modules: [
       { title: 'Les grands principes',          icon: '📖', slug: 'data-grands-principes',  ready: false },
       { title: 'GDPR / RGPD',                   icon: '🔐', slug: 'gdpr-rgpd',              ready: false },
-      { title: 'ISO 27001',                     icon: '🏅', slug: 'iso-27001',              ready: false },
+
       { title: 'Secret professionnel',          icon: '🤫', slug: 'secret-professionnel',   ready: false },
       { title: 'Sécurité des données',          icon: '🛡️', slug: 'securite-donnees',       ready: false },
     ],
@@ -99,10 +100,10 @@ const THEMES_FR = [
     titre: 'Résilience & Infrastructure IT', emoji: '💻', couleur: '#059669',
     modules: [
       { title: 'Les grands principes',          icon: '📖', slug: 'it-grands-principes',    ready: false },
-      { title: 'Circulaire 24/850',             icon: '📰', slug: 'circulaire-24-850',      ready: false },
+
       { title: 'Infrastructure IT',             icon: '🖥️', slug: 'infrastructure-it',      ready: false },
       { title: 'Résilience IT (DORA)',          icon: '💻', slug: 'resilience-it',          ready: false },
-      { title: 'Externalisation 22/806',        icon: '🤝', slug: 'externalisation',        ready: false },
+
     ],
   },
   {
@@ -112,8 +113,17 @@ const THEMES_FR = [
       { title: 'Gestion des accès',             icon: '🔑', slug: 'gestion-acces',          ready: false },
       { title: 'Cybersécurité',                 icon: '🛡️', slug: 'cybersecurite',          ready: false },
       { title: 'Sécurité physique',             icon: '🏢', slug: 'securite-physique',      ready: false },
+      { title: 'ISO 27001',                     icon: '🏅', slug: 'iso-27001',              ready: false },
       { title: 'Incidents de sécurité',         icon: '🚨', slug: 'incidents-securite',     ready: false },
       { title: 'Politique de sécurité',         icon: '📋', slug: 'politique-securite',     ready: false },
+    ],
+  },
+  {
+    titre: 'Externalisation', emoji: '🤝', couleur: '#0369a1',
+    modules_fr: [
+      { title: 'Externalisation 22/806',        icon: '🤝', slug: 'externalisation',        ready: false },
+    ],
+    modules_en: [
     ],
   },
   {
@@ -184,10 +194,11 @@ const THEMES_EN = [
       { title: 'Internal Control',        icon: '🔎', slug: 'controle-interne',       ready: false },
       { title: 'Conflicts of Interest',   icon: '⚡', slug: 'conflits-interets',      ready: false },
       { title: 'Risk Management',         icon: '⚖️', slug: 'gestion-risques',        ready: false },
-      { title: 'PSF Governance',          icon: '🏛️', slug: 'gouvernance',            ready: false },
+      { title: 'Governance',          icon: '🏛️', slug: 'gouvernance',            ready: false },
       { title: 'Mutualisation',           icon: '🔗', slug: 'mutualisation',          ready: false },
       { title: 'Regulatory Watch',        icon: '📡', slug: 'veille-reglementaire',   ready: false },
       { title: 'Whistleblowing',          icon: '📣', slug: 'whistleblowing',         ready: false },
+      { title: 'Circular 24/850',         icon: '📰', slug: 'circulaire-24-850',      ready: false },
     ],
   },
   {
@@ -195,7 +206,7 @@ const THEMES_EN = [
     modules: [
       { title: 'Key Principles',          icon: '📖', slug: 'data-grands-principes',  ready: false },
       { title: 'GDPR / RGPD',             icon: '🔐', slug: 'gdpr-rgpd',              ready: false },
-      { title: 'ISO 27001',               icon: '🏅', slug: 'iso-27001',              ready: false },
+
       { title: 'Professional Secrecy',    icon: '🤫', slug: 'secret-professionnel',   ready: false },
       { title: 'Data Security',           icon: '🛡️', slug: 'securite-donnees',       ready: false },
     ],
@@ -204,10 +215,8 @@ const THEMES_EN = [
     titre: 'IT Resilience & Infrastructure', emoji: '💻', couleur: '#059669',
     modules: [
       { title: 'Key Principles',          icon: '📖', slug: 'it-grands-principes',    ready: false },
-      { title: 'Circular 24/850',         icon: '📰', slug: 'circulaire-24-850',      ready: false },
       { title: 'IT Infrastructure',       icon: '🖥️', slug: 'infrastructure-it',      ready: false },
       { title: 'IT Resilience (DORA)',    icon: '💻', slug: 'resilience-it',          ready: false },
-      { title: 'Outsourcing 22/806',      icon: '🤝', slug: 'externalisation',        ready: false },
     ],
   },
   {
@@ -216,6 +225,7 @@ const THEMES_EN = [
       { title: 'Key Principles',          icon: '📖', slug: 'securite-grands-principes', ready: false },
       { title: 'Access Management',       icon: '🔑', slug: 'gestion-acces',          ready: false },
       { title: 'Cybersecurity',           icon: '🛡️', slug: 'cybersecurite',          ready: false },
+      { title: 'ISO 27001',               icon: '🏅', slug: 'iso-27001',              ready: false },
       { title: 'Physical Security',       icon: '🏢', slug: 'securite-physique',      ready: false },
       { title: 'Security Incidents',      icon: '🚨', slug: 'incidents-securite',     ready: false },
       { title: 'Security Policy',         icon: '📋', slug: 'politique-securite',     ready: false },
