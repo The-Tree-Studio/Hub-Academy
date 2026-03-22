@@ -445,15 +445,15 @@ const FICHES_FR = [
   {
     "id": 15,
     "emoji": "👨‍💼",
-    "titre": "Le rôle d’i-Hub dans le processus CRS de nos clients",
+    "titre": "Comment i-Hub intervient : sur instruction et dans le cadre du SLA",
     "contenu": [
       {
         "icon": "🎯",
-        "texte": "**i-Hub onboarding** : vérifie la cohérence de l’auto-certification du client final transmise par le PSF — dans le périmètre du SLA"
+        "texte": "i-Hub **agit sur instruction** de ses clients PSF — jamais de sa propre initiative"
       },
       {
         "icon": "🔍",
-        "texte": "**Compliance i-Hub** : valide les cas complexes signalés lors des vérifications, informe le PSF des anomalies — la décision finale appartient au **PSF**"
+        "texte": "Le **SLA** signé avec chaque PSF définit exactement quels documents vérifier, quels contrôles effectuer et comment restituer les résultats"
       },
       {
         "icon": "💻",
@@ -461,10 +461,10 @@ const FICHES_FR = [
       },
       {
         "icon": "👤",
-        "texte": "**Chaque collaborateur i-Hub** : signale toute anomalie visible dans les documents vérifiés — i-Hub ne déclare pas, il vérifie et alerte le PSF"
+        "texte": "Toute **anomalie détectée** lors de la vérification est documentée et signalée au PSF — c’est le PSF qui décide de la suite à donner"
       }
     ],
-    "aretenir": "Chez i-Hub, CRS = vérification documentaire pour le compte des PSF. C’est le **PSF** qui collecte, classe et déclare à l’ACD. i-Hub ne fait jamais partie de la chaîne de déclaration."
+    "aretenir": "i-Hub = sous-traitant qui vérifie sur instruction du PSF, dans le cadre du SLA. Le PSF collecte, classe et déclare. i-Hub ne fait jamais partie de la chaîne de déclaration."
   }
 ]
 const FICHES_EN = [
@@ -863,26 +863,26 @@ const FICHES_EN = [
   {
     "id": 15,
     "emoji": "👨‍💼",
-    "titre": "i-Hub’s role in our clients' CRS process",
+    "titre": "How i-Hub intervenes: on instruction and within the SLA scope",
     "contenu": [
       {
         "icon": "🎯",
-        "texte": "**i-Hub onboarding**: verifies consistency of the final client’s self-certification transmitted by the PSF — within the SLA scope"
+        "texte": "i-Hub **acts on instruction** from its PSF clients — never on its own initiative"
       },
       {
         "icon": "🔍",
-        "texte": "**i-Hub Compliance**: validates complex cases flagged during verifications, notifies the PSF of anomalies — the final decision belongs to the **PSF**"
+        "texte": "The **SLA** signed with each PSF defines exactly which documents to verify, which checks to perform and how to report results"
       },
       {
         "icon": "💻",
-        "texte": "**i-Hub IT / Data**: manages verification tools and secure transmission of verified data to PSFs — it is the **PSF** that generates and submits XML files to the ACD"
+        "texte": "i-Hub verifies **only what the SLA provides for** — no more, no less. Anything outside the scope is flagged to the PSF without being processed"
       },
       {
         "icon": "👤",
-        "texte": "**Every i-Hub staff member**: flags any visible anomaly in verified documents — i-Hub does not report, it verifies and alerts the PSF"
+        "texte": "Any **anomaly detected** during verification is documented and flagged to the PSF — it is the PSF that decides on the follow-up action"
       }
     ],
-    "aretenir": "At i-Hub, CRS = documentary verification on behalf of PSFs. It is the **PSF** that collects, classifies and reports to the ACD. i-Hub is never part of the reporting chain."
+    "aretenir": "i-Hub = subcontractor that verifies on the PSF’s instruction, within the SLA scope. The PSF collects, classifies and reports. i-Hub is never part of the reporting chain."
   }
 ]
 const MATCHING_FR = [{"sigle":"CRS","definition":"Norme commune de déclaration OCDE"},{"sigle":"IFD","definition":"Institution financière qui déclare au CRS"},{"sigle":"Résidence fiscale","definition":"Pays où une personne est imposable sur ses revenus mondiaux"},{"sigle":"NIF","definition":"Numéro d’identification fiscale d’un contribuable"},{"sigle":"Auto-certification","definition":"Document par lequel le client déclare sa résidence fiscale"},{"sigle":"ENF Passive","definition":"Entité patrimoniale devant déclarer ses UBO étrangers"},{"sigle":"ACD","definition":"Autorité luxembourgeoise recevant les déclarations CRS"},{"sigle":"ENF Active","definition":"Société opérationnelle peu soumise aux obligations CRS"},{"sigle":"Changement de circonstances","definition":"Événement modifiant la résidence fiscale d’un client"},{"sigle":"90 jours","definition":"Délai pour obtenir une auto-certification après ouverture"}]

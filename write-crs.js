@@ -127,12 +127,12 @@ const FICHES_FR = [
     {icon:'🔍',texte:q("Le **Forum mondial** surveille la qualité des échanges — un pays qui transmet des données incomplètes peut être sanctionné")},
   ]},
 
-  {id:15,emoji:'👨‍💼',titre:q("Le rôle d'i-Hub dans le processus CRS de nos clients"),contenu:[
-    {icon:'🎯',texte:q("**i-Hub onboarding** : vérifie la cohérence de l'auto-certification du client final transmise par le PSF \u2014 dans le périmètre du SLA")},
-    {icon:'🔍',texte:q("**Compliance i-Hub** : valide les cas complexes signalés lors des vérifications, informe le PSF des anomalies \u2014 la décision finale appartient au **PSF**")},
+  {id:15,emoji:'👨‍💼',titre:q("Comment i-Hub intervient : sur instruction et dans le cadre du SLA"),contenu:[
+    {icon:'🎯',texte:q("i-Hub **agit sur instruction** de ses clients PSF \u2014 jamais de sa propre initiative")},
+    {icon:'🔍',texte:q("Le **SLA** signé avec chaque PSF définit exactement quels documents vérifier, quels contrôles effectuer et comment restituer les résultats")},
     {icon:'💻',texte:q("**IT / Data i-Hub** : gère les outils de vérification documentaire et la transmission sécurisée des données vérifiées aux PSF \u2014 c'est le **PSF** qui génère et envoie les fichiers XML à l'ACD")},
-    {icon:'👤',texte:q("**Chaque collaborateur i-Hub** : signale toute anomalie visible dans les documents vérifiés \u2014 i-Hub ne déclare pas, il vérifie et alerte le PSF")},
-  ],aretenir:q("Chez i-Hub, CRS = vérification documentaire pour le compte des PSF. C'est le **PSF** qui collecte, classe et déclare à l'ACD. i-Hub ne fait jamais partie de la chaîne de déclaration.")},
+    {icon:'👤',texte:q("Toute **anomalie détectée** lors de la vérification est documentée et signalée au PSF \u2014 c'est le PSF qui décide de la suite à donner")},
+  ],aretenir:q("i-Hub = sous-traitant qui vérifie sur instruction du PSF, dans le cadre du SLA. Le PSF collecte, classe et déclare. i-Hub ne fait jamais partie de la chaîne de déclaration.")},
 ];
 
 const FICHES_EN = [
@@ -254,12 +254,12 @@ const FICHES_EN = [
     {icon:'🔍',texte:q("The **Global Forum** monitors exchange quality — a country transmitting incomplete data may face consequences")},
   ]},
 
-  {id:15,emoji:'👨‍💼',titre:q("i-Hub's role in our clients' CRS process"),contenu:[
-    {icon:'🎯',texte:q("**i-Hub onboarding**: verifies consistency of the final client's self-certification transmitted by the PSF \u2014 within the SLA scope")},
-    {icon:'🔍',texte:q("**i-Hub Compliance**: validates complex cases flagged during verifications, notifies the PSF of anomalies \u2014 the final decision belongs to the **PSF**")},
-    {icon:'💻',texte:q("**i-Hub IT / Data**: manages verification tools and secure transmission of verified data to PSFs \u2014 it is the **PSF** that generates and submits XML files to the ACD")},
-    {icon:'👤',texte:q("**Every i-Hub staff member**: flags any visible anomaly in verified documents \u2014 i-Hub does not report, it verifies and alerts the PSF")},
-  ],aretenir:q("At i-Hub, CRS = documentary verification on behalf of PSFs. It is the **PSF** that collects, classifies and reports to the ACD. i-Hub is never part of the reporting chain.")},
+  {id:15,emoji:'👨‍💼',titre:q("How i-Hub intervenes: on instruction and within the SLA scope"),contenu:[
+    {icon:'🎯',texte:q("i-Hub **acts on instruction** from its PSF clients \u2014 never on its own initiative")},
+    {icon:'🔍',texte:q("The **SLA** signed with each PSF defines exactly which documents to verify, which checks to perform and how to report results")},
+    {icon:'💻',texte:q("i-Hub verifies **only what the SLA provides for** \u2014 no more, no less. Anything outside the scope is flagged to the PSF without being processed")},
+    {icon:'👤',texte:q("Any **anomaly detected** during verification is documented and flagged to the PSF \u2014 it is the PSF that decides on the follow-up action")},
+  ],aretenir:q("i-Hub = subcontractor that verifies on the PSF's instruction, within the SLA scope. The PSF collects, classifies and reports. i-Hub is never part of the reporting chain.")},
 ];
 
 const MATCHING_FR = [
