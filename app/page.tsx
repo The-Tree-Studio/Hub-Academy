@@ -102,6 +102,7 @@ const THEMES_FR = [
 
       { title: 'Infrastructure IT',             icon: '🖥️', slug: 'infrastructure-it',      ready: false },
       { title: 'Résilience IT (DORA)',          icon: '💻', slug: 'resilience-it',          ready: false },
+      { title: 'Résilience IT (non DORA)',      icon: '🖥️', slug: 'resilience-it-non-dora', ready: false },
 
     ],
   },
@@ -216,6 +217,7 @@ const THEMES_EN = [
       { title: 'Key Principles',          icon: '📖', slug: 'it-grands-principes',    ready: false },
       { title: 'IT Infrastructure',       icon: '🖥️', slug: 'infrastructure-it',      ready: false },
       { title: 'IT Resilience (DORA)',    icon: '💻', slug: 'resilience-it',          ready: false },
+      { title: 'IT Resilience (non-DORA)', icon: '🖥️', slug: 'resilience-it-non-dora', ready: false },
     ],
   },
   {
