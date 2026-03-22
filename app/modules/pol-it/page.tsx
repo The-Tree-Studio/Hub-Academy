@@ -91,7 +91,7 @@ export default function ModulePolIT() {
 
   const NavBar = () => (
     <div style={{background:'#6b7280',padding:'12px 24px',display:'flex',alignItems:'center',gap:'12px',boxShadow:'0 2px 8px rgba(0,0,0,0.15)'}}>
-      <button onClick={() => router.back()} style={{background:'none',border:`1px solid ${C}`,borderRadius:'8px',padding:'6px 12px',color:C,cursor:'pointer',fontSize:'14px'}}>{}{'fr'===lang ? '← Accueil' : '← Home'}</button>
+      <button onClick={() => router.back()} style={{background:'none',border:`1px solid ${C}`,borderRadius:'8px',padding:'6px 12px',color:C,cursor:'pointer',fontSize:'14px'}}>{'fr'===lang ? '← Accueil' : '← Home'}</button>
       <span style={{color:'#fff',fontWeight:'700',fontSize:'15px'}}>💻 {t.title}</span>
       <div style={{marginLeft:'auto',display:'flex',background:'rgba(255,255,255,0.15)',borderRadius:'16px',padding:'2px',gap:'2px'}}>
         {(['fr','en'] as const).map(l => <button key={l} onClick={() => switchLang(l)} style={{padding:'4px 10px',borderRadius:'12px',border:'none',cursor:'pointer',fontSize:'12px',fontWeight:'700',background:lang===l?C:'transparent',color:'white'}}>{'fr'===l?'🇫🇷 FR':'🇬🇧 EN'}</button>)}
@@ -112,7 +112,7 @@ export default function ModulePolIT() {
           </div>
         </div>
         <div style={{background:`${C}10`,border:`1px solid ${C}30`,borderRadius:'12px',padding:'16px',marginBottom:'28px',fontSize:'14px',color:'#374151'}}>
-          💡 {'fr'===lang ? 'Chaque fiche présente : la référence officielle, l’objectif, les destinataires et un résumé.' : 'Each card shows: the official reference, objective, audience and a summary.'}
+          💡 {'fr'===lang ? 'Chaque fiche présente : référence, objectif, destinataires et résumé.' : 'Each card shows: the official reference, objective, audience and a summary.'}
         </div>
         <button onClick={() => setPhase('fiches')} style={{background:C,color:'white',border:'none',borderRadius:'12px',padding:'16px 48px',fontSize:'18px',fontWeight:'700',cursor:'pointer'}}>{{'fr'===lang ? 'Découvrir les documents 📚' : 'Discover the documents 📚'}}</button>
       </div>
@@ -135,24 +135,24 @@ export default function ModulePolIT() {
           </div>
           <div style={{background:'white',borderRadius:'20px',overflow:'hidden',marginBottom:'20px',border:`2px solid ${C}30`,boxShadow:`0 8px 40px ${C}12`}}>
             <div style={{background:C,padding:'24px 28px',display:'flex',alignItems:'center',gap:'16px'}}>
-              <span style={{fontSize:'44px'}}>{}{'fr'===lang ? '📜' : '📜'}</span>
+              <span style={{fontSize:'44px'}}>📜</span>
               <div style={{flex:1}}>
                 <p style={{margin:'0 0 4px',color:'rgba(255,255,255,0.75)',fontSize:'12px',fontWeight:'600',letterSpacing:'1px'}}>{{'fr'===lang ? 'RÉFÉRENCE' : 'REFERENCE'}} : {fiche.ref}</p>
-                <h2 style={{color:'white',fontSize:'19px',fontWeight:'800',margin:0,lineHeight:1.3}}>{}{'fr'===lang ? '📜' : '📜'} {fiche.titre}</h2>
+                <h2 style={{color:'white',fontSize:'19px',fontWeight:'800',margin:0,lineHeight:1.3}}>📜 {fiche.titre}</h2>
               </div>
             </div>
             <div style={{padding:'24px 28px',display:'flex',flexDirection:'column',gap:'18px'}}>
               <div style={{background:`${C}08`,border:`1px solid ${C}25`,borderRadius:'12px',padding:'16px'}}>
                 <p style={{margin:'0 0 8px',fontSize:'12px',fontWeight:'800',color:C,textTransform:'uppercase',letterSpacing:'1px'}}>🎯 {lang==='fr'?'Objectif':'Objective'}</p>
-                <p style={{margin:0,fontSize:'15px',color:'#374151',lineHeight:1.6,fontWeight:'600'}}>{}{'fr'===lang ? '' : ''}{fiche.objectif}</p>
+                <p style={{margin:0,fontSize:'15px',color:'#374151',lineHeight:1.6,fontWeight:'600'}}>{fiche.objectif}</p>
               </div>
               <div style={{background:'#f8fafc',border:'1px solid #e2e8f0',borderRadius:'12px',padding:'16px'}}>
                 <p style={{margin:'0 0 8px',fontSize:'12px',fontWeight:'800',color:'#64748b',textTransform:'uppercase',letterSpacing:'1px'}}>👥 {lang==='fr'?'Applicable à':'Applies to'}</p>
-                <p style={{margin:0,fontSize:'14px',color:'#374151',lineHeight:1.5}}>{}{'fr'===lang ? '' : ''}{fiche.applicable}</p>
+                <p style={{margin:0,fontSize:'14px',color:'#374151',lineHeight:1.5}}>{fiche.applicable}</p>
               </div>
               <div style={{background:'#fafafa',border:'1px solid #e5e7eb',borderRadius:'12px',padding:'16px'}}>
                 <p style={{margin:'0 0 8px',fontSize:'12px',fontWeight:'800',color:'#6b7280',textTransform:'uppercase',letterSpacing:'1px'}}>📝 {lang==='fr'?'Résumé':'Summary'}</p>
-                <p style={{margin:0,fontSize:'14px',color:'#374151',lineHeight:1.65}}>{}{'fr'===lang ? '' : ''}{fiche.resume}</p>
+                <p style={{margin:0,fontSize:'14px',color:'#374151',lineHeight:1.65}}>{fiche.resume}</p>
               </div>
             </div>
           </div>
