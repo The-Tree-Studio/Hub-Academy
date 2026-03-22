@@ -444,7 +444,7 @@ export default function ModuleFiscaliteGrandsPrincipes() {
           ))}
         </div>
         <div style={{display:'flex',gap:'12px',justifyContent:'center',marginBottom:'32px',flexWrap:'wrap'}}>
-          {[{label:t.fiches,icon:'\ud83d\udcd6'},{label:t.quiz,icon:'\ud83c\udfae'},{label:t.time,icon:'\u23f1\ufe0f'}].map((b,i)=>(
+          {[{label:t.fiches,icon:'\ud83d\udcd6'},{label:t.time,icon:'\u23f1\ufe0f'}].map((b,i)=>(
             <div key={i} style={{background:'white',border:'1px solid #e5e7eb',borderRadius:'12px',padding:'10px 20px',fontSize:'14px',color:'#4b5563',display:'flex',alignItems:'center',gap:'6px'}}>{b.icon} {b.label}</div>
           ))}
         </div>
@@ -506,7 +506,7 @@ export default function ModuleFiscaliteGrandsPrincipes() {
           <div style={{display:'flex',gap:'12px'}}>
             {ficheIndex>0 && <button onClick={()=>{setFicheIndex(i=>i-1);setPlusLoinOpen(false)}} style={{flex:1,padding:'14px',background:'white',border:'1px solid #e5e7eb',borderRadius:'12px',color:'#6b7280',cursor:'pointer',fontSize:'15px',fontWeight:'600'}}>{t.prev}</button>}
             <button onClick={()=>ficheIndex<FICHES.length-1?(setFicheIndex(i=>i+1),setPlusLoinOpen(false)):setPhase('resultat')} style={{flex:2,padding:'14px',background:C,border:'none',borderRadius:'12px',color:'white',cursor:'pointer',fontSize:'16px',fontWeight:'700',boxShadow:\`0 4px 16px \${C}40\`}}>
-              {ficheIndex<FICHES.length-1?\`\${t.next} (\${ficheIndex+2}/\${FICHES.length}) \u2192\`:t.quizBtn}
+              {ficheIndex<FICHES.length-1?\`\${t.next} (\${ficheIndex+2}/\${FICHES.length}) \u2192\`:t.finBtn}
             </button>
           </div>
         </div>
