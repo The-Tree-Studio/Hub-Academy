@@ -31,7 +31,7 @@ const FICHES_FR = [
   ],aretenir:q("i-Hub doit identifier la ou les résidences fiscales de chaque client — pas seulement son lieu de résidence physique."),
   plusLoin:[
     {icon:'💡',texte:q("Les **conventions de double imposition** (CDI) peuvent déterminer quelle résidence fiscale prime en cas de conflit")},
-    {icon:'🔍',texte:q("En cas de doute sur la résidence fiscale, i-Hub doit demander une **auto-certification** au client")},
+    {icon:'🔍',texte:q("En cas de doute sur la résidence fiscale, i-Hub signale l'incohérence au **PSF**, qui demande une **auto-certification** complémentaire au client final")},
     {icon:'🌍',texte:q("Certains pays (ex: Monaco, Bahamas) ne participent pas au CRS — leurs résidents ne font pas l'objet d'un échange automatique")},
   ]},
 
@@ -49,15 +49,15 @@ const FICHES_FR = [
     {icon:'🚫',texte:q("**Exclusions** : comptes de retraite réglementés, comptes dormants de faible valeur, certains produits d'assurance")},
   ],aretenir:q("Pas tous les comptes sont déclarables. La classification correcte de chaque compte est essentielle pour i-Hub.")},
 
-  {id:6,emoji:'📝',titre:q("L'auto-certification client"),contenu:[
-    {icon:'📄',texte:q("L'**auto-certification** est le document par lequel le client déclare lui-même sa ou ses résidences fiscales à i-Hub")},
+  {id:6,emoji:'📝',titre:q("L'auto-certification du client final du PSF"),contenu:[
+    {icon:'📄',texte:q("L'**auto-certification** est le document par lequel le **client final du PSF** déclare lui-même sa ou ses résidences fiscales au **PSF**")},
     {icon:'✍️',texte:q("Elle doit être signée par le client et doit contenir : nom, adresse, pays de résidence fiscale, **NIF** (numéro d'identification fiscale)")},
-    {icon:'⏱️',texte:q("i-Hub doit obtenir une auto-certification dans les **90 jours** suivant l'ouverture du compte")},
-    {icon:'🔄',texte:q("L'auto-certification doit être **mise à jour** si les informations changent — le client a l'obligation de notifier i-Hub")},
-  ],aretenir:q("Sans auto-certification valide dans les 90 jours, i-Hub ne peut pas finaliser l'entrée en relation. C'est bloquant."),
+    {icon:'⏱️',texte:q("Le **PSF** doit obtenir l'auto-certification du client final dans les **90 jours** suivant l'ouverture — i-Hub vérifie sa présence et sa cohérence")},
+    {icon:'🔄',texte:q("L'auto-certification doit être **mise à jour** si la situation du client final change — le client final notifie le **PSF**, qui sollicite i-Hub pour re-vérifier si nécessaire")},
+  ],aretenir:q("Sans auto-certification valide, le **PSF** ne peut pas finaliser l'entrée en relation avec son client final. i-Hub vérifie que le document est présent et cohérent."),
   plusLoin:[
-    {icon:'📋',texte:q("Le format de l'auto-certification n'est pas imposé — i-Hub peut utiliser son propre formulaire ou un modèle OCDE")},
-    {icon:'🔍',texte:q("i-Hub doit vérifier la **plausibilité** de l'auto-certification par rapport aux autres informations disponibles")},
+    {icon:'📋',texte:q("Le format de l'auto-certification n'est pas imposé — le **PSF** utilise son propre formulaire ou un modèle OCDE, qu'i-Hub reçoit et vérifie")},
+    {icon:'🔍',texte:q("i-Hub vérifie la **plausibilité** de l'auto-certification reçue par rapport aux autres documents d'identité du client final")},
     {icon:'⚠️',texte:q("Une auto-certification **incohérente** avec les données KYC doit être rejetée et une nouvelle demandée")},
   ]},
 
@@ -92,8 +92,8 @@ const FICHES_FR = [
   {id:11,emoji:'🚨',titre:q("Changement de circonstances"),contenu:[
     {icon:'🔔',texte:q("Un **changement de circonstances** = tout événement modifiant la résidence fiscale d'un client")},
     {icon:'📋',texte:q("Exemples : déménagement dans un nouveau pays, obtention d'une nouvelle nationalité, changement d'adresse postale")},
-    {icon:'⚡',texte:q("i-Hub doit traiter le changement dans les **90 jours** — obtenir une nouvelle auto-certification et reclassifier le compte")},
-    {icon:'🚫',texte:q("Si le client ne fournit pas de nouvelle auto-certification, i-Hub applique la **présomption de résidence** basée sur les indices disponibles")},
+    {icon:'⚡',texte:q("Le **PSF** doit traiter le changement dans les **90 jours** — obtenir une nouvelle auto-certification du client final et reclassifier — i-Hub vérifie le nouveau document")},
+    {icon:'🚫',texte:q("Si le client final ne fournit pas de nouvelle auto-certification, le **PSF** applique la **présomption de résidence** basée sur les indices disponibles},
   ],aretenir:q("i-Hub ne peut pas ignorer un changement de circonstances. Toute mise à jour d'adresse peut déclencher une reclassification CRS.")},
 
   {id:12,emoji:'⚖️',titre:q("Sanctions en cas de manquement au CRS"),contenu:[
@@ -158,7 +158,7 @@ const FICHES_EN = [
   ],aretenir:q("i-Hub must identify the tax residence(s) of each client — not just their physical place of residence."),
   plusLoin:[
     {icon:'💡',texte:q("**Double tax treaties** (DTTs) may determine which tax residence prevails in case of conflict")},
-    {icon:'🔍',texte:q("If tax residence is unclear, i-Hub must request a **self-certification** from the client")},
+    {icon:'🔍',texte:q("If tax residence is unclear, i-Hub flags the inconsistency to the **PSF**, who requests additional **self-certification** from the final client")},
     {icon:'🌍',texte:q("Some countries (e.g. Monaco, Bahamas) do not participate in CRS — their residents are not subject to automatic exchange")},
   ]},
 
@@ -176,15 +176,15 @@ const FICHES_EN = [
     {icon:'🚫',texte:q("**Exclusions**: regulated retirement accounts, dormant low-value accounts, certain insurance products")},
   ],aretenir:q("Not all accounts are reportable. Correct classification of each account is essential for i-Hub.")},
 
-  {id:6,emoji:'📝',titre:q("Client self-certification"),contenu:[
-    {icon:'📄',texte:q("The **self-certification** is the document by which the client declares their tax residence(s) to i-Hub")},
+  {id:6,emoji:'📝',titre:q("PSF final client self-certification"),contenu:[
+    {icon:'📄',texte:q("The **self-certification** is the document by which the **PSF's final client** declares their tax residence(s) to the **PSF**")},
     {icon:'✍️',texte:q("It must be signed and contain: name, address, country of tax residence, **TIN** (tax identification number)")},
-    {icon:'⏱️',texte:q("i-Hub must obtain a self-certification within **90 days** of account opening")},
-    {icon:'🔄',texte:q("The self-certification must be **updated** if circumstances change — the client must notify i-Hub")},
-  ],aretenir:q("Without a valid self-certification within 90 days, i-Hub cannot complete onboarding. It is a hard blocker."),
+    {icon:'⏱️',texte:q("The **PSF** must obtain the self-certification from the final client within **90 days** of account opening — i-Hub verifies its presence and consistency")},
+    {icon:'🔄',texte:q("The self-certification must be **updated** if the final client's situation changes — the final client notifies the **PSF**, who may ask i-Hub to re-verify")},
+  ],aretenir:q("Without a valid self-certification, the **PSF** cannot complete onboarding of its final client. i-Hub verifies that the document is present and consistent."),
   plusLoin:[
-    {icon:'📋',texte:q("The format of self-certification is not prescribed — i-Hub may use its own form or an OECD template")},
-    {icon:'🔍',texte:q("i-Hub must verify the **plausibility** of the self-certification against other available information")},
+    {icon:'📋',texte:q("The format is not prescribed — the **PSF** uses its own form or an OECD template, which i-Hub receives and verifies")},
+    {icon:'🔍',texte:q("i-Hub verifies the **plausibility** of the self-certification received against other identity documents of the final client")},
     {icon:'⚠️',texte:q("A self-certification **inconsistent** with KYC data must be rejected and a new one requested")},
   ]},
 
@@ -219,8 +219,8 @@ const FICHES_EN = [
   {id:11,emoji:'🚨',titre:q("Change of circumstances"),contenu:[
     {icon:'🔔',texte:q("A **change of circumstances** = any event that modifies a client's tax residence")},
     {icon:'📋',texte:q("Examples: relocation to a new country, acquisition of a new nationality, change of postal address")},
-    {icon:'⚡',texte:q("i-Hub must process the change within **90 days** — obtain a new self-certification and reclassify")},
-    {icon:'🚫',texte:q("If the client does not provide a new self-certification, i-Hub applies a **residence presumption** based on available indicators")},
+    {icon:'⚡',texte:q("The **PSF** must process the change within **90 days** — obtain a new self-certification from the final client and reclassify — i-Hub verifies the new document")},
+    {icon:'🚫',texte:q("If the final client does not provide a new self-certification, the **PSF** applies a **residence presumption** based on available indicators")},
   ],aretenir:q("i-Hub cannot ignore a change of circumstances. Any address update may trigger a CRS reclassification.")},
 
   {id:12,emoji:'⚖️',titre:q("Penalties for CRS non-compliance"),contenu:[
@@ -318,10 +318,10 @@ const VF_EN = [
 
 const CAS_FR = [
   {
-    situation:q("Un résident belge ouvre un compte chez i-Hub. Il refuse de remplir l'auto-certification."),
+    situation:q("Un résident belge est client final d'un PSF. Il refuse de remplir l'auto-certification auprès du PSF."),
     action:q("Bloquer l'ouverture — auto-certification obligatoire dans les 90 jours"),
     options:[q("Ouvrir le compte — la Belgique est un pays ami"),q("Bloquer l'ouverture — auto-certification obligatoire dans les 90 jours"),q("Ouvrir et déclarer à l'ACD sans auto-certification"),q("Appliquer FATCA à la place du CRS")],
-    explication:q("L'auto-certification est obligatoire dans les 90 jours. Sans elle, i-Hub ne peut pas finaliser l'entrée en relation.")
+    explication:q("L'auto-certification est obligatoire dans les 90 jours. Sans elle, le **PSF** ne peut pas finaliser l'entrée en relation avec son client final.")
   },
   {
     situation:q("Une holding luxembourgeoise a un actionnaire français détenant 30% du capital. Elle se déclare ENF Active."),
@@ -350,10 +350,10 @@ const CAS_FR = [
 ];
 const CAS_EN = [
   {
-    situation:q("A Belgian resident opens an account at i-Hub. They refuse to complete the self-certification."),
+    situation:q("A Belgian resident is a final client of a PSF. They refuse to complete the self-certification with the PSF."),
     action:q("Block opening — self-certification mandatory within 90 days"),
     options:[q("Open the account — Belgium is a partner country"),q("Block opening — self-certification mandatory within 90 days"),q("Open and report to ACD without self-certification"),q("Apply FATCA instead of CRS")],
-    explication:q("Self-certification is mandatory within 90 days. Without it, i-Hub cannot complete the onboarding.")
+    explication:q("Self-certification is mandatory within 90 days. Without it, the **PSF** cannot complete the onboarding of its final client.")
   },
   {
     situation:q("A Luxembourg holding has a French shareholder holding 30% of capital. It declares itself an Active NFE."),
