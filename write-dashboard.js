@@ -26,7 +26,7 @@ const CERTIFICATIONS = {
 
 const THEMES_FR = [
   {
-    titre: "Anti-blanchiment d'argent", emoji: '🛡️', couleur: '#e91e8c',
+    titre: "AML/CTF", emoji: '🛡️', couleur: '#e91e8c',
     modules: [
       { title: 'Les grands principes',          icon: '📖', slug: 'aml-grands-principes',   ready: false },
       { title: 'AML/KYC Rules',                 icon: '🔍', slug: 'aml-kyc',                ready: true  },
