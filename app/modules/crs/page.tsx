@@ -128,7 +128,7 @@ const FICHES_FR = [
       },
       {
         "icon": "🔍",
-        "texte": "En cas de doute sur la résidence fiscale, i-Hub doit demander une **auto-certification** au client"
+        "texte": "En cas de doute sur la résidence fiscale, i-Hub signale l’incohérence au **PSF**, qui demande une **auto-certification** complémentaire au client final"
       },
       {
         "icon": "🌍",
@@ -187,11 +187,11 @@ const FICHES_FR = [
   {
     "id": 6,
     "emoji": "📝",
-    "titre": "L’auto-certification client",
+    "titre": "L’auto-certification du client final du PSF",
     "contenu": [
       {
         "icon": "📄",
-        "texte": "L'**auto-certification** est le document par lequel le client déclare lui-même sa ou ses résidences fiscales à i-Hub"
+        "texte": "L'**auto-certification** est le document par lequel le **client final du PSF** déclare lui-même sa ou ses résidences fiscales au **PSF**"
       },
       {
         "icon": "✍️",
@@ -199,22 +199,22 @@ const FICHES_FR = [
       },
       {
         "icon": "⏱️",
-        "texte": "i-Hub doit obtenir une auto-certification dans les **90 jours** suivant l’ouverture du compte"
+        "texte": "Le **PSF** doit obtenir l’auto-certification du client final dans les **90 jours** suivant l’ouverture — i-Hub vérifie sa présence et sa cohérence"
       },
       {
         "icon": "🔄",
-        "texte": "L’auto-certification doit être **mise à jour** si les informations changent — le client a l’obligation de notifier i-Hub"
+        "texte": "L’auto-certification doit être **mise à jour** si la situation du client final change — le client final notifie le **PSF**, qui sollicite i-Hub pour re-vérifier si nécessaire"
       }
     ],
-    "aretenir": "Sans auto-certification valide dans les 90 jours, i-Hub ne peut pas finaliser l’entrée en relation. C’est bloquant.",
+    "aretenir": "Sans auto-certification valide, le **PSF** ne peut pas finaliser l’entrée en relation avec son client final. i-Hub vérifie que le document est présent et cohérent.",
     "plusLoin": [
       {
         "icon": "📋",
-        "texte": "Le format de l’auto-certification n’est pas imposé — i-Hub peut utiliser son propre formulaire ou un modèle OCDE"
+        "texte": "Le format de l’auto-certification n’est pas imposé — le **PSF** utilise son propre formulaire ou un modèle OCDE, qu’i-Hub reçoit et vérifie"
       },
       {
         "icon": "🔍",
-        "texte": "i-Hub doit vérifier la **plausibilité** de l’auto-certification par rapport aux autres informations disponibles"
+        "texte": "i-Hub vérifie la **plausibilité** de l’auto-certification reçue par rapport aux autres documents d’identité du client final"
       },
       {
         "icon": "⚠️",
@@ -333,11 +333,11 @@ const FICHES_FR = [
       },
       {
         "icon": "⚡",
-        "texte": "i-Hub doit traiter le changement dans les **90 jours** — obtenir une nouvelle auto-certification et reclassifier le compte"
+        "texte": "Le **PSF** doit traiter le changement dans les **90 jours** — obtenir une nouvelle auto-certification du client final et reclassifier — i-Hub vérifie le nouveau document"
       },
       {
         "icon": "🚫",
-        "texte": "Si le client ne fournit pas de nouvelle auto-certification, i-Hub applique la **présomption de résidence** basée sur les indices disponibles"
+        "texte": "Si le client final ne fournit pas de nouvelle auto-certification, le **PSF** applique la **présomption de résidence** basée sur les indices disponibles"
       }
     ],
     "aretenir": "i-Hub ne peut pas ignorer un changement de circonstances. Toute mise à jour d’adresse peut déclencher une reclassification CRS."
@@ -546,7 +546,7 @@ const FICHES_EN = [
       },
       {
         "icon": "🔍",
-        "texte": "If tax residence is unclear, i-Hub must request a **self-certification** from the client"
+        "texte": "If tax residence is unclear, i-Hub flags the inconsistency to the **PSF**, who requests additional **self-certification** from the final client"
       },
       {
         "icon": "🌍",
@@ -605,11 +605,11 @@ const FICHES_EN = [
   {
     "id": 6,
     "emoji": "📝",
-    "titre": "Client self-certification",
+    "titre": "PSF final client self-certification",
     "contenu": [
       {
         "icon": "📄",
-        "texte": "The **self-certification** is the document by which the client declares their tax residence(s) to i-Hub"
+        "texte": "The **self-certification** is the document by which the **PSF’s final client** declares their tax residence(s) to the **PSF**"
       },
       {
         "icon": "✍️",
@@ -617,22 +617,22 @@ const FICHES_EN = [
       },
       {
         "icon": "⏱️",
-        "texte": "i-Hub must obtain a self-certification within **90 days** of account opening"
+        "texte": "The **PSF** must obtain the self-certification from the final client within **90 days** of account opening — i-Hub verifies its presence and consistency"
       },
       {
         "icon": "🔄",
-        "texte": "The self-certification must be **updated** if circumstances change — the client must notify i-Hub"
+        "texte": "The self-certification must be **updated** if the final client’s situation changes — the final client notifies the **PSF**, who may ask i-Hub to re-verify"
       }
     ],
-    "aretenir": "Without a valid self-certification within 90 days, i-Hub cannot complete onboarding. It is a hard blocker.",
+    "aretenir": "Without a valid self-certification, the **PSF** cannot complete onboarding of its final client. i-Hub verifies that the document is present and consistent.",
     "plusLoin": [
       {
         "icon": "📋",
-        "texte": "The format of self-certification is not prescribed — i-Hub may use its own form or an OECD template"
+        "texte": "The format is not prescribed — the **PSF** uses its own form or an OECD template, which i-Hub receives and verifies"
       },
       {
         "icon": "🔍",
-        "texte": "i-Hub must verify the **plausibility** of the self-certification against other available information"
+        "texte": "i-Hub verifies the **plausibility** of the self-certification received against other identity documents of the final client"
       },
       {
         "icon": "⚠️",
@@ -751,11 +751,11 @@ const FICHES_EN = [
       },
       {
         "icon": "⚡",
-        "texte": "i-Hub must process the change within **90 days** — obtain a new self-certification and reclassify"
+        "texte": "The **PSF** must process the change within **90 days** — obtain a new self-certification from the final client and reclassify — i-Hub verifies the new document"
       },
       {
         "icon": "🚫",
-        "texte": "If the client does not provide a new self-certification, i-Hub applies a **residence presumption** based on available indicators"
+        "texte": "If the final client does not provide a new self-certification, the **PSF** applies a **residence presumption** based on available indicators"
       }
     ],
     "aretenir": "i-Hub cannot ignore a change of circumstances. Any address update may trigger a CRS reclassification."
@@ -889,8 +889,8 @@ const MATCHING_FR = [{"sigle":"CRS","definition":"Norme commune de déclaration 
 const MATCHING_EN = [{"sigle":"CRS","definition":"OECD common reporting standard"},{"sigle":"RFI","definition":"Financial institution that reports under CRS"},{"sigle":"Tax residence","definition":"Country where a person is taxable on worldwide income"},{"sigle":"TIN","definition":"Tax identification number of a taxpayer"},{"sigle":"Self-certification","definition":"Document by which the client declares their tax residence"},{"sigle":"Passive NFE","definition":"Investment entity that must disclose foreign UBOs"},{"sigle":"ACD","definition":"Luxembourg authority receiving CRS reports"},{"sigle":"Active NFE","definition":"Operating company with limited CRS obligations"},{"sigle":"Change of circumstances","definition":"Event that modifies a client’s tax residence"},{"sigle":"90 days","definition":"Deadline to obtain a self-certification after account opening"}]
 const VF_FR = [{"texte":"Le CRS est basé sur la nationalité du titulaire du compte","reponse":false,"explication":"Non ! Le CRS est basé sur la résidence fiscale, pas la nationalité. C’est FATCA qui utilise la nationalité."},{"texte":"Le Luxembourg a effectué ses premiers échanges CRS en 2017","reponse":true,"explication":"Exact ! Les premiers échanges CRS luxembourgeois ont eu lieu en septembre 2017."},{"texte":"Une personne peut avoir plusieurs résidences fiscales simultanément","reponse":true,"explication":"Exact ! Une personne peut être résidente fiscale dans plusieurs pays à la fois — toutes doivent être déclarées."},{"texte":"i-Hub ne déclare pas aux autorités fiscales étrangères — c’est le rôle du PSF via l’ACD","reponse":false,"explication":"Non ! C’est le PSF qui déclare à l’ACD luxembourgeoise, qui transmet ensuite aux pays partenaires."},{"texte":"L’auto-certification doit être obtenue dans les 90 jours suivant l’ouverture du compte","reponse":true,"explication":"Exact ! Le délai légal est de 90 jours. Au-delà, i-Hub est en infraction."},{"texte":"Les USA participent au CRS","reponse":false,"explication":"Non ! Les USA ont leur propre système (FATCA) et ne participent pas au CRS de l’OCDE."},{"texte":"Une ENF Active doit déclarer ses personnes détenant le contrôle","reponse":false,"explication":"Non ! C’est l’ENF Passive qui doit déclarer ses personnes détenant le contrôle résidentes à l’étranger."},{"texte":"La déclaration CRS annuelle est due avant le 30 juin","reponse":true,"explication":"Exact ! Le délai de déclaration à l’ACD est le 30 juin de l’année suivant l’année de référence."},{"texte":"Le RGPD s’oppose à la collecte de données dans le cadre du CRS","reponse":false,"explication":"Non ! La collecte CRS est légalement imposée — le client ne peut pas l’opposer au RGPD."},{"texte":"L’amende ACD peut atteindre 250 000 € par déclaration incorrecte","reponse":true,"explication":"Exact ! Les sanctions luxembourgeoises pour manquement CRS peuvent atteindre 250 000 € par infraction."},{"texte":"CRS et FATCA ne peuvent jamais s’appliquer au même client en même temps","reponse":false,"explication":"Non ! Un résident français de nationalité américaine est soumis aux deux simultanément."},{"texte":"Les comptes de valeur supérieure à 1 million USD font l’objet d’une procédure renforcée","reponse":true,"explication":"Exact ! Les comptes > 1M USD nécessitent une procédure de diligence renforcée incluant une revue documentaire complète."}]
 const VF_EN = [{"texte":"The CRS is based on the account holder’s nationality","reponse":false,"explication":"No! The CRS is based on tax residence, not nationality. It’s FATCA that uses nationality."},{"texte":"Luxembourg conducted its first CRS exchanges in 2017","reponse":true,"explication":"Correct! Luxembourg’s first CRS exchanges took place in September 2017."},{"texte":"A person can have multiple tax residences simultaneously","reponse":true,"explication":"Correct! A person can be a tax resident in several countries at once — all must be declared."},{"texte":"i-Hub reports directly to foreign tax authorities","reponse":false,"explication":"No! It is the **PSF** that reports to the Luxembourg ACD, which then transmits to partner countries."},{"texte":"Self-certification must be obtained within 90 days of account opening","reponse":true,"explication":"Correct! The legal deadline is 90 days. Beyond this, i-Hub is in breach."},{"texte":"The USA participates in CRS","reponse":false,"explication":"No! The USA has its own system (FATCA) and does not participate in the OECD CRS."},{"texte":"An Active NFE must disclose its controlling persons","reponse":false,"explication":"No! It’s the Passive NFE that must disclose its controlling persons resident abroad."},{"texte":"The annual CRS report is due before 30 June","reponse":true,"explication":"Correct! The ACD reporting deadline is 30 June of the year following the reference year."},{"texte":"GDPR prevents data collection under CRS","reponse":false,"explication":"No! CRS data collection is legally mandated — clients cannot invoke GDPR against it."},{"texte":"The ACD fine can reach €250,000 per incorrect declaration","reponse":true,"explication":"Correct! Luxembourg penalties for CRS breaches can reach €250,000 per violation."},{"texte":"CRS and FATCA can never apply to the same client at the same time","reponse":false,"explication":"No! A French resident with US nationality is subject to both simultaneously."},{"texte":"Accounts above USD 1 million are subject to an enhanced procedure","reponse":true,"explication":"Correct! Accounts over USD 1M require an enhanced due diligence procedure including a full document review."}]
-const CAS_FR = [{"situation":"Un résident belge ouvre un compte chez i-Hub. Il refuse de remplir l’auto-certification.","action":"Bloquer l’ouverture — auto-certification obligatoire dans les 90 jours","options":["Ouvrir le compte — la Belgique est un pays ami","Bloquer l’ouverture — auto-certification obligatoire dans les 90 jours","Ouvrir et déclarer à l’ACD sans auto-certification","Appliquer FATCA à la place du CRS"],"explication":"L’auto-certification est obligatoire dans les 90 jours. Sans elle, i-Hub ne peut pas finaliser l’entrée en relation."},{"situation":"Une holding luxembourgeoise a un actionnaire français détenant 30% du capital. Elle se déclare ENF Active.","action":"Reclassifier en ENF Passive — 30% = personne détenant le contrôle à déclarer","options":["Accepter — ENF Active = pas d’obligation CRS","Demander un W-8BEN-E","Reclassifier en ENF Passive — 30% = personne détenant le contrôle à déclarer","Déclarer la holding comme résidente française"],"explication":"Une holding dont les revenus sont majoritairement passifs est une ENF Passive. 30% > 25% → actionnaire français à déclarer."},{"situation":"Un client déménage d’Allemagne en Thaïlande (non-participant CRS). Il soumet une nouvelle auto-certification.","action":"Reclassifier comme non-déclarable — la Thaïlande ne participe pas au CRS","options":["Continuer à déclarer à l’ACD — prudence","Reclassifier comme non-déclarable — la Thaïlande ne participe pas au CRS","Appliquer FATCA à la place","Déclarer à l’Allemagne car il y résidait avant"],"explication":"La Thaïlande ne participe pas au CRS. Un résident thaïlandais n’est pas déclarable sous ce régime — sous réserve de vérification."},{"situation":"Un client ouvre un compte le 1er mars 2025. Au 30 juin 2025, il n’a toujours pas fourni son auto-certification.","action":"Infraction — délai de 90 jours dépassé, signaler à l’équipe Compliance","options":["Pas de problème — 30 juin est la date limite de déclaration","Accorder 90 jours supplémentaires","Infraction — délai de 90 jours dépassé, signaler à l’équipe Compliance","Clôturer le compte immédiatement"],"explication":"90 jours à partir du 1er mars = 30 mai. Au 30 juin le délai est largement dépassé. Il faut escalader à Compliance."},{"situation":"Un résident luxembourgeois d’origine américaine déclare une résidence fiscale aux USA uniquement dans son auto-certification.","action":"Vérifier : FATCA s’applique (US Person), CRS non — mais demander confirmation de non-résidence LU","options":["Appliquer CRS uniquement — pas besoin de FATCA","Ignorer — il est luxembourgeois","Vérifier : FATCA s’applique (US Person), CRS non — mais demander confirmation de non-résidence LU","Déclarer sous les deux régimes automatiquement"],"explication":"US Person → FATCA obligatoire. Résidence fiscale USA seulement → CRS non applicable. Mais vérifier la non-résidence LU."}]
-const CAS_EN = [{"situation":"A Belgian resident opens an account at i-Hub. They refuse to complete the self-certification.","action":"Block opening — self-certification mandatory within 90 days","options":["Open the account — Belgium is a partner country","Block opening — self-certification mandatory within 90 days","Open and report to ACD without self-certification","Apply FATCA instead of CRS"],"explication":"Self-certification is mandatory within 90 days. Without it, i-Hub cannot complete the onboarding."},{"situation":"A Luxembourg holding has a French shareholder holding 30% of capital. It declares itself an Active NFE.","action":"Reclassify as Passive NFE — 30% = controlling person to be reported","options":["Accept — Active NFE = no CRS obligation","Request a W-8BEN-E","Reclassify as Passive NFE — 30% = controlling person to be reported","Report the holding as a French resident"],"explication":"A holding with mainly passive income is a Passive NFE. 30% > 25% → French shareholder must be reported."},{"situation":"A client moves from Germany to Thailand (CRS non-participant). They submit a new self-certification.","action":"Reclassify as non-reportable — Thailand does not participate in CRS","options":["Continue reporting to ACD — caution prevails","Reclassify as non-reportable — Thailand does not participate in CRS","Apply FATCA instead","Report to Germany as they previously resided there"],"explication":"Thailand does not participate in CRS. A Thai resident is not reportable under this regime — subject to verification."},{"situation":"A client opens an account on 1 March 2025. By 30 June 2025, they have still not provided their self-certification.","action":"Breach — 90-day deadline exceeded, escalate to Compliance team","options":["No problem — 30 June is the reporting deadline","Grant an additional 90 days","Breach — 90-day deadline exceeded, escalate to Compliance team","Close the account immediately"],"explication":"90 days from 1 March = 30 May. By 30 June the deadline has long passed. Escalate to Compliance."},{"situation":"A Luxembourg resident of US origin declares US tax residence only in their self-certification.","action":"Check: FATCA applies (US Person), CRS does not — but confirm non-Luxembourg residence","options":["Apply CRS only — no need for FATCA","Ignore — they are Luxembourg-based","Check: FATCA applies (US Person), CRS does not — but confirm non-Luxembourg residence","Report under both regimes automatically"],"explication":"US Person → FATCA mandatory. Tax residence USA only → CRS not applicable. But verify non-Luxembourg tax residence."}]
+const CAS_FR = [{"situation":"Un résident belge est client final d’un PSF. Il refuse de remplir l’auto-certification auprès du PSF.","action":"Bloquer l’ouverture — auto-certification obligatoire dans les 90 jours","options":["Ouvrir le compte — la Belgique est un pays ami","Bloquer l’ouverture — auto-certification obligatoire dans les 90 jours","Ouvrir et déclarer à l’ACD sans auto-certification","Appliquer FATCA à la place du CRS"],"explication":"L’auto-certification est obligatoire dans les 90 jours. Sans elle, le **PSF** ne peut pas finaliser l’entrée en relation avec son client final."},{"situation":"Une holding luxembourgeoise a un actionnaire français détenant 30% du capital. Elle se déclare ENF Active.","action":"Reclassifier en ENF Passive — 30% = personne détenant le contrôle à déclarer","options":["Accepter — ENF Active = pas d’obligation CRS","Demander un W-8BEN-E","Reclassifier en ENF Passive — 30% = personne détenant le contrôle à déclarer","Déclarer la holding comme résidente française"],"explication":"Une holding dont les revenus sont majoritairement passifs est une ENF Passive. 30% > 25% → actionnaire français à déclarer."},{"situation":"Un client déménage d’Allemagne en Thaïlande (non-participant CRS). Il soumet une nouvelle auto-certification.","action":"Reclassifier comme non-déclarable — la Thaïlande ne participe pas au CRS","options":["Continuer à déclarer à l’ACD — prudence","Reclassifier comme non-déclarable — la Thaïlande ne participe pas au CRS","Appliquer FATCA à la place","Déclarer à l’Allemagne car il y résidait avant"],"explication":"La Thaïlande ne participe pas au CRS. Un résident thaïlandais n’est pas déclarable sous ce régime — sous réserve de vérification."},{"situation":"Un client ouvre un compte le 1er mars 2025. Au 30 juin 2025, il n’a toujours pas fourni son auto-certification.","action":"Infraction — délai de 90 jours dépassé, signaler à l’équipe Compliance","options":["Pas de problème — 30 juin est la date limite de déclaration","Accorder 90 jours supplémentaires","Infraction — délai de 90 jours dépassé, signaler à l’équipe Compliance","Clôturer le compte immédiatement"],"explication":"90 jours à partir du 1er mars = 30 mai. Au 30 juin le délai est largement dépassé. Il faut escalader à Compliance."},{"situation":"Un résident luxembourgeois d’origine américaine déclare une résidence fiscale aux USA uniquement dans son auto-certification.","action":"Vérifier : FATCA s’applique (US Person), CRS non — mais demander confirmation de non-résidence LU","options":["Appliquer CRS uniquement — pas besoin de FATCA","Ignorer — il est luxembourgeois","Vérifier : FATCA s’applique (US Person), CRS non — mais demander confirmation de non-résidence LU","Déclarer sous les deux régimes automatiquement"],"explication":"US Person → FATCA obligatoire. Résidence fiscale USA seulement → CRS non applicable. Mais vérifier la non-résidence LU."}]
+const CAS_EN = [{"situation":"A Belgian resident is a final client of a PSF. They refuse to complete the self-certification with the PSF.","action":"Block opening — self-certification mandatory within 90 days","options":["Open the account — Belgium is a partner country","Block opening — self-certification mandatory within 90 days","Open and report to ACD without self-certification","Apply FATCA instead of CRS"],"explication":"Self-certification is mandatory within 90 days. Without it, the **PSF** cannot complete the onboarding of its final client."},{"situation":"A Luxembourg holding has a French shareholder holding 30% of capital. It declares itself an Active NFE.","action":"Reclassify as Passive NFE — 30% = controlling person to be reported","options":["Accept — Active NFE = no CRS obligation","Request a W-8BEN-E","Reclassify as Passive NFE — 30% = controlling person to be reported","Report the holding as a French resident"],"explication":"A holding with mainly passive income is a Passive NFE. 30% > 25% → French shareholder must be reported."},{"situation":"A client moves from Germany to Thailand (CRS non-participant). They submit a new self-certification.","action":"Reclassify as non-reportable — Thailand does not participate in CRS","options":["Continue reporting to ACD — caution prevails","Reclassify as non-reportable — Thailand does not participate in CRS","Apply FATCA instead","Report to Germany as they previously resided there"],"explication":"Thailand does not participate in CRS. A Thai resident is not reportable under this regime — subject to verification."},{"situation":"A client opens an account on 1 March 2025. By 30 June 2025, they have still not provided their self-certification.","action":"Breach — 90-day deadline exceeded, escalate to Compliance team","options":["No problem — 30 June is the reporting deadline","Grant an additional 90 days","Breach — 90-day deadline exceeded, escalate to Compliance team","Close the account immediately"],"explication":"90 days from 1 March = 30 May. By 30 June the deadline has long passed. Escalate to Compliance."},{"situation":"A Luxembourg resident of US origin declares US tax residence only in their self-certification.","action":"Check: FATCA applies (US Person), CRS does not — but confirm non-Luxembourg residence","options":["Apply CRS only — no need for FATCA","Ignore — they are Luxembourg-based","Check: FATCA applies (US Person), CRS does not — but confirm non-Luxembourg residence","Report under both regimes automatically"],"explication":"US Person → FATCA mandatory. Tax residence USA only → CRS not applicable. But verify non-Luxembourg tax residence."}]
 
 export default function ModuleCRS() {
   const router = useRouter()
